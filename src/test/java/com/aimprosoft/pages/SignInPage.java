@@ -28,4 +28,9 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.SIGNINBUTTON).click();
         //$("//button[contains(text(),'Login')]").click();
     }
+
+    public boolean homePageIsOpened() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.AIMPROSOFT_LOGO)));
+        return $(LOCATORS.AIMPROSOFT_LOGO).isPresent();
+    }
 }

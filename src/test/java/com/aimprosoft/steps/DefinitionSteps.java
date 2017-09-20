@@ -32,6 +32,6 @@ public class DefinitionSteps {
 
     @Then("^home page is opened$")
     public void homePageIsOpened() throws Throwable {
-
+        endUserSteps.homePageIsOpened();
     }
 }

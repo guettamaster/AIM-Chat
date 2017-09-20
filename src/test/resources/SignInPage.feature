@@ -4,4 +4,5 @@ Feature: testing signin page
     Given open signin page
     And filled fields valid data
     When click on Login button
-#    Then home page is opened
+    Then home page is opened
+    Then "admin" user name is displayed

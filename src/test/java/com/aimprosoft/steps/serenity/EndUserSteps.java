@@ -29,4 +29,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnLoginButton() {
         signinPage.clickOnLoginButton();
     }
+
+    @Step
+    public void homePageIsOpened() {
+        Assert.assertTrue("False", signinPage.homePageIsOpened());
+    }
 }

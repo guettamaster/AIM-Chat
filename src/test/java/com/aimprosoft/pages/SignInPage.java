@@ -26,7 +26,6 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
     public void clickOnLoginButton() {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SIGNINBUTTON)));
         $(LOCATORS.SIGNINBUTTON).click();
-        //$("//button[contains(text(),'Login')]").click();
     }
 
     public boolean homePageIsOpened() {

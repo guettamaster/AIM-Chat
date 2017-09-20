@@ -1,6 +1,7 @@
 package com.aimprosoft.steps.serenity;
 
 import com.aimprosoft.LOCATORS;
+import com.aimprosoft.pages.HomePage;
 import com.aimprosoft.pages.SignInPage;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Step;
@@ -12,6 +13,7 @@ import java.text.ParseException;
 public class EndUserSteps extends ScenarioSteps {
 
     SignInPage signinPage;
+    HomePage homePage;
 
 //======================================================SignInPage======================================================
 
@@ -38,5 +40,17 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void userNameIsDisplayed(String admin) {
         Assert.assertTrue("False", signinPage.userNameIsDisplayed(admin));
+    }
+
+//======================================================HomePage======================================================
+
+    @Step
+    public void clickOnPlusLink() {
+        homePage.clickOnPlusLink();
+    }
+
+    @Step
+    public void roomTitleInPopupIsDisplayed() {
+        Assert.assertTrue("False", homePage.roomTitleInPopupIsDisplayed());
     }
 }

@@ -39,4 +39,16 @@ public class DefinitionSteps {
     public void userNameIsDisplayed(String admin) throws Throwable {
         endUserSteps.userNameIsDisplayed(admin);
     }
+
+//======================================================HomePage======================================================
+
+    @When("^click on plus link$")
+    public void clickOnPlusLink() throws Throwable {
+        endUserSteps.clickOnPlusLink();
+    }
+
+    @Then("^room title in popup is displayed$")
+    public void roomTitleInPopupIsDisplayed() throws Throwable {
+        endUserSteps.roomTitleInPopupIsDisplayed();
+    }
 }

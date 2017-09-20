@@ -34,4 +34,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void homePageIsOpened() {
         Assert.assertTrue("False", signinPage.homePageIsOpened());
     }
+
+    @Step
+    public void userNameIsDisplayed(String admin) {
+        Assert.assertTrue("False", signinPage.userNameIsDisplayed(admin));
+    }
 }

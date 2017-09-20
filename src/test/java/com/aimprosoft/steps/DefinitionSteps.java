@@ -34,4 +34,9 @@ public class DefinitionSteps {
     public void homePageIsOpened() throws Throwable {
         endUserSteps.homePageIsOpened();
     }
+
+    @Then("^\"([^\"]*)\" user name is displayed$")
+    public void userNameIsDisplayed(String admin) throws Throwable {
+        endUserSteps.userNameIsDisplayed(admin);
+    }
 }

@@ -11,5 +11,6 @@ String SIGNINBUTTON = "//button[.='Sign In']";
 //TODO======================================================HomePage==========================================================
 
 String AIMPROSOFT_LOGO = "//span[@class='logo']";
+String USER_NAME_IN_THE_LEFT_PANEL = "//p[@class='username'][contains(text(),'$1')]";
 
 }

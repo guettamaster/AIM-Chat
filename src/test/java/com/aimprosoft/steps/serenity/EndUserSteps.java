@@ -53,4 +53,24 @@ public class EndUserSteps extends ScenarioSteps {
     public void roomTitleInPopupIsDisplayed() {
         Assert.assertTrue("False", homePage.roomTitleInPopupIsDisplayed());
     }
+
+    @Step
+    public void enterInTheInputField(String arg0, String arg1) {
+        homePage.enterInTheInputField(arg0, arg1);
+    }
+
+    @Step
+    public void choosePublicRoomCheckbox() {
+        homePage.choosePublicRoomCheckbox();
+    }
+
+    @Step
+    public void enterInTheInviteMembersField(String superadmin) {
+        homePage.enterInTheInviteMembersField(superadmin);
+    }
+
+    @Step
+    public void enterInTheTextareaField(String arg0, String arg1) {
+        homePage.enterInTheTextareaField(arg0, arg1);
+    }
 }

@@ -51,4 +51,24 @@ public class DefinitionSteps {
     public void roomTitleInPopupIsDisplayed() throws Throwable {
         endUserSteps.roomTitleInPopupIsDisplayed();
     }
+
+    @When("^enter \"([^\"]*)\" in the \"([^\"]*)\" input field$")
+    public void enterInTheInputField(String arg0, String arg1) throws Throwable {
+        endUserSteps.enterInTheInputField(arg0, arg1);
+    }
+
+    @When("^choose public room checkbox$")
+    public void choosePublicRoomCheckbox() throws Throwable {
+        endUserSteps.choosePublicRoomCheckbox();
+    }
+
+    @When("^enter \"([^\"]*)\" in the Invite members field$")
+    public void enterInTheInviteMembersField(String superadmin) throws Throwable {
+        endUserSteps.enterInTheInviteMembersField(superadmin);
+    }
+
+    @When("^enter \"([^\"]*)\" in the \"([^\"]*)\" textarea field$")
+    public void enterInTheTextareaField(String arg0, String arg1) throws Throwable {
+        endUserSteps.enterInTheTextareaField(arg0, arg1);
+    }
 }

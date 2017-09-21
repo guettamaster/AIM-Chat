@@ -73,4 +73,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void enterInTheTextareaField(String arg0, String arg1) {
         homePage.enterInTheTextareaField(arg0, arg1);
     }
+
+    @Step
+    public void clickOnOKButton() {
+        homePage.clickOnOKButton();
+    }
+
+    @Step
+    public void theRoomIsCreated(String arg0) {
+        Assert.assertTrue("False", homePage.theRoomIsCreated(arg0));
+    }
+
+    @Step
+    public void clickOnStandardTab() {
+        signinPage.clickOnStandardTab();
+    }
 }

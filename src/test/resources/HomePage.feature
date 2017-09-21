@@ -1,7 +1,8 @@
 Feature: testing home page
 
-  Scenario: 2.001 Check that "test room" is created
+  Scenario: 2.001 Check that "testroom" is created
     Given open signin page
+    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -12,9 +13,5 @@ Feature: testing home page
     When choose public room checkbox
     When enter "superadmin" in the Invite members field
     When enter "testdescription" in the "Description" textarea field
-#    When click on Save button
-#    When click on Document Library link
-#    Then the "333file" document node is created
-#    When click on "333file" document name title
-#    Then the "333file" document is opened
-#    Then the "333file" title field is correct
+    When click on OK button
+    Then the "testroom" room is created

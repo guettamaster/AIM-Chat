@@ -71,4 +71,19 @@ public class DefinitionSteps {
     public void enterInTheTextareaField(String arg0, String arg1) throws Throwable {
         endUserSteps.enterInTheTextareaField(arg0, arg1);
     }
+
+    @When("^click on OK button$")
+    public void clickOnOKButton() throws Throwable {
+        endUserSteps.clickOnOKButton();
+    }
+
+    @Then("^the \"([^\"]*)\" room is created$")
+    public void theRoomIsCreated(String arg0) throws Throwable {
+        endUserSteps.theRoomIsCreated(arg0);
+    }
+
+    @When("^click on Standard tab$")
+    public void clickOnStandardTab() throws Throwable {
+        endUserSteps.clickOnStandardTab();
+    }
 }

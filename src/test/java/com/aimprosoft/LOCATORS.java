@@ -4,10 +4,10 @@ public interface LOCATORS {
 
 //TODO======================================================SignInPage========================================================
 
-String EMAIL_FIELD = "//div[@id='name-control']/input[@name='login']";
-String PASSWORD_FIELD = "//div[@id='name-control']/input[@name='password']";
+String EMAIL_FIELD = "//div[@class='tab-pane active fade in']//input[@placeholder='Email']";
+String PASSWORD_FIELD = "//div[@class='tab-pane active fade in']//input[@placeholder='Password']";
 String SIGNINBUTTON = "//button[.='Sign In']";
-String STANDARD_TAB = "//li[@role='presentation']/a[@role='tab'][contains(text(),'Standard')]";
+String STANDARD_TAB = "//a[@id='login-type-tab-2']";
 
 //TODO======================================================HomePage==========================================================
 
@@ -21,6 +21,8 @@ String INVITE_MEMBERS_INPUT_FIELD = "//div[@class='form-group'][2]/div[@class='d
 String TEXTAREA_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//textarea";
 String OK_BUTTON = "//button[.='OK']";
 String ROOM_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]";
+String ROOM_TITLE_NAME_IN_THE_HEADER = "//div[@class='channel-name room-public'][contains(text(),'$1')]";
+String ABOUT_CHANNEL_BUTTON = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='container']//span[@class='glyphicon glyphicon-info-sign settings-gliph']";
 
 
 

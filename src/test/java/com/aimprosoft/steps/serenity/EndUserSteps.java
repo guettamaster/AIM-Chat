@@ -88,4 +88,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnStandardTab() {
         signinPage.clickOnStandardTab();
     }
+
+    @Step
+    public void clickOnRoomInTheLeftPanel(String arg0) {
+        homePage.clickOnRoomInTheLeftPanel(arg0);
+    }
+
+    @Step
+    public void theTitleIsDisplayedInTheHeader(String arg0) {
+        Assert.assertTrue("False", homePage.theTitleIsDisplayedInTheHeader(arg0));
+    }
+
+    @Step
+    public void clickOnTheAboutChannelButtonOfRoom(String arg0) {
+        homePage.clickOnTheAboutChannelButtonOfRoom(arg0);
+    }
 }

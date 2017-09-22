@@ -15,12 +15,14 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
     private static Logger logger = LoggerFactory.getLogger(SignInPage.class);
 
     public void loginAsadmin() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.EMAIL_FIELD)));
+//        waitABit(1500);
         String email = "admin@email.com";
         String password = "qwerty1";
         logger.info("Entering email: " + email + " and password: " + password);
         $(LOCATORS.EMAIL_FIELD).sendKeys(email);
+//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.EMAIL_FIELD)));
         $(LOCATORS.PASSWORD_FIELD).sendKeys(password);
+
     }
 
     public void clickOnLoginButton() {

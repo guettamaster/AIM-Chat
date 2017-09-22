@@ -86,4 +86,19 @@ public class DefinitionSteps {
     public void clickOnStandardTab() throws Throwable {
         endUserSteps.clickOnStandardTab();
     }
+
+    @When("^click on \"([^\"]*)\" room in the left panel$")
+    public void clickOnRoomInTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.clickOnRoomInTheLeftPanel(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" title is displayed in the header$")
+    public void theTitleIsDisplayedInTheHeader(String arg0) throws Throwable {
+        endUserSteps.theTitleIsDisplayedInTheHeader(arg0);
+    }
+
+    @When("^click on the about channel button of \"([^\"]*)\" room$")
+    public void clickOnTheAboutChannelButtonOfRoom(String arg0) throws Throwable {
+        endUserSteps.clickOnTheAboutChannelButtonOfRoom(arg0);
+    }
 }

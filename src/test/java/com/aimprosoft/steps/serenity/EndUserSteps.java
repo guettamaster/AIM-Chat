@@ -103,4 +103,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheAboutChannelButtonOfRoom(String arg0) {
         homePage.clickOnTheAboutChannelButtonOfRoom(arg0);
     }
+
+    @Step
+    public void clickOnTheChannelDetailsLink(String arg0) {
+        homePage.clickOnTheChannelDetailsLink(arg0);
+    }
 }

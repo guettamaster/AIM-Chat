@@ -26,3 +26,4 @@ Feature: testing home page
     When click on "testroom" room in the left panel
     Then the "testroom" title is displayed in the header
     When click on the about channel button of "testroom" room
+    When click on the "testroom" channel details link

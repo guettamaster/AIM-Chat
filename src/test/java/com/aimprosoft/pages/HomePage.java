@@ -80,4 +80,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 //        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
         $(LOCATORS.ABOUT_CHANNEL_BUTTON.replace("$1", arg0)).click();
     }
+
+    public void clickOnTheChannelDetailsLink(String arg0) {
+        $(LOCATORS.CHANNEL_DETAILS_LINK.replace("$1", arg0)).click();
+    }
 }

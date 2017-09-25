@@ -101,4 +101,9 @@ public class DefinitionSteps {
     public void clickOnTheAboutChannelButtonOfRoom(String arg0) throws Throwable {
         endUserSteps.clickOnTheAboutChannelButtonOfRoom(arg0);
     }
+
+    @When("^click on the \"([^\"]*)\" channel details link$")
+    public void clickOnTheChannelDetailsLink(String arg0) throws Throwable {
+        endUserSteps.clickOnTheChannelDetailsLink(arg0);
+    }
 }

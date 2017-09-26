@@ -27,3 +27,5 @@ Feature: testing home page
     Then the "testroom" title is displayed in the header
     When click on the about channel button of "testroom" room
     When click on the "testroom" channel details link
+    Then "testroom" name is displayed in the channel details block
+

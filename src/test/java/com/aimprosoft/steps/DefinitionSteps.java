@@ -116,4 +116,19 @@ public class DefinitionSteps {
     public void clickOnTheEditRoomNameLink() throws Throwable {
         endUserSteps.clickOnTheEditRoomNameLink();
     }
+
+    @Then("^input room name field is displayed$")
+    public void inputRoomNameFieldIsDisplayed() throws Throwable {
+        endUserSteps.inputRoomNameFieldIsDisplayed();
+    }
+
+    @When("^clear data in the input room name field$")
+    public void clearDataInTheInputRoomNameField() throws Throwable {
+        endUserSteps.clearDataInTheInputRoomNameField();
+    }
+
+    @When("^enter \"([^\"]*)\" in the input room name field$")
+    public void enterInTheInputRoomNameField(String arg0) throws Throwable {
+        endUserSteps.enterInTheInputRoomNameField(arg0);
+    }
 }

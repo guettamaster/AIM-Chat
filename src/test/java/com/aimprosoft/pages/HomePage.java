@@ -3,6 +3,8 @@ package com.aimprosoft.pages;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -88,15 +90,40 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public boolean nameIsDisplayedInTheChannelDetailsBlock(String arg0) {
         waitABit(500);
-//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_CHANNEL_DETAILS_BLOCK.replace("$1", arg0))));
         return $(LOCATORS.ROOM_NAME_IN_THE_CHANNEL_DETAILS_BLOCK.replace("$1", arg0)).isPresent();
     }
 
     public void clickOnTheEditRoomNameLink() {
-//        waitABit(2000);
-//        $(LOCATORS.EDIT_ROOM_NAME_LINK).click();
         withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.EDIT_ROOM_NAME_LINK));
+    }
+
+    public boolean inputRoomNameFieldIsDisplayed() {
+        waitABit(500);
+        return $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE).isPresent();
+    }
+
+    public void clearDataInTheInputRoomNameField() {
+        if (inputRoomNameField()) {
+    $(LOCATORS.ROOM_NAME_INPUT_FIELD.replace("$1","1")).clear();
+        }else {
+    $(LOCATORS.ROOM_NAME_INPUT_FIELD.replace("$1", "2")).clear();
+        }
+    }
+
+    public boolean inputRoomNameField() {
+        return $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE).isVisible();
+    }
+
+    public void enterInTheInputRoomNameField(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0))));
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(find(By.xpath(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0))));
+        actions.click();
+        actions.sendKeys(arg0);
+
+
+//        $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE).sendKeys(arg0);
     }
 }

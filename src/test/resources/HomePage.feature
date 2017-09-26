@@ -32,6 +32,7 @@ Feature: testing home page
     Then input room name field is displayed
     When clear data in the input room name field
     When enter "Test111" in the input room name field
-    When click on Save button under the input room name field
+#    When click on Save button under the input room name field
+#    Then
 
 

@@ -118,4 +118,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheEditRoomNameLink() {
         homePage.clickOnTheEditRoomNameLink();
     }
+
+    @Step
+    public void inputRoomNameFieldIsDisplayed() {
+        Assert.assertTrue("False", homePage.inputRoomNameFieldIsDisplayed());
+    }
+
+    @Step
+    public void clearDataInTheInputRoomNameField() {
+        homePage.clearDataInTheInputRoomNameField();
+    }
+
+    @Step
+    public void enterInTheInputRoomNameField(String arg0) {
+        homePage.enterInTheInputRoomNameField(arg0);
+    }
 }

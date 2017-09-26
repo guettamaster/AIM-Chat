@@ -28,4 +28,10 @@ Feature: testing home page
     When click on the about channel button of "testroom" room
     When click on the "testroom" channel details link
     Then "testroom" name is displayed in the channel details block
+    When click on the Edit room name link
+    Then input room name field is displayed
+    When clear data in the input room name field
+    When enter "Test111" in the input room name field
+    When click on Save button under the input room name field
+
 

@@ -2,6 +2,7 @@ package com.aimprosoft.pages;
 
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -77,11 +78,25 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheAboutChannelButtonOfRoom(String arg0) {
-//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ABOUT_CHANNEL_BUTTON.replace("$1", arg0))));
         $(LOCATORS.ABOUT_CHANNEL_BUTTON.replace("$1", arg0)).click();
     }
 
     public void clickOnTheChannelDetailsLink(String arg0) {
         $(LOCATORS.CHANNEL_DETAILS_LINK.replace("$1", arg0)).click();
+    }
+
+    public boolean nameIsDisplayedInTheChannelDetailsBlock(String arg0) {
+        waitABit(500);
+//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_CHANNEL_DETAILS_BLOCK.replace("$1", arg0))));
+        return $(LOCATORS.ROOM_NAME_IN_THE_CHANNEL_DETAILS_BLOCK.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheEditRoomNameLink() {
+//        waitABit(2000);
+//        $(LOCATORS.EDIT_ROOM_NAME_LINK).click();
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.EDIT_ROOM_NAME_LINK));
     }
 }

@@ -106,4 +106,14 @@ public class DefinitionSteps {
     public void clickOnTheChannelDetailsLink(String arg0) throws Throwable {
         endUserSteps.clickOnTheChannelDetailsLink(arg0);
     }
+
+    @Then("^\"([^\"]*)\" name is displayed in the channel details block$")
+    public void nameIsDisplayedInTheChannelDetailsBlock(String arg0) throws Throwable {
+        endUserSteps.nameIsDisplayedInTheChannelDetailsBlock(arg0);
+    }
+
+    @When("^click on the Edit room name link$")
+    public void clickOnTheEditRoomNameLink() throws Throwable {
+        endUserSteps.clickOnTheEditRoomNameLink();
+    }
 }

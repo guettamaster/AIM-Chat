@@ -108,4 +108,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheChannelDetailsLink(String arg0) {
         homePage.clickOnTheChannelDetailsLink(arg0);
     }
+
+    @Step
+    public void nameIsDisplayedInTheChannelDetailsBlock(String arg0) {
+        Assert.assertTrue("False", homePage.nameIsDisplayedInTheChannelDetailsBlock(arg0));
+    }
+
+    @Step
+    public void clickOnTheEditRoomNameLink() {
+        homePage.clickOnTheEditRoomNameLink();
+    }
 }

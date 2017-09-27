@@ -138,4 +138,29 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnSaveButtonUnderTheInputRoomNameField() {
         homePage.clickOnSaveButtonUnderTheInputRoomNameField();
     }
+
+    @Step
+    public void clickOnTheEditDescriptionLinkInTheRoom(String arg0) {
+        homePage.clickOnTheEditDescriptionLinkInTheRoom(arg0);
+    }
+
+    @Step
+    public void inputDescriptionFieldIsDisplayed() {
+        Assert.assertTrue("False", homePage.inputDescriptionFieldIsDisplayed());
+    }
+
+    @Step
+    public void clearDataInTheInputDescriptionField() {
+        homePage.clearDataInTheInputDescriptionField();
+    }
+
+    @Step
+    public void enterInTheInputDescriptionField(String arg0) {
+        homePage.enterInTheInputDescriptionField(arg0);
+    }
+
+    @Step
+    public void clickOnDoneButtonUnderTheInputDescriptionField() {
+        homePage.clickOnDoneButtonUnderTheInputDescriptionField();
+    }
 }

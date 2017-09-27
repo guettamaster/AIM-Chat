@@ -29,6 +29,9 @@ String EDIT_ROOM_NAME_LINK = "//span[@class='edit-description-link']/a[contains(
 String ROOM_NAME_INPUT_FIELD = "(//div[@class='field-value']/input[@class='form-control'])[$1]";
 String ROOM_NAME_INPUT_FIELD_ACTIVE = "(//div[@class='field-value']/input[@class='form-control'])[1]";
 String SAVE_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD = "//div[@class='button-group']/button[@class='btn btn-success done-button'][contains(text(),'Save')]";
+String EDIT_DESCRIPTION_LINK = "(//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='chat-container active']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[2]";
+String DESCRIPTION_INPUT_FIELD = "(//textarea[@class='form-control'])[2]";
+String DONE_BUTTON = "//button[.='Done']";
 
 
 

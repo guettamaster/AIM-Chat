@@ -129,4 +129,28 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.SAVE_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD));
     }
+
+    public void clickOnTheEditDescriptionLinkInTheRoom(String arg0) {
+        $(LOCATORS.EDIT_DESCRIPTION_LINK.replace("$1", arg0)).click();
+    }
+
+    public boolean inputDescriptionFieldIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DESCRIPTION_INPUT_FIELD)));
+//        waitABit(500);
+        return $(LOCATORS.DESCRIPTION_INPUT_FIELD).isPresent();
+    }
+
+    public void clearDataInTheInputDescriptionField() {
+        $(LOCATORS.DESCRIPTION_INPUT_FIELD).clear();
+    }
+
+    public void enterInTheInputDescriptionField(String arg0) {
+        $(LOCATORS.DESCRIPTION_INPUT_FIELD).sendKeys(arg0);
+    }
+
+    public void clickOnDoneButtonUnderTheInputDescriptionField() {
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.DONE_BUTTON));
+    }
 }

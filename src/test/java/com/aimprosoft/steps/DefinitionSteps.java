@@ -136,4 +136,29 @@ public class DefinitionSteps {
     public void clickOnSaveButtonUnderTheInputRoomNameField() throws Throwable {
         endUserSteps.clickOnSaveButtonUnderTheInputRoomNameField();
     }
+
+    @When("^click on the Edit description link in the \"([^\"]*)\" room$")
+    public void clickOnTheEditDescriptionLinkInTheRoom(String arg0) throws Throwable {
+        endUserSteps.clickOnTheEditDescriptionLinkInTheRoom(arg0);
+    }
+
+    @Then("^input description field is displayed$")
+    public void inputDescriptionFieldIsDisplayed() throws Throwable {
+        endUserSteps.inputDescriptionFieldIsDisplayed();
+    }
+
+    @When("^clear data in the input description field$")
+    public void clearDataInTheInputDescriptionField() throws Throwable {
+        endUserSteps.clearDataInTheInputDescriptionField();
+    }
+
+    @When("^enter \"([^\"]*)\" in the input description field$")
+    public void enterInTheInputDescriptionField(String arg0) throws Throwable {
+        endUserSteps.enterInTheInputDescriptionField(arg0);
+    }
+
+    @When("^click on Done button under the input description field$")
+    public void clickOnDoneButtonUnderTheInputDescriptionField() throws Throwable {
+        endUserSteps.clickOnDoneButtonUnderTheInputDescriptionField();
+    }
 }

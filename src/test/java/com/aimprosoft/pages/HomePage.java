@@ -117,13 +117,16 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputRoomNameField(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0))));
+        waitABit(500);
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(find(By.xpath(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0))));
-        actions.click();
         actions.sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0))));
+        actions.build().perform();
+    }
 
-
-//        $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE).sendKeys(arg0);
+    public void clickOnSaveButtonUnderTheInputRoomNameField() {
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.SAVE_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD));
     }
 }

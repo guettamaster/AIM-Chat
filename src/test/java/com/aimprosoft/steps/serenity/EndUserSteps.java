@@ -133,4 +133,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void enterInTheInputRoomNameField(String arg0) {
         homePage.enterInTheInputRoomNameField(arg0);
     }
+
+    @Step
+    public void clickOnSaveButtonUnderTheInputRoomNameField() {
+        homePage.clickOnSaveButtonUnderTheInputRoomNameField();
+    }
 }

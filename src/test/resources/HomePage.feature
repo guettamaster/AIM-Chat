@@ -32,7 +32,12 @@ Feature: testing home page
     Then input room name field is displayed
     When clear data in the input room name field
     When enter "Test111" in the input room name field
-#    When click on Save button under the input room name field
-#    Then
+    When click on Save button under the input room name field
+    Then the "Test111" title is displayed in the header
+    Then "Test111" name is displayed in the channel details block
+    Then the "Test111" room is created
+
+  Scenario: 2.003 Check that in "Test111" room changed description
+
 
 

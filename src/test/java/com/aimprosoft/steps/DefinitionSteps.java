@@ -131,4 +131,9 @@ public class DefinitionSteps {
     public void enterInTheInputRoomNameField(String arg0) throws Throwable {
         endUserSteps.enterInTheInputRoomNameField(arg0);
     }
+
+    @When("^click on Save button under the input room name field$")
+    public void clickOnSaveButtonUnderTheInputRoomNameField() throws Throwable {
+        endUserSteps.clickOnSaveButtonUnderTheInputRoomNameField();
+    }
 }

@@ -73,5 +73,3 @@ Feature: testing home page
     When click on the Yes delete this room button
     Then the "Test111" room is deleted
 
-    jjjjj
-

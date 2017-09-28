@@ -161,4 +161,14 @@ public class DefinitionSteps {
     public void clickOnDoneButtonUnderTheInputDescriptionField() throws Throwable {
         endUserSteps.clickOnDoneButtonUnderTheInputDescriptionField();
     }
+
+    @Then("^the \"([^\"]*)\" description is displayed in the channel details block$")
+    public void theDescriptionIsDisplayedInTheChannelDetailsBlock(String arg0) throws Throwable {
+        endUserSteps.theDescriptionIsDisplayedInTheChannelDetailsBlock(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" description is displayed in the header$")
+    public void theDescriptionIsDisplayedInTheHeader(String arg0) throws Throwable {
+        endUserSteps.theDescriptionIsDisplayedInTheHeader(arg0);
+    }
 }

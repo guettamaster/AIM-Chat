@@ -160,7 +160,17 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void clickOnDoneButtonUnderTheInputDescriptionField() {
+    public void clickOnDoneButtonUnderTheInputDescriptionField() throws InterruptedException {
         homePage.clickOnDoneButtonUnderTheInputDescriptionField();
+    }
+
+    @Step
+    public void theDescriptionIsDisplayedInTheChannelDetailsBlock(String arg0) {
+        Assert.assertTrue("False", homePage.theDescriptionIsDisplayedInTheChannelDetailsBlock(arg0));
+    }
+
+    @Step
+    public void theDescriptionIsDisplayedInTheHeader(String arg0) {
+        Assert.assertTrue("False", homePage.theDescriptionIsDisplayedInTheHeader(arg0));
     }
 }

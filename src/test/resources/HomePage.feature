@@ -1,6 +1,6 @@
 Feature: testing home page
 
-  Scenario: 2.001 Check that "testroom" is created
+  Scenario: 2.001 Check that "testroom" room is created
     Given open signin page
     When click on Standard tab
     And filled fields valid data
@@ -54,9 +54,17 @@ Feature: testing home page
     When clear data in the input description field
     When enter "new description111" in the input description field
     When click on Done button under the input description field
+    Then the "new description111" description is displayed in the channel details block
+    Then the "new description111" description is displayed in the header
+
+  Scenario: 2.004 Check that "Test111" room is deleted
+    Given open signin page
+    When click on Standard tab
+    And filled fields valid data
+    When click on Login button
+    Then home page is opened
+    Then "admin" user name is displayed
+    When click on "Test111" room in the left panel
     Then the "Test111" title is displayed in the header
-    Then "Test111" name is displayed in the channel details block
-    Then the "Test111" room is created
-
-
+    When click on the wheel link
 

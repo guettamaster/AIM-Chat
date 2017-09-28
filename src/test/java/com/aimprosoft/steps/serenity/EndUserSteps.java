@@ -173,4 +173,34 @@ public class EndUserSteps extends ScenarioSteps {
     public void theDescriptionIsDisplayedInTheHeader(String arg0) {
         Assert.assertTrue("False", homePage.theDescriptionIsDisplayedInTheHeader(arg0));
     }
+
+    @Step
+    public void clickOnTheWheelLink() {
+        homePage.clickOnTheWheelLink();
+    }
+
+    @Step
+    public void deleteRoomLinkIsDisplayed() {
+        Assert.assertTrue("False", homePage.deleteRoomLinkIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheDeleteRoomLink() {
+        homePage.clickOnTheDeleteRoomLink();
+    }
+
+    @Step
+    public void theRoomIsDeleted(String arg0) {
+        Assert.assertTrue("False", homePage.theRoomIsDeleted(arg0));
+    }
+
+    @Step
+    public void deleteRoomPopUpIsDisplayed() {
+        Assert.assertTrue("False", homePage.deleteRoomPopUpIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheYesDeleteThisRoomButton() {
+        homePage.clickOnTheYesDeleteThisRoomButton();
+    }
 }

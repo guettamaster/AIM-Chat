@@ -3,17 +3,14 @@ package com.aimprosoft.pages;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.aimprosoft.LOCATORS;
-import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import java.util.concurrent.TimeUnit;
 
 @DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
@@ -171,5 +168,41 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean theDescriptionIsDisplayedInTheHeader(String arg0) {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DESCRIPTION_TITLE_IN_THE_HEADER.replace("$1", arg0))));
         return $(LOCATORS.DESCRIPTION_TITLE_IN_THE_HEADER.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheWheelLink() {
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.WHEEL_LINK_IN_THE_HEADER));
+    }
+
+    public boolean deleteRoomLinkIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_ROOM_LINK)));
+        return $(LOCATORS.DELETE_ROOM_LINK).isPresent();
+    }
+
+    public void clickOnTheDeleteRoomLink() {
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.DELETE_ROOM_LINK));
+    }
+
+    public boolean theRoomIsDeleted(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        for (WebElement element : findAll("//a[@class='room-link']/span[@class='ccss']")) {
+            if (element.getText().equalsIgnoreCase(arg0)) return false;
+        }
+        return true;
+    }
+
+    public boolean deleteRoomPopUpIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP)));
+        return $(LOCATORS.DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP).isPresent();
+    }
+
+    public void clickOnTheYesDeleteThisRoomButton() {
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.YES_DELETE_THIS_ROOM_BUTTON));
     }
 }

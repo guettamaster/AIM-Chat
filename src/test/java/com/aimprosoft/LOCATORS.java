@@ -34,7 +34,10 @@ String DESCRIPTION_INPUT_FIELD = "(//textarea[@class='form-control'])[2]";
 String DONE_BUTTON = "(//button[.='Done'])[2]";
 String DESCRIPTION_TITLE_IN_THE_CHANNEL_DETAILS_BLOCK = "//div[@class='description-text']/span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String DESCRIPTION_TITLE_IN_THE_HEADER = "//ul[@class='b-chat-header-text nav navbar-nav']//span[@class='description'][contains(text(),'$1')]";
-
+String WHEEL_LINK_IN_THE_HEADER = "//a[@class='dropdown-toggle']/i[@class='glyphicon glyphicon-cog']";
+String DELETE_ROOM_LINK = "//ul[@class='dropdown-menu']/li/a[contains(text(),'Delete Room')]";
+String DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][.='Delete Room']";
+String YES_DELETE_THIS_ROOM_BUTTON = "//button[.='Yes, delete this room']";
 
 
 

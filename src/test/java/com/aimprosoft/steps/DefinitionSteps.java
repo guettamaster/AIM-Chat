@@ -171,4 +171,34 @@ public class DefinitionSteps {
     public void theDescriptionIsDisplayedInTheHeader(String arg0) throws Throwable {
         endUserSteps.theDescriptionIsDisplayedInTheHeader(arg0);
     }
+
+    @When("^click on the wheel link$")
+    public void clickOnTheWheelLink() throws Throwable {
+        endUserSteps.clickOnTheWheelLink();
+    }
+
+    @Then("^Delete room link is displayed$")
+    public void deleteRoomLinkIsDisplayed() throws Throwable {
+        endUserSteps.deleteRoomLinkIsDisplayed();
+    }
+
+    @When("^click on the Delete room link$")
+    public void clickOnTheDeleteRoomLink() throws Throwable {
+        endUserSteps.clickOnTheDeleteRoomLink();
+    }
+
+    @Then("^the \"([^\"]*)\" room is deleted$")
+    public void theRoomIsDeleted(String arg0) throws Throwable {
+        endUserSteps.theRoomIsDeleted(arg0);
+    }
+
+    @Then("^delete room pop-up is displayed$")
+    public void deleteRoomPopUpIsDisplayed() throws Throwable {
+        endUserSteps.deleteRoomPopUpIsDisplayed();
+    }
+
+    @When("^click on the Yes delete this room button$")
+    public void clickOnTheYesDeleteThisRoomButton() throws Throwable {
+        endUserSteps.clickOnTheYesDeleteThisRoomButton();
+    }
 }

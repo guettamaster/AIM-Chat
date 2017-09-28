@@ -67,4 +67,11 @@ Feature: testing home page
     When click on "Test111" room in the left panel
     Then the "Test111" title is displayed in the header
     When click on the wheel link
+    Then Delete room link is displayed
+    When click on the Delete room link
+    Then delete room pop-up is displayed
+    When click on the Yes delete this room button
+    Then the "Test111" room is deleted
+
+    jjjjj
 

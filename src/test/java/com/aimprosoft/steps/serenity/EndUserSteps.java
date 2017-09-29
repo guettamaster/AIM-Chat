@@ -203,4 +203,44 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheYesDeleteThisRoomButton() {
         homePage.clickOnTheYesDeleteThisRoomButton();
     }
+
+    @Step
+    public void clickOnTheDirectMessagesLink() {
+        homePage.clickOnTheDirectMessagesLink();
+    }
+
+    @Step
+    public void directRoomsPopUpIsDisplayed() {
+        Assert.assertTrue("False", homePage.directRoomsPopUpIsDisplayed());
+    }
+
+    @Step
+    public void enterInTheInputSearchField(String arg0) {
+        homePage.enterInTheInputSearchField(arg0);
+    }
+
+    @Step
+    public void isDisplayedInTheListOfUsers(String arg0) {
+        Assert.assertTrue("False", homePage.isDisplayedInTheListOfUsers(arg0));
+    }
+
+    @Step
+    public void clickOnTheNameInTheListOfUsers(String arg0) {
+        homePage.clickOnTheNameInTheListOfUsers(arg0);
+    }
+
+    @Step
+    public void userNameIsDisplayedInTheLeftPanel(String arg0) {
+        Assert.assertTrue("False", homePage.userNameIsDisplayedInTheLeftPanel(arg0));
+    }
+
+    @Step
+    public void userNameIsDisplayedInTheHeader(String arg0) {
+        Assert.assertTrue("False", homePage.userNameIsDisplayedInTheHeader(arg0));
+    }
+
+    @Step
+    public void clickOnTheUserNameInTheLeftPanel(String arg0) {
+        homePage.clickOnTheUserNameInTheLeftPanel(arg0);
+    }
 }

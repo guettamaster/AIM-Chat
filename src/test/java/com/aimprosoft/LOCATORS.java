@@ -12,7 +12,7 @@ String STANDARD_TAB = "//a[@id='login-type-tab-2']";
 //TODO======================================================HomePage==========================================================
 
 String AIMPROSOFT_LOGO = "//span[@class='logo']";
-String USER_NAME_IN_THE_LEFT_PANEL = "//p[@class='username'][contains(text(),'$1')]";
+String THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL = "//p[@class='username'][contains(text(),'$1')]";
 String PLUS_LINK = "//a[@class='add-room-button']/i[@class='glyphicon glyphicon-plus']";
 String ROOM_TITLE_IN_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][contains(text(),'Add Room')]";
 String INPUT_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//input";
@@ -38,8 +38,12 @@ String WHEEL_LINK_IN_THE_HEADER = "//a[@class='dropdown-toggle']/i[@class='glyph
 String DELETE_ROOM_LINK = "//ul[@class='dropdown-menu']/li/a[contains(text(),'Delete Room')]";
 String DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][.='Delete Room']";
 String YES_DELETE_THIS_ROOM_BUTTON = "//button[.='Yes, delete this room']";
-
-
+String DIRECT_MESSAGES_LINK = "//h2[@class='channel-header']/a[contains(text(),'Direct Messages')]";
+String DIRECT_ROOMS_TITLE_IN_THE_DIRECT_ROOMS_POPUP = "//h4[.='Direct rooms']";
+String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//input[@class='form-control'][@placeholder='search']";
+String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='username-item']/span[@class='username-text'][contains(text(),'$1')]";
+String USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]";
+String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";
 
 
 

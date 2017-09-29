@@ -201,4 +201,44 @@ public class DefinitionSteps {
     public void clickOnTheYesDeleteThisRoomButton() throws Throwable {
         endUserSteps.clickOnTheYesDeleteThisRoomButton();
     }
+
+    @When("^click on the Direct Messages link$")
+    public void clickOnTheDirectMessagesLink() throws Throwable {
+        endUserSteps.clickOnTheDirectMessagesLink();
+    }
+
+    @Then("^direct rooms pop-up is displayed$")
+    public void directRoomsPopUpIsDisplayed() throws Throwable {
+        endUserSteps.directRoomsPopUpIsDisplayed();
+    }
+
+    @When("^enter \"([^\"]*)\" in the input search field$")
+    public void enterInTheInputSearchField(String arg0) throws Throwable {
+        endUserSteps.enterInTheInputSearchField(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" is displayed in the list of users$")
+    public void isDisplayedInTheListOfUsers(String arg0) throws Throwable {
+        endUserSteps.isDisplayedInTheListOfUsers(arg0);
+    }
+
+    @When("^click on the \"([^\"]*)\" name in the list of users$")
+    public void clickOnTheNameInTheListOfUsers(String arg0) throws Throwable {
+        endUserSteps.clickOnTheNameInTheListOfUsers(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" user name is displayed in the left panel$")
+    public void userNameIsDisplayedInTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.userNameIsDisplayedInTheLeftPanel(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" user name is displayed in the header$")
+    public void userNameIsDisplayedInTheHeader(String arg0) throws Throwable {
+        endUserSteps.userNameIsDisplayedInTheHeader(arg0);
+    }
+
+    @When("^click on the \"([^\"]*)\" user name in the left panel$")
+    public void clickOnTheUserNameInTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.clickOnTheUserNameInTheLeftPanel(arg0);
+    }
 }

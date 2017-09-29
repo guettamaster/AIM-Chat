@@ -73,3 +73,28 @@ Feature: testing home page
     When click on the Yes delete this room button
     Then the "Test111" room is deleted
 
+  Scenario: 2.005 Check that direct message to a.shevchenko is created
+    Given open signin page
+    When click on Standard tab
+    And filled fields valid data
+    When click on Login button
+    Then home page is opened
+    Then "admin" user name is displayed
+    When click on the Direct Messages link
+    Then direct rooms pop-up is displayed
+    When enter "a.shevchenko" in the input search field
+    Then "a.shevchenko" is displayed in the list of users
+    When click on the "a.shevchenko" name in the list of users
+    Then "a.shevchenko" user name is displayed in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+
+  Scenario: 2.006 Check that message to a.shevchenko is sent
+    Given open signin page
+    When click on Standard tab
+    And filled fields valid data
+    When click on Login button
+    Then home page is opened
+    Then "admin" user name is displayed
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    When enter 

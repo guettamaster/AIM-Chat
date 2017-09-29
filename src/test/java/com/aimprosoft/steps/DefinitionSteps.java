@@ -241,4 +241,14 @@ public class DefinitionSteps {
     public void clickOnTheUserNameInTheLeftPanel(String arg0) throws Throwable {
         endUserSteps.clickOnTheUserNameInTheLeftPanel(arg0);
     }
+
+    @When("^enter \"([^\"]*)\" in the input message field$")
+    public void enterInTheInputMessageField(String arg0) throws Throwable {
+        endUserSteps.enterInTheInputMessageField(arg0);
+    }
+
+    @When("^click on Enter button$")
+    public void clickOnEnterButton() throws Throwable {
+        endUserSteps.clickOnEnterButton();
+    }
 }

@@ -97,3 +97,5 @@ Feature: testing home page
     Then "admin" user name is displayed
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
+    When enter "test message" in the input message field
+#    When click on Enter button

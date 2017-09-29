@@ -243,4 +243,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheUserNameInTheLeftPanel(String arg0) {
         homePage.clickOnTheUserNameInTheLeftPanel(arg0);
     }
+
+    @Step
+    public void enterInTheInputMessageField(String arg0) {
+        homePage.enterInTheInputMessageField(arg0);
+    }
+
+    @Step
+    public void clickOnEnterButton() {
+        homePage.clickOnEnterButton();
+    }
 }

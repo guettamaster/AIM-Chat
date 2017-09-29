@@ -3,6 +3,7 @@ package com.aimprosoft.pages;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
@@ -245,5 +246,18 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOnTheUserNameInTheLeftPanel(String arg0) {
         $(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).click();
+    }
+
+    public void enterInTheInputMessageField(String arg0) {
+        Actions actions = new Actions(getDriver());
+        actions.sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void clickOnEnterButton() {
+        Actions action = new Actions(getDriver());
+        waitABit(500);
+        action.moveToElement(find(By.xpath((String.format(LOCATORS.INPUT_MESSAGE_FIELD))))).click().sendKeys(Keys.ENTER).build().perform();
     }
 }

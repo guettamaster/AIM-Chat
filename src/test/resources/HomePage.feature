@@ -18,7 +18,7 @@ Feature: testing home page
 
   Scenario: 2.002 Check that "testroom" renamed to "Test111"
     Given open signin page
-#    When click on Standard tab
+    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened

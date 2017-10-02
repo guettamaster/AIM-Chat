@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import com.aimprosoft.LOCATORS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import java.util.concurrent.TimeUnit;
 
 @DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
@@ -134,7 +133,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public boolean inputDescriptionFieldIsDisplayed() {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DESCRIPTION_INPUT_FIELD)));
-//        waitABit(500);
         return $(LOCATORS.DESCRIPTION_INPUT_FIELD).isPresent();
     }
 
@@ -143,26 +141,20 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputDescriptionField(String arg0) {
-//        waitABit(1000);
         Actions actions = new Actions(getDriver());
         actions.sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.DESCRIPTION_INPUT_FIELD.replace("$1", arg0))));
         actions.build().perform();
-//        $(LOCATORS.DESCRIPTION_INPUT_FIELD).sendKeys(arg0);
     }
 
     public void clickOnDoneButtonUnderTheInputDescriptionField() throws InterruptedException {
-//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DONE_BUTTON)));
-//        $(LOCATORS.DONE_BUTTON).click();
         withTimeoutOf(1, TimeUnit.SECONDS);
-//        waitABit(2000);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.DONE_BUTTON));
     }
 
     public boolean theDescriptionIsDisplayedInTheChannelDetailsBlock(String arg0) {
         waitABit(2000);
-//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DESCRIPTION_TITLE_IN_THE_CHANNEL_DETAILS_BLOCK.replace("$1", arg0))));
         return $(LOCATORS.DESCRIPTION_TITLE_IN_THE_CHANNEL_DETAILS_BLOCK.replace("$1", arg0)).isPresent();
     }
 
@@ -256,8 +248,12 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnEnterButton() {
-        Actions action = new Actions(getDriver());
-        waitABit(500);
-        action.moveToElement(find(By.xpath((String.format(LOCATORS.INPUT_MESSAGE_FIELD))))).click().sendKeys(Keys.ENTER).build().perform();
+        $(LOCATORS.INPUT_MESSAGE_FIELD).click();
+        $(LOCATORS.INPUT_MESSAGE_FIELD).sendKeys(Keys.ENTER);
+    }
+
+    public boolean messageIsCreated(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+        return $(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)).isPresent();
     }
 }

@@ -44,7 +44,8 @@ String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//input[@class='form-cont
 String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='username-item']/span[@class='username-text'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";
-String INPUT_MESSAGE_FIELD = "(//div[@class='input-text']/textarea[@class='input-text-field'][@placeholder='Enter message'])[1]";
+String INPUT_MESSAGE_FIELD = "//div[@class='chat-container active']//textarea[@class='input-text-field'][@placeholder='Enter message']";
+String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='chat-container active']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 
 
 

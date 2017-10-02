@@ -253,4 +253,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnEnterButton() {
         homePage.clickOnEnterButton();
     }
+
+    @Step
+    public void messageIsCreated(String arg0) {
+        Assert.assertTrue("False", homePage.messageIsCreated(arg0));
+    }
 }

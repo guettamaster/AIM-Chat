@@ -251,4 +251,9 @@ public class DefinitionSteps {
     public void clickOnEnterButton() throws Throwable {
         endUserSteps.clickOnEnterButton();
     }
+
+    @Then("^\"([^\"]*)\" message is created$")
+    public void messageIsCreated(String arg0) throws Throwable {
+        endUserSteps.messageIsCreated(arg0);
+    }
 }

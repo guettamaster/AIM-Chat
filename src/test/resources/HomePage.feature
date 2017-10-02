@@ -111,3 +111,4 @@ Feature: testing home page
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     Then "test message" message is displayed
+    When click on the right control hamburger on the "test message" message

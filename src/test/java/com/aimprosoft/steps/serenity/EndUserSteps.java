@@ -263,4 +263,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void messageIsDisplayed(String arg0) {
         Assert.assertTrue("False", homePage.messageIsDisplayed(arg0));
     }
+
+    @Step
+    public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) {
+        homePage.clickOnTheRightControlHamburgerOnTheMessage(arg0);
+    }
 }

@@ -261,4 +261,9 @@ public class DefinitionSteps {
     public void messageIsDisplayed(String arg0) throws Throwable {
         endUserSteps.messageIsDisplayed(arg0);
     }
+
+    @When("^click on the right control hamburger on the \"([^\"]*)\" message$")
+    public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) throws Throwable {
+        endUserSteps.clickOnTheRightControlHamburgerOnTheMessage(arg0);
+    }
 }

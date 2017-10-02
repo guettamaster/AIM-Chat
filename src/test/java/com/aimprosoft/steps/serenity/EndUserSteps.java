@@ -258,4 +258,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void messageIsCreated(String arg0) {
         Assert.assertTrue("False", homePage.messageIsCreated(arg0));
     }
+
+    @Step
+    public void messageIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.messageIsDisplayed(arg0));
+    }
 }

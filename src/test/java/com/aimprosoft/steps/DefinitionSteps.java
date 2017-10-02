@@ -256,4 +256,9 @@ public class DefinitionSteps {
     public void messageIsCreated(String arg0) throws Throwable {
         endUserSteps.messageIsCreated(arg0);
     }
+
+    @Then("^\"([^\"]*)\" message is displayed$")
+    public void messageIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.messageIsDisplayed(arg0);
+    }
 }

@@ -100,3 +100,14 @@ Feature: testing home page
     When enter "test message" in the input message field
     When click on Enter button
     Then "test message" message is created
+
+  Scenario: 2.007 Check that "test message" message to a.shevchenko is edited
+    Given open signin page
+    When click on Standard tab
+    And filled fields valid data
+    When click on Login button
+    Then home page is opened
+    Then "admin" user name is displayed
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    Then "test message" message is displayed

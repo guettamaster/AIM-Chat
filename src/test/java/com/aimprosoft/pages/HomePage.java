@@ -249,7 +249,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheNameInTheListOfUsers(String arg0) {
-        $(LOCATORS.USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP.replace("$1", arg0)).click();
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP.replace("$1", arg0)));
+//        $(LOCATORS.USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP.replace("$1", arg0)).click();
     }
 
     public boolean userNameIsDisplayedInTheLeftPanel(String arg0) {

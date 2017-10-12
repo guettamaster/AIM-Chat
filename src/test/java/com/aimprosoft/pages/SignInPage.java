@@ -17,8 +17,9 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
     private static Logger logger = LoggerFactory.getLogger(SignInPage.class);
 
     public void loginAsadmin() {
-        String email = "admin@aimprosoft.com";
+        String email = "admin@email.com";
 //      admin@email.com
+//      admin@aimprosoft.com
         String password = "qwerty1";
         logger.info("Entering email: " + email + " and password: " + password);
         $(LOCATORS.EMAIL_FIELD).sendKeys(email);

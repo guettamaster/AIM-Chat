@@ -235,11 +235,12 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean userNameIsDisplayedInTheHeader(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_HEADER.replace("$1", arg0))));
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_HEADER.replace("$1", arg0))));
         return $(LOCATORS.USER_NAME_IN_THE_HEADER.replace("$1", arg0)).isPresent();
     }
 
     public void clickOnTheUserNameInTheLeftPanel(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
         $(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).click();
     }
 

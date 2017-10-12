@@ -184,7 +184,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean theRoomIsDeleted(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
         for (WebElement element : findAll("//a[@class='room-link']/span[@class='ccss']")) {
             if (element.getText().equalsIgnoreCase(arg0)) return false;
         }

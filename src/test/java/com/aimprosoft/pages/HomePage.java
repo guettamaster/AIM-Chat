@@ -183,13 +183,36 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         js.executeScript("arguments[0].click();", findBy(LOCATORS.DELETE_ROOM_LINK));
     }
 
-    public boolean theRoomIsDeleted(String arg0) {
-        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
-        for (WebElement element : findAll("//a[@class='room-link']/span[@class='ccss']")) {
-            if (element.getText().equalsIgnoreCase(arg0)) return false;
+    public boolean theRoomIsDeleted(String arg0) throws InterruptedException {
+        try {
+            System.out.println("wait that documents are invisible");
+//            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//h3[@class='filename']")));
+            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+            System.out.println("Element is invisible");
+        } catch (Exception e) {
+            System.out.println("Element isn`t invisible");
         }
-        return true;
+
+        try {
+            System.out.println("check that documents are presented in the DOM");
+//            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//h3[@class='filename']")));
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+            System.out.println("documents are presented in the DOM");
+            System.out.println("check that documents are visibility");
+//            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//h3[@class='filename']")));
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+            System.out.println("documents are visibility");
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
     }
+
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+//        for (WebElement element : findAll("//a[@class='room-link']/span[@class='ccss']")) {
+//            if (element.getText().equalsIgnoreCase(arg0)) return false;
+//        }
+//        return true;
 
     public boolean deleteRoomPopUpIsDisplayed() {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP)));

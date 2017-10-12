@@ -190,7 +190,7 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void theRoomIsDeleted(String arg0) {
+    public void theRoomIsDeleted(String arg0) throws InterruptedException {
         Assert.assertTrue("False", homePage.theRoomIsDeleted(arg0));
     }
 

@@ -68,7 +68,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnRoomInTheLeftPanel(String arg0) {
-        $(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).click();
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)));
+//        $(LOCATORS.ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).click();
     }
 
     public boolean theTitleIsDisplayedInTheHeader(String arg0) {
@@ -148,7 +151,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnDoneButtonUnderTheInputDescriptionField() throws InterruptedException {
-        withTimeoutOf(1, TimeUnit.SECONDS);
+        withTimeoutOf(2, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.DONE_BUTTON));
     }

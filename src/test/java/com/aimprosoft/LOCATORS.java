@@ -33,6 +33,7 @@ String EDIT_DESCRIPTION_LINK = "(//div[@class='channel-name room-public'][contai
 String DESCRIPTION_INPUT_FIELD = "//div[@class='chat-container active']//textarea[@class='form-control']";
 //        "(//textarea[@class='form-control'])[2]";
 String DONE_BUTTON = "(//button[.='Done'])[2]";
+//        "(//div[@class='description-form-buttons']//button[.='Done'])[2]";
 String DESCRIPTION_TITLE_IN_THE_CHANNEL_DETAILS_BLOCK = "//div[@class='description-text']/span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String DESCRIPTION_TITLE_IN_THE_HEADER = "//ul[@class='b-chat-header-text nav navbar-nav']//span[@class='description'][contains(text(),'$1')]";
 String WHEEL_LINK_IN_THE_HEADER = "//a[@class='dropdown-toggle']/i[@class='glyphicon glyphicon-cog']";

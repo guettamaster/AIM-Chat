@@ -152,7 +152,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnDoneButtonUnderTheInputDescriptionField() throws InterruptedException {
-        withTimeoutOf(2, TimeUnit.SECONDS);
+        withTimeoutOf(4, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.DONE_BUTTON));
     }

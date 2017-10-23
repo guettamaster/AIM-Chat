@@ -13,7 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.concurrent.TimeUnit;
 
-@DefaultUrl("https://chat-predprod.aimprosoft.com/index.html")
+@DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
 

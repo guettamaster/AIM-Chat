@@ -266,4 +266,14 @@ public class DefinitionSteps {
     public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) throws Throwable {
         endUserSteps.clickOnTheRightControlHamburgerOnTheMessage(arg0);
     }
+
+    @Then("^message menu is displayed$")
+    public void messageMenuIsDisplayed() throws Throwable {
+        endUserSteps.messageMenuIsDisplayed();
+    }
+
+    @When("^click on the \"([^\"]*)\" link in the message menu$")
+    public void clickOnTheLinkInTheMessageMenu(String arg0) throws Throwable {
+        endUserSteps.clickOnTheLinkInTheMessageMenu(arg0);
+    }
 }

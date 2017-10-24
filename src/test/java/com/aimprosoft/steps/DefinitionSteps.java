@@ -276,4 +276,19 @@ public class DefinitionSteps {
     public void clickOnTheLinkInTheMessageMenu(String arg0) throws Throwable {
         endUserSteps.clickOnTheLinkInTheMessageMenu(arg0);
     }
+
+    @When("^clear data in the input message field$")
+    public void clearDataInTheInputMessageField() throws Throwable {
+        endUserSteps.clearDataInTheInputMessageField();
+    }
+
+    @Then("^\"([^\"]*)\" action is displayed$")
+    public void actionIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.actionIsDisplayed(arg0);
+    }
+
+    @When("^click on the Delete Message link in the message menu$")
+    public void clickOnTheDeleteMessageLinkInTheMessageMenu() throws Throwable {
+        endUserSteps.clickOnTheDeleteMessageLinkInTheMessageMenu();
+    }
 }

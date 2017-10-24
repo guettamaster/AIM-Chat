@@ -311,4 +311,17 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU.replace("$1", arg0)));
     }
+
+    public void clearDataInTheInputMessageField() {
+        $(LOCATORS.INPUT_MESSAGE_FIELD).clear();
+    }
+
+    public boolean actionIsDisplayed(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.COMMENT_UNDER_MESSAGE.replace("$1", arg0))));
+        return $(LOCATORS.COMMENT_UNDER_MESSAGE.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheDeleteMessageLinkInTheMessageMenu() {
+        $(LOCATORS.DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU).click();
+    }
 }

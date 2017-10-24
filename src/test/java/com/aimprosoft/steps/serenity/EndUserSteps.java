@@ -278,4 +278,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheLinkInTheMessageMenu(String arg0) {
         homePage.clickOnTheLinkInTheMessageMenu(arg0);
     }
+
+    @Step
+    public void clearDataInTheInputMessageField() {
+        homePage.clearDataInTheInputMessageField();
+    }
+
+    @Step
+    public void actionIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.actionIsDisplayed(arg0));
+    }
+
+    @Step
+    public void clickOnTheDeleteMessageLinkInTheMessageMenu() {
+        homePage.clickOnTheDeleteMessageLinkInTheMessageMenu();
+    }
 }

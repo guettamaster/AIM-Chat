@@ -116,3 +116,21 @@ Feature: testing home page
     When click on the "Edit Message" link in the message menu
     When clear data in the input message field
     When enter "edited note" in the input message field
+    When click on Enter button
+    Then "edited note" message is created
+    Then "edited Today at" action is displayed
+
+  Scenario: 2.008 Check that "edited note" message to a.shevchenko is deleted
+    Given open signin page
+    When click on Standard tab
+    And filled fields valid data
+    When click on Login button
+    Then home page is opened
+    Then "admin" user name is displayed
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    Then "edited note" message is displayed
+    When click on the right control hamburger on the "edited note" message
+    Then message menu is displayed
+    When click on the Delete Message link in the message menu
+#    Then "Delete Message" title in the opened pop-up is displayed

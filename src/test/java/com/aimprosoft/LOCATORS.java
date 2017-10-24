@@ -49,7 +49,7 @@ String INPUT_MESSAGE_FIELD = "//div[@class='chat-container active']//textarea[@c
 String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='chat-container active']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE = "//div[@class='backlight']//span[@class='LinkifyPlus'][contains(text(), '$1')]//ancestor::div[@class='chat-container active']//span[@id='right-control-hamburger']";
 String MESSAGE_MENU = "//div[@class='chat-container active']//ul[@id='message-menu-menu'][@aria-labelledby='message-menu']";
-String EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='backlight']//a[@role='menuitem'][contains(text(), 'Edit Message')]";
+String EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem'][contains(text(), '$1')]";
 
 
 

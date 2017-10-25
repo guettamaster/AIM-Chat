@@ -293,4 +293,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheDeleteMessageLinkInTheMessageMenu() {
         homePage.clickOnTheDeleteMessageLinkInTheMessageMenu();
     }
+
+    @Step
+    public void deleteMessageTitleInTheOpenedPopUpIsDisplayed() {
+        Assert.assertTrue("False", homePage.deleteMessageTitleInTheOpenedPopUpIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp() {
+        homePage.clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp();
+    }
+
+    @Step
+    public void messageIsDeleted(String arg0) {
+        Assert.assertTrue("False", homePage.messageIsDeleted(arg0));
+    }
 }

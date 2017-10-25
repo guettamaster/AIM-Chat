@@ -291,4 +291,19 @@ public class DefinitionSteps {
     public void clickOnTheDeleteMessageLinkInTheMessageMenu() throws Throwable {
         endUserSteps.clickOnTheDeleteMessageLinkInTheMessageMenu();
     }
+
+    @Then("^Delete Message title in the opened pop-up is displayed$")
+    public void deleteMessageTitleInTheOpenedPopUpIsDisplayed() throws Throwable {
+        endUserSteps.deleteMessageTitleInTheOpenedPopUpIsDisplayed();
+    }
+
+    @When("^click on the Yes, delete this message button in the opened pop-up$")
+    public void clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp() throws Throwable {
+        endUserSteps.clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp();
+    }
+
+    @Then("^\"([^\"]*)\" message is deleted$")
+    public void messageIsDeleted(String arg0) throws Throwable {
+        endUserSteps.messageIsDeleted(arg0);
+    }
 }

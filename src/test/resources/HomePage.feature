@@ -133,4 +133,14 @@ Feature: testing home page
     When click on the right control hamburger on the "edited note" message
     Then message menu is displayed
     When click on the Delete Message link in the message menu
-#    Then "Delete Message" title in the opened pop-up is displayed
+    Then Delete Message title in the opened pop-up is displayed
+    When click on the Yes, delete this message button in the opened pop-up
+    Then "edited note" message is deleted
+
+  Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel
+    Given open signin page
+    When click on Standard tab
+    And filled fields valid data
+    When click on Login button
+    Then home page is opened
+    Then "admin" user name is displayed

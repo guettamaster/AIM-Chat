@@ -51,7 +51,8 @@ String MESSAGE_MENU = "//div[@class='chat-container active']//ul[@id='message-me
 String EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem'][contains(text(), '$1')]";
 String COMMENT_UNDER_MESSAGE = "//div[@class='chat-container active']//span[@class='was-edited'][contains(text(), '$1')]";
 String DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem']//span[@class='glyphicon glyphicon-remove-sign']";
-
+String DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][.='Delete Message']";
+String YES_DELETE_THIS_MESSAGE_BUTTON = "//button[.='Yes, delete this message']";
 
 
 

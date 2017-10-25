@@ -45,7 +45,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.PUBLIC_ROOM_TYPE_CHECKBOX));
-//        $(LOCATORS.PUBLIC_ROOM_TYPE_CHECKBOX).click();
         Serenity.getCurrentSession().put("Public Room", true);
     }
 
@@ -55,7 +54,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void enterInTheTextareaField(String arg0, String arg1) {
         waitABit(500);
-//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.TEXTAREA_FIELD_WITH_LABEL.replace("$1", arg1))));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(find(By.xpath(LOCATORS.TEXTAREA_FIELD_WITH_LABEL.replace("$1", arg1))));
         actions.click();
@@ -316,5 +314,36 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOnTheDeleteMessageLinkInTheMessageMenu() {
         $(LOCATORS.DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU).click();
+    }
+
+    public boolean deleteMessageTitleInTheOpenedPopUpIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP)));
+        return $(LOCATORS.DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP).isPresent();
+    }
+
+    public void clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp() {
+        $(LOCATORS.YES_DELETE_THIS_MESSAGE_BUTTON).click();
+    }
+
+    public boolean messageIsDeleted(String arg0) {
+        try {
+            System.out.println("wait that documents are invisible");
+            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+            System.out.println("Element is invisible");
+        } catch (Exception e) {
+            System.out.println("Element isn`t invisible");
+        }
+
+        try {
+            System.out.println("check that documents are presented in the DOM");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+            System.out.println("documents are presented in the DOM");
+            System.out.println("check that documents are visibility");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+            System.out.println("documents are visibility");
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
     }
 }

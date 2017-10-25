@@ -53,6 +53,7 @@ String COMMENT_UNDER_MESSAGE = "//div[@class='chat-container active']//span[@cla
 String DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem']//span[@class='glyphicon glyphicon-remove-sign']";
 String DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][.='Delete Message']";
 String YES_DELETE_THIS_MESSAGE_BUTTON = "//button[.='Yes, delete this message']";
+String DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]//ancestor::li//i[@class='glyphicon glyphicon-remove-circle']";
 
 
 

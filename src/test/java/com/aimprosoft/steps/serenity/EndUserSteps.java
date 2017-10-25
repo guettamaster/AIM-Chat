@@ -308,4 +308,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void messageIsDeleted(String arg0) {
         Assert.assertTrue("False", homePage.messageIsDeleted(arg0));
     }
+
+    @Step
+    public void xxx() {
+        signinPage.xxx();
+    }
 }

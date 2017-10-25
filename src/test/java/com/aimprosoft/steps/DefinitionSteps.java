@@ -306,4 +306,9 @@ public class DefinitionSteps {
     public void messageIsDeleted(String arg0) throws Throwable {
         endUserSteps.messageIsDeleted(arg0);
     }
+
+    @Then("^xxx$")
+    public void xxx() throws Throwable {
+        endUserSteps.xxx();
+    }
 }

@@ -137,10 +137,12 @@ Feature: testing home page
     When click on the Yes, delete this message button in the opened pop-up
     Then "edited note" message is deleted
 
-  Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel
+  Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel (in the direct messages)
     Given open signin page
     When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
     Then "admin" user name is displayed
+    When click on the delete sign near "a.shevchenko" user in the left panel
+    Then "a.shevchenko" user is deleted in the left panel

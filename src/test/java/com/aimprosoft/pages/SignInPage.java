@@ -50,4 +50,8 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
 //        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STANDARD_TAB)));
 //        $(LOCATORS.STANDARD_TAB).click();
     }
+
+    public void xxx() {
+        $(LOCATORS.SIGNINBUTTON).click();
+    }
 }

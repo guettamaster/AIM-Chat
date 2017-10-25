@@ -7,4 +7,3 @@ Feature: testing signin page
     When click on Login button
     Then home page is opened
     Then "admin" user name is displayed
-    Then xxx

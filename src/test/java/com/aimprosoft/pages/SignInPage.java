@@ -3,6 +3,7 @@ package com.aimprosoft.pages;
 import com.aimprosoft.LOCATORS;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,7 +44,10 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnStandardTab() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STANDARD_TAB)));
-        $(LOCATORS.STANDARD_TAB).click();
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.STANDARD_TAB));
+//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STANDARD_TAB)));
+//        $(LOCATORS.STANDARD_TAB).click();
     }
 }

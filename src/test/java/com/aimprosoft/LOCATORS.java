@@ -41,7 +41,7 @@ String DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP = "//div[@class='modal-header'
 String YES_DELETE_THIS_ROOM_BUTTON = "//button[.='Yes, delete this room']";
 String DIRECT_MESSAGES_LINK = "//h2[@class='channel-header']/a[contains(text(),'Direct Messages')]";
 String DIRECT_ROOMS_TITLE_IN_THE_DIRECT_ROOMS_POPUP = "//h4[.='Direct rooms']";
-String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//input[@class='form-control'][@placeholder='search']";
+String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//div[@class='modal-header']//input[@class='form-control'][@placeholder='search']";
 String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='username-item']/span[@class='username-text'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";

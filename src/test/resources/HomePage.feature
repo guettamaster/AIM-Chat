@@ -37,7 +37,7 @@ Feature: testing home page
     Then "Testroomname1" name is displayed in the channel details block
     Then the "Testroomname1" room is created
 
-  Scenario: 2.003 Check that in "Test111" room changed description
+  Scenario: 2.003 Check that in "Testroomname1" room changed description
     Given open signin page
     When click on Standard tab
     And filled fields valid data

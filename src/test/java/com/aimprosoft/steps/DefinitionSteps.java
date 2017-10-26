@@ -307,6 +307,13 @@ public class DefinitionSteps {
         endUserSteps.messageIsDeleted(arg0);
     }
 
+    @When("^click on the delete sign near \"([^\"]*)\" user in the left panel$")
+    public void clickOnTheDeleteSignNearUserInTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.clickOnTheDeleteSignNearUserInTheLeftPanel(arg0);
+    }
 
-
+    @Then("^\"([^\"]*)\" user is deleted in the left panel$")
+    public void userIsDeletedInTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.userIsDeletedInTheLeftPanel(arg0);
+    }
 }

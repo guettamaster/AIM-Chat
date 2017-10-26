@@ -180,7 +180,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         return $(LOCATORS.DELETE_ROOM_LINK).isPresent();
     }
 
-    public void clickOnTheDeleteRoomLink() {
+    public void clickOnTheDeleteRoomLink() throws InterruptedException {
         withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.DELETE_ROOM_LINK));
@@ -325,7 +325,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.YES_DELETE_THIS_MESSAGE_BUTTON).click();
     }
 
-    public boolean messageIsDeleted(String arg0) {
+    public boolean messageIsDeleted(String arg0) throws InterruptedException {
         try {
             System.out.println("wait that documents are invisible");
             withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
@@ -340,6 +340,34 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
             System.out.println("documents are presented in the DOM");
             System.out.println("check that documents are visibility");
             withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+            System.out.println("documents are visibility");
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
+    }
+
+    public void clickOnTheDeleteSignNearUserInTheLeftPanel(String arg0) {
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)));
+    }
+
+    public boolean userIsDeletedInTheLeftPanel(String arg0) throws InterruptedException {
+        try {
+            System.out.println("wait that documents are invisible");
+            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+            System.out.println("Element is invisible");
+        } catch (Exception e) {
+            System.out.println("Element isn`t invisible");
+        }
+
+        try {
+            System.out.println("check that documents are presented in the DOM");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+            System.out.println("documents are presented in the DOM");
+            System.out.println("check that documents are visibility");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
             System.out.println("documents are visibility");
             return false;
         } catch (Exception e) {

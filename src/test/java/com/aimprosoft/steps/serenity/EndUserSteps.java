@@ -185,7 +185,7 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void clickOnTheDeleteRoomLink() {
+    public void clickOnTheDeleteRoomLink() throws InterruptedException {
         homePage.clickOnTheDeleteRoomLink();
     }
 
@@ -305,8 +305,17 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void messageIsDeleted(String arg0) {
+    public void messageIsDeleted(String arg0) throws InterruptedException {
         Assert.assertTrue("False", homePage.messageIsDeleted(arg0));
     }
 
+    @Step
+    public void clickOnTheDeleteSignNearUserInTheLeftPanel(String arg0) {
+        homePage.clickOnTheDeleteSignNearUserInTheLeftPanel(arg0);
+    }
+
+    @Step
+    public void userIsDeletedInTheLeftPanel(String arg0) throws InterruptedException {
+        Assert.assertTrue("False", homePage.userIsDeletedInTheLeftPanel(arg0));
+    }
 }

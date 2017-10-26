@@ -5,17 +5,12 @@ pipeline {
     }
     agent any
     environment {
-        //http://jenkins address/credentials
-        GITHUB_CREDENTIALS = "f534a8e6-ff71-40b5-b332-328f5eb82aba"
-        GIT_URL = "https://github.com/guettamaster/AIM-Chat.git"
-        GIT_BRANCH = "master"
         MVN_GOAL = "clean verify"
     }
     stages {
-        stage('Initialize') {
+        stage('Checkout') {
             steps {
-                git url: env.GIT_URL,
-                        branch: env.GIT_BRANCH, credentialsId: "${env.GITHUB_CREDENTIALS}"
+                scm checkout
             }
         }
         stage('Execute tests') {

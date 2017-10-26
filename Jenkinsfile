@@ -1,6 +1,5 @@
 pipeline {
     options {
-        buildDiscarder(logRotator(numToKeepStr: '30'))
         disableConcurrentBuilds()
     }
     agent any
@@ -10,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                scm checkout
+                checkout scm
             }
         }
         stage('Execute tests') {

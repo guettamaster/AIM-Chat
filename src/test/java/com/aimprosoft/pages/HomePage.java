@@ -32,7 +32,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputField(String arg0, String arg1) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg1))));
+        waitABit(500);
         Actions actions = new Actions(getDriver());
         actions.moveToElement(find(By.xpath(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg1))));
         actions.click();
@@ -277,7 +277,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean messageIsCreated(String arg0) {
-        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+        waitABit(500);
         return $(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)).isPresent();
     }
 
@@ -374,4 +374,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
             return true;
         }
     }
+
+
+//     /home/user-qa/IdeaProjects/AIM-Chat1/src/test/resources/Files
+
 }

@@ -316,4 +316,19 @@ public class DefinitionSteps {
     public void userIsDeletedInTheLeftPanel(String arg0) throws Throwable {
         endUserSteps.userIsDeletedInTheLeftPanel(arg0);
     }
+
+    @When("^click on Clip button$")
+    public void clickOnClipButton() throws Throwable {
+        endUserSteps.clickOnClipButton();
+    }
+
+    @Then("^Upload file link is displayed$")
+    public void uploadFileLinkIsDisplayed() throws Throwable {
+        endUserSteps.uploadFileLinkIsDisplayed();
+    }
+
+    @When("^Upload \"([^\"]*)\" to the form$")
+    public void uploadToTheForm(String arg0) throws Throwable {
+        endUserSteps.uploadToTheForm(arg0);
+    }
 }

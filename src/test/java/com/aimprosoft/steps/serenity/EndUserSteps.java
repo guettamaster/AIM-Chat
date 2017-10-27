@@ -318,4 +318,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void userIsDeletedInTheLeftPanel(String arg0) throws InterruptedException {
         Assert.assertTrue("False", homePage.userIsDeletedInTheLeftPanel(arg0));
     }
+
+    @Step
+    public void clickOnClipButton() {
+        homePage.clickOnClipButton();
+    }
+
+    @Step
+    public void uploadFileLinkIsDisplayed() {
+        Assert.assertTrue("False", homePage.uploadFileLinkIsDisplayed());
+    }
+
+    @Step
+    public void uploadToTheForm(String arg0) throws URISyntaxException {
+        homePage.uploadToTheForm(arg0);
+    }
 }

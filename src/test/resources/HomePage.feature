@@ -164,4 +164,5 @@ Feature: testing home page
     Then the "testroom" room is created
     When click on Clip button
     Then Upload file link is displayed
-    When click on Upload file link
+    When Upload "/home/user-qa/IdeaProjects/AIM-Chat1/src/test/resources/Files/maxresdefault.jpg" to the form
+    Then "Upload file" title is displayed in the pop-up

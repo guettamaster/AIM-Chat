@@ -4,13 +4,14 @@ import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.aimprosoft.LOCATORS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
 
 @DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
@@ -32,7 +33,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputField(String arg0, String arg1) {
-        waitABit(500);
+        waitABit(1000);
         Actions actions = new Actions(getDriver());
         actions.moveToElement(find(By.xpath(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg1))));
         actions.click();
@@ -375,7 +376,21 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         }
     }
 
+    public void clickOnClipButton() {
+        $(LOCATORS.CLIP_BUTTON).click();
+    }
 
-//     /home/user-qa/IdeaProjects/AIM-Chat1/src/test/resources/Files
+    public boolean uploadFileLinkIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_BUTTON)));
+        return $(LOCATORS.UPLOAD_BUTTON).isPresent();
+    }
+
+    public void uploadToTheForm(String arg0) throws URISyntaxException {
+        getDriver().findElement(By.id("formControlsFile")).sendKeys(arg0);
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.UPLOAD_BUTTON));
+    }
+
 
 }

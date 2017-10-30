@@ -56,6 +56,7 @@ String YES_DELETE_THIS_MESSAGE_BUTTON = "//button[.='Yes, delete this message']"
 String DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]//ancestor::li//i[@class='glyphicon glyphicon-remove-circle']";
 String CLIP_BUTTON = "//div[@class='chat-container active']//span[@class='fa fa-paperclip']";
 String UPLOAD_BUTTON = "//div[@class='chat-container active']//span[@class='glyphicon glyphicon-upload']";
+String UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP = "//h4[@class='modal-title'][.='Upload file']";
 
 
 

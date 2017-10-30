@@ -331,4 +331,9 @@ public class DefinitionSteps {
     public void uploadToTheForm(String arg0) throws Throwable {
         endUserSteps.uploadToTheForm(arg0);
     }
+
+    @Then("^\"([^\"]*)\" title is displayed in the pop-up$")
+    public void titleIsDisplayedInThePopUp(String arg0) throws Throwable {
+        endUserSteps.titleIsDisplayedInThePopUp(arg0);
+    }
 }

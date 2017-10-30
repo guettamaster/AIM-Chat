@@ -333,4 +333,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void uploadToTheForm(String arg0) throws URISyntaxException {
         homePage.uploadToTheForm(arg0);
     }
+
+    @Step
+    public void titleIsDisplayedInThePopUp(String arg0) {
+        Assert.assertTrue("False", homePage.titleIsDisplayedInThePopUp(arg0));
+    }
 }

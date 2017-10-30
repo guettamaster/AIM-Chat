@@ -396,4 +396,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP.replace("$1", arg0))));
         return $(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP.replace("$1", arg0)).isPresent();
     }
+
+    public void clickOnUploadButton() {
+        $(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP).click();
+
+    }
 }

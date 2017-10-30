@@ -338,4 +338,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void titleIsDisplayedInThePopUp(String arg0) {
         Assert.assertTrue("False", homePage.titleIsDisplayedInThePopUp(arg0));
     }
+
+    @Step
+    public void clickOnUploadButton() {
+        homePage.clickOnUploadButton();
+    }
 }

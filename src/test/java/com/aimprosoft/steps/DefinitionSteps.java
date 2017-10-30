@@ -336,4 +336,9 @@ public class DefinitionSteps {
     public void titleIsDisplayedInThePopUp(String arg0) throws Throwable {
         endUserSteps.titleIsDisplayedInThePopUp(arg0);
     }
+
+    @When("^click on Upload button$")
+    public void clickOnUploadButton() throws Throwable {
+        endUserSteps.clickOnUploadButton();
+    }
 }

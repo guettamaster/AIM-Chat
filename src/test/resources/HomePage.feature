@@ -169,4 +169,4 @@ Feature: testing home page
     When Upload "/home/user-qa/IdeaProjects/AIM-Chat1/src/test/resources/Files/maxresdefault.jpg" to the form
     Then "Upload file" title is displayed in the pop-up
     When click on Upload button
-#    Then "maxresdefault.jpg" file is displayed in the room
+    Then "maxresdefault.jpg" file is displayed in the room

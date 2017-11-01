@@ -9,11 +9,11 @@ Feature: testing home page
     Then "admin" user name is displayed
     When click on plus link
     Then room title in popup is displayed
-    When enter "testroom" in the "Room Name" input field
+    When enter "testroom" in the "Name" input field
     When choose public room checkbox
     When enter "superadmin" in the Invite members field
     When enter "testdescription" in the "Description" textarea field
-    When click on OK button
+    When click on Add button
     Then the "testroom" room is created
 
   Scenario: 2.002 Check that "testroom" renamed to "Testroomname1"
@@ -70,7 +70,7 @@ Feature: testing home page
     Then Delete room link is displayed
     When click on the Delete room link
     Then delete room pop-up is displayed
-    When click on the Yes delete this room button
+    When click on the Delete button
     Then the "Testroomname1" room is deleted
 
   Scenario: 2.005 Check that direct message to a.shevchenko is created
@@ -134,7 +134,7 @@ Feature: testing home page
     Then message menu is displayed
     When click on the Delete Message link in the message menu
     Then Delete Message title in the opened pop-up is displayed
-    When click on the Yes, delete this message button in the opened pop-up
+    When click on the Delete button in the opened pop-up
     Then "edited note" message is deleted
 
   Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel (in the direct messages)
@@ -156,14 +156,17 @@ Feature: testing home page
     Then "admin" user name is displayed
     When click on plus link
     Then room title in popup is displayed
-    When enter "testroom" in the "Room Name" input field
+    When enter "testroom" in the "Name" input field
     When choose public room checkbox
     When enter "superadmin" in the Invite members field
     When enter "testdescription" in the "Description" textarea field
-    When click on OK button
+    When click on Add button
     Then the "testroom" room is created
+    When click on "testroom" room in the left panel
+    Then the "testroom" title is displayed in the header
     When click on Clip button
     Then Upload file link is displayed
     When Upload "/home/user-qa/IdeaProjects/AIM-Chat1/src/test/resources/Files/maxresdefault.jpg" to the form
     Then "Upload file" title is displayed in the pop-up
     When click on Upload button
+    Then "maxresdefault.jpg" file is displayed in the room

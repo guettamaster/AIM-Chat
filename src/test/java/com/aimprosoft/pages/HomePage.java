@@ -63,8 +63,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         Serenity.getCurrentSession().put(arg1, arg0);
     }
 
-    public void clickOnOKButton() {
-        $(LOCATORS.OK_BUTTON).click();
+    public void clickOnAddButton() {
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.ADD_BUTTON));
     }
 
     public boolean theRoomIsCreated(String arg0) {
@@ -214,10 +216,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         return $(LOCATORS.DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP).isPresent();
     }
 
-    public void clickOnTheYesDeleteThisRoomButton() {
+    public void clickOnTheDeleteButton() {
         withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", findBy(LOCATORS.YES_DELETE_THIS_ROOM_BUTTON));
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.DELETE_BUTTON));
     }
 
     public void clickOnTheDirectMessagesLink() {
@@ -322,8 +324,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         return $(LOCATORS.DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP).isPresent();
     }
 
-    public void clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp() {
-        $(LOCATORS.YES_DELETE_THIS_MESSAGE_BUTTON).click();
+    public void clickOnTheDeleteButtonInTheOpenedPopUp() {
+        $(LOCATORS.DELETE_THIS_MESSAGE_BUTTON).click();
     }
 
     public boolean messageIsDeleted(String arg0) throws InterruptedException {
@@ -377,7 +379,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnClipButton() {
-        $(LOCATORS.CLIP_BUTTON).click();
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.CLIP_BUTTON));
     }
 
     public boolean uploadFileLinkIsDisplayed() {
@@ -400,5 +404,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void clickOnUploadButton() {
         $(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP).click();
 
+    }
+
+    public boolean fileIsDisplayedInTheRoom(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))));
+        return $(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0)).isPresent();
     }
 }

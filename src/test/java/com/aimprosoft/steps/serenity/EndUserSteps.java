@@ -75,8 +75,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void clickOnOKButton() {
-        homePage.clickOnOKButton();
+    public void clickOnAddButton() {
+        homePage.clickOnAddButton();
     }
 
     @Step
@@ -200,8 +200,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void clickOnTheYesDeleteThisRoomButton() {
-        homePage.clickOnTheYesDeleteThisRoomButton();
+    public void clickOnTheDeleteButton() {
+        homePage.clickOnTheDeleteButton();
     }
 
     @Step
@@ -300,8 +300,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp() {
-        homePage.clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp();
+    public void clickOnTheDeleteButtonInTheOpenedPopUp() {
+        homePage.clickOnTheDeleteButtonInTheOpenedPopUp();
     }
 
     @Step
@@ -342,5 +342,10 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void clickOnUploadButton() {
         homePage.clickOnUploadButton();
+    }
+
+    @Step
+    public void fileIsDisplayedInTheRoom(String arg0) {
+        Assert.assertTrue("False", homePage.fileIsDisplayedInTheRoom(arg0));
     }
 }

@@ -72,9 +72,9 @@ public class DefinitionSteps {
         endUserSteps.enterInTheTextareaField(arg0, arg1);
     }
 
-    @When("^click on OK button$")
-    public void clickOnOKButton() throws Throwable {
-        endUserSteps.clickOnOKButton();
+    @When("^click on Add button$")
+    public void clickOnAddButton() throws Throwable {
+        endUserSteps.clickOnAddButton();
     }
 
     @Then("^the \"([^\"]*)\" room is created$")
@@ -197,9 +197,9 @@ public class DefinitionSteps {
         endUserSteps.deleteRoomPopUpIsDisplayed();
     }
 
-    @When("^click on the Yes delete this room button$")
-    public void clickOnTheYesDeleteThisRoomButton() throws Throwable {
-        endUserSteps.clickOnTheYesDeleteThisRoomButton();
+    @When("^click on the Delete button$")
+    public void clickOnTheDeleteButton() throws Throwable {
+        endUserSteps.clickOnTheDeleteButton();
     }
 
     @When("^click on the Direct Messages link$")
@@ -297,9 +297,9 @@ public class DefinitionSteps {
         endUserSteps.deleteMessageTitleInTheOpenedPopUpIsDisplayed();
     }
 
-    @When("^click on the Yes, delete this message button in the opened pop-up$")
-    public void clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp() throws Throwable {
-        endUserSteps.clickOnTheYesDeleteThisMessageButtonInTheOpenedPopUp();
+    @When("^click on the Delete button in the opened pop-up$")
+    public void clickOnTheDeleteButtonInTheOpenedPopUp() throws Throwable {
+        endUserSteps.clickOnTheDeleteButtonInTheOpenedPopUp();
     }
 
     @Then("^\"([^\"]*)\" message is deleted$")
@@ -340,5 +340,10 @@ public class DefinitionSteps {
     @When("^click on Upload button$")
     public void clickOnUploadButton() throws Throwable {
         endUserSteps.clickOnUploadButton();
+    }
+
+    @Then("^\"([^\"]*)\" file is displayed in the room$")
+    public void fileIsDisplayedInTheRoom(String arg0) throws Throwable {
+        endUserSteps.fileIsDisplayedInTheRoom(arg0);
     }
 }

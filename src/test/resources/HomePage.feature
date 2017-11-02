@@ -25,7 +25,7 @@ Feature: testing home page
     Then "admin" user name is displayed
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
-    When click on the about channel button of "testroom" room
+    When click on the about channel button of "room1" room
     When click on the "room1" channel details link
     Then "room1" name is displayed in the channel details block
     When click on the Edit room name link

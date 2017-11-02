@@ -403,7 +403,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOnUploadButton() {
         $(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP).click();
-
     }
 
     public boolean fileIsDisplayedInTheRoom(String arg0) {

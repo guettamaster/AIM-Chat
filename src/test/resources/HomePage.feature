@@ -1,6 +1,6 @@
 Feature: testing home page
 
-  Scenario: 2.001 Check that "testroom" room is created
+  Scenario: 2.001 Check that "room1" room is created
     Given open signin page
     When click on Standard tab
     And filled fields valid data
@@ -16,7 +16,7 @@ Feature: testing home page
     When click on Add button
     Then the "room1" room is created
 
-  Scenario: 2.002 Check that "testroom" renamed to "Testroomname1"
+  Scenario: 2.002 Check that "room1" renamed to "Testroomname1"
     Given open signin page
     When click on Standard tab
     And filled fields valid data
@@ -57,7 +57,7 @@ Feature: testing home page
     Then the "new description111" description is displayed in the channel details block
     Then the "new description111" description is displayed in the header
 
-  Scenario: 2.004 Check that "Test111" room is deleted
+  Scenario: 2.004 Check that "Testroomname1" room is deleted
     Given open signin page
     When click on Standard tab
     And filled fields valid data

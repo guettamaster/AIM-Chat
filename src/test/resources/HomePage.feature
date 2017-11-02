@@ -156,14 +156,14 @@ Feature: testing home page
     Then "admin" user name is displayed
     When click on plus link
     Then room title in popup is displayed
-    When enter "room1" in the "Name" input field
+    When enter "testroom" in the "Name" input field
     When choose public room checkbox
     When enter "superadmin" in the Invite members field
     When enter "testdescription" in the "Description" textarea field
     When click on Add button
-    Then the "room1" room is created
-    When click on "room1" room in the left panel
-    Then the "room1" title is displayed in the header
+    Then the "testroom" room is created
+    When click on "testroom" room in the left panel
+    Then the "testroom" title is displayed in the header
     When click on Clip button
     Then Upload file link is displayed
     When Upload "/var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg" to the form

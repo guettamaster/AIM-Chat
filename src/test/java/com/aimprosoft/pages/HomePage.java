@@ -420,7 +420,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void theFileIsDownloadedOnTheLocalMachine() {
         waitABit(3500);
-        File folder = new File(System.getProperty("user.home") + "/Downloads/");
+        File folder = new File(System.getProperty("user.home") + "/Downloads1/");
         waitABit(1500);
         File[] listOfFile = folder.listFiles();
         int file = listOfFile.length;

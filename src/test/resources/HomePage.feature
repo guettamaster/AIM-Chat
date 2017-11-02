@@ -170,3 +170,21 @@ Feature: testing home page
     Then "Upload file" title is displayed in the pop-up
     When click on Upload button
     Then "maxresdefault.jpg" file is displayed in the room
+
+  Scenario: 2.011 Check that image is downloaded
+    Given open signin page
+    When click on Standard tab
+    And filled fields valid data
+    When click on Login button
+    Then home page is opened
+    Then "admin" user name is displayed
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
+    When click on Clip button
+    Then Upload file link is displayed
+    When Upload "/var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.txt" to the form
+    Then "Upload file" title is displayed in the pop-up
+    When click on Upload button
+    Then "maxresdefault.txt" file is displayed in the room
+    When click on the Download button under "maxresdefault.txt" file
+    Then the file is downloaded on the local machine

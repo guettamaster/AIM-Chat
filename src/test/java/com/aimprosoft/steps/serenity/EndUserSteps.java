@@ -348,4 +348,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void fileIsDisplayedInTheRoom(String arg0) {
         Assert.assertTrue("False", homePage.fileIsDisplayedInTheRoom(arg0));
     }
+
+    @Step
+    public void clickOnTheDownloadButtonUnderFile(String arg0) {
+        homePage.clickOnTheDownloadButtonUnderFile(arg0);
+    }
+
+    @Step
+    public void theFileIsDownloadedOnTheLocalMachine() {
+        homePage.theFileIsDownloadedOnTheLocalMachine();
+    }
 }

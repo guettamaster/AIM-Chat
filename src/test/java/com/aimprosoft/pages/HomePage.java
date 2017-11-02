@@ -2,6 +2,7 @@ package com.aimprosoft.pages;
 
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +12,7 @@ import com.aimprosoft.LOCATORS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.io.File;
 import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
 
@@ -408,5 +410,20 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean fileIsDisplayedInTheRoom(String arg0) {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))));
         return $(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheDownloadButtonUnderFile(String arg0) {
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.DOWNLOAD_BUTTON_UNDER_FILE_NAME.replace("$1", arg0)));
+    }
+
+    public void theFileIsDownloadedOnTheLocalMachine() {
+        waitABit(3500);
+        File folder = new File(System.getProperty("user.home") + "/Downloads/");
+        waitABit(1500);
+        File[] listOfFile = folder.listFiles();
+        int file = listOfFile.length;
+        Assert.assertEquals(1, file);
     }
 }

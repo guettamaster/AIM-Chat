@@ -346,4 +346,14 @@ public class DefinitionSteps {
     public void fileIsDisplayedInTheRoom(String arg0) throws Throwable {
         endUserSteps.fileIsDisplayedInTheRoom(arg0);
     }
+
+    @When("^click on the Download button under \"([^\"]*)\" file$")
+    public void clickOnTheDownloadButtonUnderFile(String arg0) throws Throwable {
+        endUserSteps.clickOnTheDownloadButtonUnderFile(arg0);
+    }
+
+    @Then("^the file is downloaded on the local machine$")
+    public void theFileIsDownloadedOnTheLocalMachine() throws Throwable {
+        endUserSteps.theFileIsDownloadedOnTheLocalMachine();
+    }
 }

@@ -154,14 +154,14 @@ Feature: testing home page
     When click on Login button
     Then home page is opened
     Then "admin" user name is displayed
-    When click on plus link
-    Then room title in popup is displayed
-    When enter "room1" in the "Name" input field
-    When choose public room checkbox
-    When enter "superadmin" in the Invite members field
-    When enter "testdescription" in the "Description" textarea field
-    When click on Add button
-    Then the "room1" room is created
+#    When click on plus link
+#    Then room title in popup is displayed
+#    When enter "room1" in the "Name" input field
+#    When choose public room checkbox
+#    When enter "superadmin" in the Invite members field
+#    When enter "testdescription" in the "Description" textarea field
+#    When click on Add button
+#    Then the "room1" room is created
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on Clip button

@@ -407,6 +407,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean fileIsDisplayedInTheRoom(String arg0) {
+        waitABit(15000);
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))));
         return $(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0)).isPresent();
     }

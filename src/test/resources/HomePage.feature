@@ -9,12 +9,12 @@ Feature: testing home page
     Then "admin" user name is displayed
     When click on plus link
     Then room title in popup is displayed
-    When enter "testroom" in the "Name" input field
+    When enter "room1" in the "Name" input field
     When choose public room checkbox
     When enter "superadmin" in the Invite members field
     When enter "testdescription" in the "Description" textarea field
     When click on Add button
-    Then the "testroom" room is created
+    Then the "room1" room is created
 
   Scenario: 2.002 Check that "testroom" renamed to "Testroomname1"
     Given open signin page
@@ -23,11 +23,11 @@ Feature: testing home page
     When click on Login button
     Then home page is opened
     Then "admin" user name is displayed
-    When click on "testroom" room in the left panel
-    Then the "testroom" title is displayed in the header
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
     When click on the about channel button of "testroom" room
-    When click on the "testroom" channel details link
-    Then "testroom" name is displayed in the channel details block
+    When click on the "room1" channel details link
+    Then "room1" name is displayed in the channel details block
     When click on the Edit room name link
     Then input room name field is displayed
     When clear data in the input room name field
@@ -156,14 +156,14 @@ Feature: testing home page
     Then "admin" user name is displayed
     When click on plus link
     Then room title in popup is displayed
-    When enter "testroom" in the "Name" input field
+    When enter "room1" in the "Name" input field
     When choose public room checkbox
     When enter "superadmin" in the Invite members field
     When enter "testdescription" in the "Description" textarea field
     When click on Add button
-    Then the "testroom" room is created
-    When click on "testroom" room in the left panel
-    Then the "testroom" title is displayed in the header
+    Then the "room1" room is created
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
     When click on Clip button
     Then Upload file link is displayed
     When Upload "/var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg" to the form

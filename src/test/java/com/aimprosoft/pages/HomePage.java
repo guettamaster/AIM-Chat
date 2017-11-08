@@ -138,7 +138,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheEditDescriptionLinkInTheRoom(String arg0) {
-        $(LOCATORS.EDIT_DESCRIPTION_LINK.replace("$1", arg0)).click();
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.EDIT_DESCRIPTION_LINK.replace("$1", arg0)));
     }
 
     public boolean inputDescriptionFieldIsDisplayed() {

@@ -356,4 +356,9 @@ public class DefinitionSteps {
     public void theFileIsDownloadedOnTheLocalMachine() throws Throwable {
         endUserSteps.theFileIsDownloadedOnTheLocalMachine();
     }
+
+    @When("^click on Add Room title$")
+    public void clickOnAddRoomTitle() throws Throwable {
+        endUserSteps.clickOnAddRoomTitle();
+    }
 }

@@ -67,8 +67,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOnAddButton() {
         withTimeoutOf(1, TimeUnit.SECONDS);
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", findBy(LOCATORS.ADD_BUTTON));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.ADD_BUTTON));
     }
 
     public boolean theRoomIsCreated(String arg0) {
@@ -427,5 +426,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         File[] listOfFile = folder.listFiles();
         int file = listOfFile.length;
         Assert.assertEquals(1, file);
+    }
+
+    public void clickOnAddRoomTitle() {
+        $(LOCATORS.ROOM_TITLE_IN_POPUP).click();
     }
 }

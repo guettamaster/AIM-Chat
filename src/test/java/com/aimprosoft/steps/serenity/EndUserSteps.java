@@ -358,4 +358,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void theFileIsDownloadedOnTheLocalMachine() {
         homePage.theFileIsDownloadedOnTheLocalMachine();
     }
+
+    @Step
+    public void clickOnAddRoomTitle() {
+        homePage.clickOnAddRoomTitle();
+    }
 }

@@ -432,4 +432,13 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void clickOnAddRoomTitle() {
         $(LOCATORS.ROOM_TITLE_IN_POPUP).click();
     }
+
+    public void clickOnTheFavoriteRoomButton() {
+        $(LOCATORS.FAVORITE_ROOM_BUTTON).click();
+    }
+
+    public boolean theIsDisplayedInTheFavoritiesOnTheLeftPanel(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        return $(LOCATORS.FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).isPresent();
+    }
 }

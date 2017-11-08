@@ -361,4 +361,14 @@ public class DefinitionSteps {
     public void clickOnAddRoomTitle() throws Throwable {
         endUserSteps.clickOnAddRoomTitle();
     }
+
+    @When("^click on the favorite room button$")
+    public void clickOnTheFavoriteRoomButton() throws Throwable {
+        endUserSteps.clickOnTheFavoriteRoomButton();
+    }
+
+    @Then("^the \"([^\"]*)\" is displayed in the Favorities on the left panel$")
+    public void theIsDisplayedInTheFavoritiesOnTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.theIsDisplayedInTheFavoritiesOnTheLeftPanel(arg0);
+    }
 }

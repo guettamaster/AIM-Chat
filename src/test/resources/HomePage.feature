@@ -190,14 +190,14 @@ Feature: testing home page
     When click on the Download button under "maxresdefault.txt" file
     Then the file is downloaded on the local machine
 
-#  Scenario: 2.012 Check that "room1" is added to Favorites to the left panel after clicking on the favorite button in the header
-#    Given open signin page
-#    When click on Standard tab
-#    And filled fields valid data
-#    When click on Login button
-#    Then home page is opened
-#    Then "admin" user name is displayed
-#    When click on "room1" room in the left panel
-#    Then the "room1" title is displayed in the header
-#    When click on the favorite room button
-#    Then the "room1" is displayed in the Favorities on the left panel
+  Scenario: 2.012 Check that "room1" is added to Favorites to the left panel after clicking on the favorite button in the header
+    Given open signin page
+    When click on Standard tab
+    And filled fields valid data
+    When click on Login button
+    Then home page is opened
+    Then "admin" user name is displayed
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
+    When click on the favorite room button
+    Then the "room1" is displayed in the Favorities on the left panel

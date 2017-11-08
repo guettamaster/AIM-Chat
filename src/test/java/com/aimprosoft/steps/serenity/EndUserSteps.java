@@ -363,4 +363,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnAddRoomTitle() {
         homePage.clickOnAddRoomTitle();
     }
+
+    @Step
+    public void clickOnTheFavoriteRoomButton() {
+        homePage.clickOnTheFavoriteRoomButton();
+    }
+
+    @Step
+    public void theIsDisplayedInTheFavoritiesOnTheLeftPanel(String arg0) {
+        Assert.assertTrue("False", homePage.theIsDisplayedInTheFavoritiesOnTheLeftPanel(arg0));
+    }
 }

@@ -421,8 +421,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void theFileIsDownloadedOnTheLocalMachine() {
         waitABit(3500);
-//        File folder = new File("/var/lib/jenkins/Downloads/");
-        File folder = new File("/home/user-qa/Downloads");
+        File folder = new File("/var/lib/jenkins/Downloads/"); // this is for Jenkins
+//        File folder = new File("/home/user-qa/Downloads");  //this is for local machine
         waitABit(1500);
         File[] listOfFile = folder.listFiles();
         int file = listOfFile.length;

@@ -367,8 +367,8 @@ public class DefinitionSteps {
         endUserSteps.clickOnTheFavoriteRoomButton();
     }
 
-    @Then("^the \"([^\"]*)\" is displayed in the Favorities on the left panel$")
-    public void theIsDisplayedInTheFavoritiesOnTheLeftPanel(String arg0) throws Throwable {
-        endUserSteps.theIsDisplayedInTheFavoritiesOnTheLeftPanel(arg0);
+    @Then("^the \"([^\"]*)\" is displayed in the Favorites on the left panel$")
+    public void theIsDisplayedInTheFavoritesOnTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.theIsDisplayedInTheFavoritesOnTheLeftPanel(arg0);
     }
 }

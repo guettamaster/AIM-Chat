@@ -370,7 +370,7 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void theIsDisplayedInTheFavoritiesOnTheLeftPanel(String arg0) {
-        Assert.assertTrue("False", homePage.theIsDisplayedInTheFavoritiesOnTheLeftPanel(arg0));
+    public void theIsDisplayedInTheFavoritesOnTheLeftPanel(String arg0) {
+        Assert.assertTrue("False", homePage.theIsDisplayedInTheFavoritesOnTheLeftPanel(arg0));
     }
 }

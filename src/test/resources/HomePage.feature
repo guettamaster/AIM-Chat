@@ -200,4 +200,4 @@ Feature: testing home page
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the favorite room button
-    Then the "room1" is displayed in the Favorities on the left panel
+    Then the "room1" is displayed in the Favorites on the left panel

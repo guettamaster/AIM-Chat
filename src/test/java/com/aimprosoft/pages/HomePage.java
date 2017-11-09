@@ -283,8 +283,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean messageIsCreated(String arg0) {
-        waitABit(500);
-        return $(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)).isPresent();
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+        return $(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)).isVisible();
     }
 
     public boolean messageIsDisplayed(String arg0) {

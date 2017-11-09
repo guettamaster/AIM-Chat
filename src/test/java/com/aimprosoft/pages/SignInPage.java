@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.concurrent.TimeUnit;
 
-@DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
+@DefaultUrl("https://chat-predprod.aimprosoft.com/index.html")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
 
@@ -18,7 +18,7 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
     private static Logger logger = LoggerFactory.getLogger(SignInPage.class);
 
     public void loginAsadmin() {
-        String email = "admin@email.com";
+        String email = "admin@aimprosoft.com";
 //      admin@email.com
 //      admin@aimprosoft.com
         String password = "qwerty1";

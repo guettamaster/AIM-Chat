@@ -16,7 +16,7 @@ import java.io.File;
 import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
 
-@DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
+@DefaultUrl("https://chat-predprod.aimprosoft.com/index.html")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
 

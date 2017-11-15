@@ -57,7 +57,7 @@ String DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP = "//div[@class='modal-h
 String DELETE_THIS_MESSAGE_BUTTON = "//button[.='Delete']";
 String DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]//ancestor::li//i[@class='glyphicon glyphicon-remove-circle']";
 String CLIP_BUTTON = "//div[@class='chat-container active']//div[@class='button-input']/i[contains(text(),'attach_file')]";
-String UPLOAD_BUTTON = "//div[@class='chat-container active']//span[@class='glyphicon glyphicon-upload']";
+String UPLOAD_BUTTON = "//div[@class='chat-container active']//label[@class='uploadFile'][contains(text(),'Upload file')]";
 String UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP = "//h4[@class='modal-title'][.='Upload file']";
 //   //tr[descendant::a[contains(text(),'$1')]]//div[@data-field='retailPrice']
 String UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP = "//div[@class='modal-footer']/button[@class='btn btn-success'][.='Upload']";

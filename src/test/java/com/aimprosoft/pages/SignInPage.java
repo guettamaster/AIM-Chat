@@ -30,7 +30,6 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.EMAIL_FIELD_PROD_LDAP).sendKeys(email);
 //      EMAIL_FIELD_PROD_LDAP
 //      EMAIL_FIELD
-
         $(LOCATORS.PASSWORD_FIELD).sendKeys(password);
 
     }

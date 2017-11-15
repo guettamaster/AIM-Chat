@@ -6,7 +6,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on plus link
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
@@ -23,7 +24,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the about channel button of "room1" room
@@ -44,7 +46,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on "Testroomname1" room in the left panel
     Then the "Testroomname1" title is displayed in the header
     When click on the about channel button of "Testroomname1" room
@@ -64,7 +67,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on "Testroomname1" room in the left panel
     Then the "Testroomname1" title is displayed in the header
     When click on the wheel link
@@ -80,7 +84,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on the Direct Messages link
     Then direct rooms pop-up is displayed
     When enter "a.shevchenko" in the input search field
@@ -95,7 +100,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     When enter "test message" in the input message field
@@ -108,7 +114,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     Then "test message" message is displayed
@@ -127,7 +134,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     Then "edited note" message is displayed
@@ -144,7 +152,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on the delete sign near "a.shevchenko" user in the left panel
     Then "a.shevchenko" user is deleted in the left panel
 
@@ -154,7 +163,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on plus link
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
@@ -178,7 +188,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on Clip button
@@ -196,7 +207,8 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
     Then home page is opened
-    Then "admin" user name is displayed
+#    Then "admin" user name is displayed
+    Then "o.ivankovckyi" user name is displayed
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the favorite room button

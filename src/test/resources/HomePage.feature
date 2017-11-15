@@ -1,4 +1,4 @@
-Feature: testing home page
+#Feature: testing home page
 
   Scenario: 2.001 Check that "room1" room is created
     Given open signin page

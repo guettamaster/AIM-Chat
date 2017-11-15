@@ -169,7 +169,8 @@ Feature: testing home page
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
     When choose public room checkbox
-    When enter "superadmin" in the Invite members field
+#    When enter "superadmin" in the Invite members field
+    When enter "a.shevchenko" in the Invite members field
     When enter "testdescription" in the "Description" textarea field
     When click on Add button
     Then the "room1" room is created

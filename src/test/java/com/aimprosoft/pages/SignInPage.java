@@ -36,8 +36,10 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnLoginButton() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SIGNINBUTTON)));
-        $(LOCATORS.SIGNINBUTTON).click();
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.LDAP_SIGNINBUTTON)));
+        $(LOCATORS.LDAP_SIGNINBUTTON).click();
+//      LDAP_SIGNINBUTTON
+//      SIGNINBUTTON
     }
 
     public boolean homePageIsOpened() {

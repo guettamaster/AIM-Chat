@@ -8,6 +8,7 @@ String EMAIL_FIELD = "//div[@class='tab-pane active fade in']//input[@placeholde
 String EMAIL_FIELD_PROD_LDAP = "//div[@class='tab-pane active fade in']//input[@placeholder='Login']";
 String PASSWORD_FIELD = "//div[@class='tab-pane active fade in']//input[@placeholder='Password']";
 String SIGNINBUTTON = "//button[.='Sign In']";
+String LDAP_SIGNINBUTTON = "//button[.='LDAP Sign In']";
 String STANDARD_TAB = "//a[@id='login-type-tab-2']";
 
 //TODO======================================================HomePage==========================================================

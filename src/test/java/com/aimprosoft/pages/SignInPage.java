@@ -9,19 +9,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.concurrent.TimeUnit;
 
-@DefaultUrl("https://chat-predprod.aimprosoft.com/index.html")
+@DefaultUrl("https://chat.aimprosoft.com/index.html")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
+//https://chat.aimprosoft.com/index.html
 
 public class SignInPage extends net.serenitybdd.core.pages.PageObject {
 
     private static Logger logger = LoggerFactory.getLogger(SignInPage.class);
 
     public void loginAsadmin() {
-        String email = "admin@aimprosoft.com";
+        String email = "o.ivankovckyi";
 //      admin@email.com
 //      admin@aimprosoft.com
-        String password = "qwerty1";
+//      o.ivankovckyi
+        String password = "15028819";
+//      15028819
+//      qwerty1
         logger.info("Entering email: " + email + " and password: " + password);
         $(LOCATORS.EMAIL_FIELD).sendKeys(email);
         $(LOCATORS.PASSWORD_FIELD).sendKeys(password);

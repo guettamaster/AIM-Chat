@@ -2,7 +2,7 @@ Feature: testing home page
 
   Scenario: 2.001 Check that "room1" room is created
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -19,7 +19,7 @@ Feature: testing home page
 
   Scenario: 2.002 Check that "room1" renamed to "Testroomname1"
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -40,7 +40,7 @@ Feature: testing home page
 
   Scenario: 2.003 Check that in "Testroomname1" room changed description
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -60,7 +60,7 @@ Feature: testing home page
 
   Scenario: 2.004 Check that "Testroomname1" room is deleted
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -76,7 +76,7 @@ Feature: testing home page
 
   Scenario: 2.005 Check that direct message to a.shevchenko is created
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -91,7 +91,7 @@ Feature: testing home page
 
   Scenario: 2.006 Check that message to a.shevchenko is sent
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -104,7 +104,7 @@ Feature: testing home page
 
   Scenario: 2.007 Check that "test message" message to a.shevchenko is edited
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -123,7 +123,7 @@ Feature: testing home page
 
   Scenario: 2.008 Check that "edited note" message to a.shevchenko is deleted
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -140,7 +140,7 @@ Feature: testing home page
 
   Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel (in the direct messages)
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -150,7 +150,7 @@ Feature: testing home page
 
   Scenario: 2.010 Check that image is uploaded to room
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -174,7 +174,7 @@ Feature: testing home page
 
   Scenario: 2.011 Check that txt file is downloaded
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
@@ -192,7 +192,7 @@ Feature: testing home page
 
   Scenario: 2.012 Check that "room1" is added to Favorites to the left panel after clicking on the favorite button in the header
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened

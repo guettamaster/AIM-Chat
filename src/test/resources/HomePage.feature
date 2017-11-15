@@ -2,12 +2,12 @@ Feature: testing home page
 
   Background:
     Given open signin page
-#    When click on Standard tab
+    When click on Standard tab
     And filled fields valid data
     When click on Login button
     Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
+    Then "admin" user name is displayed
+#    Then "o.ivankovckyi" user name is displayed
 
   Scenario: 2.001 Check that "room1" room is created
     When click on plus link

@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.concurrent.TimeUnit;
 
-@DefaultUrl("https://chat.aimprosoft.com/index.html")
+@DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
 //https://chat.aimprosoft.com/index.html
@@ -19,15 +19,15 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
     private static Logger logger = LoggerFactory.getLogger(SignInPage.class);
 
     public void loginAsadmin() {
-        String email = "o.ivankovckyi";
+        String email = "admin@email.com";
 //      admin@email.com
 //      admin@aimprosoft.com
 //      o.ivankovckyi
-        String password = "15028819";
+        String password = "qwerty1";
 //      15028819
 //      qwerty1
         logger.info("Entering email: " + email + " and password: " + password);
-        $(LOCATORS.EMAIL_FIELD_PROD_LDAP).sendKeys(email);
+        $(LOCATORS.EMAIL_FIELD).sendKeys(email);
 //      EMAIL_FIELD_PROD_LDAP
 //      EMAIL_FIELD
         $(LOCATORS.PASSWORD_FIELD).sendKeys(password);
@@ -35,8 +35,8 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnLoginButton() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.LDAP_SIGNINBUTTON)));
-        $(LOCATORS.LDAP_SIGNINBUTTON).click();
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SIGNINBUTTON)));
+        $(LOCATORS.SIGNINBUTTON).click();
 //      LDAP_SIGNINBUTTON
 //      SIGNINBUTTON
     }

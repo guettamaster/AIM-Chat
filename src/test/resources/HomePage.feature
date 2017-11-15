@@ -1,6 +1,6 @@
-#Feature: testing home page
+Feature: testing home page
 
-  Scenario: 2.001 Check that "room1" room is created
+  Background:
     Given open signin page
 #    When click on Standard tab
     And filled fields valid data
@@ -8,6 +8,8 @@
     Then home page is opened
 #    Then "admin" user name is displayed
     Then "o.ivankovckyi" user name is displayed
+
+  Scenario: 2.001 Check that "room1" room is created
     When click on plus link
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
@@ -19,13 +21,6 @@
     Then the "room1" room is created
 
   Scenario: 2.002 Check that "room1" renamed to "Testroomname1"
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the about channel button of "room1" room
@@ -41,13 +36,6 @@
     Then the "Testroomname1" room is created
 
   Scenario: 2.003 Check that in "Testroomname1" room changed description
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on "Testroomname1" room in the left panel
     Then the "Testroomname1" title is displayed in the header
     When click on the about channel button of "Testroomname1" room
@@ -62,13 +50,6 @@
     Then the "new description111" description is displayed in the header
 
   Scenario: 2.004 Check that "Testroomname1" room is deleted
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on "Testroomname1" room in the left panel
     Then the "Testroomname1" title is displayed in the header
     When click on the wheel link
@@ -79,13 +60,6 @@
     Then the "Testroomname1" room is deleted
 
   Scenario: 2.005 Check that direct message to a.shevchenko is created
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on the Direct Messages link
     Then direct rooms pop-up is displayed
     When enter "a.shevchenko" in the input search field
@@ -95,13 +69,6 @@
     Then "a.shevchenko" user name is displayed in the header
 
   Scenario: 2.006 Check that message to a.shevchenko is sent
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     When enter "test message" in the input message field
@@ -109,13 +76,6 @@
     Then "test message" message is created
 
   Scenario: 2.007 Check that "test message" message to a.shevchenko is edited
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     Then "test message" message is displayed
@@ -129,13 +89,6 @@
     Then "edited Today at" action is displayed
 
   Scenario: 2.008 Check that "edited note" message to a.shevchenko is deleted
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     Then "edited note" message is displayed
@@ -147,24 +100,10 @@
     Then "edited note" message is deleted
 
   Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel (in the direct messages)
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on the delete sign near "a.shevchenko" user in the left panel
     Then "a.shevchenko" user is deleted in the left panel
 
   Scenario: 2.010 Check that image is uploaded to room
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on plus link
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
@@ -184,13 +123,6 @@
     Then "maxresdefault.jpg" file is displayed in the room
 
   Scenario: 2.011 Check that txt file is downloaded
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on Clip button
@@ -203,13 +135,6 @@
     Then the file is downloaded on the local machine
 
   Scenario: 2.012 Check that "room1" is added to Favorites to the left panel after clicking on the favorite button in the header
-    Given open signin page
-#    When click on Standard tab
-    And filled fields valid data
-    When click on Login button
-    Then home page is opened
-#    Then "admin" user name is displayed
-    Then "o.ivankovckyi" user name is displayed
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the favorite room button

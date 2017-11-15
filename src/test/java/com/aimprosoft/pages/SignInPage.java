@@ -27,7 +27,10 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
 //      15028819
 //      qwerty1
         logger.info("Entering email: " + email + " and password: " + password);
-        $(LOCATORS.EMAIL_FIELD).sendKeys(email);
+        $(LOCATORS.EMAIL_FIELD_PROD_LDAP).sendKeys(email);
+//      EMAIL_FIELD_PROD_LDAP
+//      EMAIL_FIELD
+
         $(LOCATORS.PASSWORD_FIELD).sendKeys(password);
 
     }

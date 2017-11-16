@@ -371,4 +371,19 @@ public class DefinitionSteps {
     public void theIsDisplayedInTheFavoritesOnTheLeftPanel(String arg0) throws Throwable {
         endUserSteps.theIsDisplayedInTheFavoritesOnTheLeftPanel(arg0);
     }
+
+    @When("^click on the unfavorite room button$")
+    public void clickOnTheUnfavoriteRoomButton() throws Throwable {
+        endUserSteps.clickOnTheUnfavoriteRoomButton();
+    }
+
+    @Then("^the \"([^\"]*)\" is deleted in the Favorites on the left panel$")
+    public void theIsDeletedInTheFavoritesOnTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.theIsDeletedInTheFavoritesOnTheLeftPanel(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" room returns to the Rooms on the left panel$")
+    public void theRoomReturnsToTheRoomsOnTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.theRoomReturnsToTheRoomsOnTheLeftPanel(arg0);
+    }
 }

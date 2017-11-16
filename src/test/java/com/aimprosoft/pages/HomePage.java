@@ -442,4 +442,35 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
         return $(LOCATORS.FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).isPresent();
     }
+
+    public void clickOnTheUnfavoriteRoomButton() {
+        $(LOCATORS.UNFAVORITE_ROOM_BUTTON).click();
+    }
+
+    public boolean theIsDeletedInTheFavoritesOnTheLeftPanel(String arg0) {
+        try {
+            System.out.println("wait that documents are invisible");
+            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+            System.out.println("Element is invisible");
+        } catch (Exception e) {
+            System.out.println("Element isn`t invisible");
+        }
+
+        try {
+            System.out.println("check that documents are presented in the DOM");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+            System.out.println("documents are presented in the DOM");
+            System.out.println("check that documents are visibility");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+            System.out.println("documents are visibility");
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
+    }
+
+    public boolean theRoomReturnsToTheRoomsOnTheLeftPanel(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        return $(LOCATORS.PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).isPresent();
+    }
 }

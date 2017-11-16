@@ -373,4 +373,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void theIsDisplayedInTheFavoritesOnTheLeftPanel(String arg0) {
         Assert.assertTrue("False", homePage.theIsDisplayedInTheFavoritesOnTheLeftPanel(arg0));
     }
+
+    @Step
+    public void clickOnTheUnfavoriteRoomButton() {
+        homePage.clickOnTheUnfavoriteRoomButton();
+    }
+
+    @Step
+    public void theIsDeletedInTheFavoritesOnTheLeftPanel(String arg0) {
+        Assert.assertTrue("False", homePage.theIsDeletedInTheFavoritesOnTheLeftPanel(arg0));
+    }
+
+    @Step
+    public void theRoomReturnsToTheRoomsOnTheLeftPanel(String arg0) {
+        Assert.assertTrue("False", homePage.theRoomReturnsToTheRoomsOnTheLeftPanel(arg0));
+    }
 }

@@ -9,18 +9,18 @@ Feature: testing home page
     Then "admin" user name is displayed
 #    Then "o.ivankovckyi" user name is displayed
 
-  Scenario: 2.001 Check that "room1" room is created
+  Scenario: 2.001 Check that public "room1" room is created
     When click on plus link
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
-    When choose public room checkbox
+#    When choose public room checkbox
     When enter "superadmin" in the Invite members field
     When click on Add Room title
     When enter "testdescription" in the "Description" textarea field
     When click on Add button
     Then the "room1" room is created
 
-  Scenario: 2.002 Check that "room1" renamed to "Testroomname1"
+  Scenario: 2.002 Check that public "room1" renamed to "Testroomname1"
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the about channel button of "room1" room
@@ -35,7 +35,7 @@ Feature: testing home page
     Then "Testroomname1" name is displayed in the channel details block
     Then the "Testroomname1" room is created
 
-  Scenario: 2.003 Check that in "Testroomname1" room changed description
+  Scenario: 2.003 Check that in public "Testroomname1" room changed description
     When click on "Testroomname1" room in the left panel
     Then the "Testroomname1" title is displayed in the header
     When click on the about channel button of "Testroomname1" room
@@ -49,7 +49,7 @@ Feature: testing home page
     Then the "new description111" description is displayed in the channel details block
     Then the "new description111" description is displayed in the header
 
-  Scenario: 2.004 Check that "Testroomname1" room is deleted
+  Scenario: 2.004 Check that public "Testroomname1" room is deleted
     When click on "Testroomname1" room in the left panel
     Then the "Testroomname1" title is displayed in the header
     When click on the wheel link
@@ -107,7 +107,7 @@ Feature: testing home page
     When click on plus link
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
-    When choose public room checkbox
+#    When choose public room checkbox
 #    When enter "superadmin" in the Invite members field
     When enter "a.shevchenko" in the Invite members field
     When enter "testdescription" in the "Description" textarea field
@@ -134,15 +134,16 @@ Feature: testing home page
     When click on the Download button under "maxresdefault.txt" file
     Then the file is downloaded on the local machine
 
-  Scenario: 2.012 Check that "room1" is added to Favorites to the left panel after clicking on the favorite button in the header
+  Scenario: 2.012 Check that public "room1" is added to Favorites to the left panel after clicking on the favorite button in the header
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the favorite room button
     Then the "room1" is displayed in the Favorites on the left panel
 
-  Scenario: 2.013 Check that "room1" is deleted from Favorites in the left panel after clicking on the unfavorite button in the header
+  Scenario: 2.013 Check that public "room1" is deleted from Favorites in the left panel after clicking on the unfavorite button in the header
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the unfavorite room button
     Then the "room1" is deleted in the Favorites on the left panel
     Then the "room1" room returns to the Rooms on the left panel
+

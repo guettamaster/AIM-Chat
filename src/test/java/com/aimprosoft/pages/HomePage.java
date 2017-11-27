@@ -415,9 +415,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheDownloadButtonUnderFile(String arg0) {
-        withTimeoutOf(1, TimeUnit.SECONDS);
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", findBy(LOCATORS.DOWNLOAD_BUTTON_UNDER_FILE_NAME.replace("$1", arg0)));
+        waitABit(2000);
+        $(LOCATORS.DOWNLOAD_BUTTON_UNDER_FILE_NAME.replace("$1", arg0)).click();
     }
 
     public void theFileIsDownloadedOnTheLocalMachine() {

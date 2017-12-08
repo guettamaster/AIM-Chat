@@ -1,22 +1,24 @@
 package com.aimprosoft.pages;
 
+import com.aimprosoft.LOCATORS;
 import net.serenitybdd.core.Serenity;
+import net.serenitybdd.core.annotations.findby.By;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.aimprosoft.LOCATORS;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import java.io.File;
 import java.net.URISyntaxException;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-@DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
+
+@DefaultUrl("https://chat-predprod.aimprosoft.com/index.html")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
 //https://chat.aimprosoft.com/index.html
@@ -26,7 +28,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     private static Logger logger = LoggerFactory.getLogger(HomePage.class);
 
     public void clickOnPlusLink() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PLUS_LINK)));
+        waitABit(8000);
+//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.PLUS_LINK)));
         $(LOCATORS.PLUS_LINK).click();
     }
 
@@ -36,7 +39,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputField(String arg0, String arg1) {
-        waitABit(1500);
+        waitABit(500);
         Actions actions = new Actions(getDriver());
         actions.moveToElement(find(By.xpath(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg1))));
         actions.click();
@@ -114,9 +117,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clearDataInTheInputRoomNameField() {
         if (inputRoomNameField()) {
-    $(LOCATORS.ROOM_NAME_INPUT_FIELD.replace("$1","1")).clear();
-        }else {
-    $(LOCATORS.ROOM_NAME_INPUT_FIELD.replace("$1", "2")).clear();
+            $(LOCATORS.ROOM_NAME_INPUT_FIELD.replace("$1", "1")).clear();
+        } else {
+            $(LOCATORS.ROOM_NAME_INPUT_FIELD.replace("$1", "2")).clear();
         }
     }
 
@@ -383,7 +386,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnClipButton() {
-        withTimeoutOf(1, TimeUnit.SECONDS);
+      //  withTimeoutOf(3, TimeUnit.SECONDS);
+        waitABit(2000);
+//        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.elementToBeClickable(By.xpath(LOCATORS.CLIP_BUTTON)));
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.CLIP_BUTTON));
     }
@@ -401,11 +406,13 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean titleIsDisplayedInThePopUp(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP.replace("$1", arg0))));
+        withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP.replace("$1", arg0))));
         return $(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP.replace("$1", arg0)).isPresent();
     }
 
     public void clickOnUploadButton() {
+//        waitABit(500);
+        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.elementToBeClickable(By.xpath(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP)));
         $(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP).click();
     }
 
@@ -472,4 +479,69 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
         return $(LOCATORS.PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).isPresent();
     }
+
+    public void clickOnUserName() {
+//        waitABit(2000);
+        $(LOCATORS.USER_FROM_THE_LIST).click();
+    }
+
+    public void clickOnRoomTitleInPopup() {
+//        waitABit(2000);
+        $(LOCATORS.ROOM_TITLE_IN_POPUP).click();
+    }
+
+
+//    @Test
+//    public void antiSpam() {
+//        int count = 0;
+//        try {
+//
+//
+//            for (int i = 0; i < 1000000; i++) {
+//
+//                waitABit(1000);
+//                ReplyMessageRestTemplate rm = new ReplyMessageRestTemplate("a2e82e25-6ac7-42ed-84d2-4ddf83d96847");
+//                rm.sendMessage("https://chat-predprod.aimprosoft.com/api/rooms/258806/histories", "{\"message\":\"Maximum number of messages\",\"isSystem\":false,\"systemMessageType\":\"PUBLIC\"}");
+//                count++;
+//            }
+//            System.out.println(count);
+//        } catch (Exception e) {
+//            System.out.println(count);
+//        }
+//
+//    }
+//
+//    public class ReplyMessageRestTemplate extends RestTemplate {
+//
+//        private String token;
+//
+//        public ReplyMessageRestTemplate(String token) {
+//            this.token = token;
+//        }
+//
+//        private HttpHeaders setPostRequestWithJson() {
+//            HttpHeaders headers = new HttpHeaders();
+//            headers.setContentType(MediaType.APPLICATION_JSON);
+//            headers.add("Authorization", "Bearer " + token);
+//            return headers;
+//        }
+//
+//        private String authorizedRestCallWithJson(RestTemplate restTemplate,
+//                                                  String url, String jsonMessage, Object... urlVariables) {
+//            HttpEntity<String> request = new HttpEntity<String>(jsonMessage, setPostRequestWithJson());
+//            ResponseEntity<String> sendMessage = restTemplate
+//                    .exchange(url, HttpMethod.POST, request, String.class);
+//            if (sendMessage.getStatusCode() == HttpStatus.OK)
+//                return sendMessage.getBody();
+//            else if (sendMessage.getStatusCode() == HttpStatus.UNAUTHORIZED)
+//                return sendMessage.getStatusCode().toString();
+//            return "Bad request for sending message.";
+//        }
+//
+//        public String sendMessage(String url, String message) {
+//            return authorizedRestCallWithJson(this, url, message);
+//        }
+//    }
 }
+
+

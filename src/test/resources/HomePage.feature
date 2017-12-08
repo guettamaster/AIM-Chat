@@ -147,3 +147,22 @@ Feature: testing home page
     Then the "room1" is deleted in the Favorites on the left panel
     Then the "room1" room returns to the Rooms on the left panel
 
+  Scenario: 2.014 Check that image is uploaded to room
+#    When click on plus link
+#    Then room title in popup is displayed
+#    When enter "room1" in the "Name" input field
+# #    When choose public room checkbox
+# #    When enter "superadmin" in the Invite members field
+#    When enter "r.konivec" in the Invite members field
+#    When click on user name
+#    When click on room title in popup
+#    When enter "testdescription" in the "Description" textarea field
+#    When click on Add button
+#    Then the "room1" room is created
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
+    When Upload file many times
+   | count              | 2000                                                                                          |
+   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
+   | title_name         | Upload file                                                                                   |
+   | expected_file_name | michael-jordan_wallpaper_005.jpg                                                              |

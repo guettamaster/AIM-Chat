@@ -68,6 +68,6 @@ String FAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//i[@class='
 String FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::a[contains(text(),'Favorites')] and @class='channel-section']//span[text()='$1']";
 String UNFAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//i[@class='favorite-button settings-gliph glyphicon glyphicon-star']";
 String PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::a[contains(text(),'Rooms')] and @class='channel-section']//span[text()='$1']";
-
+String USER_FROM_THE_LIST = "//div[@class='modal-body']/div[@class='invite']//div[@class='ue ue-username ue-username-person']";
 
 }

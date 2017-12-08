@@ -8,6 +8,9 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import com.aimprosoft.steps.serenity.EndUserSteps;
 
+import java.net.URISyntaxException;
+import java.util.Map;
+
 public class DefinitionSteps {
 
     @Steps
@@ -385,5 +388,20 @@ public class DefinitionSteps {
     @Then("^the \"([^\"]*)\" room returns to the Rooms on the left panel$")
     public void theRoomReturnsToTheRoomsOnTheLeftPanel(String arg0) throws Throwable {
         endUserSteps.theRoomReturnsToTheRoomsOnTheLeftPanel(arg0);
+    }
+
+    @When("^Upload file many times$")
+    public void uploadFileManyTimes(Map<String,String> parameters) throws URISyntaxException {
+      endUserSteps.uploadFileManyTimes(parameters);
+    }
+
+    @When("^click on user name$")
+    public void clickOnUserName() throws Throwable {
+        endUserSteps.clickOnUserName();
+    }
+
+    @When("^click on room title in popup$")
+    public void clickOnRoomTitleInPopup() throws Throwable {
+        endUserSteps.clickOnRoomTitleInPopup();
     }
 }

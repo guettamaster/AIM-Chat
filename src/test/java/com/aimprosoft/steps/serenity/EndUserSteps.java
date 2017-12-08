@@ -7,8 +7,10 @@ import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.junit.Assert;
+
 import java.net.URISyntaxException;
 import java.text.ParseException;
+import java.util.Map;
 
 public class EndUserSteps extends ScenarioSteps {
 
@@ -387,5 +389,27 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void theRoomReturnsToTheRoomsOnTheLeftPanel(String arg0) {
         Assert.assertTrue("False", homePage.theRoomReturnsToTheRoomsOnTheLeftPanel(arg0));
+    }
+
+    @Step
+    public void uploadFileManyTimes(Map<String, String> parameters) throws URISyntaxException {
+        for(int i=0;i<Integer.valueOf(parameters.get("count"));i++) {
+            clickOnClipButton();
+            uploadFileLinkIsDisplayed();
+            uploadToTheForm(parameters.get("file"));
+            titleIsDisplayedInThePopUp(parameters.get("title_name"));
+            clickOnUploadButton();
+            fileIsDisplayedInTheRoom(parameters.get("expected_file_name"));
+        }
+    }
+
+    @Step
+    public void clickOnUserName() {
+        homePage.clickOnUserName();
+    }
+
+    @Step
+    public void clickOnRoomTitleInPopup() {
+        homePage.clickOnRoomTitleInPopup();
     }
 }

@@ -13,9 +13,9 @@ String STANDARD_TAB = "//a[@id='login-type-tab-2']";
 
 //TODO======================================================HomePage==========================================================
 
-String AIMPROSOFT_LOGO = "//span[@class='logo']";
+String AIMPROSOFT_LOGO = "//div[@class='team-name'][contains(text(),'Aimprosoft')]";
 String THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL = "//p[@class='username'][contains(text(),'$1')]";
-String PLUS_LINK = "//a[@class='add-room-button']/i[@class='glyphicon glyphicon-plus']";
+String PLUS_LINK = "//a[@class='add-room-button']/i[contains(@class,\"material-icons 21 md-dark\")]";
 String ROOM_TITLE_IN_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][contains(text(),'Add Room')]";
 String INPUT_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//input";
 String PUBLIC_ROOM_TYPE_CHECKBOX = "//input[@name='type'][@value='public']";
@@ -27,7 +27,7 @@ String ROOM_TITLE_NAME_IN_THE_HEADER = "//div[@class='channel-name room-public']
 String ABOUT_CHANNEL_BUTTON = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='container']//span[@class='glyphicon glyphicon-info-sign settings-gliph']";
 String CHANNEL_DETAILS_LINK = "//div[@class='chat-container active']//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='b-chat-top with-panel']//div[@class='layout-content']//span[contains(text(),'Channel Details:')]";
 String ROOM_NAME_IN_THE_CHANNEL_DETAILS_BLOCK = "//div[@class='chat-container active']//div[@class='dropdown-panel show-panel']//div[@class='change-room-name']//div[contains(text(),'$1')]";
-String EDIT_ROOM_NAME_LINK = "//span[@class='edit-description-link']/a[contains(text(),'Edit')]//ancestor::div[@class='change-room-name']//span[@class='edit-description-link']/a[contains(text(),'Edit')]";
+String EDIT_ROOM_NAME_LINK = "(//span[@class='edit-description-link']/a[contains(text(),'Edit')]//ancestor::div[@class='change-room-name']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[1]";
 String ROOM_NAME_INPUT_FIELD = "(//div[@class='field-value']/input[@class='form-control'])[$1]";
 String ROOM_NAME_INPUT_FIELD_ACTIVE = "(//div[@class='field-value']/input[@class='form-control'])[1]";
 String SAVE_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD = "//div[@class='button-group']/button[@class='btn btn-success done-button'][contains(text(),'Save')]";

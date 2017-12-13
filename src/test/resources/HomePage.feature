@@ -103,26 +103,26 @@ Feature: testing home page
 #    When click on the delete sign near "a.shevchenko" user in the left panel
 #    Then "a.shevchenko" user is deleted in the left panel
 #
-  Scenario: 2.010 Check that image is uploaded to room
-    When click on plus link
-    Then room title in popup is displayed
-    When enter "room1" in the "Name" input field
-#    When choose public room checkbox
-#    When enter "superadmin" in the Invite members field
-    When enter "a.shevchenko" in the Invite members field
-    When enter "testdescription" in the "Description" textarea field
-    When click on Add button
-    Then the "room1" room is created
-    When click on "room1" room in the left panel
-    Then the "room1" title is displayed in the header
-    Then Clip button is displayed
-    When click on Clip button
-    Then Upload file link is displayed
-    When Upload "/var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg" to the form
-    Then progress bar is disappeared
-    Then "Upload file" title is displayed in the pop-up
-    When click on Upload button
-    Then "maxresdefault.jpg" file is displayed in the room
+#  Scenario: 2.010 Check that image is uploaded to room
+#    When click on plus link
+#    Then room title in popup is displayed
+#    When enter "room1" in the "Name" input field
+##    When choose public room checkbox
+##    When enter "superadmin" in the Invite members field
+#    When enter "a.shevchenko" in the Invite members field
+#    When enter "testdescription" in the "Description" textarea field
+#    When click on Add button
+#    Then the "room1" room is created
+#    When click on "room1" room in the left panel
+#    Then the "room1" title is displayed in the header
+#    Then Clip button is displayed
+#    When click on Clip button
+#    Then Upload file link is displayed
+#    When Upload "/var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg" to the form
+#    Then progress bar is disappeared
+#    Then "Upload file" title is displayed in the pop-up
+#    When click on Upload button
+#    Then "maxresdefault.jpg" file is displayed in the room
 #
 #  Scenario: 2.011 Check that txt file is downloaded
 #    When click on "room1" room in the left panel

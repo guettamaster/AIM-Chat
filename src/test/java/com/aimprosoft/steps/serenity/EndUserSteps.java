@@ -394,11 +394,14 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void uploadFileManyTimes(Map<String, String> parameters) throws URISyntaxException {
         for(int i=0;i<Integer.valueOf(parameters.get("count"));i++) {
+            clipButtonIsDisplayed();
             clickOnClipButton();
             uploadFileLinkIsDisplayed();
             uploadToTheForm(parameters.get("file"));
             titleIsDisplayedInThePopUp(parameters.get("title_name"));
             clickOnUploadButton();
+            titleIsHidedInThePopUp();
+//          progressBarIsDisappeared();
             fileIsDisplayedInTheRoom(parameters.get("expected_file_name"));
         }
     }
@@ -411,5 +414,21 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void clickOnRoomTitleInPopup() {
         homePage.clickOnRoomTitleInPopup();
+    }
+
+    @Step
+    public void clipButtonIsDisplayed() {
+        Assert.assertTrue("False", homePage.clipButtonIsDisplayed());
+    }
+
+    @Step
+    public void progressBarIsDisappeared() {
+        homePage.progressBarIsDisappeared();
+        homePage.progressBarIsHided();
+    }
+
+    @Step
+    public void titleIsHidedInThePopUp() {
+        homePage.titleIsHidedInThePopUp();
     }
 }

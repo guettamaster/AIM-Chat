@@ -7,14 +7,12 @@ import net.thucydides.core.annotations.DefaultUrl;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.net.URISyntaxException;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
@@ -391,10 +389,19 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 //        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.elementToBeClickable(By.xpath(LOCATORS.CLIP_BUTTON)));
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.CLIP_BUTTON));
+//        moveTo("(//i[.='attach_file'])[1]");
+//        waitABit(500);
+//        findBy("(//i[.='attach_file'])[1]").click();
+//        waitABit(2000);
+//        Actions actions = new Actions(getDriver());
+//        actions.moveToElement(find(org.openqa.selenium.By.xpath(("//div[@class='chat-container active']//div[@class='button-input']")))).build().perform();
+//        waitABit(500);
+//        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+//        js.executeScript("arguments[0].click();", findBy("//div[@class='chat-container active']//div[@class='button-input']/i[contains(text(),'attach_file')]"));
     }
 
     public boolean uploadFileLinkIsDisplayed() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_BUTTON)));
+        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_BUTTON)));
         return $(LOCATORS.UPLOAD_BUTTON).isPresent();
     }
 
@@ -406,18 +413,18 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean titleIsDisplayedInThePopUp(String arg0) {
-        withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP.replace("$1", arg0))));
+        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP.replace("$1", arg0))));
         return $(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP.replace("$1", arg0)).isPresent();
     }
 
     public void clickOnUploadButton() {
-//        waitABit(500);
-        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.elementToBeClickable(By.xpath(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP)));
+        waitABit(500);
+//        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.elementToBeClickable(By.xpath(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP)));
         $(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP).click();
     }
 
     public boolean fileIsDisplayedInTheRoom(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))));
+        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))));
         return $(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0)).isPresent();
     }
 
@@ -488,6 +495,32 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void clickOnRoomTitleInPopup() {
 //        waitABit(2000);
         $(LOCATORS.ROOM_TITLE_IN_POPUP).click();
+    }
+
+    public boolean clipButtonIsDisplayed() {
+        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CLIP_BUTTON)));
+        return $(LOCATORS.CLIP_BUTTON).isPresent();
+    }
+
+    public void progressBarIsDisappeared() {
+        try {
+            withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PROGRESS_BAR_IN_THE_UPLOAD_POPUP)));
+        }catch (Exception e){
+        }
+    }
+
+    public void progressBarIsHided() {
+        try {
+            withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.PROGRESS_BAR_IN_THE_UPLOAD_POPUP)));
+        } catch (Exception e) {
+        }
+    }
+
+    public void titleIsHidedInThePopUp() {
+        try {
+            withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP)));
+        }catch (Exception e) {
+        }
     }
 
 

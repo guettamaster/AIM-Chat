@@ -404,4 +404,14 @@ public class DefinitionSteps {
     public void clickOnRoomTitleInPopup() throws Throwable {
         endUserSteps.clickOnRoomTitleInPopup();
     }
+
+    @Then("^Clip button is displayed$")
+    public void clipButtonIsDisplayed() throws Throwable {
+        endUserSteps.clipButtonIsDisplayed();
+    }
+
+    @Then("^progress bar is disappeared$")
+    public void progressBarIsDisappeared() throws Throwable {
+        endUserSteps.progressBarIsDisappeared();
+    }
 }

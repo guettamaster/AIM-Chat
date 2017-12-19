@@ -164,7 +164,7 @@ Feature: testing home page
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When Upload file many times
-   | count              | 10000                                                                                         |
+   | count              | 100000                                                                                        |
    | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
    | title_name         | Upload file                                                                                   |
    | expected_file_name | michael-jordan_wallpaper_005.jpg                                                              |

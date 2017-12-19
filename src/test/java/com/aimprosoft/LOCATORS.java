@@ -60,7 +60,7 @@ String CLIP_BUTTON = "//div[@class='chat-container active']//div[@class='button-
 String UPLOAD_BUTTON = "//div[@class='chat-container active']//label[@class='uploadFile'][contains(text(),'Upload file')]";
 String UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP = "//h4[@class='modal-title'][.='Upload file']";
 //   //tr[descendant::a[contains(text(),'$1')]]//div[@data-field='retailPrice']
-String UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP = "//div[@class='modal-footer']/button[@class='btn btn-success'][.='Upload']";
+String UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP = "//div[@class='modal-footer']/button[@class='btn btn-success'][contains(text(),'Upload')]";
 String FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING = "//div[@class='chat-container active']//div[@class='file-name'][contains(text(),'$1')]";
 String DOWNLOAD_BUTTON_UNDER_FILE_NAME = "//div[@class='chat-container active']//div[@class='file-name'][contains(text(),'$1')]//following-sibling::div[@class='file-msg-controls']/button/span/a[@title='Download']/i[contains(@class,'material-icons md-24 md-dark')]";
 //   ////div[descendant::div[contains(text(),'maxresdefault.txt')] and @class='file-container']//button[@class='btn btn-success file-download']

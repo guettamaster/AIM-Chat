@@ -40,10 +40,10 @@ String WHEEL_LINK_IN_THE_HEADER = "//a[@class='dropdown-toggle']/i[@class='glyph
 String DELETE_ROOM_LINK = "//ul[@class='dropdown-menu']/li/a[contains(text(),'Delete Room')]";
 String DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP = "//h4[@class='modal-title'][contains(text(),'Delete Room')]";
 String DELETE_BUTTON = "//button[.='Delete']";
-String DIRECT_MESSAGES_LINK = "//h2[@class='channel-header']/a[contains(text(),'Direct Messages')]";
-String DIRECT_ROOMS_TITLE_IN_THE_DIRECT_ROOMS_POPUP = "//h4[.='Direct rooms']";
-String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//div[@class='modal-header']//input[@class='form-control'][@placeholder='search']";
-String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='username-item']/span[@class='username-text'][contains(text(),'$1')]";
+String DIRECT_MESSAGES_LINK = "//h2[@class='channel-header']/a[contains(text(),'Direct')]";
+String DIRECT_ROOMS_TITLE_IN_THE_DIRECT_ROOMS_POPUP = "//h4[.='Start Direct']";
+String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//div[@class='modal-header']//input[@class='form-control shadowed'][@placeholder='Search members']";
+String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='room-item']/span[@class='username-text'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";
 String INPUT_MESSAGE_FIELD = "//div[@class='chat-container active']//textarea[@id='input-text-field'][@placeholder='Type message here']";
@@ -55,17 +55,17 @@ String COMMENT_UNDER_MESSAGE = "//div[@class='chat-container active']//span[@cla
 String DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem']//span[@class='text-danger'][.='Delete Message']";
 String DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][.='Delete Message']";
 String DELETE_THIS_MESSAGE_BUTTON = "//button[.='Delete']";
-String DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]//ancestor::li//i[@class='glyphicon glyphicon-remove-circle']";
+String DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]//ancestor::li//a[@class='remove-button']";
 String CLIP_BUTTON = "//div[@class='chat-container active']//div[@class='button-input']/i[contains(text(),'attach_file')]";
 String UPLOAD_BUTTON = "//div[@class='chat-container active']//label[@class='uploadFile']/i[contains(@class,'material-icons md-24 md')]";
 String UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP = "//h4[@class='modal-title'][.='Upload file']";
 //   //tr[descendant::a[contains(text(),'$1')]]//div[@data-field='retailPrice']
 String UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP = "//div[@class='modal-footer']/button[@class='btn btn-success'][contains(text(),'Upload')]";
-String FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING = "//div[@class='chat-container active']//div[@class='file-name'][contains(text(),'$1')]";
-String DOWNLOAD_BUTTON_UNDER_FILE_NAME = "//div[@class='chat-container active']//div[@class='file-name'][contains(text(),'$1')]//following-sibling::div[@class='file-msg-controls']/button/span/a[@title='Download']/i[contains(@class,'material-icons md-24 md-dark')]";
+String FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING = "//div[@class='chat-container active']//div[@class='file-name']/span[@class='file-name-text'][contains(text(),'$1')]";
+String DOWNLOAD_BUTTON_UNDER_FILE_NAME = "//div[@class='chat-container active']//div[@class='file-name']/span[@class='file-name-text'][contains(text(),'$1')]//ancestor::div[@class='file-container']/div[@class='file-msg-controls']/button/span/a[@title='Download']/i[contains(@class,'material-icons md-24 md-dark')]";
 //   ////div[descendant::div[contains(text(),'maxresdefault.txt')] and @class='file-container']//button[@class='btn btn-success file-download']
 String FAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//i[@class='favorite-button settings-gliph glyphicon glyphicon-star-empty']";
-String FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::a[contains(text(),'Favorites')] and @class='channel-section']//span[text()='$1']";
+String FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::h2[contains(text(),'Favorites')] and @class='channel-section']//span[text()='$1']";
 String UNFAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//i[@class='favorite-button settings-gliph glyphicon glyphicon-star']";
 String PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::a[contains(text(),'Rooms')] and @class='channel-section']//span[text()='$1']";
 String USER_FROM_THE_LIST = "//div[@class='modal-body']/div[@class='invite']//div[@class='ue ue-username ue-username-person']";

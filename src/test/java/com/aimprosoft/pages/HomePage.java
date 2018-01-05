@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
 
 
-@DefaultUrl("https://chat-predprod.aimprosoft.com/index.html")
+@DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
 //https://chat.aimprosoft.com/index.html
@@ -26,8 +26,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     private static Logger logger = LoggerFactory.getLogger(HomePage.class);
 
     public void clickOnPlusLink() {
-        waitABit(8000);
-//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.PLUS_LINK)));
+//        waitABit(8000);
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.PLUS_LINK)));
         $(LOCATORS.PLUS_LINK).click();
     }
 

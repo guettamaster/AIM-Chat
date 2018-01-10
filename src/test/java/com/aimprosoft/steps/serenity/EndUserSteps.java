@@ -451,4 +451,23 @@ public class EndUserSteps extends ScenarioSteps {
     public void theProfilePageIsDisplayed() {
         Assert.assertTrue("False", homePage.theProfilePageIsDisplayed());
     }
+
+    @Step
+    public void uploadAvatarToTheProfilePage(Map<String, String> parameters) throws URISyntaxException {
+        for(int i=0;i<Integer.valueOf(parameters.get("count"));i++) {
+            uploadAvatar(parameters.get("file"));
+            clickOnSaveButton();
+            theProfilePageIsDisplayed();
+        }
+    }
+
+    @Step
+    private void clickOnSaveButton() {
+        homePage.clickOnSaveButton();
+    }
+
+    @Step
+    private void uploadAvatar(String arg0) throws URISyntaxException {
+        homePage.uploadAvatar(arg0);
+    }
 }

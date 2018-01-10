@@ -172,10 +172,12 @@ Feature: testing home page
     Then the user menu with actions is displayed
     When click on the Profile link
     Then the Profile page is displayed
-    When enter "test name" in the First Name field
-    When enter "test last name" in the Last Name field
-    When enter "0501234567" in the Phone number field
-    When enter "test skype" in the Skype field
-    When enter "test subject" in the What I do field
-    When enter "test room" in the Where I am field
+    When enter "test name" in the "First Name:" input field
+    When enter "test last name" in the "Last Name:" input field
+    When enter "0501234567" in the "Phone number:" input field
+    When enter "test skype" in the "Skype:" input field
+    When enter "test subject" in the "What I do:" input field
+    When enter "test room" in the "Where I am:" input field
     When Upload avatar to the Profile page
+      | count              | 1                                                                              |
+      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg |

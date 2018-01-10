@@ -74,4 +74,6 @@ String USER_PROFILE_LINK = "//div[@class='info']/p[@class='username'][contains(t
 String USER_MENU_WITH_ACTIONS = "//div[@id='user-menu']/ul[@id='user-menu-menu']";
 String PROFILE_LINK_INSIDE_USER_MENU = "//a[@role='menuitem']/span/i[@class='material-icons 24 md-dark '][contains(text(),'person_outline')]";
 String PROFILE_TITLE_IN_THE_PROFILE_PAGE = "//div[@class='header-settings-title'][contains(text(),'Profile')]";
+String CHANGE_AVATAR_BUTTON = "//label[@for='avatarFile'][contains(text(),'Change avatar')]";
+String SAVE_BUTTON_ON_THE_CHANGE_AVATAR_PAGE = "//button[@class='btn, btn-info abtn btn btn-default'][@type='button'][contains(text(),'Save')]";
 }

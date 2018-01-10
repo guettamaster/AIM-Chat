@@ -529,6 +529,18 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PROFILE_TITLE_IN_THE_PROFILE_PAGE)));
         return $(LOCATORS.PROFILE_TITLE_IN_THE_PROFILE_PAGE).isPresent();
     }
+
+    public void uploadAvatar(String arg0) throws URISyntaxException {
+        getDriver().findElement(By.id("formControlsFile")).sendKeys(arg0);
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.CHANGE_AVATAR_BUTTON));
+    }
+
+    public void clickOnSaveButton() {
+        waitABit(500);
+        $(LOCATORS.SAVE_BUTTON_ON_THE_CHANGE_AVATAR_PAGE).click();
+    }
 }
 
 

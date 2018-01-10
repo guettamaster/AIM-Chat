@@ -434,4 +434,9 @@ public class DefinitionSteps {
     public void theProfilePageIsDisplayed() throws Throwable {
         endUserSteps.theProfilePageIsDisplayed();
     }
+
+    @When("^Upload avatar to the Profile page$")
+    public void uploadAvatarToTheProfilePage(Map<String,String> parameters) throws URISyntaxException {
+        endUserSteps.uploadAvatarToTheProfilePage(parameters);
+    }
 }

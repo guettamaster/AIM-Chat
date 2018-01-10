@@ -384,20 +384,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnClipButton() {
-      //  withTimeoutOf(3, TimeUnit.SECONDS);
         waitABit(2000);
-//        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.elementToBeClickable(By.xpath(LOCATORS.CLIP_BUTTON)));
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.CLIP_BUTTON));
-//        moveTo("(//i[.='attach_file'])[1]");
-//        waitABit(500);
-//        findBy("(//i[.='attach_file'])[1]").click();
-//        waitABit(2000);
-//        Actions actions = new Actions(getDriver());
-//        actions.moveToElement(find(org.openqa.selenium.By.xpath(("//div[@class='chat-container active']//div[@class='button-input']")))).build().perform();
-//        waitABit(500);
-//        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-//        js.executeScript("arguments[0].click();", findBy("//div[@class='chat-container active']//div[@class='button-input']/i[contains(text(),'attach_file')]"));
     }
 
     public boolean uploadFileLinkIsDisplayed() {
@@ -523,58 +512,23 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         }
     }
 
+    public void clickOnUserName(String arg0) {
+        $(LOCATORS.USER_PROFILE_LINK.replace("$1", arg0)).click();
+    }
 
-//    @Test
-//    public void antiSpam() {
-//        int count = 0;
-//        try {
-//
-//
-//            for (int i = 0; i < 1000000; i++) {
-//
-//                waitABit(1000);
-//                ReplyMessageRestTemplate rm = new ReplyMessageRestTemplate("a2e82e25-6ac7-42ed-84d2-4ddf83d96847");
-//                rm.sendMessage("https://chat-predprod.aimprosoft.com/api/rooms/258806/histories", "{\"message\":\"Maximum number of messages\",\"isSystem\":false,\"systemMessageType\":\"PUBLIC\"}");
-//                count++;
-//            }
-//            System.out.println(count);
-//        } catch (Exception e) {
-//            System.out.println(count);
-//        }
-//
-//    }
-//
-//    public class ReplyMessageRestTemplate extends RestTemplate {
-//
-//        private String token;
-//
-//        public ReplyMessageRestTemplate(String token) {
-//            this.token = token;
-//        }
-//
-//        private HttpHeaders setPostRequestWithJson() {
-//            HttpHeaders headers = new HttpHeaders();
-//            headers.setContentType(MediaType.APPLICATION_JSON);
-//            headers.add("Authorization", "Bearer " + token);
-//            return headers;
-//        }
-//
-//        private String authorizedRestCallWithJson(RestTemplate restTemplate,
-//                                                  String url, String jsonMessage, Object... urlVariables) {
-//            HttpEntity<String> request = new HttpEntity<String>(jsonMessage, setPostRequestWithJson());
-//            ResponseEntity<String> sendMessage = restTemplate
-//                    .exchange(url, HttpMethod.POST, request, String.class);
-//            if (sendMessage.getStatusCode() == HttpStatus.OK)
-//                return sendMessage.getBody();
-//            else if (sendMessage.getStatusCode() == HttpStatus.UNAUTHORIZED)
-//                return sendMessage.getStatusCode().toString();
-//            return "Bad request for sending message.";
-//        }
-//
-//        public String sendMessage(String url, String message) {
-//            return authorizedRestCallWithJson(this, url, message);
-//        }
-//    }
+    public boolean theUserMenuWithActionsIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_MENU_WITH_ACTIONS)));
+        return $(LOCATORS.USER_MENU_WITH_ACTIONS).isPresent();
+    }
+
+    public void clickOnTheProfileLink() {
+        $(LOCATORS.PROFILE_LINK_INSIDE_USER_MENU).click();
+    }
+
+    public boolean theProfilePageIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PROFILE_TITLE_IN_THE_PROFILE_PAGE)));
+        return $(LOCATORS.PROFILE_TITLE_IN_THE_PROFILE_PAGE).isPresent();
+    }
 }
 
 

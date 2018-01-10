@@ -166,3 +166,16 @@ Feature: testing home page
 #   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
 #   | title_name         | Upload file                                                                                   |
 #   | expected_file_name | michael-jordan_wallpaper_005.jpg                                                              |
+
+  Scenario: 2.015 Check that fields in the user profile has changed
+    When click on "admin" user name
+    Then the user menu with actions is displayed
+    When click on the Profile link
+    Then the Profile page is displayed
+    When enter "test name" in the First Name field
+    When enter "test last name" in the Last Name field
+    When enter "0501234567" in the Phone number field
+    When enter "test skype" in the Skype field
+    When enter "test subject" in the What I do field
+    When enter "test room" in the Where I am field
+    When Upload avatar to the Profile page

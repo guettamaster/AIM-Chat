@@ -414,4 +414,24 @@ public class DefinitionSteps {
     public void progressBarIsDisappeared() throws Throwable {
         endUserSteps.progressBarIsDisappeared();
     }
+
+    @When("^click on \"([^\"]*)\" user name$")
+    public void clickOnUserName(String arg0) throws Throwable {
+        endUserSteps.clickOnUserName(arg0);
+    }
+
+    @Then("^the user menu with actions is displayed$")
+    public void theUserMenuWithActionsIsDisplayed() throws Throwable {
+        endUserSteps.theUserMenuWithActionsIsDisplayed();
+    }
+
+    @When("^click on the Profile link$")
+    public void clickOnTheProfileLink() throws Throwable {
+        endUserSteps.clickOnTheProfileLink();
+    }
+
+    @Then("^the Profile page is displayed$")
+    public void theProfilePageIsDisplayed() throws Throwable {
+        endUserSteps.theProfilePageIsDisplayed();
+    }
 }

@@ -431,4 +431,24 @@ public class EndUserSteps extends ScenarioSteps {
     public void titleIsHidedInThePopUp() {
         homePage.titleIsHidedInThePopUp();
     }
+
+    @Step
+    public void clickOnUserName(String arg0) {
+        homePage.clickOnUserName(arg0);
+    }
+
+    @Step
+    public void theUserMenuWithActionsIsDisplayed() {
+        Assert.assertTrue("False", homePage.theUserMenuWithActionsIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheProfileLink() {
+        homePage.clickOnTheProfileLink();
+    }
+
+    @Step
+    public void theProfilePageIsDisplayed() {
+        Assert.assertTrue("False", homePage.theProfilePageIsDisplayed());
+    }
 }

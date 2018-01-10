@@ -70,4 +70,8 @@ String UNFAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//i[@class
 String PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::a[contains(text(),'Rooms')] and @class='channel-section']//span[text()='$1']";
 String USER_FROM_THE_LIST = "//div[@class='modal-body']/div[@class='invite']//div[@class='ue ue-username ue-username-person']";
 String PROGRESS_BAR_IN_THE_UPLOAD_POPUP = "//div[@class='progress-bar active progress-bar-striped'][@role='progressbar']";
+String USER_PROFILE_LINK = "//div[@class='info']/p[@class='username'][contains(text(),'$1')]";
+String USER_MENU_WITH_ACTIONS = "//div[@id='user-menu']/ul[@id='user-menu-menu']";
+String PROFILE_LINK_INSIDE_USER_MENU = "//a[@role='menuitem']/span/i[@class='material-icons 24 md-dark '][contains(text(),'person_outline')]";
+String PROFILE_TITLE_IN_THE_PROFILE_PAGE = "//div[@class='header-settings-title'][contains(text(),'Profile')]";
 }

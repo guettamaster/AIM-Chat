@@ -439,4 +439,29 @@ public class DefinitionSteps {
     public void uploadAvatarToTheProfilePage(Map<String,String> parameters) throws URISyntaxException {
         endUserSteps.uploadAvatarToTheProfilePage(parameters);
     }
+
+    @When("^click on the Save button on the Profile page$")
+    public void clickOnTheSaveButtonOnTheProfilePage() throws Throwable {
+        endUserSteps.clickOnTheSaveButtonOnTheProfilePage();
+    }
+
+    @When("^clear data in the \"([^\"]*)\" input field$")
+    public void clearDataInTheInputField(String arg0) throws Throwable {
+        endUserSteps.clearDataInTheInputField(arg0);
+    }
+
+    @Then("^Profile successfully updated message is displayed$")
+    public void profileSuccessfullyUpdatedMessageIsDisplayed() throws Throwable {
+        endUserSteps.profileSuccessfullyUpdatedMessageIsDisplayed();
+    }
+
+    @When("^click on the arrow back$")
+    public void clickOnTheArrowBack() throws Throwable {
+        endUserSteps.clickOnTheArrowBack();
+    }
+
+    @Then("^\"([^\"]*)\" user name is displayed in the left panel after updating profile$")
+    public void userNameIsDisplayedInTheLeftPanelAfterUpdatingProfile(String arg0) throws Throwable {
+        endUserSteps.userNameIsDisplayedInTheLeftPanelAfterUpdatingProfile(arg0);
+    }
 }

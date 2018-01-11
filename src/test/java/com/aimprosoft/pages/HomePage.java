@@ -526,12 +526,13 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean theProfilePageIsDisplayed() {
+//        waitABit(500);
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PROFILE_TITLE_IN_THE_PROFILE_PAGE)));
         return $(LOCATORS.PROFILE_TITLE_IN_THE_PROFILE_PAGE).isPresent();
     }
 
     public void uploadAvatar(String arg0) throws URISyntaxException {
-        getDriver().findElement(By.id("formControlsFile")).sendKeys(arg0);
+        getDriver().findElement(By.id("avatarFile")).sendKeys(arg0);
         withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.CHANGE_AVATAR_BUTTON));
@@ -540,6 +541,30 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void clickOnSaveButton() {
         waitABit(500);
         $(LOCATORS.SAVE_BUTTON_ON_THE_CHANGE_AVATAR_PAGE).click();
+    }
+
+    public void clickOnTheSaveButtonOnTheProfilePage() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.elementToBeClickable(By.xpath(LOCATORS.SAVE_BUTTON_ON_THE_PROFILE_PAGE)));
+        $(LOCATORS.SAVE_BUTTON_ON_THE_PROFILE_PAGE).click();
+    }
+
+    public void clearDataInTheInputField(String arg0) {
+//        waitABit(500);
+        $(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg0)).clear();
+    }
+
+    public boolean profileSuccessfullyUpdatedMessageIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STATUS_AFTER_SAVING_FIELDS)));
+        return $(LOCATORS.STATUS_AFTER_SAVING_FIELDS).isPresent();
+    }
+
+    public void clickOnTheArrowBack() {
+        $(LOCATORS.ARROW_BACK).click();
+    }
+
+    public boolean userNameIsDisplayedInTheLeftPanelAfterUpdatingProfile(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_AFTER_UPDATING_PROFILE.replace("$1", arg0))));
+        return $(LOCATORS.USER_NAME_AFTER_UPDATING_PROFILE.replace("$1", arg0)).isPresent();
     }
 }
 

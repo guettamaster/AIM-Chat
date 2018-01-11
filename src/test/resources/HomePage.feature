@@ -126,10 +126,10 @@ Feature: testing home page
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When Upload file many times
-      | count              | 1                                                                              |
-      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.txt |
-      | title_name         | Upload file                                                                    |
-      | expected_file_name | maxresdefault.txt                                                              |
+   | count              | 1                                                                              |
+   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.txt |
+   | title_name         | Upload file                                                                    |
+   | expected_file_name | maxresdefault.txt                                                              |
     Then "maxresdefault.txt" file is displayed in the room
     When click on the Download button under "maxresdefault.txt" file
     Then the file is downloaded on the local machine
@@ -179,5 +179,27 @@ Feature: testing home page
     When enter "test subject" in the "What I do:" input field
     When enter "test room" in the "Where I am:" input field
     When Upload avatar to the Profile page
-      | count              | 1                                                                              |
-      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg |
+   | count              | 1                                                                              |
+   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg |
+    Then the Profile page is displayed
+    When click on the Save button on the Profile page
+    When clear data in the "First Name:" input field
+    When enter "name" in the "First Name:" input field
+    When clear data in the "Last Name:" input field
+    When enter "last_name" in the "Last Name:" input field
+    When clear data in the "Phone number:" input field
+    When enter "77777" in the "Phone number:" input field
+    When clear data in the "Skype:" input field
+    When enter "skypeacc" in the "Skype:" input field
+    When clear data in the "What I do:" input field
+    When enter "testing" in the "What I do:" input field
+    When clear data in the "Where I am:" input field
+    When enter "room209" in the "Where I am:" input field
+    When Upload avatar to the Profile page
+   | count              | 1                                                                                             |
+   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
+    Then the Profile page is displayed
+    When click on the Save button on the Profile page
+    Then Profile successfully updated message is displayed
+    When click on the arrow back
+    Then "name last_name" user name is displayed in the left panel after updating profile

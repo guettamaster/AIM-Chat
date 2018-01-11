@@ -457,7 +457,6 @@ public class EndUserSteps extends ScenarioSteps {
         for(int i=0;i<Integer.valueOf(parameters.get("count"));i++) {
             uploadAvatar(parameters.get("file"));
             clickOnSaveButton();
-            theProfilePageIsDisplayed();
         }
     }
 
@@ -469,5 +468,30 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     private void uploadAvatar(String arg0) throws URISyntaxException {
         homePage.uploadAvatar(arg0);
+    }
+
+    @Step
+    public void clickOnTheSaveButtonOnTheProfilePage() {
+        homePage.clickOnTheSaveButtonOnTheProfilePage();
+    }
+
+    @Step
+    public void clearDataInTheInputField(String arg0) {
+        homePage.clearDataInTheInputField(arg0);
+    }
+
+    @Step
+    public void profileSuccessfullyUpdatedMessageIsDisplayed() {
+        Assert.assertTrue("False", homePage.profileSuccessfullyUpdatedMessageIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheArrowBack() {
+        homePage.clickOnTheArrowBack();
+    }
+
+    @Step
+    public void userNameIsDisplayedInTheLeftPanelAfterUpdatingProfile(String arg0) {
+        Assert.assertTrue("False", homePage.userNameIsDisplayedInTheLeftPanelAfterUpdatingProfile(arg0));
     }
 }

@@ -76,4 +76,8 @@ String PROFILE_LINK_INSIDE_USER_MENU = "//a[@role='menuitem']/span/i[@class='mat
 String PROFILE_TITLE_IN_THE_PROFILE_PAGE = "//div[@class='header-settings-title'][contains(text(),'Profile')]";
 String CHANGE_AVATAR_BUTTON = "//label[@for='avatarFile'][contains(text(),'Change avatar')]";
 String SAVE_BUTTON_ON_THE_CHANGE_AVATAR_PAGE = "//button[@class='btn, btn-info abtn btn btn-default'][@type='button'][contains(text(),'Save')]";
+String SAVE_BUTTON_ON_THE_PROFILE_PAGE = "//button[@class='btn btn-default'][@type='button'][contains(text(),'Save')]";
+String STATUS_AFTER_SAVING_FIELDS = "//div[@class='statusSucces'][contains(text(),'Profile successfully updated')]";
+String ARROW_BACK = "//i[contains(text(),'arrow_back')]";
+String USER_NAME_AFTER_UPDATING_PROFILE = "//div[@class='info']/p[contains(text(),'$1')]";
 }

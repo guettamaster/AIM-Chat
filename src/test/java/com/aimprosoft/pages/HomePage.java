@@ -566,6 +566,16 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_AFTER_UPDATING_PROFILE.replace("$1", arg0))));
         return $(LOCATORS.USER_NAME_AFTER_UPDATING_PROFILE.replace("$1", arg0)).isPresent();
     }
+
+    public String checkTheValueOfTheFieldWithLabel(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg0))));
+        return $(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg0)).getValue();
+    }
+
+    public boolean theDraftSignIsDisplayedNearUserNameInTheLeftPanel(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DRAFT_SIGN_NEAR_USER_NAME.replace("$1", arg0))));
+        return $(LOCATORS.DRAFT_SIGN_NEAR_USER_NAME.replace("$1", arg0)).isPresent();
+    }
 }
 
 

@@ -80,4 +80,5 @@ String SAVE_BUTTON_ON_THE_PROFILE_PAGE = "//button[@class='btn btn-default'][@ty
 String STATUS_AFTER_SAVING_FIELDS = "//div[@class='statusSucces'][contains(text(),'Profile successfully updated')]";
 String ARROW_BACK = "//i[contains(text(),'arrow_back')]";
 String USER_NAME_AFTER_UPDATING_PROFILE = "//div[@class='info']/p[contains(text(),'$1')]";
+String DRAFT_SIGN_NEAR_USER_NAME = "//span[@class='ccss'][contains(text(),'$1')]//ancestor::a[@class='room-link']/i[contains(text(),'create')]";
 }

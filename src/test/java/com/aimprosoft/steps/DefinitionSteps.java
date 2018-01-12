@@ -464,4 +464,14 @@ public class DefinitionSteps {
     public void userNameIsDisplayedInTheLeftPanelAfterUpdatingProfile(String arg0) throws Throwable {
         endUserSteps.userNameIsDisplayedInTheLeftPanelAfterUpdatingProfile(arg0);
     }
+
+    @Then("^the \"([^\"]*)\" input field is correct$")
+    public void theInputFieldIsCorrect(String arg0) throws Throwable {
+        endUserSteps.checkTheValueOfTheFieldWithLabel(arg0);
+    }
+
+    @Then("^the draft sign is displayed near \"([^\"]*)\" user name in the left panel$")
+    public void theDraftSignIsDisplayedNearUserNameInTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.theDraftSignIsDisplayedNearUserNameInTheLeftPanel(arg0);
+    }
 }

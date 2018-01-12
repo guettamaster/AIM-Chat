@@ -494,4 +494,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void userNameIsDisplayedInTheLeftPanelAfterUpdatingProfile(String arg0) {
         Assert.assertTrue("False", homePage.userNameIsDisplayedInTheLeftPanelAfterUpdatingProfile(arg0));
     }
+
+    @Step
+    public void checkTheValueOfTheFieldWithLabel(String arg0) throws ParseException {
+        Assert.assertTrue ("The value is not correct: expected - " + Serenity.getCurrentSession().get(arg0).toString() + ", but found - " + homePage.checkTheValueOfTheFieldWithLabel(arg0), Serenity.getCurrentSession().get(arg0).toString().equals(homePage.checkTheValueOfTheFieldWithLabel(arg0)));
+    }
+
+    @Step
+    public void theDraftSignIsDisplayedNearUserNameInTheLeftPanel(String arg0) {
+        Assert.assertTrue("False", homePage.theDraftSignIsDisplayedNearUserNameInTheLeftPanel(arg0));
+    }
 }

@@ -178,6 +178,12 @@ Feature: testing home page
     When enter "test skype" in the "Skype:" input field
     When enter "test subject" in the "What I do:" input field
     When enter "test room" in the "Where I am:" input field
+    Then the "First Name:" input field is correct
+    Then the "Last Name:" input field is correct
+    Then the "Phone number:" input field is correct
+    Then the "Skype:" input field is correct
+    Then the "What I do:" input field is correct
+    Then the "Where I am:" input field is correct
     When Upload avatar to the Profile page
    | count              | 1                                                                              |
    | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg |
@@ -203,3 +209,25 @@ Feature: testing home page
     Then Profile successfully updated message is displayed
     When click on the arrow back
     Then "name last_name" user name is displayed in the left panel after updating profile
+    When click on "admin" user name
+    Then the user menu with actions is displayed
+    When click on the Profile link
+    Then the Profile page is displayed
+    Then the "First Name:" input field is correct
+    Then the "Last Name:" input field is correct
+    Then the "Phone number:" input field is correct
+    Then the "Skype:" input field is correct
+    Then the "What I do:" input field is correct
+    Then the "Where I am:" input field is correct
+
+  Scenario: 2.016 Check that draft sign is displayed in the left panel if we have an unsent message in the input field
+    When click on the Direct Messages link
+    Then direct rooms pop-up is displayed
+    When enter "a.shevchenko" in the input search field
+    Then "a.shevchenko" is displayed in the list of users
+    When click on the "a.shevchenko" name in the list of users
+    Then "a.shevchenko" user name is displayed in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    When enter "test message" in the input message field
+    When click on "General" room in the left panel
+    Then the draft sign is displayed near "a.shevchenko" user name in the left panel

@@ -576,6 +576,20 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DRAFT_SIGN_NEAR_USER_NAME.replace("$1", arg0))));
         return $(LOCATORS.DRAFT_SIGN_NEAR_USER_NAME.replace("$1", arg0)).isPresent();
     }
+
+    public void enterInTheInputSearchFieldInsideARoom(String arg0) {
+//        Actions actions = new Actions(getDriver());
+//        actions.sendKeys(arg0);
+//        actions.moveToElement(find(By.xpath(LOCATORS.INPUT_FIELD_INSIDE_A_ROOM.replace("$1", arg0))));
+//        actions.build().perform();
+        $(LOCATORS.INPUT_FIELD_INSIDE_A_ROOM.replace("$1", arg0)).sendKeys(arg0);
+//        waitABit(3000);
+    }
+
+    public boolean titleNameOfAPanelWithListIsDisplayed(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.TITLE_NAME_OF_A_PANEL.replace("$1", arg0))));
+        return $(LOCATORS.TITLE_NAME_OF_A_PANEL.replace("$1", arg0)).isPresent();
+    }
 }
 
 

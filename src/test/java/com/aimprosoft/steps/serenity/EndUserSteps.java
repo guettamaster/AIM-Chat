@@ -504,4 +504,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void theDraftSignIsDisplayedNearUserNameInTheLeftPanel(String arg0) {
         Assert.assertTrue("False", homePage.theDraftSignIsDisplayedNearUserNameInTheLeftPanel(arg0));
     }
+
+    @Step
+    public void enterInTheInputSearchFieldInsideARoom(String arg0) {
+        homePage.enterInTheInputSearchFieldInsideARoom(arg0);
+    }
+
+    @Step
+    public void titleNameOfAPanelWithListIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.titleNameOfAPanelWithListIsDisplayed(arg0));
+    }
 }

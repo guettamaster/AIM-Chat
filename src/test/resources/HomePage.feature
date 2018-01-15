@@ -231,3 +231,23 @@ Feature: testing home page
     When enter "test message" in the input message field
     When click on "General" room in the left panel
     Then the draft sign is displayed near "a.shevchenko" user name in the left panel
+
+  Scenario: 2.017 Check that mentions panel is displayed after entering "@username" in the input field inside a room
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    When enter "@" in the input search field inside a room
+    Then "People" title name of a panel with list is displayed
+
+  Scenario: 2.018 Check that rooms panel is displayed after entering "@roomname" in the input field inside a room
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    When enter "#" in the input search field inside a room
+    Then "Rooms" title name of a panel with list is displayed
+
+  Scenario: 2.019 Check that emojies panel is displayed after entering "::re" in the input field inside a room
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    When enter "::re" in the input search field inside a room
+    Then "Emojies" title name of a panel with list is displayed
+
+

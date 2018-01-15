@@ -474,4 +474,14 @@ public class DefinitionSteps {
     public void theDraftSignIsDisplayedNearUserNameInTheLeftPanel(String arg0) throws Throwable {
         endUserSteps.theDraftSignIsDisplayedNearUserNameInTheLeftPanel(arg0);
     }
+
+    @When("^enter \"([^\"]*)\" in the input search field inside a room$")
+    public void enterInTheInputSearchFieldInsideARoom(String arg0) throws Throwable {
+        endUserSteps.enterInTheInputSearchFieldInsideARoom(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" title name of a panel with list is displayed$")
+    public void titleNameOfAPanelWithListIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.titleNameOfAPanelWithListIsDisplayed(arg0);
+    }
 }

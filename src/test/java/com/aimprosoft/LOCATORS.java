@@ -83,4 +83,5 @@ String USER_NAME_AFTER_UPDATING_PROFILE = "//div[@class='info']/p[contains(text(
 String DRAFT_SIGN_NEAR_USER_NAME = "//span[@class='ccss'][contains(text(),'$1')]//ancestor::a[@class='room-link']/i[contains(text(),'create')]";
 String INPUT_FIELD_INSIDE_A_ROOM = "//div[@class='input-text']/textarea[@id='input-text-field'][@placeholder='Type message here']";
 String TITLE_NAME_OF_A_PANEL = "//div[@class='suggestions-header']/span[contains(text(),'$1')]";
+String CREATE_SNIPPET_LINK = "//div[@class='chat-container active']//label[@class='createSnippet']/i[contains(@class,'material-icons md-24 md')]";
 }

@@ -590,6 +590,22 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.TITLE_NAME_OF_A_PANEL.replace("$1", arg0))));
         return $(LOCATORS.TITLE_NAME_OF_A_PANEL.replace("$1", arg0)).isPresent();
     }
+
+    public boolean createSnippetLinkIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CREATE_SNIPPET_LINK)));
+        return $(LOCATORS.CREATE_SNIPPET_LINK).isPresent();
+    }
+
+    public void clickOnTheSnippetLink() {
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.CREATE_SNIPPET_LINK));
+        waitABit(5000);
+    }
+
+    public boolean createSnippetTitleInsideOpenedPopupIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CREATE_SNIPPET_LINK)));
+        return $(LOCATORS.CREATE_SNIPPET_LINK).isPresent();
+    }
 }
 
 

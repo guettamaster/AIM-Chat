@@ -484,4 +484,9 @@ public class DefinitionSteps {
     public void titleNameOfAPanelWithListIsDisplayed(String arg0) throws Throwable {
         endUserSteps.titleNameOfAPanelWithListIsDisplayed(arg0);
     }
+
+    @When("^check the appearance of the snippet button$")
+    public void checkTheAppearanceOfTheSnippetButton() throws Throwable {
+        endUserSteps.checkTheAppearanceOfTheSnippetButton();
+    }
 }

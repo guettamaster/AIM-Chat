@@ -250,4 +250,11 @@ Feature: testing home page
     When enter "::re" in the input search field inside a room
     Then "Emojies" title name of a panel with list is displayed
 
+  Scenario: 2.020 Check that snippet is downloaded
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    When check the appearance of the snippet button
+
+
+
 

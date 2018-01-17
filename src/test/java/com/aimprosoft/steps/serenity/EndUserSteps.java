@@ -514,4 +514,28 @@ public class EndUserSteps extends ScenarioSteps {
     public void titleNameOfAPanelWithListIsDisplayed(String arg0) {
         Assert.assertTrue("False", homePage.titleNameOfAPanelWithListIsDisplayed(arg0));
     }
+
+    @Step
+    public void checkTheAppearanceOfTheSnippetButton() {
+        clipButtonIsDisplayed();
+        clickOnClipButton();
+        createSnippetLinkIsDisplayed();
+        clickOnTheSnippetLink();
+        createSnippetTitleInsideOpenedPopupIsDisplayed();
+    }
+
+    @Step
+    private void createSnippetTitleInsideOpenedPopupIsDisplayed() {
+        Assert.assertTrue("False", homePage.createSnippetTitleInsideOpenedPopupIsDisplayed());
+    }
+
+    @Step
+    private void clickOnTheSnippetLink() {
+        homePage.clickOnTheSnippetLink();
+    }
+
+    @Step
+    private void createSnippetLinkIsDisplayed() {
+        Assert.assertTrue("False", homePage.createSnippetLinkIsDisplayed());
+    }
 }

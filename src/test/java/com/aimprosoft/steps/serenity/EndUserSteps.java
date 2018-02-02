@@ -25,8 +25,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void loginAsadmin() {
-        signinPage.loginAsadmin();
+    public void loginAsuser() {
+        signinPage.loginAsuser();
     }
 
     @Step
@@ -102,8 +102,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void clickOnTheAboutChannelButtonOfRoom(String arg0) {
-        homePage.clickOnTheAboutChannelButtonOfRoom(arg0);
+    public void clickOnTheSettingsButtonOfRoom(String arg0) {
+        homePage.clickOnTheSettingsButtonOfRoom(arg0);
     }
 
     @Step

@@ -25,7 +25,7 @@ public class DefinitionSteps {
 
     @And("^filled fields valid data$")
     public void filledFieldsValidData() throws Throwable {
-        endUserSteps.loginAsadmin();
+        endUserSteps.loginAsuser();
     }
 
     @When("^click on Login button$")
@@ -100,9 +100,9 @@ public class DefinitionSteps {
         endUserSteps.theTitleIsDisplayedInTheHeader(arg0);
     }
 
-    @When("^click on the about channel button of \"([^\"]*)\" room$")
-    public void clickOnTheAboutChannelButtonOfRoom(String arg0) throws Throwable {
-        endUserSteps.clickOnTheAboutChannelButtonOfRoom(arg0);
+    @When("^click on the settings button of \"([^\"]*)\" room$")
+    public void clickOnTheSettingsButtonOfRoom(String arg0) throws Throwable {
+        endUserSteps.clickOnTheSettingsButtonOfRoom(arg0);
     }
 
     @When("^click on the \"([^\"]*)\" channel details link$")

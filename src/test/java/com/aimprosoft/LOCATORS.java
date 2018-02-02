@@ -24,7 +24,7 @@ String TEXTAREA_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//textarea";
 String ADD_BUTTON = "//button[.='Add']";
 String ROOM_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]";
 String ROOM_TITLE_NAME_IN_THE_HEADER = "//div[@class='channel-name room-public'][contains(text(),'$1')]";
-String ABOUT_CHANNEL_BUTTON = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='container']//span[@class='glyphicon glyphicon-info-sign settings-gliph']";
+String SETTINGS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='b-chat-top']//div[@class='right-control-panel']//i[contains(@class,'material-icons 32 md-dark')][contains(text(),'settings')]";
 String CHANNEL_DETAILS_LINK = "//div[@class='chat-container active']//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='b-chat-top with-panel']//div[@class='layout-content']//span[contains(text(),'Channel Details:')]";
 String ROOM_NAME_IN_THE_CHANNEL_DETAILS_BLOCK = "//div[@class='chat-container active']//div[@class='dropdown-panel show-panel']//div[@class='change-room-name']//div[contains(text(),'$1')]";
 String EDIT_ROOM_NAME_LINK = "(//span[@class='edit-description-link']/a[contains(text(),'Edit')]//ancestor::div[@class='change-room-name']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[1]";

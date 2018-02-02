@@ -6,7 +6,7 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
 #    Then home page is opened
-    Then "admin" user name is displayed
+    Then "Scottie33" user name is displayed
 #    Then "o.ivankovckyi" user name is displayed
 
   Scenario: 2.001 Check that public "room1" room is created
@@ -14,7 +14,7 @@ Feature: testing home page
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
 #    When choose public room checkbox
-    When enter "superadmin" in the Invite members field
+    When enter "a.lugovskiy" in the Invite members field
     When click on Add Room title
     When enter "testdescription" in the "Description" textarea field
     When click on Add button
@@ -23,17 +23,19 @@ Feature: testing home page
   Scenario: 2.002 Check that public "room1" renamed to "Testroomname1"
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
-    When click on the about channel button of "room1" room
-    When click on the "room1" channel details link
-    Then "room1" name is displayed in the channel details block
-    When click on the Edit room name link
-    Then input room name field is displayed
-    When clear data in the input room name field
-    When enter "Testroomname1" in the input room name field
-    When click on Save button under the input room name field
-    Then the "Testroomname1" title is displayed in the header
-    Then "Testroomname1" name is displayed in the channel details block
-    Then the "Testroomname1" room is created
+    When click on the settings button of "room1" room
+    Then room settings is displayed on the "room1" name
+#
+#
+#
+#    When click on the Edit room name link
+#    Then input room name field is displayed
+#    When clear data in the input room name field
+#    When enter "Testroomname1" in the input room name field
+#    When click on Save button under the input room name field
+#    Then the "Testroomname1" title is displayed in the header
+#    Then "Testroomname1" name is displayed in the channel details block
+#    Then the "Testroomname1" room is created
 
   Scenario: 2.003 Check that in public "Testroomname1" room changed description
     When click on "Testroomname1" room in the left panel

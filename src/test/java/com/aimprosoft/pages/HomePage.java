@@ -88,9 +88,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         return $(LOCATORS.ROOM_TITLE_NAME_IN_THE_HEADER.replace("$1", arg0)).isPresent();
     }
 
-    public void clickOnTheAboutChannelButtonOfRoom(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ABOUT_CHANNEL_BUTTON.replace("$1", arg0))));
-        $(LOCATORS.ABOUT_CHANNEL_BUTTON.replace("$1", arg0)).click();
+    public void clickOnTheSettingsButtonOfRoom(String arg0) {
+        withTimeoutOf(1, TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.SETTINGS_BUTTON_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
+        waitABit(5000);
     }
 
     public void clickOnTheChannelDetailsLink(String arg0) {

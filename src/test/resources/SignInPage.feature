@@ -5,6 +5,6 @@ Feature: testing signin page
     When click on Standard tab
     And filled fields valid data
     When click on Login button
-    Then home page is opened
-    Then "admin" user name is displayed
+#    Then home page is opened
+    Then "Scottie33" user name is displayed
 #    Then "o.ivankovckyi" user name is displayed

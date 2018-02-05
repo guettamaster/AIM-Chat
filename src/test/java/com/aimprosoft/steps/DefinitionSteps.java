@@ -110,9 +110,9 @@ public class DefinitionSteps {
         endUserSteps.clickOnTheChannelDetailsLink(arg0);
     }
 
-    @Then("^\"([^\"]*)\" name is displayed in the channel details block$")
-    public void nameIsDisplayedInTheChannelDetailsBlock(String arg0) throws Throwable {
-        endUserSteps.nameIsDisplayedInTheChannelDetailsBlock(arg0);
+    @Then("^room settings is displayed on the \"([^\"]*)\" name$")
+    public void roomSettingsIsDisplayedOnTheName(String arg0) throws Throwable {
+        endUserSteps.roomSettingsIsDisplayedOnTheName(arg0);
     }
 
     @When("^click on the Edit room name link$")
@@ -120,9 +120,9 @@ public class DefinitionSteps {
         endUserSteps.clickOnTheEditRoomNameLink();
     }
 
-    @Then("^input room name field is displayed$")
-    public void inputRoomNameFieldIsDisplayed() throws Throwable {
-        endUserSteps.inputRoomNameFieldIsDisplayed();
+    @Then("^input room name field on the \"([^\"]*)\" is displayed$")
+    public void inputRoomNameFieldOnTheIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.inputRoomNameFieldOnTheIsDisplayed(arg0);
     }
 
     @When("^clear data in the input room name field$")
@@ -135,9 +135,9 @@ public class DefinitionSteps {
         endUserSteps.enterInTheInputRoomNameField(arg0);
     }
 
-    @When("^click on Save button under the input room name field$")
-    public void clickOnSaveButtonUnderTheInputRoomNameField() throws Throwable {
-        endUserSteps.clickOnSaveButtonUnderTheInputRoomNameField();
+    @When("^click on Save changes button under the input room name field$")
+    public void clickOnSaveChangesButtonUnderTheInputRoomNameField() throws Throwable {
+        endUserSteps.clickOnSaveChangesButtonUnderTheInputRoomNameField();
     }
 
     @When("^click on the Edit description link in the \"([^\"]*)\" room$")

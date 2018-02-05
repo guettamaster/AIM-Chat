@@ -99,9 +99,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.CHANNEL_DETAILS_LINK.replace("$1", arg0)).click();
     }
 
-    public boolean nameIsDisplayedInTheChannelDetailsBlock(String arg0) {
+    public boolean roomSettingsIsDisplayedOnTheName(String arg0) {
         waitABit(500);
-        return $(LOCATORS.ROOM_NAME_IN_THE_CHANNEL_DETAILS_BLOCK.replace("$1", arg0)).isPresent();
+        return $(LOCATORS.ROOM_NAME_IN_THE_SETTINGS_BLOCK_IN_THE_RIGHT_BUTTON.replace("$1", arg0)).isPresent();
     }
 
     public void clickOnTheEditRoomNameLink() {
@@ -110,9 +110,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         js.executeScript("arguments[0].click();", findBy(LOCATORS.EDIT_ROOM_NAME_LINK));
     }
 
-    public boolean inputRoomNameFieldIsDisplayed() {
+    public boolean inputRoomNameFieldOnTheIsDisplayed(String arg0) {
         waitABit(500);
-        return $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE).isPresent();
+        return $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0)).isPresent();
     }
 
     public void clearDataInTheInputRoomNameField() {
@@ -135,10 +135,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         actions.build().perform();
     }
 
-    public void clickOnSaveButtonUnderTheInputRoomNameField() {
+    public void clickOnSaveChangesButtonUnderTheInputRoomNameField() {
         withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", findBy(LOCATORS.SAVE_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD));
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.SAVE_CHANGES_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD));
     }
 
     public void clickOnTheEditDescriptionLinkInTheRoom(String arg0) {

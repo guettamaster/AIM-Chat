@@ -112,8 +112,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void nameIsDisplayedInTheChannelDetailsBlock(String arg0) {
-        Assert.assertTrue("False", homePage.nameIsDisplayedInTheChannelDetailsBlock(arg0));
+    public void roomSettingsIsDisplayedOnTheName(String arg0) {
+        Assert.assertTrue("False", homePage.roomSettingsIsDisplayedOnTheName(arg0));
     }
 
     @Step
@@ -122,8 +122,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void inputRoomNameFieldIsDisplayed() {
-        Assert.assertTrue("False", homePage.inputRoomNameFieldIsDisplayed());
+    public void inputRoomNameFieldOnTheIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.inputRoomNameFieldOnTheIsDisplayed(arg0));
     }
 
     @Step
@@ -137,8 +137,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void clickOnSaveButtonUnderTheInputRoomNameField() {
-        homePage.clickOnSaveButtonUnderTheInputRoomNameField();
+    public void clickOnSaveChangesButtonUnderTheInputRoomNameField() {
+        homePage.clickOnSaveChangesButtonUnderTheInputRoomNameField();
     }
 
     @Step

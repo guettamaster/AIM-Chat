@@ -25,30 +25,22 @@ Feature: testing home page
     Then the "room1" title is displayed in the header
     When click on the settings button of "room1" room
     Then room settings is displayed on the "room1" name
-#
-#
-#
-#    When click on the Edit room name link
-#    Then input room name field is displayed
-#    When clear data in the input room name field
-#    When enter "Testroomname1" in the input room name field
-#    When click on Save button under the input room name field
-#    Then the "Testroomname1" title is displayed in the header
-#    Then "Testroomname1" name is displayed in the channel details block
-#    Then the "Testroomname1" room is created
+    Then input room name field on the "room1" is displayed
+    When clear data in the input room name field
+    When enter "Testroomname1" in the input room name field
+    When click on Save changes button under the input room name field
+    Then the "Testroomname1" title is displayed in the header
+    Then the "Testroomname1" room is created
 
   Scenario: 2.003 Check that in public "Testroomname1" room changed description
     When click on "Testroomname1" room in the left panel
     Then the "Testroomname1" title is displayed in the header
-    When click on the about channel button of "Testroomname1" room
-    When click on the "Testroomname1" channel details link
-    Then "Testroomname1" name is displayed in the channel details block
-    When click on the Edit description link in the "Testroomname1" room
+    When click on the settings button of "Testroomname1" room
+    Then room settings is displayed on the "Testroomname1" name
     Then input description field is displayed
     When clear data in the input description field
     When enter "new description111" in the input description field
-    When click on Done button under the input description field
-    Then the "new description111" description is displayed in the channel details block
+    When click on Save changes button under the input room name field
     Then the "new description111" description is displayed in the header
 
   Scenario: 2.004 Check that public "Testroomname1" room is deleted

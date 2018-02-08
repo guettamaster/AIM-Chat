@@ -144,113 +144,113 @@ Feature: testing home page
     Then the "room1" is deleted in the Favorites on the left panel
     Then the "room1" room returns to the Rooms on the left panel
 
-##  Scenario: 2.014 Check that image is uploaded to room
-##    When click on plus link
-##    Then room title in popup is displayed
-##    When enter "room1" in the "Name" input field
-## #    When choose public room checkbox
-## #    When enter "superadmin" in the Invite members field
-##    When enter "r.konivec" in the Invite members field
-##    When click on user name
-##    When click on room title in popup
-##    When enter "testdescription" in the "Description" textarea field
-##    When click on Add button
-##    Then the "room1" room is created
-##    When click on "room1" room in the left panel
-##    Then the "room1" title is displayed in the header
-##    When Upload file many times
-##   | count              | 100000                                                                                        |
-##   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
-##   | title_name         | Upload file                                                                                   |
-##   | expected_file_name | michael-jordan_wallpaper_005.jpg                                                              |
-#
-#  Scenario: 2.015 Check that fields in the user profile has changed
-#    When click on "Scottie33" user name
-#    Then the user menu with actions is displayed
-#    When click on the Profile link
-#    Then the Profile page is displayed
-#    When enter "test name" in the "First Name:" input field
-#    When enter "test last name" in the "Last Name:" input field
-#    When enter "0501234567" in the "Phone number:" input field
-#    When enter "test skype" in the "Skype:" input field
-#    When enter "test subject" in the "What I do:" input field
-#    When enter "test room" in the "Where I am:" input field
-#    Then the "First Name:" input field is correct
-#    Then the "Last Name:" input field is correct
-#    Then the "Phone number:" input field is correct
-#    Then the "Skype:" input field is correct
-#    Then the "What I do:" input field is correct
-#    Then the "Where I am:" input field is correct
-#    When Upload avatar to the Profile page
-#   | count              | 1                                                                              |
-#   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg |
-#    Then the Profile page is displayed
-#    When click on the Save button on the Profile page
-#    When clear data in the "First Name:" input field
-#    When enter "name" in the "First Name:" input field
-#    When clear data in the "Last Name:" input field
-#    When enter "last_name" in the "Last Name:" input field
-#    When clear data in the "Phone number:" input field
-#    When enter "77777" in the "Phone number:" input field
-#    When clear data in the "Skype:" input field
-#    When enter "skypeacc" in the "Skype:" input field
-#    When clear data in the "What I do:" input field
-#    When enter "testing" in the "What I do:" input field
-#    When clear data in the "Where I am:" input field
-#    When enter "room209" in the "Where I am:" input field
-#    When Upload avatar to the Profile page
-#   | count              | 1                                                                                             |
+#  Scenario: 2.014 Check that image is uploaded to room
+#    When click on plus link
+#    Then room title in popup is displayed
+#    When enter "room1" in the "Name" input field
+# #    When choose public room checkbox
+# #    When enter "superadmin" in the Invite members field
+#    When enter "r.konivec" in the Invite members field
+#    When click on user name
+#    When click on room title in popup
+#    When enter "testdescription" in the "Description" textarea field
+#    When click on Add button
+#    Then the "room1" room is created
+#    When click on "room1" room in the left panel
+#    Then the "room1" title is displayed in the header
+#    When Upload file many times
+#   | count              | 100000                                                                                        |
 #   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
-#    Then the Profile page is displayed
-#    When click on the Save button on the Profile page
-#    Then Profile successfully updated message is displayed
-#    When click on the arrow back
-#    Then "name last_name" user name is displayed in the left panel after updating profile
-#    When click on "admin" user name
-#    Then the user menu with actions is displayed
-#    When click on the Profile link
-#    Then the Profile page is displayed
-#    Then the "First Name:" input field is correct
-#    Then the "Last Name:" input field is correct
-#    Then the "Phone number:" input field is correct
-#    Then the "Skype:" input field is correct
-#    Then the "What I do:" input field is correct
-#    Then the "Where I am:" input field is correct
-#
-#  Scenario: 2.016 Check that draft sign is displayed in the left panel if we have an unsent message in the input field
-#    When click on the Direct Messages link
-#    Then direct rooms pop-up is displayed
-#    When enter "a.shevchenko" in the input search field
-#    Then "a.shevchenko" is displayed in the list of users
-#    When click on the "a.shevchenko" name in the list of users
-#    Then "a.shevchenko" user name is displayed in the left panel
-#    Then "a.shevchenko" user name is displayed in the header
-#    When enter "test message" in the input message field
-#    When click on "General" room in the left panel
-#    Then the draft sign is displayed near "a.shevchenko" user name in the left panel
-#
-#  Scenario: 2.017 Check that mentions panel is displayed after entering "@username" in the input field inside a room
-#    When click on "General" room in the left panel
-#    Then the "General" title is displayed in the header
-#    When enter "@" in the input search field inside a room
-#    Then "People" title name of a panel with list is displayed
-#
-#  Scenario: 2.018 Check that rooms panel is displayed after entering "@roomname" in the input field inside a room
-#    When click on "General" room in the left panel
-#    Then the "General" title is displayed in the header
-#    When enter "#" in the input search field inside a room
-#    Then "Rooms" title name of a panel with list is displayed
-#
-#  Scenario: 2.019 Check that emojies panel is displayed after entering "::re" in the input field inside a room
-#    When click on "General" room in the left panel
-#    Then the "General" title is displayed in the header
-#    When enter "::re" in the input search field inside a room
-#    Then "Emojies" title name of a panel with list is displayed
-#
-#  Scenario: 2.020 Check that snippet is downloaded
-#    When click on "General" room in the left panel
-#    Then the "General" title is displayed in the header
-#    When check the appearance of the snippet button
+#   | title_name         | Upload file                                                                                   |
+#   | expected_file_name | michael-jordan_wallpaper_005.jpg                                                              |
+
+  Scenario: 2.015 Check that fields in the user profile has changed
+    When click on "Scottie33" user name
+    Then the user menu with actions is displayed
+    When click on the Profile link
+    Then the Profile page is displayed
+    When enter "test name" in the "First Name:" input field
+    When enter "test last name" in the "Last Name:" input field
+    When enter "0501234567" in the "Phone number:" input field
+    When enter "test skype" in the "Skype:" input field
+    When enter "test subject" in the "What I do:" input field
+    When enter "test room" in the "Where I am:" input field
+    Then the "First Name:" input field is correct
+    Then the "Last Name:" input field is correct
+    Then the "Phone number:" input field is correct
+    Then the "Skype:" input field is correct
+    Then the "What I do:" input field is correct
+    Then the "Where I am:" input field is correct
+    When Upload avatar to the Profile page
+   | count              | 1                                                                              |
+   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg |
+    Then the Profile page is displayed
+    When click on the Save button on the Profile page
+    When clear data in the "First Name:" input field
+    When enter "name" in the "First Name:" input field
+    When clear data in the "Last Name:" input field
+    When enter "last_name" in the "Last Name:" input field
+    When clear data in the "Phone number:" input field
+    When enter "77777" in the "Phone number:" input field
+    When clear data in the "Skype:" input field
+    When enter "skypeacc" in the "Skype:" input field
+    When clear data in the "What I do:" input field
+    When enter "testing" in the "What I do:" input field
+    When clear data in the "Where I am:" input field
+    When enter "room209" in the "Where I am:" input field
+    When Upload avatar to the Profile page
+   | count              | 1                                                                                             |
+   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
+    Then the Profile page is displayed
+    When click on the Save button on the Profile page
+    Then Profile successfully updated message is displayed
+    When click on the arrow back
+    Then "name last_name" user name is displayed in the left panel after updating profile
+    When click on "admin" user name
+    Then the user menu with actions is displayed
+    When click on the Profile link
+    Then the Profile page is displayed
+    Then the "First Name:" input field is correct
+    Then the "Last Name:" input field is correct
+    Then the "Phone number:" input field is correct
+    Then the "Skype:" input field is correct
+    Then the "What I do:" input field is correct
+    Then the "Where I am:" input field is correct
+
+  Scenario: 2.016 Check that draft sign is displayed in the left panel if we have an unsent message in the input field
+    When click on the Direct Messages link
+    Then direct rooms pop-up is displayed
+    When enter "a.shevchenko" in the input search field
+    Then "a.shevchenko" is displayed in the list of users
+    When click on the "a.shevchenko" name in the list of users
+    Then "a.shevchenko" user name is displayed in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    When enter "test message" in the input message field
+    When click on "General" room in the left panel
+    Then the draft sign is displayed near "a.shevchenko" user name in the left panel
+
+  Scenario: 2.017 Check that mentions panel is displayed after entering "@username" in the input field inside a room
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    When enter "@" in the input search field inside a room
+    Then "People" title name of a panel with list is displayed
+
+  Scenario: 2.018 Check that rooms panel is displayed after entering "@roomname" in the input field inside a room
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    When enter "#" in the input search field inside a room
+    Then "Rooms" title name of a panel with list is displayed
+
+  Scenario: 2.019 Check that emojies panel is displayed after entering "::re" in the input field inside a room
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    When enter "::re" in the input search field inside a room
+    Then "Emojies" title name of a panel with list is displayed
+
+  Scenario: 2.020 Check that snippet is downloaded
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    When check the appearance of the snippet button
 
 
 

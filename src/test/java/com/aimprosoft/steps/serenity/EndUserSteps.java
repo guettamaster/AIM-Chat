@@ -197,8 +197,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void deleteRoomPopUpIsDisplayed() {
-        Assert.assertTrue("False", homePage.deleteRoomPopUpIsDisplayed());
+    public void deleteRoomPopUpIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.deleteRoomPopUpIsDisplayed(arg0));
     }
 
     @Step
@@ -537,5 +537,15 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     private void createSnippetLinkIsDisplayed() {
         Assert.assertTrue("False", homePage.createSnippetLinkIsDisplayed());
+    }
+
+    @Step
+    public void theToastIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.theToastIsDisplayed(arg0));
+    }
+
+    @Step
+    public void theToastIsClosed(String arg0) {
+        homePage.theToastIsClosed(arg0);
     }
 }

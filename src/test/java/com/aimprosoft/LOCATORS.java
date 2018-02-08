@@ -22,7 +22,7 @@ String PUBLIC_ROOM_TYPE_CHECKBOX = "//input[@name='type'][@value='public']";
 String INVITE_MEMBERS_INPUT_FIELD = "//input[@class='sc-form-control']";
 String TEXTAREA_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//textarea";
 String ADD_BUTTON = "//button[.='Add']";
-String ROOM_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]";
+String ROOM_NAME_IN_THE_LEFT_PANEL = "//li[@role='presentation']//a[@class='room-link']//span[contains(text(), '$1')]";
 String ROOM_TITLE_NAME_IN_THE_HEADER = "//div[@class='channel-name room-public'][contains(text(),'$1')]";
 String SETTINGS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='b-chat-top']//div[@class='right-control-panel']//i[contains(@class,'material-icons 32 md-dark')][contains(text(),'settings')]";
 String CHANNEL_DETAILS_LINK = "//div[@class='chat-container active']//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='b-chat-top with-panel']//div[@class='layout-content']//span[contains(text(),'Channel Details:')]";
@@ -37,14 +37,14 @@ String DONE_BUTTON = "//div[@class='chat-container active']//button[.='Done']";
 String DESCRIPTION_TITLE_IN_THE_CHANNEL_DETAILS_BLOCK = "//div[@class='description-text']/span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String DESCRIPTION_TITLE_IN_THE_HEADER = "//ul[@class='b-chat-header-text nav navbar-nav']//span[@class='description'][contains(text(),'$1')]";
 String WHEEL_LINK_IN_THE_HEADER = "//a[@class='dropdown-toggle']/i[@class='glyphicon glyphicon-cog']";
-String DELETE_ROOM_LINK = "//ul[@class='dropdown-menu']/li/a[contains(text(),'Delete Room')]";
-String DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP = "//h4[@class='modal-title'][contains(text(),'Delete Room')]";
+String DELETE_ROOM_LINK = "//div[@class='chat-container active']//span[@class='delete-room one-user'][.='Delete Room']";
+String DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP = "//span[@class='room-to-delete'][contains(text(),'$1')]";
 String DELETE_BUTTON = "//button[.='Delete']";
 String DIRECT_MESSAGES_LINK = "//h2[@class='channel-header']/a[contains(text(),'Direct')]";
 String DIRECT_ROOMS_TITLE_IN_THE_DIRECT_ROOMS_POPUP = "//h4[.='Start Direct']";
-String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//div[@class='modal-header']//input[@class='form-control shadowed'][@placeholder='Search members']";
-String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='room-item']/span[@class='username-text'][contains(text(),'$1')]";
-String USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]";
+String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//div[@class='modal-header']//input[@class='form-control shadowed'][@placeholder='Search room']";
+String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='room-item']//span[@class='username-text'][contains(text(),'$1')]";
+String USER_NAME_IN_THE_LEFT_PANEL = "//li[@role='presentation']//a[@class='room-link']//span[contains(text(), '$1')]";
 String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";
 String INPUT_MESSAGE_FIELD = "//div[@class='chat-container active']//textarea[@id='input-text-field'][@placeholder='Type message here']";
 String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='chat-container active']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
@@ -55,7 +55,7 @@ String COMMENT_UNDER_MESSAGE = "//div[@class='chat-container active']//span[@cla
 String DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem']//span[@class='text-danger'][.='Delete Message']";
 String DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][.='Delete Message']";
 String DELETE_THIS_MESSAGE_BUTTON = "//button[.='Delete']";
-String DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[@class='ccss'][contains(text(),'$1')]//ancestor::li//a[@class='remove-button']";
+String DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[contains(text(),'$1')]//ancestor::li//a[@class='remove-button']/i[contains(text(),'remove_circle')]";
 String CLIP_BUTTON = "//div[@class='chat-container active']//div[@class='button-input']/i[contains(text(),'attach_file')]";
 String UPLOAD_BUTTON = "//div[@class='chat-container active']//label[@class='uploadFile']/i[contains(@class,'material-icons md-24 md')]";
 String UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP = "//h4[@class='modal-title'][.='Upload file']";
@@ -64,9 +64,9 @@ String UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP = "//div[@class='modal-footer']/button[
 String FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING = "//div[@class='chat-container active']//div[@class='file-name']/span[@class='file-name-text'][contains(text(),'$1')]";
 String DOWNLOAD_BUTTON_UNDER_FILE_NAME = "//div[@class='chat-container active']//div[@class='file-name']/span[@class='file-name-text'][contains(text(),'$1')]//ancestor::div[@class='file-container']/div[@class='file-msg-controls']/button/span/a[@title='Download']/i[contains(@class,'material-icons md-24 md-dark')]";
 //   ////div[descendant::div[contains(text(),'maxresdefault.txt')] and @class='file-container']//button[@class='btn btn-success file-download']
-String FAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//i[@class='favorite-button settings-gliph glyphicon glyphicon-star-empty']";
+String FAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//a[@class='favorite-button']/i[contains(text(), 'star_border')]";
 String FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::h2[contains(text(),'Favorites')] and @class='channel-section']//span[text()='$1']";
-String UNFAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//i[@class='favorite-button settings-gliph glyphicon glyphicon-star']";
+String UNFAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//a[@class='favorite-button']/i[contains(text(), 'star')]";
 String PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::a[contains(text(),'Rooms')] and @class='channel-section']//span[text()='$1']";
 String USER_FROM_THE_LIST = "//div[@class='modal-body']/div[@class='invite']//div[@class='ue ue-username ue-username-person']";
 String PROGRESS_BAR_IN_THE_UPLOAD_POPUP = "//div[@class='progress-bar active progress-bar-striped'][@role='progressbar']";
@@ -84,4 +84,5 @@ String DRAFT_SIGN_NEAR_USER_NAME = "//span[@class='ccss'][contains(text(),'$1')]
 String INPUT_FIELD_INSIDE_A_ROOM = "//div[@class='input-text']/textarea[@id='input-text-field'][@placeholder='Type message here']";
 String TITLE_NAME_OF_A_PANEL = "//div[@class='suggestions-header']/span[contains(text(),'$1')]";
 String CREATE_SNIPPET_LINK = "//div[@class='chat-container active']//label[@class='createSnippet']/i[contains(@class,'material-icons md-24 md')]";
+String TOAST_MESSAGE = "//div[@class='toast toast-success']/div[@class='toast-title'][contains(text(),'$1')]";
 }

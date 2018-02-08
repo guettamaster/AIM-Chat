@@ -195,9 +195,9 @@ public class DefinitionSteps {
         endUserSteps.theRoomIsDeleted(arg0);
     }
 
-    @Then("^delete room pop-up is displayed$")
-    public void deleteRoomPopUpIsDisplayed() throws Throwable {
-        endUserSteps.deleteRoomPopUpIsDisplayed();
+    @Then("^\"([^\"]*)\" delete room pop-up is displayed$")
+    public void deleteRoomPopUpIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.deleteRoomPopUpIsDisplayed(arg0);
     }
 
     @When("^click on the Delete button$")
@@ -488,5 +488,15 @@ public class DefinitionSteps {
     @When("^check the appearance of the snippet button$")
     public void checkTheAppearanceOfTheSnippetButton() throws Throwable {
         endUserSteps.checkTheAppearanceOfTheSnippetButton();
+    }
+
+    @Then("^the \"([^\"]*)\" toast is displayed$")
+    public void theToastIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.theToastIsDisplayed(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" toast is closed$")
+    public void theToastIsClosed(String arg0) throws Throwable {
+        endUserSteps.theToastIsClosed(arg0);
     }
 }

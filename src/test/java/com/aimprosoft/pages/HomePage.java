@@ -217,9 +217,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         }
     }
 
-    public boolean deleteRoomPopUpIsDisplayed() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP)));
-        return $(LOCATORS.DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP).isPresent();
+    public boolean deleteRoomPopUpIsDisplayed(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP.replace("$1", arg0))));
+        return $(LOCATORS.DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP.replace("$1", arg0)).isPresent();
     }
 
     public void clickOnTheDeleteButton() {
@@ -240,6 +240,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputSearchField(String arg0) {
+//        Actions action = new Actions(getDriver());
+//        waitABit(500);
+//        action.moveToElement(find(By.xpath(String.format(LOCATORS.SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP.replace("$1", arg0))))).click().sendKeys(Keys.ENTER).build().perform();
+
         waitABit(500);
         Actions actions = new Actions(getDriver());
         actions.sendKeys(arg0);
@@ -253,9 +257,13 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheNameInTheListOfUsers(String arg0) {
-        withTimeoutOf(1, TimeUnit.SECONDS);
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", findBy(LOCATORS.USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP.replace("$1", arg0)));
+//        waitABit(5000);
+//        $(LOCATORS.USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP.replace("$1", arg0)).click();
+//        waitABit(5000);
+
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP.replace("$1", arg0)));
+
     }
 
     public boolean userNameIsDisplayedInTheLeftPanel(String arg0) {
@@ -281,6 +289,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnEnterButton() {
+        waitABit(500);
         $(LOCATORS.INPUT_MESSAGE_FIELD).click();
         waitABit(500);
         $(LOCATORS.INPUT_MESSAGE_FIELD).sendKeys(Keys.ENTER);
@@ -323,6 +332,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheDeleteMessageLinkInTheMessageMenu() {
+        waitABit(500);
         $(LOCATORS.DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU).click();
     }
 
@@ -439,7 +449,12 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheFavoriteRoomButton() {
-        $(LOCATORS.FAVORITE_ROOM_BUTTON).click();
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FAVORITE_ROOM_BUTTON)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.FAVORITE_ROOM_BUTTON));
+
+
+//        waitABit(500);
+//        $(LOCATORS.FAVORITE_ROOM_BUTTON).click();
     }
 
     public boolean theIsDisplayedInTheFavoritesOnTheLeftPanel(String arg0) {
@@ -448,7 +463,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheUnfavoriteRoomButton() {
-        $(LOCATORS.UNFAVORITE_ROOM_BUTTON).click();
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UNFAVORITE_ROOM_BUTTON)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.UNFAVORITE_ROOM_BUTTON));
     }
 
     public boolean theIsDeletedInTheFavoritesOnTheLeftPanel(String arg0) {
@@ -496,7 +512,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void progressBarIsDisappeared() {
         try {
             withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PROGRESS_BAR_IN_THE_UPLOAD_POPUP)));
-        }catch (Exception e){
+        } catch (Exception e) {
         }
     }
 
@@ -510,7 +526,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void titleIsHidedInThePopUp() {
         try {
             withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.UPLOAD_FILE_TITLE_IN_THE_UPLOAD_POPUP)));
-        }catch (Exception e) {
+        } catch (Exception e) {
         }
     }
 
@@ -608,6 +624,16 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CREATE_SNIPPET_LINK)));
         return $(LOCATORS.CREATE_SNIPPET_LINK).isPresent();
     }
+
+    public boolean theToastIsDisplayed(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
+        return $(LOCATORS.TOAST_MESSAGE.replace("$1", arg0)).isPresent();
+    }
+
+    public void theToastIsClosed(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
+    }
+
 }
 
 

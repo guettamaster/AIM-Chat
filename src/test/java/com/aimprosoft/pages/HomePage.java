@@ -419,7 +419,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnUploadButton() {
-        waitABit(500);
+        waitABit(1500);
 //        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.elementToBeClickable(By.xpath(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP)));
         $(LOCATORS.UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP).click();
     }

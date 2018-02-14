@@ -367,9 +367,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheDeleteSignNearUserInTheLeftPanel(String arg0) {
-        withTimeoutOf(1, TimeUnit.SECONDS);
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", findBy(LOCATORS.DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)));
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)));
     }
 
     public boolean userIsDeletedInTheLeftPanel(String arg0) throws InterruptedException {
@@ -450,10 +449,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void clickOnTheFavoriteRoomButton() {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FAVORITE_ROOM_BUTTON)));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.FAVORITE_ROOM_BUTTON));
-
-
-//        waitABit(500);
-//        $(LOCATORS.FAVORITE_ROOM_BUTTON).click();
     }
 
     public boolean theIsDisplayedInTheFavoritesOnTheLeftPanel(String arg0) {

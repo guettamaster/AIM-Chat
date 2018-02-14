@@ -530,7 +530,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnUserName(String arg0) {
-        $(LOCATORS.USER_PROFILE_LINK.replace("$1", arg0)).click();
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)));
     }
 
     public boolean theUserMenuWithActionsIsDisplayed() {
@@ -566,7 +567,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clearDataInTheInputField(String arg0) {
-//        waitABit(500);
+        waitABit(500);
         $(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg0)).clear();
     }
 
@@ -620,8 +621,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean createSnippetTitleInsideOpenedPopupIsDisplayed() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CREATE_SNIPPET_LINK)));
-        return $(LOCATORS.CREATE_SNIPPET_LINK).isPresent();
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CREATE_SNIPPET_TITLE)));
+        return $(LOCATORS.CREATE_SNIPPET_TITLE).isPresent();
     }
 
     public boolean theToastIsDisplayed(String arg0) {

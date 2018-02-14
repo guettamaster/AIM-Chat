@@ -9,92 +9,92 @@ Feature: testing home page
     Then "Scottie33" user name is displayed
 #    Then "o.ivankovckyi" user name is displayed
 
-#  Scenario: 2.001 Check that public "room1" room is created
-#    When click on plus link
-#    Then room title in popup is displayed
-#    When enter "room1" in the "Name" input field
-##    When choose public room checkbox
-#    When enter "a.lugovskiy" in the Invite members field
-#    When click on Add Room title
-#    When enter "testdescription" in the "Description" textarea field
-#    When click on Add button
-#    Then the "Room room1 created" toast is displayed
-#    Then the "Room room1 created" toast is closed
-#    Then the "room1" room is created
-#
-#  Scenario: 2.002 Check that public "room1" renamed to "Testroomname1"
-#    When click on "room1" room in the left panel
-#    Then the "room1" title is displayed in the header
-#    When click on the settings button of "room1" room
-#    Then room settings is displayed on the "room1" name
-#    Then input room name field on the "room1" is displayed
-#    When clear data in the input room name field
-#    When enter "Testroomname1" in the input room name field
-#    When click on Save changes button under the input room name field
-#    Then the "Testroomname1" title is displayed in the header
-#    Then the "Testroomname1" room is created
-#
-#  Scenario: 2.003 Check that in public "Testroomname1" room changed description
-#    When click on "Testroomname1" room in the left panel
-#    Then the "Testroomname1" title is displayed in the header
-#    When click on the settings button of "Testroomname1" room
-#    Then room settings is displayed on the "Testroomname1" name
-#    Then input description field is displayed
-#    When clear data in the input description field
-#    When enter "new description111" in the input description field
-#    When click on Save changes button under the input room name field
-#    Then the "new description111" description is displayed in the header
-#
-#  Scenario: 2.004 Check that public "Testroomname1" room is deleted
-#    When click on "Testroomname1" room in the left panel
-#    Then the "Testroomname1" title is displayed in the header
-#    When click on the settings button of "Testroomname1" room
-#    Then room settings is displayed on the "Testroomname1" name
-#    Then Delete room link is displayed
-#    When click on the Delete room link
-#    Then "Testroomname1" delete room pop-up is displayed
-#    When click on the Delete button
-#    Then the "Testroomname1" room is deleted
-#
-#  Scenario: 2.005 Check that direct message to a.shevchenko is created
-#    When click on the Direct Messages link
-#    Then direct rooms pop-up is displayed
-#    When enter "a.shevchenko" in the input search field
-#    Then "a.shevchenko" is displayed in the list of users
-#    When click on the "a.shevchenko" name in the list of users
-#    Then "a.shevchenko" user name is displayed in the left panel
-#    Then "a.shevchenko" user name is displayed in the header
-#
-#  Scenario: 2.006 Check that message to a.shevchenko is sent
-#    When click on the "a.shevchenko" user name in the left panel
-#    Then "a.shevchenko" user name is displayed in the header
-#    When enter "test message" in the input message field
-#    When click on Enter button
-#    Then "test message" message is created
-#
-#  Scenario: 2.007 Check that "test message" message to a.shevchenko is edited
-#    When click on the "a.shevchenko" user name in the left panel
-#    Then "a.shevchenko" user name is displayed in the header
-#    Then "test message" message is displayed
-#    When click on the right control hamburger on the "test message" message
-#    Then message menu is displayed
-#    When click on the "Edit Message" link in the message menu
-#    When clear data in the input message field
-#    When enter "edited note" in the input message field
-#    When click on Enter button
-#    Then "edited note" message is created
-#    Then "edited Today at" action is displayed
-#
-#  Scenario: 2.008 Check that "edited note" message to a.shevchenko is deleted
-#    When click on the "a.shevchenko" user name in the left panel
-#    Then "a.shevchenko" user name is displayed in the header
-#    Then "edited note" message is displayed
-#    When click on the right control hamburger on the "edited note" message
-#    Then message menu is displayed
-#    When click on the Delete Message link in the message menu
-#    Then Delete Message title in the opened pop-up is displayed
-#    When click on the Delete button in the opened pop-up
-#    Then "edited note" message is deleted
+  Scenario: 2.001 Check that public "room1" room is created
+    When click on plus link
+    Then room title in popup is displayed
+    When enter "room1" in the "Name" input field
+#    When choose public room checkbox
+    When enter "a.lugovskiy" in the Invite members field
+    When click on Add Room title
+    When enter "testdescription" in the "Description" textarea field
+    When click on Add button
+    Then the "Room room1 created" toast is displayed
+    Then the "Room room1 created" toast is closed
+    Then the "room1" room is created
+
+  Scenario: 2.002 Check that public "room1" renamed to "Testroomname1"
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
+    When click on the settings button of "room1" room
+    Then room settings is displayed on the "room1" name
+    Then input room name field on the "room1" is displayed
+    When clear data in the input room name field
+    When enter "Testroomname1" in the input room name field
+    When click on Save changes button under the input room name field
+    Then the "Testroomname1" title is displayed in the header
+    Then the "Testroomname1" room is created
+
+  Scenario: 2.003 Check that in public "Testroomname1" room changed description
+    When click on "Testroomname1" room in the left panel
+    Then the "Testroomname1" title is displayed in the header
+    When click on the settings button of "Testroomname1" room
+    Then room settings is displayed on the "Testroomname1" name
+    Then input description field is displayed
+    When clear data in the input description field
+    When enter "new description111" in the input description field
+    When click on Save changes button under the input room name field
+    Then the "new description111" description is displayed in the header
+
+  Scenario: 2.004 Check that public "Testroomname1" room is deleted
+    When click on "Testroomname1" room in the left panel
+    Then the "Testroomname1" title is displayed in the header
+    When click on the settings button of "Testroomname1" room
+    Then room settings is displayed on the "Testroomname1" name
+    Then Delete room link is displayed
+    When click on the Delete room link
+    Then "Testroomname1" delete room pop-up is displayed
+    When click on the Delete button
+    Then the "Testroomname1" room is deleted
+
+  Scenario: 2.005 Check that direct message to a.shevchenko is created
+    When click on the Direct Messages link
+    Then direct rooms pop-up is displayed
+    When enter "a.shevchenko" in the input search field
+    Then "a.shevchenko" is displayed in the list of users
+    When click on the "a.shevchenko" name in the list of users
+    Then "a.shevchenko" user name is displayed in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+
+  Scenario: 2.006 Check that message to a.shevchenko is sent
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    When enter "test message" in the input message field
+    When click on Enter button
+    Then "test message" message is created
+
+  Scenario: 2.007 Check that "test message" message to a.shevchenko is edited
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    Then "test message" message is displayed
+    When click on the right control hamburger on the "test message" message
+    Then message menu is displayed
+    When click on the "Edit Message" link in the message menu
+    When clear data in the input message field
+    When enter "edited note" in the input message field
+    When click on Enter button
+    Then "edited note" message is created
+    Then "edited Today at" action is displayed
+
+  Scenario: 2.008 Check that "edited note" message to a.shevchenko is deleted
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    Then "edited note" message is displayed
+    When click on the right control hamburger on the "edited note" message
+    Then message menu is displayed
+    When click on the Delete Message link in the message menu
+    Then Delete Message title in the opened pop-up is displayed
+    When click on the Delete button in the opened pop-up
+    Then "edited note" message is deleted
 
   Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel (in the direct messages)
     When click on the delete sign near "a.shevchenko" user in the left panel

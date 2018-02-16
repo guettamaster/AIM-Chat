@@ -27,8 +27,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOnPlusLink() {
 //        waitABit(8000);
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.PLUS_LINK)));
-        $(LOCATORS.PLUS_LINK).click();
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PLUS_LINK)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.PLUS_LINK));
+//        $(LOCATORS.PLUS_LINK).click();
     }
 
     public boolean roomTitleInPopupIsDisplayed() {
@@ -277,7 +278,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOnTheUserNameInTheLeftPanel(String arg0) {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
-        $(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).click();
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)));
     }
 
     public void enterInTheInputMessageField(String arg0) {
@@ -536,7 +537,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheProfileLink() {
-        $(LOCATORS.PROFILE_LINK_INSIDE_USER_MENU).click();
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.PROFILE_LINK_INSIDE_USER_MENU));
+//        $(LOCATORS.PROFILE_LINK_INSIDE_USER_MENU).click();
     }
 
     public boolean theProfilePageIsDisplayed() {

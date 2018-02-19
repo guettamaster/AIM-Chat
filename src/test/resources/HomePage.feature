@@ -251,7 +251,7 @@ Feature: testing home page
     When click on "General" room in the left panel
     Then the "General" title is displayed in the header
     When check the appearance of the snippet button
-
+    
 
 
 

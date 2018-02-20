@@ -499,4 +499,64 @@ public class DefinitionSteps {
     public void theToastIsClosed(String arg0) throws Throwable {
         endUserSteps.theToastIsClosed(arg0);
     }
+
+    @When("^enter \"([^\"]*)\" in the snippet file name field$")
+    public void enterInTheSnippetFileNameField(String arg0) throws Throwable {
+        endUserSteps.enterInTheSnippetFileNameField(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the textarea field$")
+    public void enterInTheTextareaField(String arg0) throws Throwable {
+        endUserSteps.enterInTheTextareaField(arg0);
+    }
+
+    @When("^click on the Create button$")
+    public void clickOnTheCreateButton() throws Throwable {
+        endUserSteps.clickOnTheCreateButton();
+    }
+
+    @Then("^\"([^\"]*)\" is created$")
+    public void isCreated(String arg0) throws Throwable {
+        endUserSteps.isCreated(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" is displayed$")
+    public void isDisplayed(String arg0) throws Throwable {
+        endUserSteps.isDisplayed(arg0);
+    }
+
+    @When("^click on the edit link on the \"([^\"]*)\"$")
+    public void clickOnTheEditLinkOnThe(String arg0) throws Throwable {
+        endUserSteps.clickOnTheEditLinkOnThe(arg0);
+    }
+
+    @Then("^create snippet title inside opened popup is displayed$")
+    public void createSnippetTitleInsideOpenedPopupIsDisplayed() throws Throwable {
+        endUserSteps.createSnippetTitleInsideOpenedPopupIsDisplayed();
+    }
+
+    @Then("^edit snippet title inside opened popup is displayed$")
+    public void editSnippetTitleInsideOpenedPopupIsDisplayed() throws Throwable {
+        endUserSteps.editSnippetTitleInsideOpenedPopupIsDisplayed();
+    }
+
+    @When("^click on the arrow in the Programming Language dropdown menu$")
+    public void clickOnTheArrowInTheProgrammingLanguageDropdownMenu() throws Throwable {
+        endUserSteps.clickOnTheArrowInTheProgrammingLanguageDropdownMenu();
+    }
+
+    @When("^click \"([^\"]*)\" option from the Programming Language drop-down list$")
+    public void clickOptionFromTheProgrammingLanguageDropDownList(String arg0) throws Throwable {
+        endUserSteps.clickOptionFromTheProgrammingLanguageDropDownList(arg0);
+    }
+
+    @When("^clear data in the snippet file name field$")
+    public void clearDataInTheSnippetFileNameField() throws Throwable {
+        endUserSteps.clearDataInTheSnippetFileNameField();
+    }
+
+    @When("^clear data in the textarea field$")
+    public void clearDataInTheTextareaField() throws Throwable {
+        endUserSteps.clearDataInTheTextareaField();
+    }
 }

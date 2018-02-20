@@ -525,7 +525,7 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    private void createSnippetTitleInsideOpenedPopupIsDisplayed() {
+    public void createSnippetTitleInsideOpenedPopupIsDisplayed() {
         Assert.assertTrue("False", homePage.createSnippetTitleInsideOpenedPopupIsDisplayed());
     }
 
@@ -547,5 +547,60 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void theToastIsClosed(String arg0) {
         homePage.theToastIsClosed(arg0);
+    }
+
+    @Step
+    public void enterInTheSnippetFileNameField(String arg0) {
+        homePage.enterInTheSnippetFileNameField(arg0);
+    }
+
+    @Step
+    public void enterInTheTextareaField(String arg0) {
+        homePage.enterInTheTextareaField(arg0);
+    }
+
+    @Step
+    public void clickOnTheCreateButton() {
+        homePage.clickOnTheCreateButton();
+    }
+
+    @Step
+    public void isCreated(String arg0) {
+        Assert.assertTrue("False", homePage.isCreated(arg0));
+    }
+
+    @Step
+    public void isDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.isDisplayed(arg0));
+    }
+
+    @Step
+    public void clickOnTheEditLinkOnThe(String arg0) {
+        homePage.clickOnTheEditLinkOnThe(arg0);
+    }
+
+    @Step
+    public void editSnippetTitleInsideOpenedPopupIsDisplayed() {
+        Assert.assertTrue("False", homePage.editSnippetTitleInsideOpenedPopupIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheArrowInTheProgrammingLanguageDropdownMenu() {
+        homePage.clickOnTheArrowInTheProgrammingLanguageDropdownMenu();
+    }
+
+    @Step
+    public void clickOptionFromTheProgrammingLanguageDropDownList(String arg0) {
+        homePage.clickOptionFromTheProgrammingLanguageDropDownList(arg0);
+    }
+
+    @Step
+    public void clearDataInTheSnippetFileNameField() {
+        homePage.clearDataInTheSnippetFileNameField();
+    }
+
+    @Step
+    public void clearDataInTheTextareaField() {
+        homePage.clearDataInTheTextareaField();
     }
 }

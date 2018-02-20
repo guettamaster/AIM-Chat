@@ -247,11 +247,40 @@ Feature: testing home page
     When enter "::re" in the input search field inside a room
     Then "Emojies" title name of a panel with list is displayed
 
-  Scenario: 2.020 Check that snippet is downloaded
+  Scenario: 2.020 Check that snippet is created
     When click on "General" room in the left panel
     Then the "General" title is displayed in the header
     When check the appearance of the snippet button
-    
+    Then create snippet title inside opened popup is displayed
+    When enter "test_snippet20" in the snippet file name field
+    When enter "test20" in the textarea field
+    When click on the Create button
+    Then "test_snippet20" is created
+
+  Scenario: 2.021 Check that snippet is edited
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    Then "test_snippet20.txt" is displayed
+    When click on the edit link on the "test_snippet20.txt"
+    Then edit snippet title inside opened popup is displayed
+    When clear data in the snippet file name field
+    When enter "test_snippet33" in the snippet file name field
+    When clear data in the textarea field
+    When enter "test33" in the textarea field
+    When click on the arrow in the Programming Language dropdown menu
+    When click "Pascal" option from the Programming Language drop-down list
+#    Then
+#
+#    When click on the Create button
+#
+#
+#    Then "" is edited
+
+
+
+
+
+
 
 
 

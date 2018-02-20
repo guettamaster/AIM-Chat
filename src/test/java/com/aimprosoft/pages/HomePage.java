@@ -306,7 +306,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) {
-        withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0)));
     }
@@ -317,7 +316,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheLinkInTheMessageMenu(String arg0) {
-        withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU.replace("$1", arg0)));
     }
@@ -615,7 +613,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void clickOnTheSnippetLink() {
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.CREATE_SNIPPET_LINK));
-        waitABit(5000);
     }
 
     public boolean createSnippetTitleInsideOpenedPopupIsDisplayed() {
@@ -632,6 +629,59 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
     }
 
+    public void enterInTheSnippetFileNameField(String arg0) {
+        $(LOCATORS.SNIPPET_FILE_NAME_INPUT_FIELD.replace("$1", arg0)).sendKeys(arg0);
+    }
+
+    public void enterInTheTextareaField(String arg0) {
+        $(LOCATORS.TEXTAREA_INPUT_FIELD_INSIDE_A_SNIPPET_POPUP.replace("$1", arg0)).sendKeys(arg0);
+        waitABit(5000);
+    }
+
+    public void clickOnTheCreateButton() {
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.CREATE_BUTTON_INSIDE_A_SNIPPET_POPUP));
+//        evaluateJavascript("alert(\"test passed\")");
+    }
+
+    public boolean isCreated(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0))));
+        return $(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean isDisplayed(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0))));
+        return $(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheEditLinkOnThe(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.EDIT_SNIPPET_LINK.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.EDIT_SNIPPET_LINK.replace("$1", arg0)));
+    }
+
+    public boolean editSnippetTitleInsideOpenedPopupIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.EDIT_SNIPPET_TITLE)));
+        return $(LOCATORS.EDIT_SNIPPET_TITLE).isPresent();
+    }
+
+    public void clickOnTheArrowInTheProgrammingLanguageDropdownMenu() {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PROGRAMMING_LANGUAGE_ARROW)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.PROGRAMMING_LANGUAGE_ARROW));
+    }
+
+    public void clickOptionFromTheProgrammingLanguageDropDownList(String arg0) {
+        $(LOCATORS.PROGRAMMING_LANGUAGE_DROP_DOWN_MENU).selectByVisibleText(arg0);
+        waitABit(5000);
+    }
+
+    public void clearDataInTheSnippetFileNameField() {
+        waitABit(500);
+        $(LOCATORS.SNIPPET_FILE_NAME_INPUT_FIELD).clear();
+    }
+
+    public void clearDataInTheTextareaField() {
+        waitABit(1000);
+        $(LOCATORS.TEXTAREA_INPUT_FIELD_INSIDE_A_SNIPPET_POPUP).clear();
+    }
 }
 
 

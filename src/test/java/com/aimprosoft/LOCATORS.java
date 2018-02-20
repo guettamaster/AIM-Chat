@@ -86,4 +86,14 @@ String TITLE_NAME_OF_A_PANEL = "//div[@class='suggestions-header']/span[contains
 String CREATE_SNIPPET_TITLE = "//h4[@class='modal-title'][contains(text(),'Create')]";
 String CREATE_SNIPPET_LINK = "//label[@class='createSnippet']";
 String TOAST_MESSAGE = "//div[@class='toast toast-success']/div[@class='toast-title'][contains(text(),'$1')]";
+String SNIPPET_FILE_NAME_INPUT_FIELD = "//input[@class='snippetName form-control'][@placeholder='Enter file name (without extension)']";
+String TEXTAREA_INPUT_FIELD_INSIDE_A_SNIPPET_POPUP = "//textarea[@class='ace_text-input']";
+String CREATE_BUTTON_INSIDE_A_SNIPPET_POPUP = "//button[.='Create']";
+String SNIPPET_NAME_IN_THE_CHAT = "//div[@class='file-name']/span[@class='file-name-text'][contains(text(),'$1')]";
+String EDIT_SNIPPET_LINK = "//div[@class='file-name']/span[contains(text(),'$1')]//ancestor::div[@class='file-container']//i[contains(text(),'edit_mode')]";
+String EDIT_SNIPPET_TITLE = "//h4[@class='modal-title'][contains(text(),'Edit')]";
+String PROGRAMMING_LANGUAGE_ARROW = "//label[contains(text(),'Programming Language')]/following-sibling::div//i[@class='fa fa-caret-down']";
+String THEME_ARROW = "//label[contains(text(),'Theme')]/following-sibling::div//i[@class='fa fa-caret-down']";
+String PROGRAMMING_LANGUAGE_DROP_DOWN_MENU = "//ul[@id='snippet-mode-dropdown-menu']/li[@id='actionscript']";
+
 }

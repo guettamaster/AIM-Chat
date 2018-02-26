@@ -669,8 +669,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOptionFromTheProgrammingLanguageDropDownList(String arg0) {
-        $(LOCATORS.PROGRAMMING_LANGUAGE_DROP_DOWN_MENU).selectByVisibleText(arg0);
-        waitABit(5000);
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPTION_FROM_THE_PROGRAMMING_LANGUAGE_DROP_DOWN_LIST.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.OPTION_FROM_THE_PROGRAMMING_LANGUAGE_DROP_DOWN_LIST.replace("$1", arg0)));
     }
 
     public void clearDataInTheSnippetFileNameField() {
@@ -679,8 +679,38 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clearDataInTheTextareaField() {
-        waitABit(1000);
+        waitABit(500);
         $(LOCATORS.TEXTAREA_INPUT_FIELD_INSIDE_A_SNIPPET_POPUP).clear();
+    }
+
+    public boolean programmingLanguageDropDownListIsOpened() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PROGRAMMING_LANGUAGE_DROP_DOWN_LIST)));
+        return $(LOCATORS.PROGRAMMING_LANGUAGE_DROP_DOWN_LIST).isPresent();
+    }
+
+    public boolean optionIsDisplayedInTheProgrammingLanguageDropdownMenu(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPTION_IN_THE_PROGRAMMING_LANGUAGE_DROP_DOWN_MENU.replace("$1", arg0))));
+        return $(LOCATORS.OPTION_IN_THE_PROGRAMMING_LANGUAGE_DROP_DOWN_MENU.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheArrowInTheThemeDropdownMenu() {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THEME_ARROW)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.THEME_ARROW));
+    }
+
+    public boolean themeDropDownListIsOpened() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THEME_DROP_DOWN_LIST)));
+        return $(LOCATORS.THEME_DROP_DOWN_LIST).isPresent();
+    }
+
+    public void clickOptionFromTheThemeDropDownList(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPTION_FROM_THE_THEME_LIST.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.OPTION_FROM_THE_THEME_LIST.replace("$1", arg0)));
+    }
+
+    public boolean optionIsDisplayedInTheThemeDropdownMenu(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPTION_IN_THE_THEME_DROP_DOWN_MENU.replace("$1", arg0))));
+        return $(LOCATORS.OPTION_IN_THE_THEME_DROP_DOWN_MENU.replace("$1", arg0)).isPresent();
     }
 }
 

@@ -603,4 +603,38 @@ public class EndUserSteps extends ScenarioSteps {
     public void clearDataInTheTextareaField() {
         homePage.clearDataInTheTextareaField();
     }
+
+    @Step
+    public void programmingLanguageDropDownListIsOpened() {
+        Assert.assertTrue("False", homePage.programmingLanguageDropDownListIsOpened());
+    }
+
+    @Step
+    public void optionIsDisplayedInTheProgrammingLanguageDropdownMenu(String arg0) {
+        Assert.assertTrue("False", homePage.optionIsDisplayedInTheProgrammingLanguageDropdownMenu(arg0));
+    }
+
+    @Step
+    public void clickOnTheArrowInTheThemeDropdownMenu() {
+        homePage.clickOnTheArrowInTheThemeDropdownMenu();
+    }
+
+    @Step
+    public void themeDropDownListIsOpened() {
+        Assert.assertTrue("False", homePage.themeDropDownListIsOpened());
+    }
+
+    @Step
+    public void clickOptionFromTheThemeDropDownList(String arg0) {
+        homePage.clickOptionFromTheThemeDropDownList(arg0);
+    }
+
+    @Step
+    public void optionIsDisplayedInTheThemeDropdownMenu(String arg0) {
+        Assert.assertTrue("False", homePage.optionIsDisplayedInTheThemeDropdownMenu(arg0));
+    }
+
+    @Step
+    public void clickOnTheSaveButton() {
+    }
 }

@@ -559,4 +559,39 @@ public class DefinitionSteps {
     public void clearDataInTheTextareaField() throws Throwable {
         endUserSteps.clearDataInTheTextareaField();
     }
+
+    @Then("^Programming Language drop-down list is opened$")
+    public void programmingLanguageDropDownListIsOpened() throws Throwable {
+        endUserSteps.programmingLanguageDropDownListIsOpened();
+    }
+
+    @Then("^\"([^\"]*)\" option is displayed in the Programming Language dropdown menu$")
+    public void optionIsDisplayedInTheProgrammingLanguageDropdownMenu(String arg0) throws Throwable {
+        endUserSteps.optionIsDisplayedInTheProgrammingLanguageDropdownMenu(arg0);
+    }
+
+    @When("^click on the arrow in the Theme dropdown menu$")
+    public void clickOnTheArrowInTheThemeDropdownMenu() throws Throwable {
+        endUserSteps.clickOnTheArrowInTheThemeDropdownMenu();
+    }
+
+    @Then("^Theme drop-down list is opened$")
+    public void themeDropDownListIsOpened() throws Throwable {
+        endUserSteps.themeDropDownListIsOpened();
+    }
+
+    @When("^click \"([^\"]*)\" option from the Theme drop-down list$")
+    public void clickOptionFromTheThemeDropDownList(String arg0) throws Throwable {
+        endUserSteps.clickOptionFromTheThemeDropDownList(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" option is displayed in the Theme dropdown menu$")
+    public void optionIsDisplayedInTheThemeDropdownMenu(String arg0) throws Throwable {
+        endUserSteps.optionIsDisplayedInTheThemeDropdownMenu(arg0);
+    }
+
+    @When("^click on the Save button$")
+    public void clickOnTheSaveButton() throws Throwable {
+        endUserSteps.clickOnTheSaveButton();
+    }
 }

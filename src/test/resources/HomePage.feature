@@ -2,7 +2,7 @@ Feature: testing home page
 
   Background:
     Given open signin page
-    When click on Standard tab
+#    When click on Standard tab
     And filled fields valid data
     When click on Login button
 #    Then home page is opened
@@ -268,7 +268,18 @@ Feature: testing home page
     When clear data in the textarea field
     When enter "test33" in the textarea field
     When click on the arrow in the Programming Language dropdown menu
+    Then Programming Language drop-down list is opened
     When click "Pascal" option from the Programming Language drop-down list
+    Then "Pascal" option is displayed in the Programming Language dropdown menu
+    When click on the arrow in the Theme dropdown menu
+    Then Theme drop-down list is opened
+    When click "Cobalt" option from the Theme drop-down list
+    Then "Cobalt" option is displayed in the Theme dropdown menu
+    When click on the Save button
+
+
+
+
 #    Then
 #
 #    When click on the Create button

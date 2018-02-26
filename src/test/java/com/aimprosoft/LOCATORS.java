@@ -4,9 +4,9 @@ public interface LOCATORS {
 
 //TODO======================================================SignInPage========================================================
 
-String EMAIL_FIELD = "//div[@class='tab-pane active fade in']//input[@placeholder='Email']";
+String EMAIL_FIELD = "//input[@class='form-control'][@placeholder='Login']";
 String EMAIL_FIELD_PROD_LDAP = "//div[@class='tab-pane active fade in']//input[@placeholder='Login']";
-String PASSWORD_FIELD = "//div[@class='tab-pane active fade in']//input[@placeholder='Password']";
+String PASSWORD_FIELD = "//input[@class='form-control'][@placeholder='Password']";
 String SIGNINBUTTON = "//button[.='Sign In']";
 String LDAP_SIGNINBUTTON = "//button[.='LDAP Sign In']";
 String STANDARD_TAB = "//a[@id='login-type-tab-2']";
@@ -87,13 +87,18 @@ String CREATE_SNIPPET_TITLE = "//h4[@class='modal-title'][contains(text(),'Creat
 String CREATE_SNIPPET_LINK = "//label[@class='createSnippet']";
 String TOAST_MESSAGE = "//div[@class='toast toast-success']/div[@class='toast-title'][contains(text(),'$1')]";
 String SNIPPET_FILE_NAME_INPUT_FIELD = "//input[@class='snippetName form-control'][@placeholder='Enter file name (without extension)']";
-String TEXTAREA_INPUT_FIELD_INSIDE_A_SNIPPET_POPUP = "//textarea[@class='ace_text-input']";
+String TEXTAREA_INPUT_FIELD_INSIDE_A_SNIPPET_POPUP = "//div[@id='brace-editor']/textarea[@class='ace_text-input']";
 String CREATE_BUTTON_INSIDE_A_SNIPPET_POPUP = "//button[.='Create']";
 String SNIPPET_NAME_IN_THE_CHAT = "//div[@class='file-name']/span[@class='file-name-text'][contains(text(),'$1')]";
 String EDIT_SNIPPET_LINK = "//div[@class='file-name']/span[contains(text(),'$1')]//ancestor::div[@class='file-container']//i[contains(text(),'edit_mode')]";
 String EDIT_SNIPPET_TITLE = "//h4[@class='modal-title'][contains(text(),'Edit')]";
 String PROGRAMMING_LANGUAGE_ARROW = "//label[contains(text(),'Programming Language')]/following-sibling::div//i[@class='fa fa-caret-down']";
 String THEME_ARROW = "//label[contains(text(),'Theme')]/following-sibling::div//i[@class='fa fa-caret-down']";
-String PROGRAMMING_LANGUAGE_DROP_DOWN_MENU = "//ul[@id='snippet-mode-dropdown-menu']/li[@id='actionscript']";
+String OPTION_FROM_THE_PROGRAMMING_LANGUAGE_DROP_DOWN_LIST = "//ul[@id='snippet-mode-dropdown-menu']/li/a[contains(text(),'$1')]";
+String PROGRAMMING_LANGUAGE_DROP_DOWN_LIST = "//label[contains(text(),'Programming Language')]/following-sibling::div//ul[@id='snippet-mode-dropdown-menu']";
+String OPTION_IN_THE_PROGRAMMING_LANGUAGE_DROP_DOWN_MENU = "//div[@id='snippet-mode-dropdown']//button[contains(text(),'$1')]";
+String THEME_DROP_DOWN_LIST = "//label[contains(text(),'Theme')]/following-sibling::div//ul[@id='snippet-theme-dropdown-menu']";
+String OPTION_FROM_THE_THEME_LIST = "//ul[@id='snippet-theme-dropdown-menu']/li/a[contains(text(),'$1')]";
+String OPTION_IN_THE_THEME_DROP_DOWN_MENU = "//div[@id='snippet-theme-dropdown']//button[contains(text(),'$1')]";
 
 }

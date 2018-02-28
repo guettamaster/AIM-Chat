@@ -9,7 +9,7 @@ String EMAIL_FIELD_PROD_LDAP = "//div[@class='tab-pane active fade in']//input[@
 String PASSWORD_FIELD = "//input[@class='form-control'][@placeholder='Password']";
 String SIGNINBUTTON = "//button[.='Sign In']";
 String LDAP_SIGNINBUTTON = "//button[.='LDAP Sign In']";
-String STANDARD_TAB = "//a[@id='login-type-tab-2']";
+String STANDARD_TAB = "//button[contains(text(),'standard')]";
 
 //TODO======================================================HomePage==========================================================
 
@@ -100,5 +100,6 @@ String OPTION_IN_THE_PROGRAMMING_LANGUAGE_DROP_DOWN_MENU = "//div[@id='snippet-m
 String THEME_DROP_DOWN_LIST = "//label[contains(text(),'Theme')]/following-sibling::div//ul[@id='snippet-theme-dropdown-menu']";
 String OPTION_FROM_THE_THEME_LIST = "//ul[@id='snippet-theme-dropdown-menu']/li/a[contains(text(),'$1')]";
 String OPTION_IN_THE_THEME_DROP_DOWN_MENU = "//div[@id='snippet-theme-dropdown']//button[contains(text(),'$1')]";
+String SAVE_BUTTON_ON_THE_EDIT_SNIPPET_POPUP = "//button[@class='btn btn-success'][contains(text(),'Save')]";
 
 }

@@ -712,6 +712,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPTION_IN_THE_THEME_DROP_DOWN_MENU.replace("$1", arg0))));
         return $(LOCATORS.OPTION_IN_THE_THEME_DROP_DOWN_MENU.replace("$1", arg0)).isPresent();
     }
+
+    public void clickOnTheSaveButton() {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SAVE_BUTTON_ON_THE_EDIT_SNIPPET_POPUP)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.SAVE_BUTTON_ON_THE_EDIT_SNIPPET_POPUP));
+    }
 }
 
 

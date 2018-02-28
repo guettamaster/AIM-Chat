@@ -636,5 +636,6 @@ public class EndUserSteps extends ScenarioSteps {
 
     @Step
     public void clickOnTheSaveButton() {
+        homePage.clickOnTheSaveButton();
     }
 }

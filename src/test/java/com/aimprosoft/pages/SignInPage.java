@@ -53,7 +53,6 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnStandardTab() {
-        withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.STANDARD_TAB));
     }

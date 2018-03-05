@@ -717,6 +717,21 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SAVE_BUTTON_ON_THE_EDIT_SNIPPET_POPUP)));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.SAVE_BUTTON_ON_THE_EDIT_SNIPPET_POPUP));
     }
+
+    public boolean isEdited(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0))));
+        return $(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheSnippetName(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0)));
+    }
+
+    public boolean previewTextOnTheSnippetNameIsDisplayed(String arg0, String arg1) {
+        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PREVIEW_TEXT_IN_A_SNIPPET.replace("$1", arg0).replace("$2", arg1))));
+        return $(LOCATORS.PREVIEW_TEXT_IN_A_SNIPPET.replace("$1", arg0).replace("$2", arg1)).isPresent();
+    }
 }
 
 

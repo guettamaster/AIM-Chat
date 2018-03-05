@@ -594,4 +594,19 @@ public class DefinitionSteps {
     public void clickOnTheSaveButton() throws Throwable {
         endUserSteps.clickOnTheSaveButton();
     }
+
+    @Then("^\"([^\"]*)\" is edited$")
+    public void isEdited(String arg0) throws Throwable {
+        endUserSteps.isEdited(arg0);
+    }
+
+    @When("^click on the \"([^\"]*)\" snippet name$")
+    public void clickOnTheSnippetName(String arg0) throws Throwable {
+        endUserSteps.clickOnTheSnippetName(arg0);
+    }
+
+    @Then("^preview \"([^\"]*)\" text on the \"([^\"]*)\" snippet name is displayed$")
+    public void previewTextOnTheSnippetNameIsDisplayed(String arg0, String arg1) throws Throwable {
+        endUserSteps.previewTextOnTheSnippetNameIsDisplayed(arg0, arg1);
+    }
 }

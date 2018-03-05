@@ -638,4 +638,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheSaveButton() {
         homePage.clickOnTheSaveButton();
     }
+
+    @Step
+    public void isEdited(String arg0) {
+        Assert.assertTrue("False", homePage.isEdited(arg0));
+    }
+
+    @Step
+    public void clickOnTheSnippetName(String arg0) {
+        homePage.clickOnTheSnippetName(arg0);
+    }
+
+    @Step
+    public void previewTextOnTheSnippetNameIsDisplayed(String arg0, String arg1) {
+        Assert.assertTrue("False", homePage.previewTextOnTheSnippetNameIsDisplayed(arg0, arg1));
+    }
 }

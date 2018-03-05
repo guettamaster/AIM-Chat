@@ -255,7 +255,7 @@ Feature: testing home page
     When enter "test_snippet20" in the snippet file name field
     When enter "test20" in the textarea field
     When click on the Create button
-    Then "test_snippet20" is created
+    Then "test_snippet20.txt" is created
 
   Scenario: 2.021 Check that snippet is edited
     When click on "General" room in the left panel
@@ -276,6 +276,16 @@ Feature: testing home page
     When click "Cobalt" option from the Theme drop-down list
     Then "Cobalt" option is displayed in the Theme dropdown menu
     When click on the Save button
+    Then "test_snippet33.pas" is edited
+
+  Scenario: 2.022 Check that snippet is previewed
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    Then "test_snippet33.pas" is displayed
+    When click on the "test_snippet33.pas" snippet name
+    Then preview "test33" text on the "test_snippet33.pas" snippet name is displayed
+
+  Scenario: 2.023 Check that snippet is deleted
 
 
 

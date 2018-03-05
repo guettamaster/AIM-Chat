@@ -101,5 +101,6 @@ String THEME_DROP_DOWN_LIST = "//label[contains(text(),'Theme')]/following-sibli
 String OPTION_FROM_THE_THEME_LIST = "//ul[@id='snippet-theme-dropdown-menu']/li/a[contains(text(),'$1')]";
 String OPTION_IN_THE_THEME_DROP_DOWN_MENU = "//div[@id='snippet-theme-dropdown']//button[contains(text(),'$1')]";
 String SAVE_BUTTON_ON_THE_EDIT_SNIPPET_POPUP = "//button[@class='btn btn-success'][contains(text(),'Save')]";
+String PREVIEW_TEXT_IN_A_SNIPPET = "//span[@class='file-name-text'][contains(text(),'$2')]//ancestor::div[@class='bordered-content textfile open']//code[contains(text(),'$1')]";
 
 }

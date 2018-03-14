@@ -285,7 +285,7 @@ Feature: testing home page
     When click on the "test_snippet33.pas" snippet name
     Then preview "test33" text on the "test_snippet33.pas" snippet name is displayed
 
-  Scenario: 2.023 Check that snippet is deleted
+#  Scenario: 2.023 Check that snippet is deleted
 
 
 

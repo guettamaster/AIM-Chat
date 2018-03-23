@@ -330,8 +330,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheDeleteMessageLinkInTheMessageMenu() {
-        waitABit(500);
-        $(LOCATORS.DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU).click();
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU));
+//        waitABit(1500);
+//        $(LOCATORS.DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU).click();
     }
 
     public boolean deleteMessageTitleInTheOpenedPopUpIsDisplayed() {
@@ -649,7 +651,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean isDisplayed(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0))));
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0))));
         return $(LOCATORS.SNIPPET_NAME_IN_THE_CHAT.replace("$1", arg0)).isPresent();
     }
 
@@ -731,6 +733,18 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean previewTextOnTheSnippetNameIsDisplayed(String arg0, String arg1) {
         withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PREVIEW_TEXT_IN_A_SNIPPET.replace("$1", arg0).replace("$2", arg1))));
         return $(LOCATORS.PREVIEW_TEXT_IN_A_SNIPPET.replace("$1", arg0).replace("$2", arg1)).isPresent();
+    }
+
+    public void clickOnTheRightControlHamburgerOnTheSnippet(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET.replace("$1", arg0))));
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET.replace("$1", arg0)));
+    }
+
+    public void navigateOnSnippet(String arg0) {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(findBy(LOCATORS.SNIPPET_NAVIGATION_BLOCK.replace("$1", arg0)));
+        actions.build().perform();
     }
 }
 

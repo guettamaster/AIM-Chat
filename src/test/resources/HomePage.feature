@@ -285,7 +285,15 @@ Feature: testing home page
     When click on the "test_snippet33.pas" snippet name
     Then preview "test33" text on the "test_snippet33.pas" snippet name is displayed
 
-#  Scenario: 2.023 Check that snippet is deleted
+  Scenario: 2.023 Check that snippet is deleted
+    Then "test_snippet33.pas" is displayed
+    When navigate on "test_snippet33.pas" snippet
+    When click on the right control hamburger on the "test_snippet33.pas" snippet
+    Then message menu is displayed
+    When click on the Delete Message link in the message menu
+    Then Delete Message title in the opened pop-up is displayed
+    When click on the Delete button in the opened pop-up
+    Then "test_snippet33.pas" message is deleted
 
 
 

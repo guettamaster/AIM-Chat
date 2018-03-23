@@ -609,4 +609,14 @@ public class DefinitionSteps {
     public void previewTextOnTheSnippetNameIsDisplayed(String arg0, String arg1) throws Throwable {
         endUserSteps.previewTextOnTheSnippetNameIsDisplayed(arg0, arg1);
     }
+
+    @When("^click on the right control hamburger on the \"([^\"]*)\" snippet$")
+    public void clickOnTheRightControlHamburgerOnTheSnippet(String arg0) throws Throwable {
+        endUserSteps.clickOnTheRightControlHamburgerOnTheSnippet(arg0);
+    }
+
+    @When("^navigate on \"([^\"]*)\" snippet$")
+    public void navigateOnSnippet(String arg0) throws Throwable {
+        endUserSteps.navigateOnSnippet(arg0);
+    }
 }

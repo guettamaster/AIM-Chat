@@ -653,4 +653,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void previewTextOnTheSnippetNameIsDisplayed(String arg0, String arg1) {
         Assert.assertTrue("False", homePage.previewTextOnTheSnippetNameIsDisplayed(arg0, arg1));
     }
+
+    @Step
+    public void clickOnTheRightControlHamburgerOnTheSnippet(String arg0) {
+        homePage.clickOnTheRightControlHamburgerOnTheSnippet(arg0);
+    }
+
+    @Step
+    public void navigateOnSnippet(String arg0) {
+        homePage.navigateOnSnippet(arg0);
+    }
 }

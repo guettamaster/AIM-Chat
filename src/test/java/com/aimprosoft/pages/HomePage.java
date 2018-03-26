@@ -342,7 +342,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheDeleteButtonInTheOpenedPopUp() {
-        $(LOCATORS.DELETE_THIS_MESSAGE_BUTTON).click();
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_THIS_MESSAGE_BUTTON)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.DELETE_THIS_MESSAGE_BUTTON));
     }
 
     public boolean messageIsDeleted(String arg0) throws InterruptedException {

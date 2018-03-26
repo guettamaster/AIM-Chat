@@ -289,9 +289,9 @@ Feature: testing home page
     Then "test_snippet33.pas" is displayed
     When navigate on "test_snippet33.pas" snippet
     When click on the right control hamburger on the "test_snippet33.pas" snippet
-    Then message menu is displayed
-    When click on the Delete Message link in the message menu
-    Then Delete Message title in the opened pop-up is displayed
+    Then message menu for the "test_snippet33.pas" snippet is displayed
+    When click on the Delete Message link on the "test_snippet33.pas" snippet in the message menu
+    Then the "test_snippet33.pas" snippet is displayed inside the Delete Message pop-up
     When click on the Delete button in the opened pop-up
     Then "test_snippet33.pas" message is deleted
 

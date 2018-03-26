@@ -742,9 +742,25 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void navigateOnSnippet(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAVIGATION_BLOCK.replace("$1", arg0))));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(findBy(LOCATORS.SNIPPET_NAVIGATION_BLOCK.replace("$1", arg0)));
         actions.build().perform();
+    }
+
+    public boolean messageMenuForTheSnippetIsDisplayed(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_MENU_FOR_SNIPPET.replace("$1", arg0))));
+        return $(LOCATORS.MESSAGE_MENU_FOR_SNIPPET.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheDeleteMessageLinkOnTheSnippetInTheMessageMenu(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DELETE_MESSAGE_LINK_FOR_SNIPPET.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.DELETE_MESSAGE_LINK_FOR_SNIPPET.replace("$1", arg0)));
+    }
+
+    public boolean theSnippetIsDisplayedInsideTheDeleteMessagePopUp(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAME_INSIDE_THE_DELETE_MESSAGE_POPUP.replace("$1", arg0))));
+        return $(LOCATORS.SNIPPET_NAME_INSIDE_THE_DELETE_MESSAGE_POPUP.replace("$1", arg0)).isPresent();
     }
 }
 

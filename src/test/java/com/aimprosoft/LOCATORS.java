@@ -103,8 +103,11 @@ String OPTION_IN_THE_THEME_DROP_DOWN_MENU = "//div[@id='snippet-theme-dropdown']
 String SAVE_BUTTON_ON_THE_EDIT_SNIPPET_POPUP = "//button[@class='btn btn-success'][contains(text(),'Save')]";
 String PREVIEW_TEXT_IN_A_SNIPPET = "//span[@class='file-name-text'][contains(text(),'$2')]//ancestor::div[@class='bordered-content textfile open']//code[contains(text(),'$1')]";
 String RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET = "//span[@class='file-name-text'][contains(text(),'$1')]//ancestor::div[@class='message-main-container']//span[@id='right-control-hamburger']";
-String SNIPPET_NAVIGATION_BLOCK = "//span[@class='file-name-text'][contains(text(),'$1')]//ancestor::div[@class='message last was-edited-wrap']";
-String MESSAGE_MENU = "//div[descendant::span[@class='file-name-text'][contains(text(),'$1')] and contains(@name,'message')]//ul[@id='message-menu-menu']";
+String SNIPPET_NAVIGATION_BLOCK = "//span[@class='file-name-text'][contains(text(),'$1')]";
+String MESSAGE_MENU_FOR_SNIPPET = "//div[descendant::span[@class='file-name-text'][contains(text(),'$1')] and contains(@name,'message')]//ul[@id='message-menu-menu']";
 String DELETE_MESSAGE_LINK_FOR_SNIPPET = "//div[descendant::span[@class='file-name-text'][contains(text(),'$1')] and contains(@name,'message')]//span[@class='text-danger']";
+String SNIPPET_NAME_INSIDE_THE_DELETE_MESSAGE_POPUP = "//h4[@class='modal-title'][contains(text(),'Delete Message')]//ancestor::div[@class='modal-content']//div[@class='file-message-preview-name'][contains(text(),'$1')]";
+
+
 
 }

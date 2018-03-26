@@ -663,4 +663,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void navigateOnSnippet(String arg0) {
         homePage.navigateOnSnippet(arg0);
     }
+
+    @Step
+    public void messageMenuForTheSnippetIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.messageMenuForTheSnippetIsDisplayed(arg0));
+    }
+
+    @Step
+    public void clickOnTheDeleteMessageLinkOnTheSnippetInTheMessageMenu(String arg0) {
+        homePage.clickOnTheDeleteMessageLinkOnTheSnippetInTheMessageMenu(arg0);
+    }
+
+    @Step
+    public void theSnippetIsDisplayedInsideTheDeleteMessagePopUp(String arg0) {
+        Assert.assertTrue("False", homePage.theSnippetIsDisplayedInsideTheDeleteMessagePopUp(arg0));
+    }
 }

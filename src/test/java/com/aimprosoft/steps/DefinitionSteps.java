@@ -619,4 +619,19 @@ public class DefinitionSteps {
     public void navigateOnSnippet(String arg0) throws Throwable {
         endUserSteps.navigateOnSnippet(arg0);
     }
+
+    @Then("^message menu for the \"([^\"]*)\" snippet is displayed$")
+    public void messageMenuForTheSnippetIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.messageMenuForTheSnippetIsDisplayed(arg0);
+    }
+
+    @When("^click on the Delete Message link on the \"([^\"]*)\" snippet in the message menu$")
+    public void clickOnTheDeleteMessageLinkOnTheSnippetInTheMessageMenu(String arg0) throws Throwable {
+        endUserSteps.clickOnTheDeleteMessageLinkOnTheSnippetInTheMessageMenu(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" snippet is displayed inside the Delete Message pop-up$")
+    public void theSnippetIsDisplayedInsideTheDeleteMessagePopUp(String arg0) throws Throwable {
+        endUserSteps.theSnippetIsDisplayedInsideTheDeleteMessagePopUp(arg0);
+    }
 }

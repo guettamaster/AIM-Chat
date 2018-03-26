@@ -634,4 +634,24 @@ public class DefinitionSteps {
     public void theSnippetIsDisplayedInsideTheDeleteMessagePopUp(String arg0) throws Throwable {
         endUserSteps.theSnippetIsDisplayedInsideTheDeleteMessagePopUp(arg0);
     }
+
+    @When("^click on the Download button near the \"([^\"]*)\" snippet$")
+    public void clickOnTheDownloadButtonNearTheSnippet(String arg0) throws Throwable {
+        endUserSteps.clickOnTheDownloadButtonNearTheSnippet(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" snippet is downloaded on the local machine$")
+    public void theSnippetIsDownloadedOnTheLocalMachine(String arg0) throws Throwable {
+        endUserSteps.theSnippetIsDownloadedOnTheLocalMachine(arg0);
+    }
+
+    @Then("^message menu for the \"([^\"]*)\" message is displayed$")
+    public void messageMenuForTheMessageIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.messageMenuForTheMessageIsDisplayed(arg0);
+    }
+
+    @When("^click on a Pin to conversation link on the \"([^\"]*)\" message in the message menu$")
+    public void clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(String arg0) throws Throwable {
+        endUserSteps.clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(arg0);
+    }
 }

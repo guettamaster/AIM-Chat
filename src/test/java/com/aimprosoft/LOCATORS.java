@@ -107,7 +107,8 @@ String SNIPPET_NAVIGATION_BLOCK = "//span[@class='file-name-text'][contains(text
 String MESSAGE_MENU_FOR_SNIPPET = "//div[descendant::span[@class='file-name-text'][contains(text(),'$1')] and contains(@name,'message')]//ul[@id='message-menu-menu']";
 String DELETE_MESSAGE_LINK_FOR_SNIPPET = "//div[descendant::span[@class='file-name-text'][contains(text(),'$1')] and contains(@name,'message')]//span[@class='text-danger']";
 String SNIPPET_NAME_INSIDE_THE_DELETE_MESSAGE_POPUP = "//h4[@class='modal-title'][contains(text(),'Delete Message')]//ancestor::div[@class='modal-content']//div[@class='file-message-preview-name'][contains(text(),'$1')]";
-
-
+String DOWNLOAD_BUTTON_NEAR_SNIPPET_NAME = "//div[@class='file-name']/span[contains(text(),'test_snippet33.pas')]//ancestor::div[@class='file-container']//i[contains(@class,'material-icons md-24 md-dark')][contains(text(),'file_download')]";
+String MESSAGE_MENU_FOR_MESSAGE = "//div[descendant::span[@class='LinkifyPlus'][contains(text(),'$1')] and contains(@name,'message')]//ul[@id='message-menu-menu']";
+String PIN_TO_CONVERSATION_LINK_FOR_MESSAGE = "";
 
 }

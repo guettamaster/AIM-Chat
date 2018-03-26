@@ -285,7 +285,14 @@ Feature: testing home page
     When click on the "test_snippet33.pas" snippet name
     Then preview "test33" text on the "test_snippet33.pas" snippet name is displayed
 
-  Scenario: 2.023 Check that snippet is deleted
+  Scenario: 2.023 Check that snippet is downloaded
+    When click on "General" room in the left panel
+    Then the "General" title is displayed in the header
+    Then "test_snippet33.pas" is displayed
+    When click on the Download button near the "test_snippet33.pas" snippet
+    Then the "test_snippet33.pas" snippet is downloaded on the local machine
+
+  Scenario: 2.024 Check that snippet is deleted
     Then "test_snippet33.pas" is displayed
     When navigate on "test_snippet33.pas" snippet
     When click on the right control hamburger on the "test_snippet33.pas" snippet
@@ -295,15 +302,17 @@ Feature: testing home page
     When click on the Delete button in the opened pop-up
     Then "test_snippet33.pas" message is deleted
 
+  Scenario: 2.025 Check that message is pinned and displayed in the right panel
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    Then "test message" message is displayed
+    When click on the right control hamburger on the "test message" message
+    Then message menu for the "test message" message is displayed
+    When click on a Pin to conversation link on the "test message" message in the message menu
 
 
 
-#    Then
-#
-#    When click on the Create button
-#
-#
-#    Then "" is edited
+
 
 
 

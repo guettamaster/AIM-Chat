@@ -678,4 +678,25 @@ public class EndUserSteps extends ScenarioSteps {
     public void theSnippetIsDisplayedInsideTheDeleteMessagePopUp(String arg0) {
         Assert.assertTrue("False", homePage.theSnippetIsDisplayedInsideTheDeleteMessagePopUp(arg0));
     }
+
+    @Step
+    public void clickOnTheDownloadButtonNearTheSnippet(String arg0) {
+        homePage.clickOnTheDownloadButtonNearTheSnippet(arg0);
+    }
+
+    @Step
+    public void theSnippetIsDownloadedOnTheLocalMachine(String arg0) {
+        Assert.assertTrue("False", homePage.theSnippetIsDownloadedOnTheLocalMachine(arg0));
+    }
+
+    @Step
+    public void messageMenuForTheMessageIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.messageMenuForTheMessageIsDisplayed(arg0));
+
+    }
+
+    @Step
+    public void clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(String arg0) {
+        homePage.clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(arg0);
+    }
 }

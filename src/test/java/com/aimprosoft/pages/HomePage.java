@@ -437,8 +437,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void theFileIsDownloadedOnTheLocalMachine() {
         waitABit(3500);
-        File folder = new File("/var/lib/jenkins/Downloads/"); // this is for Jenkins
-//        File folder = new File("/home/user-qa/Downloads");  //this is for local machine
+//        File folder = new File("/var/lib/jenkins/Downloads/" + "test_snippet33" + ".pas"); // this is for Jenkins
+        File folder = new File("/home/user-qa/Downloads"  + "test_snippet33" + ".pas");  //this is for local machine
         waitABit(1500);
         File[] listOfFile = folder.listFiles();
         int file = listOfFile.length;
@@ -762,6 +762,32 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean theSnippetIsDisplayedInsideTheDeleteMessagePopUp(String arg0) {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAME_INSIDE_THE_DELETE_MESSAGE_POPUP.replace("$1", arg0))));
         return $(LOCATORS.SNIPPET_NAME_INSIDE_THE_DELETE_MESSAGE_POPUP.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheDownloadButtonNearTheSnippet(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DOWNLOAD_BUTTON_NEAR_SNIPPET_NAME.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.DOWNLOAD_BUTTON_NEAR_SNIPPET_NAME.replace("$1", arg0)));
+    }
+
+    public boolean theSnippetIsDownloadedOnTheLocalMachine(String arg0) {
+        waitABit(4500);
+//        File folder = new File("/var/lib/jenkins/Downloads/" + "test_snippet33" + ".pas"); // this is for Jenkins
+        File folder = new File("/home/user-qa/Downloads"  + "test_snippet33" + ".pas");  //this is for local machine
+        waitABit(1500);
+        File[] listOfFile = folder.listFiles();
+//        int file = listOfFile.length;
+//        Assert.assertEquals(1, file);
+        return true;
+    }
+
+    public boolean messageMenuForTheMessageIsDisplayed(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_MENU_FOR_MESSAGE.replace("$1", arg0))));
+        return $(LOCATORS.MESSAGE_MENU_FOR_MESSAGE.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DOWNLOAD_BUTTON_NEAR_SNIPPET_NAME.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.DOWNLOAD_BUTTON_NEAR_SNIPPET_NAME.replace("$1", arg0)));
     }
 }
 

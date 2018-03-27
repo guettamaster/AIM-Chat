@@ -324,7 +324,7 @@ Feature: testing home page
     When click on the Pin button of "a.shevchenko" direct
     Then the "test message" message is displayed in the Pinned messages block
 
-  Scenario: 2.026 Check that message from pinned is downloaded
+  Scenario: 2.026 Check that message from pinned is opened
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     When click on the Pin button of "a.shevchenko" direct

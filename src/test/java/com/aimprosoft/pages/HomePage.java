@@ -786,8 +786,48 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(String arg0) {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DOWNLOAD_BUTTON_NEAR_SNIPPET_NAME.replace("$1", arg0))));
-        evaluateJavascript("arguments[0].click();", $(LOCATORS.DOWNLOAD_BUTTON_NEAR_SNIPPET_NAME.replace("$1", arg0)));
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PIN_TO_CONVERSATION_LINK_FOR_MESSAGE.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.PIN_TO_CONVERSATION_LINK_FOR_MESSAGE.replace("$1", arg0)));
+    }
+
+    public boolean theMessageIsDisplayedInsideThePinMessagePopUp(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP.replace("$1", arg0))));
+        return $(LOCATORS.MESSAGE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnThePinButton() {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PIN_BUTTON)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.PIN_BUTTON));
+    }
+
+    public boolean pinnedSignIsDisplayedNearTheMessage(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+        return $(LOCATORS.PINNED_SIGN_NEAR_A_MESSAGE.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnThePinButtonOfDirect(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
+    }
+
+    public boolean theMessageIsDisplayedInThePinnedMessagesBlock(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_IN_THE_PINNED_ITEMS.replace("$1", arg0))));
+        return $(LOCATORS.MESSAGE_IN_THE_PINNED_ITEMS.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean openLinkIsDisplayedOnTheInTheRightPanel(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
+        return $(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheOpenLinkOnTheInTheRightPanel(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
+    }
+
+    public boolean highlightIsDisplayedOnTheMessage(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PINNED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0))));
+        return $(LOCATORS.PINNED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0)).isPresent();
     }
 }
 

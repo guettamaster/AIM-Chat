@@ -654,4 +654,44 @@ public class DefinitionSteps {
     public void clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(String arg0) throws Throwable {
         endUserSteps.clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(arg0);
     }
+
+    @Then("^the \"([^\"]*)\" message is displayed inside the Pin Message pop-up$")
+    public void theMessageIsDisplayedInsideThePinMessagePopUp(String arg0) throws Throwable {
+        endUserSteps.theMessageIsDisplayedInsideThePinMessagePopUp(arg0);
+    }
+
+    @When("^click on the Pin button$")
+    public void clickOnThePinButton() throws Throwable {
+        endUserSteps.clickOnThePinButton();
+    }
+
+    @Then("^pinned sign is displayed near the \"([^\"]*)\" message$")
+    public void pinnedSignIsDisplayedNearTheMessage(String arg0) throws Throwable {
+        endUserSteps.pinnedSignIsDisplayedNearTheMessage(arg0);
+    }
+
+    @When("^click on the Pin button of \"([^\"]*)\" direct$")
+    public void clickOnThePinButtonOfDirect(String arg0) throws Throwable {
+        endUserSteps.clickOnThePinButtonOfDirect(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" message is displayed in the Pinned messages block$")
+    public void theMessageIsDisplayedInThePinnedMessagesBlock(String arg0) throws Throwable {
+        endUserSteps.theMessageIsDisplayedInThePinnedMessagesBlock(arg0);
+    }
+
+    @Then("^open link is displayed on the \"([^\"]*)\" in the right panel$")
+    public void openLinkIsDisplayedOnTheInTheRightPanel(String arg0) throws Throwable {
+        endUserSteps.openLinkIsDisplayedOnTheInTheRightPanel(arg0);
+    }
+
+    @When("^click on the open link on the \"([^\"]*)\" in the right panel$")
+    public void clickOnTheOpenLinkOnTheInTheRightPanel(String arg0) throws Throwable {
+        endUserSteps.clickOnTheOpenLinkOnTheInTheRightPanel(arg0);
+    }
+
+    @Then("^highlight is displayed on the \"([^\"]*)\" message$")
+    public void highlightIsDisplayedOnTheMessage(String arg0) throws Throwable {
+        endUserSteps.highlightIsDisplayedOnTheMessage(arg0);
+    }
 }

@@ -109,6 +109,14 @@ String DELETE_MESSAGE_LINK_FOR_SNIPPET = "//div[descendant::span[@class='file-na
 String SNIPPET_NAME_INSIDE_THE_DELETE_MESSAGE_POPUP = "//h4[@class='modal-title'][contains(text(),'Delete Message')]//ancestor::div[@class='modal-content']//div[@class='file-message-preview-name'][contains(text(),'$1')]";
 String DOWNLOAD_BUTTON_NEAR_SNIPPET_NAME = "//div[@class='file-name']/span[contains(text(),'test_snippet33.pas')]//ancestor::div[@class='file-container']//i[contains(@class,'material-icons md-24 md-dark')][contains(text(),'file_download')]";
 String MESSAGE_MENU_FOR_MESSAGE = "//div[descendant::span[@class='LinkifyPlus'][contains(text(),'$1')] and contains(@name,'message')]//ul[@id='message-menu-menu']";
-String PIN_TO_CONVERSATION_LINK_FOR_MESSAGE = "";
+String PIN_TO_CONVERSATION_LINK_FOR_MESSAGE = "//span[@class='LinkifyPlus'][contains(text(),'$1')]//ancestor::div[@class='message-main-container']//div[@id='message-menu']/ul/li[2]";
+String MESSAGE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP = "//span[@class='LinkifyPlus'][contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Pin Message')]";
+String PIN_BUTTON = "//button[contains(text(),'Pin')]";
+String PINNED_SIGN_NEAR_A_MESSAGE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-body']//div[@class='pinned-by']";
+String PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-direct'][contains(text(),'$1')]//ancestor::div[@class='inner-panel b-chat']//i[@title='Pinned Messages']";
+String MESSAGE_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//div[@class='b-tab-content']//span[contains(text(),'$1')]";
+String OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL = "//div[@class='chat-container active']//div[@class='layout-content']//a[contains(text(),'Open')]//ancestor::div[@class='pinned-message-item']//span[contains(text(),'$1')]";
+String PINNED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='chat-container active']//span[contains(text(),'$1')]//ancestor::div[@class='message was-pinned']";
+
 
 }

@@ -303,12 +303,36 @@ Feature: testing home page
     Then "test_snippet33.pas" message is deleted
 
   Scenario: 2.025 Check that message is pinned and displayed in the right panel
+    When click on the Direct Messages link
+    Then direct rooms pop-up is displayed
+    When enter "a.shevchenko" in the input search field
+    Then "a.shevchenko" is displayed in the list of users
+    When click on the "a.shevchenko" name in the list of users
+    Then "a.shevchenko" user name is displayed in the left panel
+    Then "a.shevchenko" user name is displayed in the header
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
-    Then "test message" message is displayed
+    When enter "test message" in the input message field
+    When click on Enter button
+    Then "test message" message is created
     When click on the right control hamburger on the "test message" message
     Then message menu for the "test message" message is displayed
     When click on a Pin to conversation link on the "test message" message in the message menu
+    Then the "test message" message is displayed inside the Pin Message pop-up
+    When click on the Pin button
+    Then pinned sign is displayed near the "test message" message
+    When click on the Pin button of "a.shevchenko" direct
+    Then the "test message" message is displayed in the Pinned messages block
+
+  Scenario: 2.026 Check that message from pinned is downloaded
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    When click on the Pin button of "a.shevchenko" direct
+    Then the "test message" message is displayed in the Pinned messages block
+    Then open link is displayed on the "test message" in the right panel
+    When click on the open link on the "test message" in the right panel
+    Then highlight is displayed on the "test message" message
+
 
 
 

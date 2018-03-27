@@ -692,11 +692,50 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void messageMenuForTheMessageIsDisplayed(String arg0) {
         Assert.assertTrue("False", homePage.messageMenuForTheMessageIsDisplayed(arg0));
-
     }
 
     @Step
     public void clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(String arg0) {
         homePage.clickOnAPinToConversationLinkOnTheMessageInTheMessageMenu(arg0);
+    }
+
+    @Step
+    public void theMessageIsDisplayedInsideThePinMessagePopUp(String arg0) {
+        Assert.assertTrue("False", homePage.theMessageIsDisplayedInsideThePinMessagePopUp(arg0));
+    }
+
+    @Step
+    public void clickOnThePinButton() {
+        homePage.clickOnThePinButton();
+    }
+
+    @Step
+    public void pinnedSignIsDisplayedNearTheMessage(String arg0) {
+        Assert.assertTrue("False", homePage.pinnedSignIsDisplayedNearTheMessage(arg0));
+    }
+
+    @Step
+    public void clickOnThePinButtonOfDirect(String arg0) {
+        homePage.clickOnThePinButtonOfDirect(arg0);
+    }
+
+    @Step
+    public void theMessageIsDisplayedInThePinnedMessagesBlock(String arg0) {
+        Assert.assertTrue("False", homePage.theMessageIsDisplayedInThePinnedMessagesBlock(arg0));
+    }
+
+    @Step
+    public void openLinkIsDisplayedOnTheInTheRightPanel(String arg0) {
+        Assert.assertTrue("False", homePage.openLinkIsDisplayedOnTheInTheRightPanel(arg0));
+    }
+
+    @Step
+    public void clickOnTheOpenLinkOnTheInTheRightPanel(String arg0) {
+        homePage.clickOnTheOpenLinkOnTheInTheRightPanel(arg0);
+    }
+
+    @Step
+    public void highlightIsDisplayedOnTheMessage(String arg0) {
+        Assert.assertTrue("False", homePage.highlightIsDisplayedOnTheMessage(arg0));
     }
 }

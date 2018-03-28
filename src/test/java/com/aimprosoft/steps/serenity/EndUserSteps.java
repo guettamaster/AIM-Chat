@@ -267,8 +267,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) {
-        homePage.clickOnTheRightControlHamburgerOnTheMessage(arg0);
+    public void clickOnTheRightControlHamburgerOnTheFile(String arg0) {
+        homePage.clickOnTheRightControlHamburgerOnTheFile(arg0);
     }
 
     @Step
@@ -357,8 +357,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void theFileIsDownloadedOnTheLocalMachine() {
-        homePage.theFileIsDownloadedOnTheLocalMachine();
+    public void theFileIsDownloadedOnTheLocalMachine(String arg0) {
+        homePage.theFileIsDownloadedOnTheLocalMachine(arg0);
     }
 
     @Step
@@ -737,5 +737,21 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void highlightIsDisplayedOnTheMessage(String arg0) {
         Assert.assertTrue("False", homePage.highlightIsDisplayedOnTheMessage(arg0));
+    }
+
+    @Step
+    public void fileIsDisplayedInTheDirect(String arg0) {
+        Assert.assertTrue("False", homePage.fileIsDisplayedInTheDirect(arg0));
+    }
+
+    @Step
+    public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) {
+        homePage.clickOnTheRightControlHamburgerOnTheMessage(arg0);
+    }
+
+    @Step
+    public void messageMenuForTheFileIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.messageMenuForTheFileIsDisplayed(arg0));
+
     }
 }

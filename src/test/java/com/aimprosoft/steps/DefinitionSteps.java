@@ -265,9 +265,9 @@ public class DefinitionSteps {
         endUserSteps.messageIsDisplayed(arg0);
     }
 
-    @When("^click on the right control hamburger on the \"([^\"]*)\" message$")
-    public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) throws Throwable {
-        endUserSteps.clickOnTheRightControlHamburgerOnTheMessage(arg0);
+    @When("^click on the right control hamburger on the \"([^\"]*)\" file$")
+    public void clickOnTheRightControlHamburgerOnTheFile(String arg0) throws Throwable {
+        endUserSteps.clickOnTheRightControlHamburgerOnTheFile(arg0);
     }
 
     @Then("^message menu is displayed$")
@@ -355,9 +355,9 @@ public class DefinitionSteps {
         endUserSteps.clickOnTheDownloadButtonUnderFile(arg0);
     }
 
-    @Then("^the file is downloaded on the local machine$")
-    public void theFileIsDownloadedOnTheLocalMachine() throws Throwable {
-        endUserSteps.theFileIsDownloadedOnTheLocalMachine();
+    @Then("^the \"([^\"]*)\" file is downloaded on the local machine$")
+    public void theFileIsDownloadedOnTheLocalMachine(String arg0) throws Throwable {
+        endUserSteps.theFileIsDownloadedOnTheLocalMachine(arg0);
     }
 
     @When("^click on Add Room title$")
@@ -693,5 +693,20 @@ public class DefinitionSteps {
     @Then("^highlight is displayed on the \"([^\"]*)\" message$")
     public void highlightIsDisplayedOnTheMessage(String arg0) throws Throwable {
         endUserSteps.highlightIsDisplayedOnTheMessage(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" file is displayed in the direct$")
+    public void fileIsDisplayedInTheDirect(String arg0) throws Throwable {
+        endUserSteps.fileIsDisplayedInTheDirect(arg0);
+    }
+
+    @When("^click on the right control hamburger on the \"([^\"]*)\" message$")
+    public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) throws Throwable {
+        endUserSteps.clickOnTheRightControlHamburgerOnTheMessage(arg0);
+    }
+
+    @Then("^message menu for the \"([^\"]*)\" file is displayed$")
+    public void messageMenuForTheFileIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.messageMenuForTheFileIsDisplayed(arg0);
     }
 }

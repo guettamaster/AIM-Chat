@@ -117,6 +117,9 @@ String PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room
 String MESSAGE_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//div[@class='b-tab-content']//span[contains(text(),'$1')]";
 String OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL = "//div[@class='chat-container active']//div[@class='layout-content']//a[contains(text(),'Open')]//ancestor::div[@class='pinned-message-item']//span[contains(text(),'$1')]";
 String PINNED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='chat-container active']//span[contains(text(),'$1')]//ancestor::div[@class='message was-pinned']";
+String RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='chat-container active']//span[@class='file-name-text']";
+String MESSAGE_MENU_FOR_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//ul[@id='message-menu-menu']";
+
 
 
 }

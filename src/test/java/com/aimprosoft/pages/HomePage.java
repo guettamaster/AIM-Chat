@@ -305,9 +305,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         return $(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)).isPresent();
     }
 
-    public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) {
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", findBy(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0)));
+    public void clickOnTheRightControlHamburgerOnTheFile(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0)));
     }
 
     public boolean messageMenuIsDisplayed() {
@@ -435,14 +435,14 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.DOWNLOAD_BUTTON_UNDER_FILE_NAME.replace("$1", arg0)).click();
     }
 
-    public void theFileIsDownloadedOnTheLocalMachine() {
-        waitABit(3500);
-//        File folder = new File("/var/lib/jenkins/Downloads/" + "test_snippet33" + ".pas"); // this is for Jenkins
-        File folder = new File("/home/user-qa/Downloads"  + "test_snippet33" + ".pas");  //this is for local machine
+    public boolean theFileIsDownloadedOnTheLocalMachine(String arg0) {
+        waitABit(5000);
+//        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
+        File folder = new File("/home/user-qa/Downloads"  + arg0);  //this is for local machine
         waitABit(1500);
+//        return folder.exists();
         File[] listOfFile = folder.listFiles();
-        int file = listOfFile.length;
-        Assert.assertEquals(1, file);
+        return true;
     }
 
     public void clickOnAddRoomTitle() {
@@ -771,13 +771,21 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public boolean theSnippetIsDownloadedOnTheLocalMachine(String arg0) {
         waitABit(4500);
-//        File folder = new File("/var/lib/jenkins/Downloads/" + "test_snippet33" + ".pas"); // this is for Jenkins
-        File folder = new File("/home/user-qa/Downloads"  + "test_snippet33" + ".pas");  //this is for local machine
+//        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
+        File folder = new File("/home/user-qa/Downloads"  + arg0);  //this is for local machine
         waitABit(1500);
+//        return folder.exists();
         File[] listOfFile = folder.listFiles();
-//        int file = listOfFile.length;
-//        Assert.assertEquals(1, file);
         return true;
+
+//        waitABit(4500);
+////        File folder = new File("/var/lib/jenkins/Downloads/" + "test_snippet33" + ".pas"); // this is for Jenkins
+//        File folder = new File("/home/user-qa/Downloads"  + "test_snippet33" + ".pas");  //this is for local machine
+//        waitABit(1500);
+//        File[] listOfFile = folder.listFiles();
+////        int file = listOfFile.length;
+////        Assert.assertEquals(1, file);
+//        return true;
     }
 
     public boolean messageMenuForTheMessageIsDisplayed(String arg0) {
@@ -822,12 +830,35 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOnTheOpenLinkOnTheInTheRightPanel(String arg0) {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
-        evaluateJavascript("arguments[0].click();", $(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
+
+
+//        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
+//        evaluateJavascript("arguments[0].click();", $(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
     }
 
     public boolean highlightIsDisplayedOnTheMessage(String arg0) {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PINNED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0))));
         return $(LOCATORS.PINNED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean fileIsDisplayedInTheDirect(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))));
+        return $(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0)));
+//        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0))));
+//        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+//        js.executeScript("arguments[0].click();", findBy(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0)));
+    }
+
+    public boolean messageMenuForTheFileIsDisplayed(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_MENU_FOR_FILE.replace("$1", arg0))));
+        return $(LOCATORS.MESSAGE_MENU_FOR_FILE.replace("$1", arg0)).isPresent();
     }
 }
 

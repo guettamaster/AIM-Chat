@@ -754,4 +754,19 @@ public class EndUserSteps extends ScenarioSteps {
         Assert.assertTrue("False", homePage.messageMenuForTheFileIsDisplayed(arg0));
 
     }
+
+    @Step
+    public void clickOnAPinToConversationLinkOnTheFileInTheMessageMenu(String arg0) {
+        homePage.clickOnAPinToConversationLinkOnTheFileInTheMessageMenu(arg0);
+    }
+
+    @Step
+    public void theFileIsDisplayedInsideThePinMessagePopUp(String arg0) {
+        Assert.assertTrue("False", homePage.theFileIsDisplayedInsideThePinMessagePopUp(arg0));
+    }
+
+    @Step
+    public void pinnedSignIsDisplayedNearTheFile(String arg0) {
+        Assert.assertTrue("False", homePage.pinnedSignIsDisplayedNearTheFile(arg0));
+    }
 }

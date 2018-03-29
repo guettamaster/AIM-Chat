@@ -307,7 +307,13 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOnTheRightControlHamburgerOnTheFile(String arg0) {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0))));
-        evaluateJavascript("arguments[0].click();", $(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0)));
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(findBy(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0))).click().build().perform();
+//        evaluateJavascript("arguments[0].click();", $(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0)));
+
+//
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET.replace("$1", arg0))));
+//        evaluateJavascript("arguments[0].click();", $(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET.replace("$1", arg0)));
     }
 
     public boolean messageMenuIsDisplayed() {
@@ -737,16 +743,17 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheRightControlHamburgerOnTheSnippet(String arg0) {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET.replace("$1", arg0))));
+        waitABit(3000);
+//        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET.replace("$1", arg0))));
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET.replace("$1", arg0)));
     }
 
     public void navigateOnSnippet(String arg0) {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAVIGATION_BLOCK.replace("$1", arg0))));
+        waitABit(3000);
+//        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SNIPPET_NAVIGATION_BLOCK.replace("$1", arg0))));
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(findBy(LOCATORS.SNIPPET_NAVIGATION_BLOCK.replace("$1", arg0)));
-        actions.build().perform();
+        actions.moveToElement(findBy(LOCATORS.SNIPPET_NAVIGATION_BLOCK.replace("$1", arg0))).click().build().perform();
     }
 
     public boolean messageMenuForTheSnippetIsDisplayed(String arg0) {
@@ -804,7 +811,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnThePinButton() {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PIN_BUTTON)));
+        withTimeoutOf(40, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PIN_BUTTON)));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.PIN_BUTTON));
     }
 
@@ -814,7 +821,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnThePinButtonOfDirect(String arg0) {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
+        withTimeoutOf(40, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
     }
 
@@ -859,6 +866,21 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean messageMenuForTheFileIsDisplayed(String arg0) {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_MENU_FOR_FILE.replace("$1", arg0))));
         return $(LOCATORS.MESSAGE_MENU_FOR_FILE.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnAPinToConversationLinkOnTheFileInTheMessageMenu(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PIN_TO_CONVERSATION_LINK_FOR_FILE.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.PIN_TO_CONVERSATION_LINK_FOR_FILE.replace("$1", arg0)));
+    }
+
+    public boolean theFileIsDisplayedInsideThePinMessagePopUp(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP.replace("$1", arg0))));
+        return $(LOCATORS.FILE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean pinnedSignIsDisplayedNearTheFile(String arg0) {
+        withTimeoutOf(40, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+        return $(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0)).isPresent();
     }
 }
 

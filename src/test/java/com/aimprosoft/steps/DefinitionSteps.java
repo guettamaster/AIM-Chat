@@ -709,4 +709,19 @@ public class DefinitionSteps {
     public void messageMenuForTheFileIsDisplayed(String arg0) throws Throwable {
         endUserSteps.messageMenuForTheFileIsDisplayed(arg0);
     }
+
+    @When("^click on a Pin to conversation link on the \"([^\"]*)\" file in the message menu$")
+    public void clickOnAPinToConversationLinkOnTheFileInTheMessageMenu(String arg0) throws Throwable {
+        endUserSteps.clickOnAPinToConversationLinkOnTheFileInTheMessageMenu(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" file is displayed inside the Pin Message pop-up$")
+    public void theFileIsDisplayedInsideThePinMessagePopUp(String arg0) throws Throwable {
+        endUserSteps.theFileIsDisplayedInsideThePinMessagePopUp(arg0);
+    }
+
+    @Then("^pinned sign is displayed near the \"([^\"]*)\" file$")
+    public void pinnedSignIsDisplayedNearTheFile(String arg0) throws Throwable {
+        endUserSteps.pinnedSignIsDisplayedNearTheFile(arg0);
+    }
 }

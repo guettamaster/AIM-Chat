@@ -114,14 +114,15 @@ String MESSAGE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP = "//span[@class='LinkifyPlus']
 String PIN_BUTTON = "//button[contains(text(),'Pin')]";
 String PINNED_SIGN_NEAR_A_MESSAGE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-body']//div[@class='pinned-by']";
 String PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-direct'][contains(text(),'$1')]//ancestor::div[@class='inner-panel b-chat']//i[@title='Pinned Messages']";
-String MESSAGE_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//div[@class='file-name'][contains(text(),'$1')]";
+String MESSAGE_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Pinned messages')]//ancestor::div[@class='b-tab-content']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL = "//div[@class='chat-container active']//div[@class='layout-content']//a[contains(text(),'Open')]//ancestor::div[@class='pinned-message-item']//span[contains(text(),'$1')]";
 String PINNED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='chat-container active']//span[contains(text(),'$1')]//ancestor::div[@class='message was-pinned']";
-String RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE = "//span[@class='file-name-text'][contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(@class,'material-icons md-24 md-dark')][contains(text(),'more_vert')]";
+String RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE = "//div[@class='chat-container active']//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'more_vert')]";
 String MESSAGE_MENU_FOR_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//ul[@id='message-menu-menu']";
 String PIN_TO_CONVERSATION_LINK_FOR_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//div[@id='message-menu']/ul/li[1]";
 String FILE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP = "//div[contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Pin Message')]";
 String PINNED_SIGN_NEAR_A_FILE = "//span[contains(text(),'$1')]//ancestor::div[contains(@class,'uploaded-file-wrapper')]//div[@class='pinned-by']";
+String FILE_NAME_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Pinned messages')]//ancestor::div[@class='b-tab-content']//div[@class='file-name'][contains(text(),'$1')]";
 
 
 

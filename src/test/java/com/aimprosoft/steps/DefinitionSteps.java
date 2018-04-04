@@ -724,4 +724,14 @@ public class DefinitionSteps {
     public void pinnedSignIsDisplayedNearTheFile(String arg0) throws Throwable {
         endUserSteps.pinnedSignIsDisplayedNearTheFile(arg0);
     }
+
+    @Then("^the \"([^\"]*)\" file is displayed in the Pinned messages block$")
+    public void theFileIsDisplayedInThePinnedMessagesBlock(String arg0) throws Throwable {
+        endUserSteps.theFileIsDisplayedInThePinnedMessagesBlock(arg0);
+    }
+
+    @When("^scroll down to \"([^\"]*)\" file$")
+    public void scrollDownToFile(String arg0) throws Throwable {
+        endUserSteps.scrollDownToFile(arg0);
+    }
 }

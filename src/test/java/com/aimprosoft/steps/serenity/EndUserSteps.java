@@ -769,4 +769,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void pinnedSignIsDisplayedNearTheFile(String arg0) {
         Assert.assertTrue("False", homePage.pinnedSignIsDisplayedNearTheFile(arg0));
     }
+
+    @Step
+    public void theFileIsDisplayedInThePinnedMessagesBlock(String arg0) {
+        Assert.assertTrue("False", homePage.theFileIsDisplayedInThePinnedMessagesBlock(arg0));
+    }
+
+    @Step
+    public void scrollDownToFile(String arg0) {
+        homePage.scrollDownToFile(arg0);
+    }
 }

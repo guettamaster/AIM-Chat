@@ -76,6 +76,7 @@ Feature: testing home page
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     Then "test message" message is displayed
+    When scroll down to "test message" message
     When click on the right control hamburger on the "test message" message
     Then message menu is displayed
     When click on the "Edit Message" link in the message menu
@@ -89,6 +90,7 @@ Feature: testing home page
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     Then "edited note" message is displayed
+    When scroll down to "edited note" message
     When click on the right control hamburger on the "edited note" message
     Then message menu is displayed
     When click on the Delete Message link in the message menu
@@ -352,7 +354,7 @@ Feature: testing home page
     Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
     When click on the Pin button of "a.shevchenko" direct
     Then the "maxresdefault_pin.jpg" file is displayed in the Pinned messages block
-  
+
 
 
 #    When click on the Download button under "maxresdefault_pin.jpg" file

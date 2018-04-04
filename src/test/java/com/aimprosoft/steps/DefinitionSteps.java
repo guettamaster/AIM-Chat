@@ -734,4 +734,9 @@ public class DefinitionSteps {
     public void scrollDownToFile(String arg0) throws Throwable {
         endUserSteps.scrollDownToFile(arg0);
     }
+
+    @When("^scroll down to \"([^\"]*)\" message$")
+    public void scrollDownToMessage(String arg0) throws Throwable {
+        endUserSteps.scrollDownToMessage(arg0);
+    }
 }

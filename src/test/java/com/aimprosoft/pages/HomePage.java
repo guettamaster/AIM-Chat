@@ -895,6 +895,13 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         actions.moveToElement(findBy(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))).build().perform();
         }
 
+    public void scrollDownToMessage(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", findBy(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)));
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(findBy(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))).build().perform();
+    }
+
 //        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))));
 //        evaluateJavascript("arguments[0].focus()", $(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0)));
 

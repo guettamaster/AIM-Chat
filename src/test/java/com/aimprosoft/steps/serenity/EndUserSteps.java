@@ -779,4 +779,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void scrollDownToFile(String arg0) {
         homePage.scrollDownToFile(arg0);
     }
+
+    @Step
+    public void scrollDownToMessage(String arg0) {
+        homePage.scrollDownToMessage(arg0);
+    }
 }

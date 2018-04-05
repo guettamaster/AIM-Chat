@@ -355,11 +355,8 @@ Feature: testing home page
     Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
     When click on the Pin button of "a.shevchenko" direct
     Then the "maxresdefault_pin.jpg" file is displayed in the Pinned messages block
-
-
-
-#    When click on the Download button under "maxresdefault_pin.jpg" file
-#    Then the "maxresdefault_pin.jpg" file is downloaded on the local machine
+    When click on the Download button under "maxresdefault_pin.jpg" file in the Pinned messages block
+    Then the "maxresdefault_pin.jpg" file is downloaded on the local machine
 
 
 

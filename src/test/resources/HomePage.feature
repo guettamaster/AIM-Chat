@@ -317,6 +317,7 @@ Feature: testing home page
     When enter "test message" in the input message field
     When click on Enter button
     Then "test message" message is created
+    When scroll down to "test message" message
     When click on the right control hamburger on the "test message" message
     Then message menu for the "test message" message is displayed
     When click on a Pin to conversation link on the "test message" message in the message menu

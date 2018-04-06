@@ -123,7 +123,7 @@ String PIN_TO_CONVERSATION_LINK_FOR_FILE = "//span[contains(text(),'$1')]//ances
 String FILE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP = "//div[contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Pin Message')]";
 String PINNED_SIGN_NEAR_A_FILE = "//span[contains(text(),'$1')]//ancestor::div[contains(@class,'uploaded-file-wrapper')]//div[@class='pinned-by']";
 String FILE_NAME_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Pinned messages')]//ancestor::div[@class='b-tab-content']//div[@class='file-name'][contains(text(),'$1')]";
-
+String DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL = "//div[@class='pinned-message-item']//div[contains(text(),'$1')]//ancestor::div[@class='chat-container active']//div[@class='layout-content']//a[contains(text(),'Download')]";
 
 
 }

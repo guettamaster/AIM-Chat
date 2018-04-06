@@ -784,4 +784,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void scrollDownToMessage(String arg0) {
         homePage.scrollDownToMessage(arg0);
     }
+
+    @Step
+    public void clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(String arg0) {
+        homePage.clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(arg0);
+    }
 }

@@ -444,8 +444,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public boolean theFileIsDownloadedOnTheLocalMachine(String arg0) {
         waitABit(5000);
-        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
-//        File folder = new File("/home/user-qa/Downloads"  + arg0);  //this is for local machine
+//        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
+        File folder = new File("/home/user-qa/Downloads"  + arg0);  //this is for local machine
         waitABit(1500);
 //        return folder.exists();
         File[] listOfFile = folder.listFiles();
@@ -901,6 +901,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 //        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", findBy(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(findBy(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))).build().perform();
+    }
+
+    public void clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
     }
 
 //        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))));

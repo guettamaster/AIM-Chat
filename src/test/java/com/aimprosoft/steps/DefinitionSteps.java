@@ -739,4 +739,9 @@ public class DefinitionSteps {
     public void scrollDownToMessage(String arg0) throws Throwable {
         endUserSteps.scrollDownToMessage(arg0);
     }
+
+    @When("^click on the Download button under \"([^\"]*)\" file in the Pinned messages block$")
+    public void clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(String arg0) throws Throwable {
+        endUserSteps.clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(arg0);
+    }
 }

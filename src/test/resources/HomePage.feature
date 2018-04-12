@@ -152,8 +152,8 @@ Feature: testing home page
 #    When enter "room1" in the "Name" input field
 # #    When choose public room checkbox
 # #    When enter "superadmin" in the Invite members field
-#    When enter "r.konivec" in the Invite members field
-#    When click on user name
+##    When enter "r.konivec" in the Invite members field
+##    When click on user name
 #    When click on room title in popup
 #    When enter "testdescription" in the "Description" textarea field
 #    When click on Add button

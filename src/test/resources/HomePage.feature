@@ -358,10 +358,10 @@ Feature: testing home page
     When click on the Download button under "maxresdefault_pin.jpg" file in the Pinned messages block
     Then the "maxresdefault_pin.jpg" file is downloaded on the local machine
 
-  Scenario: 2.028 Check that message from pinned is unpinned
-    When click on the "a.shevchenko" user name in the left panel
-    Then "a.shevchenko" user name is displayed in the header
-    Then pinned sign is displayed near the "maxresdefault_pin.jpg" message
+#  Scenario: 2.028 Check that message from pinned is unpinned
+#    When click on the "a.shevchenko" user name in the left panel
+#    Then "a.shevchenko" user name is displayed in the header
+#    Then pinned sign is displayed near the "maxresdefault_pin.jpg" message
 
 
 

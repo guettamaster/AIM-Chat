@@ -371,7 +371,11 @@ Feature: testing home page
   Scenario: 2.028 Check that message from pinned is unpinned
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
+    When scroll down to "maxresdefault_pin.jpg" file
     Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
+    When click on the right control hamburger on the "maxresdefault_pin.jpg" file
+    Then message menu for the "maxresdefault_pin.jpg" file is displayed
+    When click on a Unpin from conversation link on the "maxresdefault_pin.jpg" file in the message menu
 
 
 

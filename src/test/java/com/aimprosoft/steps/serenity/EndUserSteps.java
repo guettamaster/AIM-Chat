@@ -789,4 +789,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(String arg0) {
         homePage.clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(arg0);
     }
+
+    @Step
+    public void navigateOnMessageBlock(String arg0) {
+        homePage.navigateOnMessageBlock(arg0);
+    }
+
+    @Step
+    public void navigateOnFileBlock(String arg0) {
+        homePage.navigateOnFileBlock(arg0);
+    }
 }

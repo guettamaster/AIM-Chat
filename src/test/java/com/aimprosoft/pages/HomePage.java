@@ -4,6 +4,7 @@ import com.aimprosoft.LOCATORS;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.annotations.findby.By;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.apache.tools.ant.taskdefs.Sleep;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -616,7 +617,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean createSnippetLinkIsDisplayed() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CREATE_SNIPPET_LINK)));
+        waitABit(1000);
+//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CREATE_SNIPPET_LINK)));
         return $(LOCATORS.CREATE_SNIPPET_LINK).isPresent();
     }
 
@@ -908,9 +910,15 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         evaluateJavascript("arguments[0].click();", $(LOCATORS.DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
     }
 
-//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))));
-//        evaluateJavascript("arguments[0].focus()", $(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0)));
+    public void navigateOnMessageBlock(String arg0) {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(findBy(LOCATORS.MESSAGE_BLOCK_IN_THE_PINNED_ITEMS.replace("$1", arg0))).build().perform();
+    }
 
+    public void navigateOnFileBlock(String arg0) {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(findBy(LOCATORS.FILE_BLOCK_IN_THE_PINNED_ITEMS.replace("$1", arg0))).build().perform();
+    }
 }
 
 

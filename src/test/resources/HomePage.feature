@@ -330,8 +330,17 @@ Feature: testing home page
   Scenario: 2.026 Check that message from pinned is opened
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
+    When check the appearance of the snippet button
+    Then create snippet title inside opened popup is displayed
+    When enter "test_snippet20" in the snippet file name field
+    When enter "test20" in the textarea field
+    When click on the Create button
+    Then "test_snippet20.txt" is created
+    When scroll down to "test message" message
+    Then pinned sign is displayed near the "test message" message
     When click on the Pin button of "a.shevchenko" direct
     Then the "test message" message is displayed in the Pinned messages block
+    When navigate on "test message" message block
     Then open link is displayed on the "test message" in the right panel
     When click on the open link on the "test message" in the right panel
     Then highlight is displayed on the "test message" message
@@ -355,13 +364,14 @@ Feature: testing home page
     Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
     When click on the Pin button of "a.shevchenko" direct
     Then the "maxresdefault_pin.jpg" file is displayed in the Pinned messages block
+    When navigate on "maxresdefault_pin.jpg" file block
     When click on the Download button under "maxresdefault_pin.jpg" file in the Pinned messages block
     Then the "maxresdefault_pin.jpg" file is downloaded on the local machine
 
   Scenario: 2.028 Check that message from pinned is unpinned
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
-    Then pinned sign is displayed near the "maxresdefault_pin.jpg" message
+    Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
 
 
 

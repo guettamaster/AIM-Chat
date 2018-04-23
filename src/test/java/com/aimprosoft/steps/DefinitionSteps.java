@@ -744,4 +744,14 @@ public class DefinitionSteps {
     public void clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(String arg0) throws Throwable {
         endUserSteps.clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(arg0);
     }
+
+    @When("^navigate on \"([^\"]*)\" message block$")
+    public void navigateOnMessageBlock(String arg0) throws Throwable {
+        endUserSteps.navigateOnMessageBlock(arg0);
+    }
+
+    @When("^navigate on \"([^\"]*)\" file block$")
+    public void navigateOnFileBlock(String arg0) throws Throwable {
+        endUserSteps.navigateOnFileBlock(arg0);
+    }
 }

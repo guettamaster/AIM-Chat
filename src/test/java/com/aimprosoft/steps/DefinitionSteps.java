@@ -769,4 +769,29 @@ public class DefinitionSteps {
     public void pinnedSignIsnTDisplayedNearTheFile(String arg0) throws Throwable {
         endUserSteps.pinnedSignIsnTDisplayedNearTheFile(arg0);
     }
+
+    @Then("^the \"([^\"]*)\" file is displayed inside the Pin Message pop-up$")
+    public void theFileIsDisplayedInsideThePinMessagePopUp(String arg0) throws Throwable {
+        endUserSteps.theFileIsDisplayedInsideThePinMessagePopUp(arg0);
+    }
+
+    @Then("^unpin link is displayed on the \"([^\"]*)\" in the right panel$")
+    public void unpinLinkIsDisplayedOnTheInTheRightPanel(String arg0) throws Throwable {
+        endUserSteps.unpinLinkIsDisplayedOnTheInTheRightPanel(arg0);
+    }
+
+    @When("^click on the unpin link on the \"([^\"]*)\" in the right panel$")
+    public void clickOnTheUnpinLinkOnTheInTheRightPanel(String arg0) throws Throwable {
+        endUserSteps.clickOnTheUnpinLinkOnTheInTheRightPanel(arg0);
+    }
+
+    @Then("^pinned sign isn't displayed near the \"([^\"]*)\" message$")
+    public void pinnedSignIsnTDisplayedNearTheMessage(String arg0) throws Throwable {
+        endUserSteps.pinnedSignIsnTDisplayedNearTheMessage(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" message is displayed inside the Unpin Message pop-up$")
+    public void theMessageIsDisplayedInsideTheUnpinMessagePopUp(String arg0) throws Throwable {
+        endUserSteps.theMessageIsDisplayedInsideTheUnpinMessagePopUp(arg0);
+    }
 }

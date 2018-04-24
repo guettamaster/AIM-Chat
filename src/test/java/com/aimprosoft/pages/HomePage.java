@@ -950,6 +950,47 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
                 return true;
             }
     }
+
+    public boolean theFileIsDisplayedInsideThePinMessagePopUp(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP.replace("$1", arg0))));
+        return $(LOCATORS.FILE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean unpinLinkIsDisplayedOnTheInTheRightPanel(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UNPIN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
+        return $(LOCATORS.UNPIN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheUnpinLinkOnTheInTheRightPanel(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UNPIN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.UNPIN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
+    }
+
+    public boolean pinnedSignIsnTDisplayedNearTheMessage(String arg0) {
+        try {
+            System.out.println("wait that documents are invisible");
+            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+            System.out.println("Element is invisible");
+        } catch (Exception e) {
+            System.out.println("Element isn`t invisible");
+        }
+        try {
+            System.out.println("check that documents are presented in the DOM");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+            System.out.println("documents are presented in the DOM");
+            System.out.println("check that documents are visibility");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+            System.out.println("documents are visibility");
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
+    }
+
+    public boolean theMessageIsDisplayedInsideTheUnpinMessagePopUp(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP.replace("$1", arg0))));
+        return $(LOCATORS.MESSAGE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP.replace("$1", arg0)).isVisible();
+    }
 }
 
 

@@ -380,7 +380,19 @@ Feature: testing home page
     When click on the Unpin button
     Then pinned sign isn't displayed near the "maxresdefault_pin.jpg" file
 
-
+  Scenario: 2.029 Check that message from pinned is unpinned from the right panel
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    When scroll down to "test message" message
+    Then pinned sign is displayed near the "test message" message
+    When click on the Pin button of "a.shevchenko" direct
+    Then the "test message" message is displayed in the Pinned messages block
+    When navigate on "test message" message block
+    Then unpin link is displayed on the "test message" in the right panel
+    When click on the unpin link on the "test message" in the right panel
+    Then the "test message" message is displayed inside the Unpin Message pop-up
+    When click on the Unpin button
+    Then pinned sign isn't displayed near the "test message" message
 
 
 

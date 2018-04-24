@@ -394,6 +394,10 @@ Feature: testing home page
     When click on the Unpin button
     Then pinned sign isn't displayed near the "test message" message
 
+  Scenario: 2.030 Check counter on a pinned message from the right panel
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+
 
 
 

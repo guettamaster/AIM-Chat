@@ -376,6 +376,9 @@ Feature: testing home page
     When click on the right control hamburger on the "maxresdefault_pin.jpg" file
     Then message menu for the "maxresdefault_pin.jpg" file is displayed
     When click on a Unpin from conversation link on the "maxresdefault_pin.jpg" file in the message menu
+    Then the "maxresdefault_pin.jpg" file is displayed inside the Unpin Message pop-up
+    When click on the Unpin button
+    Then pinned sign isn't displayed near the "maxresdefault_pin.jpg" file
 
 
 

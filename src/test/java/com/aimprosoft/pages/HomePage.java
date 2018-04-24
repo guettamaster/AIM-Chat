@@ -876,9 +876,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         evaluateJavascript("arguments[0].click();", $(LOCATORS.PIN_TO_CONVERSATION_LINK_FOR_FILE.replace("$1", arg0)));
     }
 
-    public boolean theFileIsDisplayedInsideThePinMessagePopUp(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP.replace("$1", arg0))));
-        return $(LOCATORS.FILE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP.replace("$1", arg0)).isPresent();
+    public boolean theFileIsDisplayedInsideTheUnpinMessagePopUp(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP.replace("$1", arg0))));
+        return $(LOCATORS.FILE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP.replace("$1", arg0)).isPresent();
     }
 
     public boolean pinnedSignIsDisplayedNearTheFile(String arg0) {
@@ -918,6 +918,37 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void navigateOnFileBlock(String arg0) {
         Actions actions = new Actions(getDriver());
         actions.moveToElement(findBy(LOCATORS.FILE_BLOCK_IN_THE_PINNED_ITEMS.replace("$1", arg0))).build().perform();
+    }
+
+    public void clickOnAUnpinFromConversationLinkOnTheFileInTheMessageMenu(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PIN_TO_CONVERSATION_LINK_FOR_FILE.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.PIN_TO_CONVERSATION_LINK_FOR_FILE.replace("$1", arg0)));
+    }
+
+    public void clickOnTheUnpinButton() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.UNPIN_BUTTON)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.UNPIN_BUTTON));
+    }
+
+    public boolean pinnedSignIsnTDisplayedNearTheFile(String arg0) {
+        try {
+                System.out.println("wait that documents are invisible");
+                withTimeoutOf(3, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+                System.out.println("Element is invisible");
+            } catch (Exception e) {
+                System.out.println("Element isn`t invisible");
+            }
+            try {
+                System.out.println("check that documents are presented in the DOM");
+                withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+                System.out.println("documents are presented in the DOM");
+                System.out.println("check that documents are visibility");
+                withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+                System.out.println("documents are visibility");
+                return false;
+            } catch (Exception e) {
+                return true;
+            }
     }
 }
 

@@ -126,5 +126,7 @@ String FILE_NAME_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//s
 String DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL = "//div[@class='pinned-message-item']//div[contains(text(),'$1')]//ancestor::div[@class='chat-container active']//div[@class='layout-content']//a[contains(text(),'Download')]";
 String MESSAGE_BLOCK_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//div[@class='pinned-message-item']//ancestor::div[@class='pinned-message-item']//span[contains(text(),'$1')]";
 String FILE_BLOCK_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//div[@class='pinned-message-item']//ancestor::div[@class='pinned-message-item']//div[contains(text(),'$1')]";
+String UNPIN_BUTTON = "//button[contains(text(),'Unpin')]";
+String FILE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP = "//div[contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Unpin Message')]";
 
 }

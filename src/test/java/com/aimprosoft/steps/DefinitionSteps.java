@@ -715,9 +715,9 @@ public class DefinitionSteps {
         endUserSteps.clickOnAPinToConversationLinkOnTheFileInTheMessageMenu(arg0);
     }
 
-    @Then("^the \"([^\"]*)\" file is displayed inside the Pin Message pop-up$")
-    public void theFileIsDisplayedInsideThePinMessagePopUp(String arg0) throws Throwable {
-        endUserSteps.theFileIsDisplayedInsideThePinMessagePopUp(arg0);
+    @Then("^the \"([^\"]*)\" file is displayed inside the Unpin Message pop-up$")
+    public void theFileIsDisplayedInsideTheUnpinMessagePopUp(String arg0) throws Throwable {
+        endUserSteps.theFileIsDisplayedInsideTheUnpinMessagePopUp(arg0);
     }
 
     @Then("^pinned sign is displayed near the \"([^\"]*)\" file$")
@@ -753,5 +753,20 @@ public class DefinitionSteps {
     @When("^navigate on \"([^\"]*)\" file block$")
     public void navigateOnFileBlock(String arg0) throws Throwable {
         endUserSteps.navigateOnFileBlock(arg0);
+    }
+
+    @When("^click on a Unpin from conversation link on the \"([^\"]*)\" file in the message menu$")
+    public void clickOnAUnpinFromConversationLinkOnTheFileInTheMessageMenu(String arg0) throws Throwable {
+        endUserSteps.clickOnAUnpinFromConversationLinkOnTheFileInTheMessageMenu(arg0);
+    }
+
+    @When("^click on the Unpin button$")
+    public void clickOnTheUnpinButton() throws Throwable {
+        endUserSteps.clickOnTheUnpinButton();
+    }
+
+    @Then("^pinned sign isn't displayed near the \"([^\"]*)\" file$")
+    public void pinnedSignIsnTDisplayedNearTheFile(String arg0) throws Throwable {
+        endUserSteps.pinnedSignIsnTDisplayedNearTheFile(arg0);
     }
 }

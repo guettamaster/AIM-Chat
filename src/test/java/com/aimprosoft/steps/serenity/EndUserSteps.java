@@ -752,7 +752,6 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void messageMenuForTheFileIsDisplayed(String arg0) {
         Assert.assertTrue("False", homePage.messageMenuForTheFileIsDisplayed(arg0));
-
     }
 
     @Step
@@ -761,8 +760,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void theFileIsDisplayedInsideThePinMessagePopUp(String arg0) {
-        Assert.assertTrue("False", homePage.theFileIsDisplayedInsideThePinMessagePopUp(arg0));
+    public void theFileIsDisplayedInsideTheUnpinMessagePopUp(String arg0) {
+        Assert.assertTrue("False", homePage.theFileIsDisplayedInsideTheUnpinMessagePopUp(arg0));
     }
 
     @Step
@@ -798,5 +797,20 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void navigateOnFileBlock(String arg0) {
         homePage.navigateOnFileBlock(arg0);
+    }
+
+    @Step
+    public void clickOnAUnpinFromConversationLinkOnTheFileInTheMessageMenu(String arg0) {
+        homePage.clickOnAUnpinFromConversationLinkOnTheFileInTheMessageMenu(arg0);
+    }
+
+    @Step
+    public void clickOnTheUnpinButton() {
+        homePage.clickOnTheUnpinButton();
+    }
+
+    @Step
+    public void pinnedSignIsnTDisplayedNearTheFile(String arg0) {
+        Assert.assertTrue("False", homePage.pinnedSignIsnTDisplayedNearTheFile(arg0));
     }
 }

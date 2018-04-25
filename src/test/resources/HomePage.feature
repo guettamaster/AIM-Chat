@@ -397,6 +397,8 @@ Feature: testing home page
   Scenario: 2.030 Check counter on a pinned message from the right panel
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
+    Then on "Pinned" item there is "1" counter displayed
+
 
 
 

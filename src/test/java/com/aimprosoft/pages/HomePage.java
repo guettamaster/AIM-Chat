@@ -291,7 +291,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnEnterButton() {
-        waitABit(500);
+        waitABit(1000);
         $(LOCATORS.INPUT_MESSAGE_FIELD).click();
         waitABit(500);
         $(LOCATORS.INPUT_MESSAGE_FIELD).sendKeys(Keys.ENTER);
@@ -445,8 +445,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public boolean theFileIsDownloadedOnTheLocalMachine(String arg0) {
         waitABit(5000);
-        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
-//        File folder = new File("/home/user-qa/Downloads"  + arg0);  //this is for local machine
+//        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
+        File folder = new File("/home/user-qa/Downloads"  + arg0);  //this is for local machine
         waitABit(1500);
 //        return folder.exists();
         File[] listOfFile = folder.listFiles();

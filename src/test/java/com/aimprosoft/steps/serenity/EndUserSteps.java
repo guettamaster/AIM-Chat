@@ -838,4 +838,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void theMessageIsDisplayedInsideTheUnpinMessagePopUp(String arg0) {
         Assert.assertTrue("False", homePage.theMessageIsDisplayedInsideTheUnpinMessagePopUp(arg0));
     }
+
+    @Step
+    public void clickOnTheFile(String arg0) {
+        homePage.clickOnTheFile(arg0);
+    }
+
+    @Step
+    public void navigateOnThePinnedFile(String arg0) {
+        homePage.navigateOnThePinnedFile(arg0);
+    }
 }

@@ -794,4 +794,14 @@ public class DefinitionSteps {
     public void theMessageIsDisplayedInsideTheUnpinMessagePopUp(String arg0) throws Throwable {
         endUserSteps.theMessageIsDisplayedInsideTheUnpinMessagePopUp(arg0);
     }
+
+    @When("^click on the \"([^\"]*)\" file$")
+    public void clickOnTheFile(String arg0) throws Throwable {
+        endUserSteps.clickOnTheFile(arg0);
+    }
+
+    @When("^navigate on the pinned \"([^\"]*)\" file$")
+    public void navigateOnThePinnedFile(String arg0) throws Throwable {
+        endUserSteps.navigateOnThePinnedFile(arg0);
+    }
 }

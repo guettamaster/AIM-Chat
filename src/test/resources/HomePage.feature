@@ -84,7 +84,7 @@ Feature: testing home page
     When enter "edited note" in the input message field
     When click on Enter button
     Then "edited note" message is created
-    Then "edited Today at" action is displayed
+    Then "Edited" action is displayed
 
   Scenario: 2.008 Check that "edited note" message to a.shevchenko is deleted
     When click on the "a.shevchenko" user name in the left panel
@@ -373,7 +373,9 @@ Feature: testing home page
     Then "a.shevchenko" user name is displayed in the header
     When scroll down to "maxresdefault_pin.jpg" file
     Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
-    When click on the right control hamburger on the "maxresdefault_pin.jpg" file
+    When scroll down to "maxresdefault_pin.jpg" file
+    When navigate on the pinned "maxresdefault_pin.jpg" file
+    When click on the "maxresdefault_pin.jpg" file
     Then message menu for the "maxresdefault_pin.jpg" file is displayed
     When click on a Unpin from conversation link on the "maxresdefault_pin.jpg" file in the message menu
     Then the "maxresdefault_pin.jpg" file is displayed inside the Unpin Message pop-up

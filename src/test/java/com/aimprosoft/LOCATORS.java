@@ -24,7 +24,7 @@ String TEXTAREA_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//textarea";
 String ADD_BUTTON = "//button[.='Add']";
 String ROOM_NAME_IN_THE_LEFT_PANEL = "//li[@role='presentation']//a[@class='room-link']//span[contains(text(), '$1')]";
 String ROOM_TITLE_NAME_IN_THE_HEADER = "//div[@class='channel-name room-public'][contains(text(),'$1')]";
-String SETTINGS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='b-chat-top']//div[@class='right-control-panel']//i[contains(@class,'material-icons 32 md-dark')][contains(text(),'settings')]";
+String SETTINGS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='file-drop-target']//i[@title='Settings']";
 String CHANNEL_DETAILS_LINK = "//div[@class='chat-container active']//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='b-chat-top with-panel']//div[@class='layout-content']//span[contains(text(),'Channel Details:')]";
 String ROOM_NAME_IN_THE_SETTINGS_BLOCK_IN_THE_RIGHT_BUTTON = "//div[@class='chat-container active']//div[@class='b-tab-content']//div[@class='field-value']/input[@value='$1']//ancestor::div[@class='b-tab-content']//span[@class='text'][contains(text(),'Room settings')]";
 String EDIT_ROOM_NAME_LINK = "(//span[@class='edit-description-link']/a[contains(text(),'Edit')]//ancestor::div[@class='change-room-name']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[1]";
@@ -51,7 +51,7 @@ String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='chat-container active']
 String RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE = "//div[@class='backlight']//span[@class='LinkifyPlus'][contains(text(), '$1')]//ancestor::div[@class='chat-container active']//span[@id='right-control-hamburger']";
 String MESSAGE_MENU = "//div[@class='chat-container active']//ul[@id='message-menu-menu'][@aria-labelledby='message-menu']";
 String EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem'][contains(text(), '$1')]";
-String COMMENT_UNDER_MESSAGE = "//div[@class='chat-container active']//span[@class='was-edited'][contains(text(), '$1')]";
+String COMMENT_UNDER_MESSAGE = "//div[@class='chat-container active']//div[@class='was-edited'][contains(text(), '$1')]";
 String DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem']//span[@class='text-danger'][.='Delete Message']";
 String DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][.='Delete Message']";
 String DELETE_THIS_MESSAGE_BUTTON = "//button[.='Delete']";
@@ -64,9 +64,9 @@ String UPLOAD_BUTTON_IN_THE_UPLOAD_POPUP = "//div[@class='modal-footer']/button[
 String FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING = "//div[@class='chat-container active']//div[@class='file-name']/span[@class='file-name-text'][contains(text(),'$1')]";
 String DOWNLOAD_BUTTON_UNDER_FILE_NAME = "//div[@class='chat-container active']//div[@class='file-name']/span[@class='file-name-text'][contains(text(),'$1')]//ancestor::div[@class='file-container']/div[@class='file-msg-controls']/button/span/a[@title='Download']/i[contains(@class,'material-icons md-24 md-dark')]";
 //   ////div[descendant::div[contains(text(),'maxresdefault.txt')] and @class='file-container']//button[@class='btn btn-success file-download']
-String FAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//a[@class='favorite-button']/i[contains(text(), 'star_border')]";
+String FAVORITE_ROOM_BUTTON = "//a[@class='favorite-button']/i[contains(text(), 'star_border')]";
 String FAVORITE_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::h2[contains(text(),'Favorites')] and @class='channel-section']//span[text()='$1']";
-String UNFAVORITE_ROOM_BUTTON = "//div[@class='chat-container active']//a[@class='favorite-button']/i[contains(text(), 'star')]";
+String UNFAVORITE_ROOM_BUTTON = "//a[@class='favorite-button']/i[contains(text(), 'star')]";
 String PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL = "//div[descendant::a[contains(text(),'Rooms')] and @class='channel-section']//span[text()='$1']";
 String USER_FROM_THE_LIST = "//div[@class='modal-body']/div[@class='invite']//div[@class='ue ue-username ue-username-person']";
 String PROGRESS_BAR_IN_THE_UPLOAD_POPUP = "//div[@class='progress-bar active progress-bar-striped'][@role='progressbar']";
@@ -113,7 +113,7 @@ String PIN_TO_CONVERSATION_LINK_FOR_MESSAGE = "//span[@class='LinkifyPlus'][cont
 String MESSAGE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP = "//span[@class='LinkifyPlus'][contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Pin Message')]";
 String PIN_BUTTON = "//button[contains(text(),'Pin')]";
 String PINNED_SIGN_NEAR_A_MESSAGE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-body']//div[@class='pinned-by']";
-String PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-direct'][contains(text(),'$1')]//ancestor::div[@class='inner-panel b-chat']//i[@title='Pinned Messages']";
+String PINNED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-direct'][contains(text(),'$1')]//ancestor::div[@class='file-drop-target']//i[@title='Pinned Messages']";
 String MESSAGE_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Pinned messages')]//ancestor::div[@class='b-tab-content']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL = "//div[@class='chat-container active']//div[@class='layout-content']//a[contains(text(),'Open')]//ancestor::div[@class='pinned-message-item']//span[contains(text(),'$1')]";
 String PINNED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='chat-container active']//span[contains(text(),'$1')]//ancestor::div[@class='message was-pinned']";
@@ -131,6 +131,5 @@ String FILE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP = "//div[contains(text(),'$1')]/
 String UNPIN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL = "//div[@class='chat-container active']//div[@class='pinned-message-item']//span[contains(text(),'$1')]//ancestor::div[@class='pinned-message-item']//a[contains(text(),'Unpin')]";
 String MESSAGE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP = "//span[contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Unpin Message')]";
 String COUNTER_UNDER_ITEMS_IN_THE_RIGHT_PANEL = "//div[@class='chat-container active']//i[@title='Members']//ancestor::a[@style='cursor: pointer;']//span[contains(text(), '$2')]";
-
 
 }

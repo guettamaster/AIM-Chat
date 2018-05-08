@@ -311,11 +311,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0))));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(findBy(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0))).click().build().perform();
-//        evaluateJavascript("arguments[0].click();", $(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0)));
-
-//
-//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET.replace("$1", arg0))));
-//        evaluateJavascript("arguments[0].click();", $(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_SNIPPET.replace("$1", arg0)));
     }
 
     public boolean messageMenuIsDisplayed() {
@@ -445,8 +440,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public boolean theFileIsDownloadedOnTheLocalMachine(String arg0) {
         waitABit(5000);
-//        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
-        File folder = new File("/home/user-qa/Downloads"  + arg0);  //this is for local machine
+        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
+//        File folder = new File("/home/user-qa/Downloads"  + arg0);  //this is for local machine
         waitABit(1500);
 //        return folder.exists();
         File[] listOfFile = folder.listFiles();
@@ -990,6 +985,20 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean theMessageIsDisplayedInsideTheUnpinMessagePopUp(String arg0) {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP.replace("$1", arg0))));
         return $(LOCATORS.MESSAGE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP.replace("$1", arg0)).isVisible();
+    }
+
+    public void clickOnTheFile(String arg0) {
+        waitABit(2000);
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE.replace("$1", arg0)));
+    }
+
+    public void navigateOnThePinnedFile(String arg0) {
+        waitABit(2000);
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(findBy(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))).build().perform();
+        getDriver().findElements(By.xpath("//div[@class='chat-container active']//span[contains(text(),'maxresdefault_pin.jpg')]//ancestor::div[@class='message-main-container']//i[contains(text(),'more_vert')]"));
     }
 }
 

@@ -962,6 +962,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean pinnedSignIsnTDisplayedNearTheMessage(String arg0) {
+        waitABit(1000);
         try {
             System.out.println("wait that documents are invisible");
             withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));

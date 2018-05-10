@@ -96,7 +96,7 @@
                     <argLine>-Xmx512m</argLine>
                     <!--<systemPropertyVariables>-->
                     <!--<webdriver.driver>${webdriver.driver}</webdriver.driver>-->
-                    <!--</systemPropertyVariables>-->
+                    <!--</systemPropertyVariables>-->dgd
                 </configuration>
                 <executions>
                     <execution>

@@ -1,12 +1,11 @@
 package com.aimprosoft.steps;
 
-import cucumber.api.PendingException;
+import com.aimprosoft.steps.serenity.EndUserSteps;
 import cucumber.api.java.en.And;
-import net.thucydides.core.annotations.Steps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import com.aimprosoft.steps.serenity.EndUserSteps;
+import net.thucydides.core.annotations.Steps;
 
 import java.net.URISyntaxException;
 import java.util.Map;

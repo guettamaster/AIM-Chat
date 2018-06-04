@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.concurrent.TimeUnit;
 
-@DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
+@DefaultUrl("https://chat-predprod.aimprosoft.com/")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
 //https://chat.aimprosoft.com/index.html

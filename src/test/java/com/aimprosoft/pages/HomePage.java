@@ -17,7 +17,7 @@ import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
 
 
-@DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
+@DefaultUrl("https://chat-predprod.aimprosoft.com/")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
 //https://chat.aimprosoft.com/index.html
@@ -39,7 +39,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputField(String arg0, String arg1) {
-        waitABit(500);
+        waitABit(10000);
         Actions actions = new Actions(getDriver());
         actions.moveToElement(find(By.xpath(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg1))));
         actions.click();
@@ -449,7 +449,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnAddRoomTitle() {
-        $(LOCATORS.ROOM_TITLE_IN_POPUP).click();
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_TITLE_IN_POPUP)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.ROOM_TITLE_IN_POPUP));
     }
 
     public void clickOnTheFavoriteRoomButton() {

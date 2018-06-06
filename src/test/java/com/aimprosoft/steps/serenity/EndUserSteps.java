@@ -848,4 +848,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void navigateOnThePinnedFile(String arg0) {
         homePage.navigateOnThePinnedFile(arg0);
     }
+
+    @Step
+    public void underTitleThereIsCounterDisplayed(String arg0, String arg1) {
+        Assert.assertTrue("False", homePage.underTitleThereIsCounterDisplayed(arg0, arg1));
+    }
 }

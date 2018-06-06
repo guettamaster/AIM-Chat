@@ -130,6 +130,6 @@ String UNPIN_BUTTON = "//button[contains(text(),'Unpin')]";
 String FILE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP = "//div[contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Unpin Message')]";
 String UNPIN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL = "//div[@class='chat-container active']//div[@class='pinned-message-item']//span[contains(text(),'$1')]//ancestor::div[@class='pinned-message-item']//a[contains(text(),'Unpin')]";
 String MESSAGE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP = "//span[contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Unpin Message')]";
-String COUNTER_UNDER_ITEMS_IN_THE_RIGHT_PANEL = "//div[@class='chat-container active']//i[@title='Members']//ancestor::a[@style='cursor: pointer;']//span[contains(text(), '$2')]";
+String COUNTER_UNDER_ITEMS_IN_THE_RIGHT_PANEL = "//i[@title='$1']//ancestor::a[@style='cursor: pointer;']//span[contains(text(),'$2')]";
 
 }

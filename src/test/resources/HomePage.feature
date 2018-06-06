@@ -396,10 +396,10 @@ Feature: testing home page
     When click on the Unpin button
     Then pinned sign isn't displayed near the "test message" message
 
-#  Scenario: 2.030 Check counter on a pinned message from the right panel
-#    When click on the "a.shevchenko" user name in the left panel
-#    Then "a.shevchenko" user name is displayed in the header
-#    Then on "Pinned" item there is "1" counter displayed
+  Scenario: 2.030 Check counter on a pinned message from the right panel
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    Then under "Pinned Messages" title there is "1" counter displayed
 
 
 

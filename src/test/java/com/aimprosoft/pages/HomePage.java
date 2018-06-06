@@ -17,7 +17,7 @@ import java.net.URISyntaxException;
 import java.util.concurrent.TimeUnit;
 
 
-@DefaultUrl("https://chat-predprod.aimprosoft.com/")
+@DefaultUrl("https://chat-stage.aimprosoft.com/index.html")
 //https://chat-stage.aimprosoft.com/index.html
 //https://chat-predprod.aimprosoft.com/index.html
 //https://chat.aimprosoft.com/index.html
@@ -1001,6 +1001,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         Actions actions = new Actions(getDriver());
         actions.moveToElement(findBy(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))).build().perform();
         getDriver().findElements(By.xpath("//div[@class='chat-container active']//span[contains(text(),'maxresdefault_pin.jpg')]//ancestor::div[@class='message-main-container']//i[contains(text(),'more_vert')]"));
+    }
+
+    public boolean underTitleThereIsCounterDisplayed(String arg0, String arg1) {
+        withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.COUNTER_UNDER_ITEMS_IN_THE_RIGHT_PANEL.replace("$1", arg0).replace("$2", arg1))));
+        return $(LOCATORS.COUNTER_UNDER_ITEMS_IN_THE_RIGHT_PANEL.replace("$1", arg0).replace("$2", arg1)).isPresent();
     }
 }
 

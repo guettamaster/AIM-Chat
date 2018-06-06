@@ -1,6 +1,7 @@
 package com.aimprosoft.steps;
 
 import com.aimprosoft.steps.serenity.EndUserSteps;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -802,5 +803,10 @@ public class DefinitionSteps {
     @When("^navigate on the pinned \"([^\"]*)\" file$")
     public void navigateOnThePinnedFile(String arg0) throws Throwable {
         endUserSteps.navigateOnThePinnedFile(arg0);
+    }
+
+    @Then("^under \"([^\"]*)\" title there is \"([^\"]*)\" counter displayed$")
+    public void underTitleThereIsCounterDisplayed(String arg0, String arg1) throws Throwable {
+        endUserSteps.underTitleThereIsCounterDisplayed(arg0, arg1);
     }
 }

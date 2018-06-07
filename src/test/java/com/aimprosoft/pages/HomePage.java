@@ -1007,6 +1007,26 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(60, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.COUNTER_UNDER_ITEMS_IN_THE_RIGHT_PANEL.replace("$1", arg0).replace("$2", arg1))));
         return $(LOCATORS.COUNTER_UNDER_ITEMS_IN_THE_RIGHT_PANEL.replace("$1", arg0).replace("$2", arg1)).isPresent();
     }
+
+    public void clickOnAStarSignOnTheMessage(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.HIDE_STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.HIDE_STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0)));
+    }
+
+    public boolean starSignIsDisplayedNearTheMessage(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+        return $(LOCATORS.STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheStarButtonOfDirect(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STARRED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.STARRED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL.replace("$1", arg0)));
+    }
+
+    public boolean theMessageIsDisplayedInTheStarredMessagesBlock(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_IN_THE_STARRED_ITEMS.replace("$1", arg0))));
+        return $(LOCATORS.MESSAGE_IN_THE_STARRED_ITEMS.replace("$1", arg0)).isPresent();
+    }
 }
 
 

@@ -809,4 +809,24 @@ public class DefinitionSteps {
     public void underTitleThereIsCounterDisplayed(String arg0, String arg1) throws Throwable {
         endUserSteps.underTitleThereIsCounterDisplayed(arg0, arg1);
     }
+
+    @When("^click on a star sign on the \"([^\"]*)\" message$")
+    public void clickOnAStarSignOnTheMessage(String arg0) throws Throwable {
+        endUserSteps.clickOnAStarSignOnTheMessage(arg0);
+    }
+
+    @Then("^star sign is displayed near the \"([^\"]*)\" message$")
+    public void starSignIsDisplayedNearTheMessage(String arg0) throws Throwable {
+        endUserSteps.starSignIsDisplayedNearTheMessage(arg0);
+    }
+
+    @When("^click on the Star button of \"([^\"]*)\" direct$")
+    public void clickOnTheStarButtonOfDirect(String arg0) throws Throwable {
+        endUserSteps.clickOnTheStarButtonOfDirect(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" message is displayed in the Starred messages block$")
+    public void theMessageIsDisplayedInTheStarredMessagesBlock(String arg0) throws Throwable {
+        endUserSteps.theMessageIsDisplayedInTheStarredMessagesBlock(arg0);
+    }
 }

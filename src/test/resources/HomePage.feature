@@ -401,6 +401,19 @@ Feature: testing home page
     Then "a.shevchenko" user name is displayed in the header
     Then under "Pinned Messages" title there is "1" counter displayed
 
+  Scenario: 2.031 Check that message is starred and displayed in the right panel
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    When scroll down to "test message" message
+    When click on a star sign on the "test message" message
+    Then star sign is displayed near the "test message" message
+    When click on the Star button of "a.shevchenko" direct
+    Then the "test message" message is displayed in the Starred messages block
+
+  Scenario: 2.032 Check that message from starred is opened
+
+
+
 
 
 

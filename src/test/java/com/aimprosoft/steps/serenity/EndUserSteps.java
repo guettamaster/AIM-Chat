@@ -853,4 +853,24 @@ public class EndUserSteps extends ScenarioSteps {
     public void underTitleThereIsCounterDisplayed(String arg0, String arg1) {
         Assert.assertTrue("False", homePage.underTitleThereIsCounterDisplayed(arg0, arg1));
     }
+
+    @Step
+    public void clickOnAStarSignOnTheMessage(String arg0) {
+        homePage.clickOnAStarSignOnTheMessage(arg0);
+    }
+
+    @Step
+    public void starSignIsDisplayedNearTheMessage(String arg0) {
+        Assert.assertTrue("False", homePage.starSignIsDisplayedNearTheMessage(arg0));
+    }
+
+    @Step
+    public void clickOnTheStarButtonOfDirect(String arg0) {
+        homePage.clickOnTheStarButtonOfDirect(arg0);
+    }
+
+    @Step
+    public void theMessageIsDisplayedInTheStarredMessagesBlock(String arg0) {
+        Assert.assertTrue("False", homePage.theMessageIsDisplayedInTheStarredMessagesBlock(arg0));
+    }
 }

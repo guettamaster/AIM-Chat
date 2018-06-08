@@ -849,4 +849,19 @@ public class DefinitionSteps {
     public void highlightIsDisplayedOnTheStarredMessage(String arg0) throws Throwable {
         endUserSteps.highlightIsDisplayedOnTheStarredMessage(arg0);
     }
+
+    @When("^click on a star sign on the \"([^\"]*)\" file$")
+    public void clickOnAStarSignOnTheFile(String arg0) throws Throwable {
+        endUserSteps.clickOnAStarSignOnTheFile(arg0);
+    }
+
+    @Then("^star sign is displayed near the \"([^\"]*)\" file$")
+    public void starSignIsDisplayedNearTheFile(String arg0) throws Throwable {
+        endUserSteps.starSignIsDisplayedNearTheFile(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" file is displayed in the Starred messages block$")
+    public void theFileIsDisplayedInTheStarredMessagesBlock(String arg0) throws Throwable {
+        endUserSteps.theFileIsDisplayedInTheStarredMessagesBlock(arg0);
+    }
 }

@@ -1047,6 +1047,21 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0))));
         return $(LOCATORS.STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0)).isPresent();
     }
+
+    public void clickOnAStarSignOnTheFile(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.HIDE_STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.HIDE_STAR_SIGN_NEAR_A_FILE.replace("$1", arg0)));
+    }
+
+    public boolean starSignIsDisplayedNearTheFile(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+        return $(LOCATORS.STAR_SIGN_NEAR_A_FILE.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean theFileIsDisplayedInTheStarredMessagesBlock(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FILE_IN_THE_STARRED_ITEMS.replace("$1", arg0))));
+        return $(LOCATORS.FILE_IN_THE_STARRED_ITEMS.replace("$1", arg0)).isPresent();
+    }
 }
 
 

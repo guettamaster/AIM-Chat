@@ -430,19 +430,16 @@ Feature: testing home page
       | expected_file_name | maxresdefault_pin.jpg                                                              |
     Then "maxresdefault_pin.jpg" file is displayed in the direct
     When scroll down to "maxresdefault_pin.jpg" file
+    When click on a star sign on the "maxresdefault_pin.jpg" file
+    Then star sign is displayed near the "maxresdefault_pin.jpg" file
+    When click on the Star button of "a.shevchenko" direct
+    Then the "maxresdefault_pin.jpg" file is displayed in the Starred messages block
 
 
-    When click on the right control hamburger on the "maxresdefault_pin.jpg" file
-    Then message menu for the "maxresdefault_pin.jpg" file is displayed
-    When click on a Pin to conversation link on the "maxresdefault_pin.jpg" file in the message menu
-    Then the "maxresdefault_pin.jpg" file is displayed inside the Pin Message pop-up
-    When click on the Pin button
-    Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
-    When click on the Pin button of "a.shevchenko" direct
-    Then the "maxresdefault_pin.jpg" file is displayed in the Pinned messages block
-    When navigate on "maxresdefault_pin.jpg" file block
-    When click on the Download button under "maxresdefault_pin.jpg" file in the Pinned messages block
-    Then the "maxresdefault_pin.jpg" file is downloaded on the local machine
+#    Then the "maxresdefault_pin.jpg" file is displayed in the Pinned messages block
+#    When navigate on "maxresdefault_pin.jpg" file block
+#    When click on the Download button under "maxresdefault_pin.jpg" file in the Pinned messages block
+#    Then the "maxresdefault_pin.jpg" file is downloaded on the local machine
 
 
 

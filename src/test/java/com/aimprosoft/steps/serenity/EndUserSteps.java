@@ -893,4 +893,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void highlightIsDisplayedOnTheStarredMessage(String arg0) {
         Assert.assertTrue("False", homePage.highlightIsDisplayedOnTheStarredMessage(arg0));
     }
+
+    @Step
+    public void clickOnAStarSignOnTheFile(String arg0) {
+        homePage.clickOnAStarSignOnTheFile(arg0);
+    }
+
+    @Step
+    public void starSignIsDisplayedNearTheFile(String arg0) {
+        Assert.assertTrue("False", homePage.starSignIsDisplayedNearTheFile(arg0));
+    }
+
+    @Step
+    public void theFileIsDisplayedInTheStarredMessagesBlock(String arg0) {
+        Assert.assertTrue("False", homePage.theFileIsDisplayedInTheStarredMessagesBlock(arg0));
+    }
 }

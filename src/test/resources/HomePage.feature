@@ -411,6 +411,39 @@ Feature: testing home page
     Then the "test message" message is displayed in the Starred messages block
 
   Scenario: 2.032 Check that message from starred is opened
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    When click on the Star button of "a.shevchenko" direct
+    Then the "test message" message is displayed in the Starred messages block
+    When navigate on "test message" message block in the Starred message block
+    Then open link is displayed on the "test message" in the right panel on the Starred message block
+    When click on the open link on the "test message" in the right panel on the Starred message block
+    Then highlight is displayed on the starred "test message" message
+
+  Scenario: 2.033 Check that message from starred is downloaded
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    When Upload file many times
+      | count              | 1                                                                                  |
+      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault_pin.jpg |
+      | title_name         | Upload file                                                                        |
+      | expected_file_name | maxresdefault_pin.jpg                                                              |
+    Then "maxresdefault_pin.jpg" file is displayed in the direct
+    When scroll down to "maxresdefault_pin.jpg" file
+
+
+    When click on the right control hamburger on the "maxresdefault_pin.jpg" file
+    Then message menu for the "maxresdefault_pin.jpg" file is displayed
+    When click on a Pin to conversation link on the "maxresdefault_pin.jpg" file in the message menu
+    Then the "maxresdefault_pin.jpg" file is displayed inside the Pin Message pop-up
+    When click on the Pin button
+    Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
+    When click on the Pin button of "a.shevchenko" direct
+    Then the "maxresdefault_pin.jpg" file is displayed in the Pinned messages block
+    When navigate on "maxresdefault_pin.jpg" file block
+    When click on the Download button under "maxresdefault_pin.jpg" file in the Pinned messages block
+    Then the "maxresdefault_pin.jpg" file is downloaded on the local machine
+
 
 
 

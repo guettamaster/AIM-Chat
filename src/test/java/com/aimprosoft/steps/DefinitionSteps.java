@@ -829,4 +829,24 @@ public class DefinitionSteps {
     public void theMessageIsDisplayedInTheStarredMessagesBlock(String arg0) throws Throwable {
         endUserSteps.theMessageIsDisplayedInTheStarredMessagesBlock(arg0);
     }
+
+    @When("^navigate on \"([^\"]*)\" message block in the Starred message block$")
+    public void navigateOnMessageBlockInTheStarredMessageBlock(String arg0) throws Throwable {
+        endUserSteps.navigateOnMessageBlockInTheStarredMessageBlock(arg0);
+    }
+
+    @Then("^open link is displayed on the \"([^\"]*)\" in the right panel on the Starred message block$")
+    public void openLinkIsDisplayedOnTheInTheRightPanelOnTheStarredMessageBlock(String arg0) throws Throwable {
+        endUserSteps.openLinkIsDisplayedOnTheInTheRightPanelOnTheStarredMessageBlock(arg0);
+    }
+
+    @When("^click on the open link on the \"([^\"]*)\" in the right panel on the Starred message block$")
+    public void clickOnTheOpenLinkOnTheInTheRightPanelOnTheStarredMessageBlock(String arg0) throws Throwable {
+        endUserSteps.clickOnTheOpenLinkOnTheInTheRightPanelOnTheStarredMessageBlock(arg0);
+    }
+
+    @Then("^highlight is displayed on the starred \"([^\"]*)\" message$")
+    public void highlightIsDisplayedOnTheStarredMessage(String arg0) throws Throwable {
+        endUserSteps.highlightIsDisplayedOnTheStarredMessage(arg0);
+    }
 }

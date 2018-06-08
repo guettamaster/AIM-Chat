@@ -873,4 +873,24 @@ public class EndUserSteps extends ScenarioSteps {
     public void theMessageIsDisplayedInTheStarredMessagesBlock(String arg0) {
         Assert.assertTrue("False", homePage.theMessageIsDisplayedInTheStarredMessagesBlock(arg0));
     }
+
+    @Step
+    public void navigateOnMessageBlockInTheStarredMessageBlock(String arg0) {
+        homePage.navigateOnMessageBlockInTheStarredMessageBlock(arg0);
+    }
+
+    @Step
+    public void openLinkIsDisplayedOnTheInTheRightPanelOnTheStarredMessageBlock(String arg0) {
+        Assert.assertTrue("False", homePage.openLinkIsDisplayedOnTheInTheRightPanelOnTheStarredMessageBlock(arg0));
+    }
+
+    @Step
+    public void clickOnTheOpenLinkOnTheInTheRightPanelOnTheStarredMessageBlock(String arg0) {
+        homePage.clickOnTheOpenLinkOnTheInTheRightPanelOnTheStarredMessageBlock(arg0);
+    }
+
+    @Step
+    public void highlightIsDisplayedOnTheStarredMessage(String arg0) {
+        Assert.assertTrue("False", homePage.highlightIsDisplayedOnTheStarredMessage(arg0));
+    }
 }

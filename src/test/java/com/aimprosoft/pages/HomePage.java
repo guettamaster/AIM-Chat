@@ -1027,6 +1027,26 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_IN_THE_STARRED_ITEMS.replace("$1", arg0))));
         return $(LOCATORS.MESSAGE_IN_THE_STARRED_ITEMS.replace("$1", arg0)).isPresent();
     }
+
+    public void navigateOnMessageBlockInTheStarredMessageBlock(String arg0) {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(findBy(LOCATORS.MESSAGE_BLOCK_IN_THE_STARRED_ITEMS.replace("$1", arg0))).build().perform();
+    }
+
+    public boolean openLinkIsDisplayedOnTheInTheRightPanelOnTheStarredMessageBlock(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK.replace("$1", arg0))));
+        return $(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheOpenLinkOnTheInTheRightPanelOnTheStarredMessageBlock(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK.replace("$1", arg0)));
+    }
+
+    public boolean highlightIsDisplayedOnTheStarredMessage(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0))));
+        return $(LOCATORS.STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0)).isPresent();
+    }
 }
 
 

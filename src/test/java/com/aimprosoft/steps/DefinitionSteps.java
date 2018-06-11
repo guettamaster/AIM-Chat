@@ -864,4 +864,14 @@ public class DefinitionSteps {
     public void theFileIsDisplayedInTheStarredMessagesBlock(String arg0) throws Throwable {
         endUserSteps.theFileIsDisplayedInTheStarredMessagesBlock(arg0);
     }
+
+    @When("^navigate on \"([^\"]*)\" file block in the Starred messages block$")
+    public void navigateOnFileBlockInTheStarredMessagesBlock(String arg0) throws Throwable {
+        endUserSteps.navigateOnFileBlockInTheStarredMessagesBlock(arg0);
+    }
+
+    @When("^click on the Download button under \"([^\"]*)\" file in the Starred messages block$")
+    public void clickOnTheDownloadButtonUnderFileInTheStarredMessagesBlock(String arg0) throws Throwable {
+        endUserSteps.clickOnTheDownloadButtonUnderFileInTheStarredMessagesBlock(arg0);
+    }
 }

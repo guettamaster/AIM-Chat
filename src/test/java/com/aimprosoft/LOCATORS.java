@@ -140,6 +140,8 @@ String OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK = "//div[@
 String STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='chat-container active']//span[contains(text(),'$1')]//ancestor::div[@class='message last was-pinned is-stared-parent']";
 String HIDE_STAR_SIGN_NEAR_A_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'star_border')]";
 String STAR_SIGN_NEAR_A_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'star')]";
-String FILE_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Starred messages')]//ancestor::div[@class='b-tab-content']//div[@class='file-name'][contains(text(),'maxresdefault_pin.jpg')]";
+String FILE_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Starred messages')]//ancestor::div[@class='b-tab-content']//div[@class='file-name'][contains(text(),'$1')]";
+String FILE_BLOCK_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//div[@class='starred-message-container']//ancestor::li[@class='starred-message']//div[contains(text(),'$1')]";
+String DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_ITEMS = "//div[@class='starred-message-filename']/div[contains(text(),'$1')]//ancestor::div[@class='chat-container active']//div[@class='layout-content']//a[contains(text(),'Download')]";
 
 }

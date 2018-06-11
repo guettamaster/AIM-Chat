@@ -425,21 +425,24 @@ Feature: testing home page
     Then "a.shevchenko" user name is displayed in the header
     When Upload file many times
       | count              | 1                                                                                  |
-      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault_pin.jpg |
+      | file               | /home/user-qa/IdeaProjects/AIM-Chat1/src/test/resources/Files/17.jpg               |
       | title_name         | Upload file                                                                        |
-      | expected_file_name | maxresdefault_pin.jpg                                                              |
-    Then "maxresdefault_pin.jpg" file is displayed in the direct
-    When scroll down to "maxresdefault_pin.jpg" file
-    When click on a star sign on the "maxresdefault_pin.jpg" file
-    Then star sign is displayed near the "maxresdefault_pin.jpg" file
+      | expected_file_name | 17.jpg                                                                             |
+    Then "17.jpg" file is displayed in the direct
+    When scroll down to "17.jpg" file
+    When click on a star sign on the "17.jpg" file
+    Then star sign is displayed near the "17.jpg" file
     When click on the Star button of "a.shevchenko" direct
-    Then the "maxresdefault_pin.jpg" file is displayed in the Starred messages block
+    Then the "17.jpg" file is displayed in the Starred messages block
+    When navigate on "17.jpg" file block in the Starred messages block
+    When click on the Download button under "17.jpg" file in the Starred messages block
+    Then the "17.jpg" file is downloaded on the local machine
 
+#  /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault_pin.jpg
 
-#    Then the "maxresdefault_pin.jpg" file is displayed in the Pinned messages block
-#    When navigate on "maxresdefault_pin.jpg" file block
-#    When click on the Download button under "maxresdefault_pin.jpg" file in the Pinned messages block
-#    Then the "maxresdefault_pin.jpg" file is downloaded on the local machine
+  Scenario: 2.034 Check that message from starred is unstarred
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
 
 
 

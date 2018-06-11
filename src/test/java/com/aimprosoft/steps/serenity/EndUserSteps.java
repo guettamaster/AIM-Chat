@@ -908,4 +908,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void theFileIsDisplayedInTheStarredMessagesBlock(String arg0) {
         Assert.assertTrue("False", homePage.theFileIsDisplayedInTheStarredMessagesBlock(arg0));
     }
+
+    @Step
+    public void navigateOnFileBlockInTheStarredMessagesBlock(String arg0) {
+        homePage.navigateOnFileBlockInTheStarredMessagesBlock(arg0);
+    }
+
+    @Step
+    public void clickOnTheDownloadButtonUnderFileInTheStarredMessagesBlock(String arg0) {
+        homePage.clickOnTheDownloadButtonUnderFileInTheStarredMessagesBlock(arg0);
+    }
 }

@@ -443,6 +443,20 @@ Feature: testing home page
   Scenario: 2.034 Check that message from starred is unstarred
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
+    When scroll down to "test message" message
+    Then star sign is displayed near the "test message" message
+    When click on a star sign on the "test message" message
+
+
+
+#    When navigate on the pinned "maxresdefault_pin.jpg" file
+#    When click on the "maxresdefault_pin.jpg" file
+#    Then message menu for the "maxresdefault_pin.jpg" file is displayed
+#    When click on a Unpin from conversation link on the "maxresdefault_pin.jpg" file in the message menu
+#    Then the "maxresdefault_pin.jpg" file is displayed inside the Unpin Message pop-up
+#    When click on the Unpin button
+#    Then pinned sign isn't displayed near the "maxresdefault_pin.jpg" file
+
 
 
 

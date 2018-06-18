@@ -1072,6 +1072,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_ITEMS.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_ITEMS.replace("$1", arg0)));
     }
+
+    public boolean editedMarkIsDisplayedOnTheSnippet(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.EDITED_MARK_ON_THE_SNIPPET.replace("$1", arg0))));
+        return $(LOCATORS.EDITED_MARK_ON_THE_SNIPPET.replace("$1", arg0)).isPresent();
+    }
 }
 
 

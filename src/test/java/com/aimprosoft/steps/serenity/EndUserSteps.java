@@ -918,4 +918,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheDownloadButtonUnderFileInTheStarredMessagesBlock(String arg0) {
         homePage.clickOnTheDownloadButtonUnderFileInTheStarredMessagesBlock(arg0);
     }
+
+    @Step
+    public void editedMarkIsDisplayedOnTheSnippet(String arg0) {
+        Assert.assertTrue("False", homePage.editedMarkIsDisplayedOnTheSnippet(arg0));
+    }
 }

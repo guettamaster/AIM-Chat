@@ -126,7 +126,7 @@ Feature: testing home page
     Then the "room1" title is displayed in the header
     When Upload file many times
    | count              | 1                                                                              |
-   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.txt |
+   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.txt  |
    | title_name         | Upload file                                                                    |
    | expected_file_name | maxresdefault.txt                                                              |
     Then "maxresdefault.txt" file is displayed in the room
@@ -235,7 +235,7 @@ Feature: testing home page
     When click on "General" room in the left panel
     Then the "General" title is displayed in the header
     When enter "@" in the input search field inside a room
-    Then "People" title name of a panel with list is displayed
+    Then "Mentions" title name of a panel with list is displayed
 
   Scenario: 2.018 Check that rooms panel is displayed after entering "@roomname" in the input field inside a room
     When click on "General" room in the left panel
@@ -279,6 +279,7 @@ Feature: testing home page
     Then "Cobalt" option is displayed in the Theme dropdown menu
     When click on the Save button
     Then "test_snippet33.pas" is edited
+    Then Edited mark is displayed on the "test_snippet33.pas" snippet
 
   Scenario: 2.022 Check that snippet is previewed
     When click on "General" room in the left panel
@@ -425,7 +426,7 @@ Feature: testing home page
     Then "a.shevchenko" user name is displayed in the header
     When Upload file many times
       | count              | 1                                                                                  |
-      | file               | /home/user-qa/IdeaProjects/AIM-Chat1/src/test/resources/Files/17.jpg               |
+      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/17.jpg                |
       | title_name         | Upload file                                                                        |
       | expected_file_name | 17.jpg                                                                             |
     Then "17.jpg" file is displayed in the direct

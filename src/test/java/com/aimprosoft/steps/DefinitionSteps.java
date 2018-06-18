@@ -874,4 +874,9 @@ public class DefinitionSteps {
     public void clickOnTheDownloadButtonUnderFileInTheStarredMessagesBlock(String arg0) throws Throwable {
         endUserSteps.clickOnTheDownloadButtonUnderFileInTheStarredMessagesBlock(arg0);
     }
+
+    @Then("^Edited mark is displayed on the \"([^\"]*)\" snippet$")
+    public void editedMarkIsDisplayedOnTheSnippet(String arg0) throws Throwable {
+        endUserSteps.editedMarkIsDisplayedOnTheSnippet(arg0);
+    }
 }

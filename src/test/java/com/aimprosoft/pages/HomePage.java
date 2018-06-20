@@ -298,7 +298,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean messageIsCreated(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+        waitABit(1000);
+//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
         return $(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)).isVisible();
     }
 
@@ -1029,6 +1030,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void navigateOnMessageBlockInTheStarredMessageBlock(String arg0) {
+        waitABit(3000);
         Actions actions = new Actions(getDriver());
         actions.moveToElement(findBy(LOCATORS.MESSAGE_BLOCK_IN_THE_STARRED_ITEMS.replace("$1", arg0))).build().perform();
     }

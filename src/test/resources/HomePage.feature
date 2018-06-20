@@ -351,37 +351,37 @@ Feature: testing home page
     Then "a.shevchenko" user name is displayed in the header
     When Upload file many times
       | count              | 1                                                                                  |
-      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault_pin.jpg |
+      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/syd_barrett___bad_hair_day_by_softmachine09.jpg |
       | title_name         | Upload file                                                                        |
-      | expected_file_name | maxresdefault_pin.jpg                                                              |
-    Then "maxresdefault_pin.jpg" file is displayed in the direct
-#    When navigate on "maxresdefault_pin.jpg" snippet
-    When scroll down to "maxresdefault_pin.jpg" file
-    When click on the right control hamburger on the "maxresdefault_pin.jpg" file
-    Then message menu for the "maxresdefault_pin.jpg" file is displayed
-    When click on a Pin to conversation link on the "maxresdefault_pin.jpg" file in the message menu
-    Then the "maxresdefault_pin.jpg" file is displayed inside the Pin Message pop-up
+      | expected_file_name | syd_barrett___bad_hair_day_by_softmachine09.jpg                                                              |
+    Then "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed in the direct
+#    When navigate on "syd_barrett___bad_hair_day_by_softmachine09.jpg" snippet
+    When scroll down to "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+    When click on the right control hamburger on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+    Then message menu for the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed
+    When click on a Pin to conversation link on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file in the message menu
+    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed inside the Pin Message pop-up
     When click on the Pin button
-    Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
+    Then pinned sign is displayed near the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
     When click on the Pin button of "a.shevchenko" direct
-    Then the "maxresdefault_pin.jpg" file is displayed in the Pinned messages block
-    When navigate on "maxresdefault_pin.jpg" file block
-    When click on the Download button under "maxresdefault_pin.jpg" file in the Pinned messages block
-    Then the "maxresdefault_pin.jpg" file is downloaded on the local machine
+    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed in the Pinned messages block
+    When navigate on "syd_barrett___bad_hair_day_by_softmachine09.jpg" file block
+    When click on the Download button under "syd_barrett___bad_hair_day_by_softmachine09.jpg" file in the Pinned messages block
+    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is downloaded on the local machine
 
   Scenario: 2.028 Check that message from pinned is unpinned
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
-    When scroll down to "maxresdefault_pin.jpg" file
-    Then pinned sign is displayed near the "maxresdefault_pin.jpg" file
-    When scroll down to "maxresdefault_pin.jpg" file
-    When navigate on the pinned "maxresdefault_pin.jpg" file
-    When click on the "maxresdefault_pin.jpg" file
-    Then message menu for the "maxresdefault_pin.jpg" file is displayed
-    When click on a Unpin from conversation link on the "maxresdefault_pin.jpg" file in the message menu
-    Then the "maxresdefault_pin.jpg" file is displayed inside the Unpin Message pop-up
+    When scroll down to "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+    Then pinned sign is displayed near the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+    When scroll down to "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+    When navigate on the pinned "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+    When click on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+    Then message menu for the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed
+    When click on a Unpin from conversation link on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file in the message menu
+    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed inside the Unpin Message pop-up
     When click on the Unpin button
-    Then pinned sign isn't displayed near the "maxresdefault_pin.jpg" file
+    Then pinned sign isn't displayed near the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
 
   Scenario: 2.029 Check that message from pinned is unpinned from the right panel
     When click on the "a.shevchenko" user name in the left panel
@@ -400,7 +400,19 @@ Feature: testing home page
   Scenario: 2.030 Check counter on a pinned message from the right panel
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
-    Then under "Pinned Messages" title there is "1" counter displayed
+    When enter "qqq test" in the input message field
+    When click on Enter button
+    Then "qqq test" message is created
+    When scroll down to "qqq test" message
+    When click on the right control hamburger on the "qqq test" message
+    Then message menu for the "qqq test" message is displayed
+    When click on a Pin to conversation link on the "qqq test" message in the message menu
+    Then the "qqq test" message is displayed inside the Pin Message pop-up
+    When click on the Pin button
+    Then pinned sign is displayed near the "qqq test" message
+    When click on the Pin button of "a.shevchenko" direct
+    Then the "qqq test" message is displayed in the Pinned messages block
+    Then under "Pinned messages" title there is "1" counter displayed
 
   Scenario: 2.031 Check that message is starred and displayed in the right panel
     When click on the "a.shevchenko" user name in the left panel
@@ -439,7 +451,7 @@ Feature: testing home page
     When click on the Download button under "17.jpg" file in the Starred messages block
     Then the "17.jpg" file is downloaded on the local machine
 
-#  /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault_pin.jpg
+#  /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/syd_barrett___bad_hair_day_by_softmachine09.jpg
 
   Scenario: 2.034 Check that message from starred is unstarred
     When click on the "a.shevchenko" user name in the left panel
@@ -450,13 +462,13 @@ Feature: testing home page
 
 
 
-#    When navigate on the pinned "maxresdefault_pin.jpg" file
-#    When click on the "maxresdefault_pin.jpg" file
-#    Then message menu for the "maxresdefault_pin.jpg" file is displayed
-#    When click on a Unpin from conversation link on the "maxresdefault_pin.jpg" file in the message menu
-#    Then the "maxresdefault_pin.jpg" file is displayed inside the Unpin Message pop-up
+#    When navigate on the pinned "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+#    When click on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+#    Then message menu for the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed
+#    When click on a Unpin from conversation link on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file in the message menu
+#    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed inside the Unpin Message pop-up
 #    When click on the Unpin button
-#    Then pinned sign isn't displayed near the "maxresdefault_pin.jpg" file
+#    Then pinned sign isn't displayed near the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
 
 
 

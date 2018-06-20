@@ -48,7 +48,7 @@ String USER_NAME_IN_THE_LEFT_PANEL = "//li[@role='presentation']//a[@class='room
 String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";
 String INPUT_MESSAGE_FIELD = "//div[@class='chat-container active']//textarea[@id='input-text-field'][@placeholder='Type message here']";
 String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='chat-container active']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
-String RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE = "//div[@class='backlight']//span[@class='LinkifyPlus'][contains(text(), '$1')]//ancestor::div[@class='chat-container active']//span[@id='right-control-hamburger']";
+String RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE = "//span[@class='LinkifyPlus'][contains(text(), '$1')]//ancestor::div[@class='message-main-container']//span[@id='right-control-hamburger']";
 String MESSAGE_MENU = "//div[@class='chat-container active']//ul[@id='message-menu-menu'][@aria-labelledby='message-menu']";
 String EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem'][contains(text(), '$1')]";
 String COMMENT_UNDER_MESSAGE = "//div[@class='chat-container active']//div[@class='was-edited'][contains(text(), '$1')]";
@@ -133,11 +133,11 @@ String MESSAGE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP = "//span[contains(text(),'$1
 String COUNTER_UNDER_ITEMS_IN_THE_RIGHT_PANEL = "//i[@title='$1']//ancestor::a[@style='cursor: pointer;']//span[contains(text(),'$2')]";
 String HIDE_STAR_SIGN_NEAR_A_MESSAGE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'star_border')]";
 String STAR_SIGN_NEAR_A_MESSAGE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'star')]";
-String STARRED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-direct'][contains(text(),'$1')]//ancestor::div[@class='file-drop-target']//i[@title='Starred Items']";
+String STARRED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-direct'][contains(text(),'$1')]//ancestor::div[@class='file-drop-target']//i[@title='Starred messages']";
 String MESSAGE_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Starred messages')]//ancestor::div[@class='b-tab-content']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String MESSAGE_BLOCK_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//div[@class='starred-message-container']//ancestor::li[@class='starred-message']//span[contains(text(),'$1')]";
 String OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK = "//div[@class='chat-container active']//div[@class='layout-content']//li[@class='starred-message']//span[contains(text(),'$1')]//ancestor::ul[@class='messages']//span[@class='actions']";
-String STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='chat-container active']//span[contains(text(),'$1')]//ancestor::div[@class='message last was-pinned is-stared-parent']";
+String STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='chat-container active']//span[contains(text(),'$1')]//ancestor::div[@class='message first is-stared-parent']";
 String HIDE_STAR_SIGN_NEAR_A_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'star_border')]";
 String STAR_SIGN_NEAR_A_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'star')]";
 String FILE_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Starred messages')]//ancestor::div[@class='b-tab-content']//div[@class='file-name'][contains(text(),'$1')]";

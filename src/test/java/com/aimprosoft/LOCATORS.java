@@ -24,7 +24,7 @@ String TEXTAREA_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//textarea";
 String ADD_BUTTON = "//button[.='Add']";
 String ROOM_NAME_IN_THE_LEFT_PANEL = "//li[@role='presentation']//a[@class='room-link']//span[contains(text(), '$1')]";
 String ROOM_TITLE_NAME_IN_THE_HEADER = "//div[@class='channel-name room-public'][contains(text(),'$1')]";
-String SETTINGS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='file-drop-target']//i[@title='Settings']";
+String SETTINGS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='file-drop-target']//i[@title='Room settings']";
 String CHANNEL_DETAILS_LINK = "//div[@class='chat-container active']//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='b-chat-top with-panel']//div[@class='layout-content']//span[contains(text(),'Channel Details:')]";
 String ROOM_NAME_IN_THE_SETTINGS_BLOCK_IN_THE_RIGHT_BUTTON = "//div[@class='chat-container active']//div[@class='b-tab-content']//div[@class='field-value']/input[@value='$1']//ancestor::div[@class='b-tab-content']//span[@class='text'][contains(text(),'Room settings')]";
 String EDIT_ROOM_NAME_LINK = "(//span[@class='edit-description-link']/a[contains(text(),'Edit')]//ancestor::div[@class='change-room-name']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[1]";
@@ -144,5 +144,6 @@ String FILE_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//span[
 String FILE_BLOCK_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//div[@class='starred-message-container']//ancestor::li[@class='starred-message']//div[contains(text(),'$1')]";
 String DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_ITEMS = "//div[@class='starred-message-filename']/div[contains(text(),'$1')]//ancestor::div[@class='chat-container active']//div[@class='layout-content']//a[contains(text(),'Download')]";
 String EDITED_MARK_ON_THE_SNIPPET = "//span[@class='file-name-text'][contains(text(),'$1')]//ancestor::div[@class='message-main-container']//div[contains(text(),'Edited')]";
+String ROOM_NAME_TITLE_IN_THE_TOP_OF_A_ROOM = "(//div[contains(@class,'channel-name room')][contains(text(),'$1')])[2]";
 
 }

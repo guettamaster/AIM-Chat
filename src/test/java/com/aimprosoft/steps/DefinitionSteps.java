@@ -879,4 +879,9 @@ public class DefinitionSteps {
     public void editedMarkIsDisplayedOnTheSnippet(String arg0) throws Throwable {
         endUserSteps.editedMarkIsDisplayedOnTheSnippet(arg0);
     }
+
+    @Then("^the \"([^\"]*)\" room name title in the top is displayed$")
+    public void theRoomNameTitleInTheTopIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.theRoomNameTitleInTheTopIsDisplayed(arg0);
+    }
 }

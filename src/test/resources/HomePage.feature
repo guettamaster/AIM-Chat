@@ -21,6 +21,7 @@ Feature: testing home page
     Then the "Room room1 created" toast is displayed
     Then the "Room room1 created" toast is closed
     Then the "room1" room is created
+    Then the "room1" room name title in the top is displayed
 
   Scenario: 2.002 Check that public "room1" renamed to "Testroomname1"
     When click on "room1" room in the left panel

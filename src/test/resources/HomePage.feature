@@ -34,6 +34,7 @@ Feature: testing home page
     When click on Save changes button under the input room name field
     Then the "Testroomname1" title is displayed in the header
     Then the "Testroomname1" room is created
+    Then the "Testroomname1" room name title in the top is displayed
 
   Scenario: 2.003 Check that in public "Testroomname1" room changed description
     When click on "Testroomname1" room in the left panel

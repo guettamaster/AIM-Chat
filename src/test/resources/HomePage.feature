@@ -9,7 +9,7 @@ Feature: testing home page
     Then "Scottie33" user name is displayed
 #    Then "o.ivankovckyi" user name is displayed
 
-  Scenario: 2.001 Check that public "room1" room is created
+  Scenario: 2.001 Check that public `room1` room is created
     When click on plus link
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
@@ -23,7 +23,7 @@ Feature: testing home page
     Then the "room1" room is created
     Then the "room1" room name title in the top is displayed
 
-  Scenario: 2.002 Check that public "room1" renamed to "Testroomname1"
+  Scenario: 2.002 Check that public `room1` renamed to `Testroomname1`
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the settings button of "room1" room
@@ -36,7 +36,7 @@ Feature: testing home page
     Then the "Testroomname1" room is created
     Then the "Testroomname1" room name title in the top is displayed
 
-  Scenario: 2.003 Check that in public "Testroomname1" room changed description
+  Scenario: 2.003 Check that in public `Testroomname1` room changed description
     When click on "Testroomname1" room in the left panel
     Then the "Testroomname1" title is displayed in the header
     When click on the settings button of "Testroomname1" room
@@ -46,8 +46,9 @@ Feature: testing home page
     When enter "new description111" in the input description field
     When click on Save changes button under the input room name field
     Then the "new description111" description is displayed in the header
+    Then the "new description111" description in the top is displayed
 
-  Scenario: 2.004 Check that public "Testroomname1" room is deleted
+  Scenario: 2.004 Check that public `Testroomname1` room is deleted
     When click on "Testroomname1" room in the left panel
     Then the "Testroomname1" title is displayed in the header
     When click on the settings button of "Testroomname1" room
@@ -74,7 +75,7 @@ Feature: testing home page
     When click on Enter button
     Then "test message" message is created
 
-  Scenario: 2.007 Check that "test message" message to a.shevchenko is edited
+  Scenario: 2.007 Check that `test message` message to a.shevchenko is edited
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     Then "test message" message is displayed
@@ -88,7 +89,7 @@ Feature: testing home page
     Then "edited note" message is created
     Then "Edited" action is displayed
 
-  Scenario: 2.008 Check that "edited note" message to a.shevchenko is deleted
+  Scenario: 2.008 Check that `edited note` message to a.shevchenko is deleted
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     Then "edited note" message is displayed
@@ -135,13 +136,13 @@ Feature: testing home page
     When click on the Download button under "maxresdefault.txt" file
     Then the "maxresdefault.txt" file is downloaded on the local machine
 
-  Scenario: 2.012 Check that public "room1" is added to Favorites to the left panel after clicking on the favorite button in the header
+  Scenario: 2.012 Check that public `room1` is added to Favorites to the left panel after clicking on the favorite button in the header
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the favorite room button
     Then the "room1" is displayed in the Favorites on the left panel
 
-  Scenario: 2.013 Check that public "room1" is deleted from Favorites in the left panel after clicking on the unfavorite button in the header
+  Scenario: 2.013 Check that public `room1` is deleted from Favorites in the left panel after clicking on the unfavorite button in the header
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When click on the unfavorite room button
@@ -233,19 +234,19 @@ Feature: testing home page
     When click on "General" room in the left panel
     Then the draft sign is displayed near "a.shevchenko" user name in the left panel
 
-  Scenario: 2.017 Check that mentions panel is displayed after entering "@username" in the input field inside a room
+  Scenario: 2.017 Check that mentions panel is displayed after entering `@username` in the input field inside a room
     When click on "General" room in the left panel
     Then the "General" title is displayed in the header
     When enter "@" in the input search field inside a room
     Then "Mentions" title name of a panel with list is displayed
 
-  Scenario: 2.018 Check that rooms panel is displayed after entering "@roomname" in the input field inside a room
+  Scenario: 2.018 Check that rooms panel is displayed after entering `@roomname` in the input field inside a room
     When click on "General" room in the left panel
     Then the "General" title is displayed in the header
     When enter "#" in the input search field inside a room
     Then "Rooms" title name of a panel with list is displayed
 
-  Scenario: 2.019 Check that emojies panel is displayed after entering "::re" in the input field inside a room
+  Scenario: 2.019 Check that emojies panel is displayed after entering `::re` in the input field inside a room
     When click on "General" room in the left panel
     Then the "General" title is displayed in the header
     When enter "::re" in the input search field inside a room

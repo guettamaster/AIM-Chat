@@ -1084,6 +1084,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_TITLE_IN_THE_TOP_OF_A_ROOM.replace("$1", arg0))));
         return $(LOCATORS.ROOM_NAME_TITLE_IN_THE_TOP_OF_A_ROOM.replace("$1", arg0)).isPresent();
     }
+
+    public boolean theDescriptionInTheTopIsDisplayed(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DESCRIPTION_TITLE_IN_THE_TOP.replace("$1", arg0))));
+        return $(LOCATORS.DESCRIPTION_TITLE_IN_THE_TOP.replace("$1", arg0)).isPresent();
+    }
 }
 
 

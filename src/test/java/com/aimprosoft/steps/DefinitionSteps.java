@@ -884,4 +884,9 @@ public class DefinitionSteps {
     public void theRoomNameTitleInTheTopIsDisplayed(String arg0) throws Throwable {
         endUserSteps.theRoomNameTitleInTheTopIsDisplayed(arg0);
     }
+
+    @Then("^the \"([^\"]*)\" description in the top is displayed$")
+    public void theDescriptionInTheTopIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.theDescriptionInTheTopIsDisplayed(arg0);
+    }
 }

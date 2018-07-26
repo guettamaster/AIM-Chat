@@ -928,4 +928,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void theRoomNameTitleInTheTopIsDisplayed(String arg0) {
         Assert.assertTrue("False", homePage.theRoomNameTitleInTheTopIsDisplayed(arg0));
     }
+
+    @Step
+    public void theDescriptionInTheTopIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.theDescriptionInTheTopIsDisplayed(arg0));
+    }
 }

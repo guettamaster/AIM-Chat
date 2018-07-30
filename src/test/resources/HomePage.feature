@@ -105,7 +105,7 @@ Feature: testing home page
     When click on the delete sign near "a.shevchenko" user in the left panel
     Then "a.shevchenko" user is deleted in the left panel
 
-  Scenario: 2.010 Check that image is uploaded to room  
+  Scenario: 2.010 Check that image is uploaded to room
     When click on plus link
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field

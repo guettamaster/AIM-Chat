@@ -856,7 +856,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheRightControlHamburgerOnTheMessage(String arg0) {
-        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0))));
+        waitABit(1000);
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0)));
 //        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0))));
 //        JavascriptExecutor js = (JavascriptExecutor) getDriver();

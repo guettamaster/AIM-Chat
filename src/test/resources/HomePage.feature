@@ -123,6 +123,7 @@ Feature: testing home page
    | title_name         | Upload file                                                                    |
    | expected_file_name | maxresdefault.jpg                                                              |
     Then "maxresdefault.jpg" file is displayed in the room
+    
 
   Scenario: 2.011 Check that txt file is downloaded
     When click on "room1" room in the left panel

@@ -130,7 +130,7 @@ Feature: testing home page
     Then the "room1" title is displayed in the header
     When Upload file many times
    | count              | 1                                                                              |
-   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.txt  |
+   | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/maxresdefault.txt |
    | title_name         | Upload file                                                                    |
    | expected_file_name | maxresdefault.txt                                                              |
     Then "maxresdefault.txt" file is displayed in the room
@@ -189,7 +189,7 @@ Feature: testing home page
     Then the "Where I am:" input field is correct
     When Upload avatar to the Profile page
    | count              | 1                                                                              |
-   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/maxresdefault.jpg |
+   | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/maxresdefault.jpg |
     Then the Profile page is displayed
     When click on the Save button on the Profile page
     When clear data in the "First Name:" input field
@@ -206,7 +206,7 @@ Feature: testing home page
     When enter "room209" in the "Where I am:" input field
     When Upload avatar to the Profile page
    | count              | 1                                                                                             |
-   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
+   | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/17.jpg |
     Then the Profile page is displayed
     When click on the Save button on the Profile page
     Then Profile successfully updated message is displayed

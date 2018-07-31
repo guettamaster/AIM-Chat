@@ -354,24 +354,24 @@ Feature: testing home page
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     When Upload file many times
-      | count              | 1                                                                                  |
-      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/syd_barrett___bad_hair_day_by_softmachine09.jpg |
-      | title_name         | Upload file                                                                        |
-      | expected_file_name | syd_barrett___bad_hair_day_by_softmachine09.jpg                                                              |
-    Then "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed in the direct
+      | count              | 1                                                                   |
+      | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/17.jpg |
+      | title_name         | Upload file                                                         |
+      | expected_file_name | 17.jpg                                                              |
+    Then "17.jpg" file is displayed in the direct
 #    When navigate on "syd_barrett___bad_hair_day_by_softmachine09.jpg" snippet
-    When scroll down to "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
-    When click on the right control hamburger on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
-    Then message menu for the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed
-    When click on a Pin to conversation link on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file in the message menu
-    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed inside the Pin Message pop-up
+    When scroll down to "17.jpg" file
+    When click on the right control hamburger on the "17.jpg" file
+    Then message menu for the "17.jpg" file is displayed
+    When click on a Pin to conversation link on the "17.jpg" file in the message menu
+    Then the "17.jpg" file is displayed inside the Pin Message pop-up
     When click on the Pin button
-    Then pinned sign is displayed near the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+    Then pinned sign is displayed near the "17.jpg" file
     When click on the Pin button of "a.shevchenko" direct
-    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed in the Pinned messages block
-    When navigate on "syd_barrett___bad_hair_day_by_softmachine09.jpg" file block
-    When click on the Download button under "syd_barrett___bad_hair_day_by_softmachine09.jpg" file in the Pinned messages block
-    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is downloaded on the local machine
+    Then the "17.jpg" file is displayed in the Pinned messages block
+    When navigate on "17.jpg" file block
+    When click on the Download button under "17.jpg" file in the Pinned messages block
+    Then the "17.jpg" file is downloaded on the local machine
 
   Scenario: 2.028 Check that message from pinned is unpinned
     When click on the "a.shevchenko" user name in the left panel

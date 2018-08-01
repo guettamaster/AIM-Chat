@@ -376,16 +376,16 @@ Feature: testing home page
   Scenario: 2.028 Check that message from pinned is unpinned
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
-    When scroll down to "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
-    Then pinned sign is displayed near the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
-    When scroll down to "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
-    When navigate on the pinned "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
-    When click on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
-    Then message menu for the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed
-    When click on a Unpin from conversation link on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file in the message menu
-    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed inside the Unpin Message pop-up
+    When scroll down to "17.jpg" file
+    Then pinned sign is displayed near the "17.jpg" file
+    When scroll down to "17.jpg" file
+    When navigate on the pinned "17.jpg" file
+    When click on the "17.jpg" file
+    Then message menu for the "17.jpg" file is displayed
+    When click on a Unpin from conversation link on the "17.jpg" file in the message menu
+    Then the "17.jpg" file is displayed inside the Unpin Message pop-up
     When click on the Unpin button
-    Then pinned sign isn't displayed near the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+    Then pinned sign isn't displayed near the "17.jpg" file
 
   Scenario: 2.029 Check that message from pinned is unpinned from the right panel
     When click on the "a.shevchenko" user name in the left panel
@@ -442,7 +442,7 @@ Feature: testing home page
     Then "a.shevchenko" user name is displayed in the header
     When Upload file many times
       | count              | 1                                                                                  |
-      | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/17.jpg                |
+      | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/17.jpg                |
       | title_name         | Upload file                                                                        |
       | expected_file_name | 17.jpg                                                                             |
     Then "17.jpg" file is displayed in the direct

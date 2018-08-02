@@ -1044,12 +1044,21 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void clickOnTheOpenLinkOnTheInTheRightPanelOnTheStarredMessageBlock(String arg0) {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK.replace("$1", arg0)));
+        waitABit(1000);
     }
 
     public boolean highlightIsDisplayedOnTheStarredMessage(String arg0) {
-        waitABit(2000);
-//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0))));
         return $(LOCATORS.STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0)).isPresent();
+
+//
+// withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0))));
+//return getDriver().findElement(By.className("message highlight first is-stared-parent")).isDisplayed();
+//       if($(LOCATORS.STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0)).isPresent())
+//            return true;
+//        else {
+//            evaluateJavascript("arguments[0].click();", $(LOCATORS.OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK.replace("$1", arg0)));
+//             return $(LOCATORS.STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW.replace("$1", arg0)).isPresent();
+//        }
     }
 
     public void clickOnAStarSignOnTheFile(String arg0) {

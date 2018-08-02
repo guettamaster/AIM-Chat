@@ -138,7 +138,7 @@ String STARRED_ITEMS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name roo
 String MESSAGE_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Starred messages')]//ancestor::div[@class='b-tab-content']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String MESSAGE_BLOCK_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//div[@class='starred-message-container']//ancestor::li[@class='starred-message']//span[contains(text(),'$1')]";
 String OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_BLOCK = "//div[@class='chat-container active']//span[@class='LinkifyPlus'][contains(text(),'$1')]//ancestor::ul[@class='messages']//span[@class='actions']/a";
-String STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='message highlight last is-stared-parent']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
+String STARRED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='message highlight last the-same is-stared-parent']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String HIDE_STAR_SIGN_NEAR_A_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'star_border')]";
 String STAR_SIGN_NEAR_A_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'star')]";
 String FILE_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']//span[contains(text(),'Starred messages')]//ancestor::div[@class='b-tab-content']//div[@class='file-name'][contains(text(),'$1')]";

@@ -124,15 +124,14 @@ Feature: testing home page
    | expected_file_name | maxresdefault.jpg                                                              |
     Then "maxresdefault.jpg" file is displayed in the room
 
-
   Scenario: 2.011 Check that txt file is downloaded
     When click on "room1" room in the left panel
     Then the "room1" title is displayed in the header
     When Upload file many times
-   | count              | 1                                                                              |
-   | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/maxresdefault.txt |
-   | title_name         | Upload file                                                                    |
-   | expected_file_name | maxresdefault.txt                                                              |
+   | count              | 1                                                                                     |
+   | file               | /home/ivankovskiy-pc/IdeaProjects/AIM-Chat/src/test/resources/Files/maxresdefault.txt |
+   | title_name         | Upload file                                                                           |
+   | expected_file_name | maxresdefault.txt                                                                     |
     Then "maxresdefault.txt" file is displayed in the room
     When click on the Download button under "maxresdefault.txt" file
     Then the "maxresdefault.txt" file is downloaded on the local machine

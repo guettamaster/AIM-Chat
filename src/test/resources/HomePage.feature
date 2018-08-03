@@ -466,9 +466,9 @@ Feature: testing home page
   Scenario: 2.034 Check that message from starred is unstarred
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
-    When scroll down to "test message" message
-    Then star sign is displayed near the "test message" message
-    When click on a star sign on the "test message" message
+    When scroll down to "lss message" message
+    Then star sign is displayed near the "lss message" message
+    When click on a star sign on the "lss message" message
 
 
 

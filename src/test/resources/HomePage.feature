@@ -460,24 +460,48 @@ Feature: testing home page
     When click on the Download button under "77.jpg" file in the Starred messages block
     Then the "77.jpg" file is downloaded on the local machine
 
-#  /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/syd_barrett___bad_hair_day_by_softmachine09.jpg
-
   Scenario: 2.034 Check that message from starred is unstarred
     When click on the "a.shevchenko" user name in the left panel
     Then "a.shevchenko" user name is displayed in the header
     When scroll down to "lss message" message
     Then star sign is displayed near the "lss message" message
     When click on a star sign on the "lss message" message
+    Then star sign isn't displayed near the "lss message" message
+
+  Scenario: 2.035 Check counter on a starred message from the right panel
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    Then "77.jpg" file is displayed in the direct
+    When scroll down to "77.jpg" file
+    Then star sign is displayed near the "77.jpg" file
+    When click on a star sign on the "77.jpg" file
+    Then star sign isn't displayed near the "77.jpg" file
+    When scroll down to "lss message" message
+    When click on a star sign on the "lss message" message
+    Then star sign is displayed near the "lss message" message
+    When click on the Star button of "a.shevchenko" direct
+    Then the "lss message" message is displayed in the Starred messages block
+    Then under "Starred messages" title there is "1" counter displayed
 
 
 
-#    When navigate on the pinned "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
-#    When click on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
-#    Then message menu for the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed
-#    When click on a Unpin from conversation link on the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file in the message menu
-#    Then the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file is displayed inside the Unpin Message pop-up
-#    When click on the Unpin button
-#    Then pinned sign isn't displayed near the "syd_barrett___bad_hair_day_by_softmachine09.jpg" file
+
+
+#    When enter "qqq test" in the input message field
+#    When click on Enter button
+#    Then "qqq test" message is created
+#    When scroll down to "qqq test" message
+#    When click on the right control hamburger on the "qqq test" message
+#    Then message menu for the "qqq test" message is displayed
+#    When click on a Pin to conversation link on the "qqq test" message in the message menu
+#    Then the "qqq test" message is displayed inside the Pin Message pop-up
+#    When click on the Pin button
+#    Then pinned sign is displayed near the "qqq test" message
+#    When click on the Pin button of "a.shevchenko" direct
+#    Then the "qqq test" message is displayed in the Pinned messages block
+#    Then under "Pinned messages" title there is "1" counter displayed
+
+
 
 
 

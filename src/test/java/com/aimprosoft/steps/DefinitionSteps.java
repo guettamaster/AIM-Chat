@@ -889,4 +889,14 @@ public class DefinitionSteps {
     public void theDescriptionInTheTopIsDisplayed(String arg0) throws Throwable {
         endUserSteps.theDescriptionInTheTopIsDisplayed(arg0);
     }
+
+    @Then("^star sign isn't displayed near the \"([^\"]*)\" message$")
+    public void starSignIsnTDisplayedNearTheMessage(String arg0) throws Throwable {
+        endUserSteps.starSignIsnTDisplayedNearTheMessage(arg0);
+    }
+
+    @Then("^star sign isn't displayed near the \"([^\"]*)\" file$")
+    public void starSignIsnTDisplayedNearTheFile(String arg0) throws Throwable {
+        endUserSteps.starSignIsnTDisplayedNearTheFile(arg0);
+    }
 }

@@ -933,4 +933,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void theDescriptionInTheTopIsDisplayed(String arg0) {
         Assert.assertTrue("False", homePage.theDescriptionInTheTopIsDisplayed(arg0));
     }
+
+    @Step
+    public void starSignIsnTDisplayedNearTheMessage(String arg0) {
+        Assert.assertTrue("False", homePage.starSignIsnTDisplayedNearTheMessage(arg0));
+    }
+
+    @Step
+    public void starSignIsnTDisplayedNearTheFile(String arg0) {
+        Assert.assertTrue("False", homePage.starSignIsnTDisplayedNearTheFile(arg0));
+    }
 }

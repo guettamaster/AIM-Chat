@@ -476,42 +476,13 @@ Feature: testing home page
     Then star sign is displayed near the "77.jpg" file
     When click on a star sign on the "77.jpg" file
     Then star sign isn't displayed near the "77.jpg" file
+    When scroll down to "test message" message
+    Then star sign is displayed near the "test message" message
+    When click on a star sign on the "test message" message
+    Then star sign isn't displayed near the "test message" message
     When scroll down to "lss message" message
     When click on a star sign on the "lss message" message
     Then star sign is displayed near the "lss message" message
     When click on the Star button of "a.shevchenko" direct
     Then the "lss message" message is displayed in the Starred messages block
     Then under "Starred messages" title there is "1" counter displayed
-
-
-
-
-
-#    When enter "qqq test" in the input message field
-#    When click on Enter button
-#    Then "qqq test" message is created
-#    When scroll down to "qqq test" message
-#    When click on the right control hamburger on the "qqq test" message
-#    Then message menu for the "qqq test" message is displayed
-#    When click on a Pin to conversation link on the "qqq test" message in the message menu
-#    Then the "qqq test" message is displayed inside the Pin Message pop-up
-#    When click on the Pin button
-#    Then pinned sign is displayed near the "qqq test" message
-#    When click on the Pin button of "a.shevchenko" direct
-#    Then the "qqq test" message is displayed in the Pinned messages block
-#    Then under "Pinned messages" title there is "1" counter displayed
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

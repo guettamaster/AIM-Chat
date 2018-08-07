@@ -1067,7 +1067,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean starSignIsDisplayedNearTheFile(String arg0) {
-        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+        waitABit(500);
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
         return $(LOCATORS.STAR_SIGN_NEAR_A_FILE.replace("$1", arg0)).isPresent();
     }
 
@@ -1102,47 +1103,53 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean starSignIsnTDisplayedNearTheMessage(String arg0) {
-        waitABit(1000);
-        try {
-            System.out.println("wait that documents are invisible");
-            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
-            System.out.println("Element is invisible");
-        } catch (Exception e) {
-            System.out.println("Element isn`t invisible");
-        }
-        try {
-            System.out.println("check that documents are presented in the DOM");
-            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
-            System.out.println("documents are presented in the DOM");
-            System.out.println("check that documents are visibility");
-            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
-            System.out.println("documents are visibility");
-            return false;
-        } catch (Exception e) {
-            return true;
-        }
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.HIDE_STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+        return $(LOCATORS.HIDE_STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0)).isPresent();
+//        waitABit(1000);
+//        try {
+//            System.out.println("wait that documents are invisible");
+//            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+//            System.out.println("Element is invisible");
+//        } catch (Exception e) {
+//            System.out.println("Element isn`t invisible");
+//        }
+//        try {
+//            System.out.println("check that documents are presented in the DOM");
+//            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+//            System.out.println("documents are presented in the DOM");
+//            System.out.println("check that documents are visibility");
+//            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_MESSAGE.replace("$1", arg0))));
+//            System.out.println("documents are visibility");
+//            return false;
+//        } catch (Exception e) {
+//            return true;
+//        }
     }
 
     public boolean starSignIsnTDisplayedNearTheFile(String arg0) {
-        waitABit(1000);
-        try {
-            System.out.println("wait that documents are invisible");
-            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
-            System.out.println("Element is invisible");
-        } catch (Exception e) {
-            System.out.println("Element isn`t invisible");
-        }
-        try {
-            System.out.println("check that documents are presented in the DOM");
-            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
-            System.out.println("documents are presented in the DOM");
-            System.out.println("check that documents are visibility");
-            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
-            System.out.println("documents are visibility");
-            return false;
-        } catch (Exception e) {
-            return true;
-        }
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.HIDE_STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+        return $(LOCATORS.HIDE_STAR_SIGN_NEAR_A_FILE.replace("$1", arg0)).isPresent();
+
+
+//        waitABit(500);
+//        try {
+//            System.out.println("wait that documents are invisible");
+//            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.HIDE_STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+//            System.out.println("Element is invisible");
+//        } catch (Exception e) {
+//            System.out.println("Element isn`t invisible");
+//        }
+//        try {
+//            System.out.println("check that documents are presented in the DOM");
+//            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.HIDE_STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+//            System.out.println("documents are presented in the DOM");
+//            System.out.println("check that documents are visibility");
+//            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.HIDE_STAR_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+//            System.out.println("documents are visibility");
+//            return false;
+//        } catch (Exception e) {
+//            return true;
+//        }
     }
 }
 

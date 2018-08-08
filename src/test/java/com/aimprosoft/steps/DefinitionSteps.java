@@ -899,4 +899,24 @@ public class DefinitionSteps {
     public void starSignIsnTDisplayedNearTheFile(String arg0) throws Throwable {
         endUserSteps.starSignIsnTDisplayedNearTheFile(arg0);
     }
+
+    @When("^check the appearance of the sticker button$")
+    public void checkTheAppearanceOfTheStickerButton() throws Throwable {
+        endUserSteps.checkTheAppearanceOfTheStickerButton();
+    }
+
+    @Then("^the sticker search input inside opened popup is displayed$")
+    public void theStickerSearchInputInsideOpenedPopupIsDisplayed() throws Throwable {
+        endUserSteps.theStickerSearchInputInsideOpenedPopupIsDisplayed();
+    }
+
+    @When("^click on the manage stickers button$")
+    public void clickOnTheManageStickersButton() throws Throwable {
+        endUserSteps.clickOnTheManageStickersButton();
+    }
+
+    @Then("^add stickers title in popup is displayed$")
+    public void addStickersTitleInPopupIsDisplayed() throws Throwable {
+        endUserSteps.addStickersTitleInPopupIsDisplayed();
+    }
 }

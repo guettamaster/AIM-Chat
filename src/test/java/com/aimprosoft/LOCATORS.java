@@ -146,5 +146,9 @@ String FILE_BLOCK_IN_THE_STARRED_ITEMS = "//div[@class='chat-container active']/
 String DOWNLOAD_LINK_ON_A_FILE_IN_THE_RIGHT_PANEL_ON_THE_STARRED_ITEMS = "//div[@class='starred-message-filename']/div[contains(text(),'$1')]//ancestor::div[@class='chat-container active']//div[@class='layout-content']//a[contains(text(),'Download')]";
 String EDITED_MARK_ON_THE_SNIPPET = "//span[@class='file-name-text'][contains(text(),'$1')]//ancestor::div[@class='message-main-container']//div[contains(text(),'Edited')]";
 String ROOM_NAME_TITLE_IN_THE_TOP_OF_A_ROOM = "(//div[contains(@class,'channel-name room')][contains(text(),'$1')])[2]";
+String STICKER_BUTTON = "//div[@id='sticker_form']/a[@id='sticker-lightUp']";
+String STICKER_SEARCH_INPUT = "//input[@placeholder='Search emoji']";
+String MANAGE_STICKERS_BUTTON = "//i[contains(@class,'material-icons 25 md-dark')][contains(text(),'add_circle')]";
+String ADD_STICKERS_TITLE = "//h4[contains(text(),'Add Stickers')]";
 
 }

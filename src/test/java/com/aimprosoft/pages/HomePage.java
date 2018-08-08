@@ -1151,6 +1151,31 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 //            return true;
 //        }
     }
+
+    public boolean theStickerButtonIsDisplayed() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STICKER_BUTTON)));
+        return $(LOCATORS.STICKER_BUTTON).isPresent();
+    }
+
+    public void clickOnTheStickerButton() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STICKER_BUTTON)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.STICKER_BUTTON));
+    }
+
+    public boolean theStickerSearchInputInsideOpenedPopupIsDisplayed() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.STICKER_SEARCH_INPUT)));
+        return $(LOCATORS.STICKER_SEARCH_INPUT).isPresent();
+    }
+
+    public void clickOnTheManageStickersButton() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MANAGE_STICKERS_BUTTON)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.MANAGE_STICKERS_BUTTON));
+    }
+
+    public boolean addStickersTitleInPopupIsDisplayed() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ADD_STICKERS_TITLE)));
+        return $(LOCATORS.ADD_STICKERS_TITLE).isPresent();
+    }
 }
 
 

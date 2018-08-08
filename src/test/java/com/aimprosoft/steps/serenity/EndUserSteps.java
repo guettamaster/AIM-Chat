@@ -943,4 +943,36 @@ public class EndUserSteps extends ScenarioSteps {
     public void starSignIsnTDisplayedNearTheFile(String arg0) {
         Assert.assertTrue("False", homePage.starSignIsnTDisplayedNearTheFile(arg0));
     }
+
+    @Step
+    public void checkTheAppearanceOfTheStickerButton() {
+        theStickerButtonIsDisplayed();
+        clickOnTheStickerButton();
+        theStickerSearchInputInsideOpenedPopupIsDisplayed();
+    }
+
+    @Step
+    public void theStickerSearchInputInsideOpenedPopupIsDisplayed() {
+        Assert.assertTrue("False", homePage.theStickerSearchInputInsideOpenedPopupIsDisplayed());
+    }
+
+    @Step
+    private void clickOnTheStickerButton() {
+        homePage.clickOnTheStickerButton();
+    }
+
+    @Step
+    private void theStickerButtonIsDisplayed() {
+        Assert.assertTrue("False", homePage.theStickerButtonIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheManageStickersButton() {
+        homePage.clickOnTheManageStickersButton();
+    }
+
+    @Step
+    public void addStickersTitleInPopupIsDisplayed() {
+        Assert.assertTrue("False", homePage.addStickersTitleInPopupIsDisplayed());
+    }
 }

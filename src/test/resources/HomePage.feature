@@ -486,3 +486,12 @@ Feature: testing home page
     When click on the Star button of "a.shevchenko" direct
     Then the "lss message" message is displayed in the Starred messages block
     Then under "Starred messages" title there is "1" counter displayed
+
+  Scenario: 2.036 Check that collection of stickers is created
+    Then the "General" title is displayed in the header
+    When check the appearance of the sticker button
+    Then the sticker search input inside opened popup is displayed
+    When click on the manage stickers button
+    Then add stickers title in popup is displayed
+    When click on the create pack button
+

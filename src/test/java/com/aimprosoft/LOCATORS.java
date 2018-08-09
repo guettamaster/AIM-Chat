@@ -150,5 +150,6 @@ String STICKER_BUTTON = "//div[@id='sticker_form']/a[@id='sticker-lightUp']";
 String STICKER_SEARCH_INPUT = "//input[@placeholder='Search emoji']";
 String MANAGE_STICKERS_BUTTON = "//i[contains(@class,'material-icons 25 md-dark')][contains(text(),'add_circle')]";
 String ADD_STICKERS_TITLE = "//h4[contains(text(),'Add Stickers')]";
+String CREATE_PACK_BUTTON = "//span[contains(@class,'create-pack-button')]";
 
 }

@@ -975,4 +975,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void addStickersTitleInPopupIsDisplayed() {
         Assert.assertTrue("False", homePage.addStickersTitleInPopupIsDisplayed());
     }
+
+    @Step
+    public void clickOnTheCreatePackButton() {
+        homePage.clickOnTheCreatePackButton();
+    }
 }

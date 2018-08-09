@@ -494,4 +494,5 @@ Feature: testing home page
     When click on the manage stickers button
     Then add stickers title in popup is displayed
     When click on the create pack button
+    Then create new collection title in popup is displayed
 

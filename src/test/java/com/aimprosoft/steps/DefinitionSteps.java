@@ -919,4 +919,9 @@ public class DefinitionSteps {
     public void addStickersTitleInPopupIsDisplayed() throws Throwable {
         endUserSteps.addStickersTitleInPopupIsDisplayed();
     }
+
+    @When("^click on the create pack button$")
+    public void clickOnTheCreatePackButton() throws Throwable {
+        endUserSteps.clickOnTheCreatePackButton();
+    }
 }

@@ -924,4 +924,24 @@ public class DefinitionSteps {
     public void clickOnTheCreatePackButton() throws Throwable {
         endUserSteps.clickOnTheCreatePackButton();
     }
+
+    @When("^click on the room header in the left panel$")
+    public void clickOnTheRoomHeaderInTheLeftPanel() {
+        endUserSteps.clickOnTheRoomHeaderInTheLeftPanel();
+    }
+
+    @Then("^\"([^\"]*)\" modal is displayed$")
+    public void modalIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.modalIsDisplayed(arg0);
+    }
+
+    @Then("^the \"([^\"]*)\" is displayed in the list of users$")
+    public void theIsDisplayedInTheListOfUsers(String arg0) throws Throwable {
+        endUserSteps.theIsDisplayedInTheListOfUsers(arg0);
+    }
+
+    @When("^click the \"([^\"]*)\" name in the list of users$")
+    public void clickTheNameInTheListOfUsers(String arg0) throws Throwable {
+        endUserSteps.clickTheNameInTheListOfUsers(arg0);
+    }
 }

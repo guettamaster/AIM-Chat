@@ -1181,6 +1181,26 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CREATE_PACK_BUTTON)));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.CREATE_PACK_BUTTON));
     }
+
+    public void clickOnTheRoomHeaderInTheLeftPanel() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_HEADER_LINK)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.ROOM_HEADER_LINK));
+    }
+
+    public boolean modalIsDisplayed(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.MODAL_TYPE.replace("$1", arg0))));
+        return $(LOCATORS.MODAL_TYPE.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean theIsDisplayedInTheListOfUsers(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0))));
+        return $(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickTheNameInTheListOfUsers(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0)));
+    }
 }
 
 

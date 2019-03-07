@@ -980,4 +980,24 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheCreatePackButton() {
         homePage.clickOnTheCreatePackButton();
     }
+
+    @Step
+    public void clickOnTheRoomHeaderInTheLeftPanel() {
+        homePage.clickOnTheRoomHeaderInTheLeftPanel();
+    }
+
+    @Step
+    public void modalIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.modalIsDisplayed(arg0));
+    }
+
+    @Step
+    public void theIsDisplayedInTheListOfUsers(String arg0) {
+        Assert.assertTrue("False", homePage.theIsDisplayedInTheListOfUsers(arg0));
+    }
+
+    @Step
+    public void clickTheNameInTheListOfUsers(String arg0) {
+        homePage.clickTheNameInTheListOfUsers(arg0);
+    }
 }

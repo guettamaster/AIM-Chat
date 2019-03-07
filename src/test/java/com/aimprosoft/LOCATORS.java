@@ -15,7 +15,7 @@ String STANDARD_TAB = "//button[contains(text(),'standard')]";
 
 String AIMPROSOFT_LOGO = "//div[@class='team-name'][contains(text(),'Aimprosoft')]";
 String THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL = "//p[@class='username'][contains(text(),'$1')]";
-String PLUS_LINK = "//a[@class='add-room-button']/i[contains(@class,\"material-icons 21 md-dark\")]";
+String PLUS_LINK = "//a[@class='add-room-button']/i[contains(@class,\"material-icons 30 md-dark\")]";
 String ROOM_TITLE_IN_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][contains(text(),'Add Room')]";
 String INPUT_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//input";
 String PUBLIC_ROOM_TYPE_CHECKBOX = "//input[@name='type'][@value='public']";
@@ -23,8 +23,8 @@ String INVITE_MEMBERS_INPUT_FIELD = "//input[@class='sc-form-control']";
 String TEXTAREA_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//textarea";
 String ADD_BUTTON = "//button[.='Add']";
 String ROOM_NAME_IN_THE_LEFT_PANEL = "//li[@role='presentation']//a[@class='room-link']//span[contains(text(), '$1')]";
-String ROOM_TITLE_NAME_IN_THE_HEADER = "//div[@class='channel-name room-public'][contains(text(),'$1')]";
-String SETTINGS_BUTTON_IN_THE_RIGHT_PANEL = "//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='file-drop-target']//i[@title='Room settings']";
+String ROOM_TITLE_NAME_IN_THE_HEADER = "(//div[@class='channel-name room-public'][contains(text(),'$1')])[2]";
+String SETTINGS_BUTTON_IN_THE_RIGHT_PANEL = "(//div[@class='channel-name room-public'][contains(text(),'$1')])[2]//ancestor::div[@class='file-drop-target']//i[@title='Room settings']";
 String CHANNEL_DETAILS_LINK = "//div[@class='chat-container active']//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='b-chat-top with-panel']//div[@class='layout-content']//span[contains(text(),'Channel Details:')]";
 String ROOM_NAME_IN_THE_SETTINGS_BLOCK_IN_THE_RIGHT_BUTTON = "//div[@class='chat-container active']//div[@class='b-tab-content']//div[@class='field-value']/input[@value='$1']//ancestor::div[@class='b-tab-content']//span[@class='text'][contains(text(),'Room settings')]";
 String EDIT_ROOM_NAME_LINK = "(//span[@class='edit-description-link']/a[contains(text(),'Edit')]//ancestor::div[@class='change-room-name']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[1]";
@@ -151,5 +151,8 @@ String STICKER_SEARCH_INPUT = "//input[@placeholder='Search emoji']";
 String MANAGE_STICKERS_BUTTON = "//i[contains(@class,'material-icons 25 md-dark')][contains(text(),'add_circle')]";
 String ADD_STICKERS_TITLE = "//h4[contains(text(),'Add Stickers')]";
 String CREATE_PACK_BUTTON = "//span[contains(@class,'create-pack-button')]";
+String ROOM_HEADER_LINK = "//h2[@class='channel-header']/a[contains(text(),'Rooms')]";
+String MODAL_TYPE = "//h4[@class='modal-title'][contains(text(),'$1')]";
+String USER_NAME_IN_THE_USERS_LIST = "//ul[@class='user-list']//div[@class='ue ue-username ue-username-person'][contains(text(),'$1')]";
 
 }

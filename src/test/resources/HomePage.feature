@@ -6,15 +6,19 @@ Feature: testing home page
     And filled fields valid data
     When click on Login button
 #    Then home page is opened
-    Then "Scottie33" user name is displayed
+    Then "guettamaster" user name is displayed
 #    Then "o.ivankovckyi" user name is displayed
 
   Scenario: 2.001 Check that public `room1` room is created
+    When click on the room header in the left panel
+    Then "Browse Rooms" modal is displayed
     When click on plus link
     Then room title in popup is displayed
     When enter "room1" in the "Name" input field
 #    When choose public room checkbox
-    When enter "a.lugovskiy" in the Invite members field
+    When enter "a.legeza" in the Invite members field
+    Then the "a.legeza" is displayed in the list of users
+    When click the "a.legeza" name in the list of users
     When click on Add Room title
     When enter "testdescription" in the "Description" textarea field
     When click on Add button

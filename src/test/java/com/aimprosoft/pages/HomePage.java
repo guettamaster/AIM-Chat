@@ -39,7 +39,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputField(String arg0, String arg1) {
-        waitABit(10000);
+        waitABit(1500);
         Actions actions = new Actions(getDriver());
         actions.moveToElement(find(By.xpath(LOCATORS.INPUT_FIELD_WITH_LABEL.replace("$1", arg1))));
         actions.click();
@@ -102,7 +102,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean roomSettingsIsDisplayedOnTheName(String arg0) {
-        waitABit(500);
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_IN_THE_SETTINGS_BLOCK_IN_THE_RIGHT_BUTTON.replace("$1", arg0))));
+//        waitABit(500);
         return $(LOCATORS.ROOM_NAME_IN_THE_SETTINGS_BLOCK_IN_THE_RIGHT_BUTTON.replace("$1", arg0)).isPresent();
     }
 
@@ -113,16 +114,19 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean inputRoomNameFieldOnTheIsDisplayed(String arg0) {
-        waitABit(500);
+//        waitABit(500);
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0))));
         return $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0)).isPresent();
     }
 
     public void clearDataInTheInputRoomNameField() {
-        if (inputRoomNameField()) {
-            $(LOCATORS.ROOM_NAME_INPUT_FIELD.replace("$1", "1")).clear();
-        } else {
-            $(LOCATORS.ROOM_NAME_INPUT_FIELD.replace("$1", "2")).clear();
-        }
+//        if (inputRoomNameField()) {
+//            $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", "1")).clear();
+//        } else {
+//            $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", "2")).clear();
+//        }
+        $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE).clear();
+        waitABit(5000);
     }
 
     public boolean inputRoomNameField() {
@@ -630,12 +634,12 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean theToastIsDisplayed(String arg0) {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
+        withTimeoutOf(2, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
         return $(LOCATORS.TOAST_MESSAGE.replace("$1", arg0)).isPresent();
     }
 
     public void theToastIsClosed(String arg0) {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
+        withTimeoutOf(3, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
     }
 
     public void enterInTheSnippetFileNameField(String arg0) {
@@ -1200,6 +1204,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void clickTheNameInTheListOfUsers(String arg0) {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0)));
+    }
+
+    public void clearDataInTheInputRoomNameField(String arg0) {
+        $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0)).clear();
+        waitABit(5000);
     }
 }
 

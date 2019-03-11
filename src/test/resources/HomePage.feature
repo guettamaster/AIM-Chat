@@ -33,7 +33,7 @@ Feature: testing home page
     When click on the settings button of "room1" room
     Then room settings is displayed on the "room1" name
     Then input room name field on the "room1" is displayed
-    When clear data in the input room name field
+    When clear data in the input "room1" room name field
     When enter "Testroomname1" in the input room name field
     When click on Save changes button under the input room name field
     Then the "Testroomname1" title is displayed in the header

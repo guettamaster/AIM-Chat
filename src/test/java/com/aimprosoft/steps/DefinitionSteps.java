@@ -944,4 +944,9 @@ public class DefinitionSteps {
     public void clickTheNameInTheListOfUsers(String arg0) throws Throwable {
         endUserSteps.clickTheNameInTheListOfUsers(arg0);
     }
+
+    @When("^clear data in the input \"([^\"]*)\" room name field$")
+    public void clearDataInTheInputRoomNameField(String arg0) throws Throwable {
+        endUserSteps.clearDataInTheInputRoomNameField(arg0);
+    }
 }

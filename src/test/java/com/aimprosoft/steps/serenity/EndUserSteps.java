@@ -1000,4 +1000,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickTheNameInTheListOfUsers(String arg0) {
         homePage.clickTheNameInTheListOfUsers(arg0);
     }
+
+    @Step
+    public void clearDataInTheInputRoomNameField(String arg0) {
+        homePage.clearDataInTheInputRoomNameField(arg0);
+    }
 }

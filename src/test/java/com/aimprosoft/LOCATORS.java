@@ -38,7 +38,7 @@ String DESCRIPTION_TITLE_IN_THE_CHANNEL_DETAILS_BLOCK = "//div[@class='descripti
 String DESCRIPTION_TITLE_IN_THE_HEADER = "//div[@data-for='description'][@data-tip='$1']";
 String DESCRIPTION_TITLE_IN_THE_TOP = "//div[@id='room-description']/div[contains(text(),'$1')]";
 String WHEEL_LINK_IN_THE_HEADER = "//a[@class='dropdown-toggle']/i[@class='glyphicon glyphicon-cog']";
-String DELETE_ROOM_LINK = "//div[@class='chat-container active']//span[@class='delete-room one-user'][.='Delete Room']";
+String DELETE_ROOM_LINK = "//div[contains(@class,'leave-room')]/span[.='Delete Room']";
 String DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP = "//span[@class='room-to-delete'][contains(text(),'$1')]";
 String DELETE_BUTTON = "//button[.='Delete']";
 String DIRECT_MESSAGES_LINK = "//h2[@class='channel-header']/a[contains(text(),'Direct')]";

@@ -1005,4 +1005,14 @@ public class EndUserSteps extends ScenarioSteps {
     public void clearDataInTheInputRoomNameField(String arg0) {
         homePage.clearDataInTheInputRoomNameField(arg0);
     }
+
+    @Step
+    public void inputDescriptionFieldWithIsDisplayed(String arg0) {
+        Assert.assertTrue("False", homePage.inputDescriptionFieldWithIsDisplayed(arg0));
+    }
+
+    @Step
+    public void clearDataInTheInputDescriptionFieldWith(String arg0) {
+        homePage.clearDataInTheInputDescriptionFieldWith(arg0);
+    }
 }

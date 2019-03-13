@@ -32,7 +32,7 @@ String ROOM_NAME_INPUT_FIELD = "(//div[@class='field-value']/input[@class='form-
 String ROOM_NAME_INPUT_FIELD_ACTIVE = "//div[@class='field-value']/input[@class='form-control'][@value='$1']";
 String SAVE_CHANGES_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD = "//div[@class='button-group']/button[@class='btn btn-success done-button'][contains(text(),'Save changes')]";
 String EDIT_DESCRIPTION_LINK = "(//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='chat-container active']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[2]";
-String DESCRIPTION_INPUT_FIELD = "//div[@class='chat-container active']//textarea[@class='form-control']";
+String DESCRIPTION_INPUT_FIELD = "//div/textarea[@class='form-control'][contains(text(), '$1')]";
 String DONE_BUTTON = "//div[@class='chat-container active']//button[.='Done']";
 String DESCRIPTION_TITLE_IN_THE_CHANNEL_DETAILS_BLOCK = "//div[@class='description-text']/span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String DESCRIPTION_TITLE_IN_THE_HEADER = "//div[@id='room-description']/div[contains(text(),'$1')]";

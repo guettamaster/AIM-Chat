@@ -145,6 +145,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.SAVE_CHANGES_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD));
+        waitABit(5000);
     }
 
     public void clickOnTheEditDescriptionLinkInTheRoom(String arg0) {
@@ -1208,7 +1209,16 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clearDataInTheInputRoomNameField(String arg0) {
         $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0)).clear();
-        waitABit(5000);
+    }
+
+    public boolean inputDescriptionFieldWithIsDisplayed(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.DESCRIPTION_INPUT_FIELD.replace("$1", arg0))));
+        return $(LOCATORS.DESCRIPTION_INPUT_FIELD.replace("$1", arg0)).isPresent();
+    }
+
+    public void clearDataInTheInputDescriptionFieldWith(String arg0) {
+        $(LOCATORS.DESCRIPTION_INPUT_FIELD.replace("$1", arg0)).clear();
+        waitABit(3000);
     }
 }
 

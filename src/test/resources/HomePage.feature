@@ -45,10 +45,11 @@ Feature: testing home page
     Then the "Testroomname1" title is displayed in the header
     When click on the settings button of "Testroomname1" room
     Then room settings is displayed on the "Testroomname1" name
-    Then input description field is displayed
-    When clear data in the input description field
+    Then input description field with "testdescription" is displayed
+    When clear data in the input description field with "testdescription"
     When enter "new description111" in the input description field
     When click on Save changes button under the input room name field
+
     Then the "new description111" description is displayed in the header
     Then the "new description111" description in the top is displayed
 

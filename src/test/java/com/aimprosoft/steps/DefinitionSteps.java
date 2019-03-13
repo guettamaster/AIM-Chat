@@ -949,4 +949,14 @@ public class DefinitionSteps {
     public void clearDataInTheInputRoomNameField(String arg0) throws Throwable {
         endUserSteps.clearDataInTheInputRoomNameField(arg0);
     }
+
+    @Then("^input description field with \"([^\"]*)\" is displayed$")
+    public void inputDescriptionFieldWithIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.inputDescriptionFieldWithIsDisplayed(arg0);
+    }
+
+    @When("^clear data in the input description field with \"([^\"]*)\"$")
+    public void clearDataInTheInputDescriptionFieldWith(String arg0) throws Throwable {
+        endUserSteps.clearDataInTheInputDescriptionFieldWith(arg0);
+    }
 }

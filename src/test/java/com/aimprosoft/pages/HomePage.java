@@ -296,9 +296,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnEnterButton() {
-        waitABit(1000);
+        waitABit(5000);
         $(LOCATORS.INPUT_MESSAGE_FIELD).click();
-        waitABit(500);
+        waitABit(5000);
         $(LOCATORS.INPUT_MESSAGE_FIELD).sendKeys(Keys.ENTER);
     }
 

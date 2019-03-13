@@ -47,8 +47,8 @@ String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//div[@class='modal-heade
 String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='room-item']//span[@class='username-text'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_LEFT_PANEL = "//li[@role='presentation']//a[@class='room-link']//span[contains(text(), '$1')]";
 String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";
-String INPUT_MESSAGE_FIELD = "//div[@class='chat-container active']//textarea[@id='input-text-field'][@placeholder='Type message here']";
-String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='chat-container active']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
+String INPUT_MESSAGE_FIELD = "(//div[@class='input-text input-text-hover']//div[@class='public-DraftEditorPlaceholder-root']/div[contains(text(),'Type message here')])[2]";
+String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE = "//span[@class='LinkifyPlus'][contains(text(), '$1')]//ancestor::div[@class='message-main-container']//span[@id='right-control-hamburger']";
 String MESSAGE_MENU = "//div[@class='chat-container active']//ul[@id='message-menu-menu'][@aria-labelledby='message-menu']";
 String EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem'][contains(text(), '$1')]";

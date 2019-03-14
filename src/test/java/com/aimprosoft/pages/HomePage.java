@@ -296,10 +296,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnEnterButton() {
-        waitABit(5000);
-        $(LOCATORS.INPUT_MESSAGE_FIELD).click();
-        waitABit(5000);
-        $(LOCATORS.INPUT_MESSAGE_FIELD).sendKeys(Keys.ENTER);
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(findBy(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG)).click().sendKeys(Keys.ENTER);
+        actions.build().perform();
     }
 
     public boolean messageIsCreated(String arg0) {
@@ -330,7 +329,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clearDataInTheInputMessageField() {
-        $(LOCATORS.INPUT_MESSAGE_FIELD).clear();
+        waitABit(3000);
+        $(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG).clear();
     }
 
     public boolean actionIsDisplayed(String arg0) {

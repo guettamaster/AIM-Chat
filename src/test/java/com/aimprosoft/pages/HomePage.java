@@ -292,7 +292,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputMessageField(String arg0) {
-        waitABit(5000);
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));
         Actions actions = new Actions(getDriver());
         actions.sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));
@@ -300,6 +300,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnEnterButton() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG)));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(findBy(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG)).click().sendKeys(Keys.ENTER);
         actions.build().perform();

@@ -1190,7 +1190,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheRoomHeaderInTheLeftPanel() {
-        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_HEADER_LINK)));
+        waitABit(2000);
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.ROOM_HEADER_LINK)));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.ROOM_HEADER_LINK));
     }
 

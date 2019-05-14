@@ -638,12 +638,12 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean theToastIsDisplayed(String arg0) {
-        withTimeoutOf(2, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
+        withTimeoutOf(5, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
         return $(LOCATORS.TOAST_MESSAGE.replace("$1", arg0)).isPresent();
     }
 
     public void theToastIsClosed(String arg0) {
-        withTimeoutOf(3, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
+        withTimeoutOf(5, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.TOAST_MESSAGE.replace("$1", arg0))));
     }
 
     public void enterInTheSnippetFileNameField(String arg0) {

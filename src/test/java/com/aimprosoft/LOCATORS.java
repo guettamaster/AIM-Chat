@@ -151,7 +151,7 @@ String STICKER_SEARCH_INPUT = "//input[@placeholder='Search emoji']";
 String MANAGE_STICKERS_BUTTON = "//i[contains(@class,'material-icons 25 md-dark')][contains(text(),'add_circle')]";
 String ADD_STICKERS_TITLE = "//h4[contains(text(),'Add Stickers')]";
 String CREATE_PACK_BUTTON = "//span[contains(@class,'create-pack-button')]";
-String ROOM_HEADER_LINK = "//h2[@class='channel-header']/a[@xpath='1'][contains(text(),'Rooms')]";
+String ROOM_HEADER_LINK = "//h2[@class='channel-header']/a[@class='add-room-button']/i[contains(@class,'material-icons 21 md-dark')][contains(text(),'add_circle')]";
 String MODAL_TYPE = "//h4[@class='modal-title'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_USERS_LIST = "//ul[@class='user-list']//div[@class='ue ue-username ue-username-person'][contains(text(),'$1')]";
 String INPUT_MESSAGE_FIELD_WITHOUT_ARG = "(//div[@class='input-text input-text-hover'][@id='send-message-input'])[1]";

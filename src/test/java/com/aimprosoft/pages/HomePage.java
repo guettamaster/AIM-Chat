@@ -275,7 +275,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean userNameIsDisplayedInTheLeftPanel(String arg0) {
-        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        waitABit(5000);
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
         return $(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).isPresent();
     }
 
@@ -285,7 +286,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheUserNameInTheLeftPanel(String arg0) {
-        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        waitABit(5000);
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)));
     }
 

@@ -12,8 +12,8 @@ Feature: testing home page
   Scenario: 2.001 Check that public `room1` room is created
     When click on the room header in the left panel
     Then "Add Room" modal is displayed
-    When click on plus link
-    Then room title in popup is displayed
+#    When click on plus link
+#    Then room title in popup is displayed
     When enter "room1" in the "Name" input field
 #    When choose public room checkbox
     When enter "a.legeza" in the Invite members field

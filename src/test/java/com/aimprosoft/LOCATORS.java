@@ -50,7 +50,7 @@ String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][conta
 String INPUT_MESSAGE_FIELD = "//div[@class='input-text input-text-hover']//span[@data-text='true'][contains(text(),'$1')]";
 String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE = "//span[@class='LinkifyPlus'][contains(text(), '$1')]//ancestor::div[@class='message-main-container']//div[@class='right-menu-btn']";
-String MESSAGE_MENU = "//div[@class='right-control-menu']/ul[@xpath='1']";
+String MESSAGE_MENU = "//div[@class='right-control-menu']/ul";
 String EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='right-control-menu']//li[contains(text(),'$1')]";
 String COMMENT_UNDER_MESSAGE = "//div[@class='chat-container active']//div[@class='was-edited'][contains(text(), '$1')]";
 String DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem']//span[@class='text-danger'][.='Delete Message']";
@@ -154,6 +154,7 @@ String CREATE_PACK_BUTTON = "//span[contains(@class,'create-pack-button')]";
 String ROOM_HEADER_LINK = "//h2[@class='channel-header']/a[contains(text(),'Rooms')]";
 String MODAL_TYPE = "//h4[@class='modal-title'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_USERS_LIST = "//ul[@class='user-list']//div[@class='ue ue-username ue-username-person'][contains(text(),'$1')]";
-String INPUT_MESSAGE_FIELD_WITHOUT_ARG = "//div[@class='input-text input-text-hover']//span[@data-text='true']";
+String INPUT_MESSAGE_FIELD_WITHOUT_ARG = "(//div[@class='input-text input-text-hover'][@id='send-message-input'])[1]";
+        //                  "//div[@class='input-text input-text-hover']//span[@data-text='true']";
 
 }

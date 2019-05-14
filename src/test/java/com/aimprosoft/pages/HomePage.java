@@ -330,7 +330,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clearDataInTheInputMessageField() {
         waitABit(3000);
-        $(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG).clear();
+        Actions builder = new Actions(getDriver());
+        builder.sendKeys(Keys.chord(Keys.CONTROL, "a")).perform();
+        //$(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG).clear();
     }
 
     public boolean actionIsDisplayed(String arg0) {

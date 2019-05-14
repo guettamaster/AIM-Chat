@@ -87,7 +87,6 @@ Feature: testing home page
     When click on the right control hamburger on the "test message" message
     Then message menu is displayed
     When click on the "Edit Message" link in the message menu
-
     When clear data in the input message field
     When enter "edited note" in the input message field
     When click on Enter button

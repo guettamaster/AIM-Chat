@@ -292,7 +292,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputMessageField(String arg0) {
-        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));
+        waitABit(2000);
         Actions actions = new Actions(getDriver());
         actions.sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));
@@ -300,10 +301,15 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnEnterButton() {
-        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG)));
+        waitABit(2000);
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG)));
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(findBy(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG)).click().sendKeys(Keys.ENTER);
-        actions.build().perform();
+        actions.moveToElement(find(org.openqa.selenium.By.xpath((String.format(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG))))).click().sendKeys(Keys.ENTER).build().perform();
+
+//        Actions builder = new Actions(getDriver());
+//        builder.sendKeys(Keys.chord(Keys.CONTROL, "a")).perform();
+
+
     }
 
     public boolean messageIsCreated(String arg0) {

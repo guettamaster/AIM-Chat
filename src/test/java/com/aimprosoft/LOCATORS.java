@@ -47,7 +47,8 @@ String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//div[@class='modal-heade
 String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='room-item']//span[@class='username-text'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']//span[contains(text(), '$1')]";
 String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";
-String INPUT_MESSAGE_FIELD = "//div[@class='input-text input-text-hover']//span[@data-text='true'][contains(text(),'$1')]";
+String INPUT_MESSAGE_FIELD = "//div[contains(@class,'chat-container active')]//div[@class='notranslate public-DraftEditor-content']//span[@data-text='true'][contains(text(),'$1')]";
+//        "//div[@class='input-text input-text-hover']//span[@data-text='true'][contains(text(),'$1')]";
 String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE = "//span[@class='LinkifyPlus'][contains(text(), '$1')]//ancestor::div[@class='message-main-container']//div[@class='right-menu-btn']";
 String MESSAGE_MENU = "//div[@class='right-control-menu']/ul";
@@ -154,7 +155,9 @@ String CREATE_PACK_BUTTON = "//span[contains(@class,'create-pack-button')]";
 String ROOM_HEADER_LINK = "//h2[@class='channel-header']/a[@class='add-room-button']/i[contains(@class,'material-icons 21 md-dark')][contains(text(),'add_circle')]";
 String MODAL_TYPE = "//h4[@class='modal-title'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_USERS_LIST = "//ul[@class='user-list']//div[@class='ue ue-username ue-username-person'][contains(text(),'$1')]";
-String INPUT_MESSAGE_FIELD_WITHOUT_ARG = "(//div[@class='input-text input-text-hover'][@id='send-message-input'])[1]";
+String INPUT_MESSAGE_FIELD_WITHOUT_ARG = "//div[contains(@class,'chat-container active')]//div[@class='notranslate public-DraftEditor-content']";
+        //                  "(//div[@class='input-text input-text-hover'][@id='send-message-input'])[1]";
+
         //                  "//div[@class='input-text input-text-hover']//span[@data-text='true']";
 
 }

@@ -959,4 +959,9 @@ public class DefinitionSteps {
     public void clearDataInTheInputDescriptionFieldWith(String arg0) throws Throwable {
         endUserSteps.clearDataInTheInputDescriptionFieldWith(arg0);
     }
+
+    @Then("^\"([^\"]*)\" message is edited$")
+    public void messageIsEdited(String arg0) throws Throwable {
+        endUserSteps.messageIsEdited(arg0);
+    }
 }

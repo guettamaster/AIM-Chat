@@ -90,7 +90,7 @@ Feature: testing home page
     When clear data in the input message field
     When enter "edited note" in the input message field
     When click on Enter button
-    Then "edited note" message is created
+    Then "edited note" message is edited
     Then "Edited" action is displayed
 
 #  Scenario: 2.008 Check that `edited note` message to a.shevchenko is deleted

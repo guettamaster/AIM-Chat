@@ -51,6 +51,7 @@ String INPUT_MESSAGE_FIELD = "//div[contains(@class,'chat-container active')]//d
 //        "//div[@class='input-text input-text-hover']//span[@data-text='true'][contains(text(),'$1')]";
 String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "(//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')])[3]";
 String THE_SENT_MESSAGE1_INSIDE_THE_ROOM = "(//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')])[3]";
+String THE_EDITED_MESSAGE_INSIDE_THE_ROOM = "//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE = "(//span[@class='LinkifyPlus'][contains(text(), '$1')])[3]//ancestor::div[@class='message-main-container']//div[@class='right-menu-btn']";
 String MESSAGE_MENU = "//div[@class='right-control-menu']/ul";
 String EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='right-control-menu']//li[contains(text(),'$1')]";

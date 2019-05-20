@@ -1015,4 +1015,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clearDataInTheInputDescriptionFieldWith(String arg0) {
         homePage.clearDataInTheInputDescriptionFieldWith(arg0);
     }
+
+    @Step
+    public void messageIsEdited(String arg0) {
+        Assert.assertTrue("False", homePage.messageIsEdited(arg0));
+    }
 }

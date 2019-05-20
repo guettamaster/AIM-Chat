@@ -1234,6 +1234,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.DESCRIPTION_INPUT_FIELD.replace("$1", arg0)).clear();
         waitABit(3000);
     }
+
+    public boolean messageIsEdited(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.THE_EDITED_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+        return $(LOCATORS.THE_EDITED_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)).isPresent();
+    }
 }
 
 

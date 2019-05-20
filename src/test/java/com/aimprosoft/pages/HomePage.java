@@ -319,8 +319,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean messageIsDisplayed(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
-        return $(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)).isPresent();
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE1_INSIDE_THE_ROOM.replace("$1", arg0))));
+        return $(LOCATORS.THE_SENT_MESSAGE1_INSIDE_THE_ROOM.replace("$1", arg0)).isPresent();
     }
 
     public void clickOnTheRightControlHamburgerOnTheFile(String arg0) {
@@ -915,10 +915,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         }
 
     public void scrollDownToMessage(String arg0) {
-        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE1_INSIDE_THE_ROOM.replace("$1", arg0))));
 //        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", findBy(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)));
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(findBy(LOCATORS.THE_SENT_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))).build().perform();
+        actions.moveToElement(findBy(LOCATORS.THE_SENT_MESSAGE1_INSIDE_THE_ROOM.replace("$1", arg0))).build().perform();
     }
 
     public void clickOnTheDownloadButtonUnderFileInThePinnedMessagesBlock(String arg0) {

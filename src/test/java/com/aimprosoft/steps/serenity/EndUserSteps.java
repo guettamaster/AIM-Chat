@@ -1020,4 +1020,29 @@ public class EndUserSteps extends ScenarioSteps {
     public void messageIsEdited(String arg0) {
         Assert.assertTrue("False", homePage.messageIsEdited(arg0));
     }
+
+    @Step
+    public void enterInThePhoneNumberInputField(String arg0) {
+        homePage.enterInThePhoneNumberInputField(arg0);
+    }
+
+    @Step
+    public void clickOnTheFormatsOfPhonesNumberMenu(String arg0) {
+        homePage.clickOnTheFormatsOfPhonesNumberMenu(arg0);
+    }
+
+    @Step
+    public void isDisplayedInThePhoneNumberInputField(String arg0) {
+        Assert.assertTrue("False", homePage.isDisplayedInThePhoneNumberInputField(arg0));
+    }
+
+    @Step
+    public void clickOnTheSaveChangesButton() {
+        homePage.clickOnTheSaveChangesButton();
+    }
+
+    @Step
+    public void thePhoneNumberInputFieldIsCorrect(String arg0) {
+        Assert.assertTrue("False", homePage.thePhoneNumberInputFieldIsCorrect(arg0));
+    }
 }

@@ -104,109 +104,117 @@ Feature: testing home page
     Then Delete Message title in the opened pop-up is displayed
     When click on the Delete button in the opened pop-up
     Then "edited note" message is deleted
+
+  Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel (in the direct messages)
+    When click on the delete sign near "a.shevchenko" user in the left panel
+    Then "a.shevchenko" user is deleted in the left panel
 #
-#  Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel (in the direct messages)
-#    When click on the delete sign near "a.shevchenko" user in the left panel
-#    Then "a.shevchenko" user is deleted in the left panel
-#
-#  Scenario: 2.010 Check that image is uploaded to room
+  Scenario: 2.010 Check that image is uploaded to room
+    When click on the room header in the left panel
+    Then "Add Room" modal is displayed
+    When enter "room1" in the "Name" input field
+#    When choose public room checkbox
+#    When enter "superadmin" in the Invite members field
+    When enter "a.shevchenko" in the Invite members field
+    When enter "testdescription" in the "Description" textarea field
+    When click on Add button
+    Then the "room1" room is created
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
+    When Upload file many times
+   | count              | 1                                                                              |
+   | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/maxresdefault.jpg |
+   | title_name         | Upload file                                                                    |
+   | expected_file_name | maxresdefault.jpg                                                              |
+    Then "maxresdefault.jpg" file is displayed in the room
+
+  Scenario: 2.011 Check that txt file is downloaded
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
+    When Upload file many times
+   | count              | 1                                                                                     |
+   | file               | /home/ivankovskiy-pc/IdeaProjects/AIM-Chat/src/test/resources/Files/maxresdefault.txt |
+   | title_name         | Upload file                                                                           |
+   | expected_file_name | maxresdefault.txt                                                                     |
+    Then "maxresdefault.txt" file is displayed in the room
+    When click on the Download button under "maxresdefault.txt" file
+    Then the "maxresdefault.txt" file is downloaded on the local machine
+
+  Scenario: 2.012 Check that public `room1` is added to Favorites to the left panel after clicking on the favorite button in the header
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
+    When click on the favorite room button
+    Then the "room1" is displayed in the Favorites on the left panel
+
+  Scenario: 2.013 Check that public `room1` is deleted from Favorites in the left panel after clicking on the unfavorite button in the header
+    When click on "room1" room in the left panel
+    Then the "room1" title is displayed in the header
+    When click on the unfavorite room button
+    Then the "room1" is deleted in the Favorites on the left panel
+    Then the "room1" room returns to the Rooms on the left panel
+
+#  Scenario: 2.014 Check that image is uploaded to room
 #    When click on plus link
 #    Then room title in popup is displayed
 #    When enter "room1" in the "Name" input field
-##    When choose public room checkbox
-##    When enter "superadmin" in the Invite members field
-#    When enter "a.shevchenko" in the Invite members field
+# #    When choose public room checkbox
+# #    When enter "superadmin" in the Invite members field
+##    When enter "r.konivec" in the Invite members field
+##    When click on user name
+#    When click on room title in popup
 #    When enter "testdescription" in the "Description" textarea field
 #    When click on Add button
 #    Then the "room1" room is created
 #    When click on "room1" room in the left panel
 #    Then the "room1" title is displayed in the header
 #    When Upload file many times
-#   | count              | 1                                                                              |
-#   | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/maxresdefault.jpg |
-#   | title_name         | Upload file                                                                    |
-#   | expected_file_name | maxresdefault.jpg                                                              |
-#    Then "maxresdefault.jpg" file is displayed in the room
+#   | count              | 100000                                                                                        |
+#   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
+#   | title_name         | Upload file                                                                                   |
+#   | expected_file_name | michael-jordan_wallpaper_005.jpg                                                              |
+
+  Scenario: 2.015 Check that fields in the user profile has changed
+    When click on "guettamaster" user name
+    Then the user menu with actions is displayed
+    When click on the Profile link
+    Then the Profile page is displayed
+    When Upload avatar to the Profile page
+      | count              | 1                                                                              |
+      | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/maxresdefault.jpg |
+    Then the Profile page is displayed
+    When enter "test name" in the "First Name" input field
+    When enter "test last name" in the "Last Name" input field
+    When enter "QA" in the "Job position" input field
+    When enter "214" in the "Office location" input field
+    When click on the "UA" Formats of phones number menu
+    Then "+380" is displayed in the Phone number input field
+    When enter "501234567" in the Phone number input field
+    When enter "test" in the "Skype" input field
+    When click on the Save Changes button
+    Then the "First Name" input field is correct
+    Then the "Last Name" input field is correct
+    Then the "Job position" input field is correct
+    Then the "Office location" input field is correct
+    Then the "+380501234567" Phone number input field is correct
+    Then the "Skype" input field is correct
+    When clear data in the "First Name" input field
+    When enter "name" in the "First Name" input field
+    When clear data in the "Last Name" input field
+    When enter "last_name" in the "Last Name" input field
+    When clear data in the "Job position" input field
+    When enter "PM" in the "Job position" input field
+    When clear data in the "Office location" input field
+    When enter "209" in the "Office location" input field
 #
-#  Scenario: 2.011 Check that txt file is downloaded
-#    When click on "room1" room in the left panel
-#    Then the "room1" title is displayed in the header
-#    When Upload file many times
-#   | count              | 1                                                                                     |
-#   | file               | /home/ivankovskiy-pc/IdeaProjects/AIM-Chat/src/test/resources/Files/maxresdefault.txt |
-#   | title_name         | Upload file                                                                           |
-#   | expected_file_name | maxresdefault.txt                                                                     |
-#    Then "maxresdefault.txt" file is displayed in the room
-#    When click on the Download button under "maxresdefault.txt" file
-#    Then the "maxresdefault.txt" file is downloaded on the local machine
+#    When click on the Formats of phones number menu
+#    Then "+380" is displayed in the Phone number input field
+#    When enter "501234567" in the Phone number input field
 #
-#  Scenario: 2.012 Check that public `room1` is added to Favorites to the left panel after clicking on the favorite button in the header
-#    When click on "room1" room in the left panel
-#    Then the "room1" title is displayed in the header
-#    When click on the favorite room button
-#    Then the "room1" is displayed in the Favorites on the left panel
 #
-#  Scenario: 2.013 Check that public `room1` is deleted from Favorites in the left panel after clicking on the unfavorite button in the header
-#    When click on "room1" room in the left panel
-#    Then the "room1" title is displayed in the header
-#    When click on the unfavorite room button
-#    Then the "room1" is deleted in the Favorites on the left panel
-#    Then the "room1" room returns to the Rooms on the left panel
 #
-##  Scenario: 2.014 Check that image is uploaded to room
-##    When click on plus link
-##    Then room title in popup is displayed
-##    When enter "room1" in the "Name" input field
-## #    When choose public room checkbox
-## #    When enter "superadmin" in the Invite members field
-###    When enter "r.konivec" in the Invite members field
-###    When click on user name
-##    When click on room title in popup
-##    When enter "testdescription" in the "Description" textarea field
-##    When click on Add button
-##    Then the "room1" room is created
-##    When click on "room1" room in the left panel
-##    Then the "room1" title is displayed in the header
-##    When Upload file many times
-##   | count              | 100000                                                                                        |
-##   | file               | /var/lib/jenkins/workspace/Chat_AIM/src/test/resources/Files/michael-jordan_wallpaper_005.jpg |
-##   | title_name         | Upload file                                                                                   |
-##   | expected_file_name | michael-jordan_wallpaper_005.jpg                                                              |
-#
-#  Scenario: 2.015 Check that fields in the user profile has changed
-#    When click on "Scottie33" user name
-#    Then the user menu with actions is displayed
-#    When click on the Profile link
-#    Then the Profile page is displayed
-#    When enter "test name" in the "First Name:" input field
-#    When enter "test last name" in the "Last Name:" input field
-#    When enter "0501234567" in the "Phone number:" input field
-#    When enter "test skype" in the "Skype:" input field
-#    When enter "test subject" in the "What I do:" input field
-#    When enter "test room" in the "Where I am:" input field
-#    Then the "First Name:" input field is correct
-#    Then the "Last Name:" input field is correct
-#    Then the "Phone number:" input field is correct
-#    Then the "Skype:" input field is correct
-#    Then the "What I do:" input field is correct
-#    Then the "Where I am:" input field is correct
-#    When Upload avatar to the Profile page
-#   | count              | 1                                                                              |
-#   | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/maxresdefault.jpg |
-#    Then the Profile page is displayed
-#    When click on the Save button on the Profile page
-#    When clear data in the "First Name:" input field
-#    When enter "name" in the "First Name:" input field
-#    When clear data in the "Last Name:" input field
-#    When enter "last_name" in the "Last Name:" input field
-#    When clear data in the "Phone number:" input field
-#    When enter "77777" in the "Phone number:" input field
 #    When clear data in the "Skype:" input field
 #    When enter "skypeacc" in the "Skype:" input field
-#    When clear data in the "What I do:" input field
-#    When enter "testing" in the "What I do:" input field
-#    When clear data in the "Where I am:" input field
-#    When enter "room209" in the "Where I am:" input field
+#
 #    When Upload avatar to the Profile page
 #   | count              | 1                                                                                             |
 #   | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/17.jpg |
@@ -223,9 +231,8 @@ Feature: testing home page
 #    Then the "Last Name:" input field is correct
 #    Then the "Phone number:" input field is correct
 #    Then the "Skype:" input field is correct
-#    Then the "What I do:" input field is correct
-#    Then the "Where I am:" input field is correct
-#
+
+
 #  Scenario: 2.016 Check that draft sign is displayed in the left panel if we have an unsent message in the input field
 #    When click on the Direct Messages link
 #    Then direct rooms pop-up is displayed

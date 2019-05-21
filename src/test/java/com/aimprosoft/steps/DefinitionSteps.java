@@ -964,4 +964,29 @@ public class DefinitionSteps {
     public void messageIsEdited(String arg0) throws Throwable {
         endUserSteps.messageIsEdited(arg0);
     }
+
+    @When("^enter \"([^\"]*)\" in the Phone number input field$")
+    public void enterInThePhoneNumberInputField(String arg0) throws Throwable {
+        endUserSteps.enterInThePhoneNumberInputField(arg0);
+    }
+
+    @When("^click on the \"([^\"]*)\" Formats of phones number menu$")
+    public void clickOnTheFormatsOfPhonesNumberMenu(String arg0) {
+        endUserSteps.clickOnTheFormatsOfPhonesNumberMenu(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" is displayed in the Phone number input field$")
+    public void isDisplayedInThePhoneNumberInputField(String arg0) throws Throwable {
+        endUserSteps.isDisplayedInThePhoneNumberInputField(arg0);
+    }
+
+    @When("^click on the Save Changes button$")
+    public void clickOnTheSaveChangesButton() {
+        endUserSteps.clickOnTheSaveChangesButton();
+    }
+
+    @Then("^the \"([^\"]*)\" Phone number input field is correct$")
+    public void thePhoneNumberInputFieldIsCorrect(String arg0) throws Throwable {
+        endUserSteps.thePhoneNumberInputFieldIsCorrect(arg0);
+    }
 }

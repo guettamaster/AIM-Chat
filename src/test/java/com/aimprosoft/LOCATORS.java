@@ -17,7 +17,9 @@ String AIMPROSOFT_LOGO = "//div[@class='team-name'][contains(text(),'Aimprosoft'
 String THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL = "//p[@class='username'][contains(text(),'$1')]";
 String PLUS_LINK = "//a[@class='add-room-button']/i[contains(@class,\"material-icons 30 md-dark\")]";
 String ROOM_TITLE_IN_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][contains(text(),'Add Room')]";
-String INPUT_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//input";
+String INPUT_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//div/input";
+String PHONE_NUMBER_INPUT_FIELD = "//input[@placeholder='Enter your phone number']";
+String PHONE_NUMBER_INPUT_FIELD_WITH_COUNTRY_CODE = "//input[@placeholder='Enter your phone number'][@value='$1']";
 String PUBLIC_ROOM_TYPE_CHECKBOX = "//input[@name='type'][@value='public']";
 String INVITE_MEMBERS_INPUT_FIELD = "//input[@class='sc-form-control']";
 String TEXTAREA_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//textarea";
@@ -78,7 +80,7 @@ String USER_PROFILE_LINK = "//div[@class='info']/p[@class='username'][contains(t
 String USER_MENU_WITH_ACTIONS = "//div[@id='user-menu']/ul[@id='user-menu-menu']";
 String PROFILE_LINK_INSIDE_USER_MENU = "//a[@role='menuitem']/span/i[@class='material-icons 24 md-dark '][contains(text(),'person_outline')]";
 String PROFILE_TITLE_IN_THE_PROFILE_PAGE = "//div[@class='header-settings-title'][contains(text(),'Profile')]";
-String CHANGE_AVATAR_BUTTON = "//label[@for='avatarFile'][contains(text(),'Change avatar')]";
+String CHANGE_AVATAR_BUTTON = "//label[@for='avatarFile']/i[contains(@class,'material-icons 64 md-dark')][contains(text(),'photo_camera')]";
 String SAVE_BUTTON_ON_THE_CHANGE_AVATAR_PAGE = "//button[@class='btn, btn-info abtn btn btn-default'][@type='button'][contains(text(),'Save')]";
 String SAVE_BUTTON_ON_THE_PROFILE_PAGE = "//button[@class='btn btn-default'][@type='button'][contains(text(),'Save')]";
 String STATUS_AFTER_SAVING_FIELDS = "//div[@class='statusSucces'][contains(text(),'Profile successfully updated')]";
@@ -158,8 +160,8 @@ String ROOM_HEADER_LINK = "//h2[@class='channel-header']/a[@class='add-room-butt
 String MODAL_TYPE = "//h4[@class='modal-title'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_USERS_LIST = "//ul[@class='user-list']//div[@class='ue ue-username ue-username-person'][contains(text(),'$1')]";
 String INPUT_MESSAGE_FIELD_WITHOUT_ARG = "//div[contains(@class,'chat-container active')]//div[@class='notranslate public-DraftEditor-content']";
-        //                  "(//div[@class='input-text input-text-hover'][@id='send-message-input'])[1]";
+String FORMATS_OF_PHONES_NUMBERS_MENU = "//div[@class='phone-number-input']//select[@class='phone-select']";
+String SAVE_CHANGES_BUTTON = "//span[@class='span_button'][contains(text(),'save changes')]";
 
-        //                  "//div[@class='input-text input-text-hover']//span[@data-text='true']";
 
 }

@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.File;
@@ -1238,6 +1239,32 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean messageIsEdited(String arg0) {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.THE_EDITED_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0))));
         return $(LOCATORS.THE_EDITED_MESSAGE_INSIDE_THE_ROOM.replace("$1", arg0)).isPresent();
+    }
+
+    public void enterInThePhoneNumberInputField(String arg0) {
+        $(LOCATORS.PHONE_NUMBER_INPUT_FIELD).sendKeys(arg0);
+        waitABit(5000);
+    }
+
+    public void clickOnTheFormatsOfPhonesNumberMenu(String arg0) {
+        Select dropdown = new Select($(LOCATORS.FORMATS_OF_PHONES_NUMBERS_MENU));
+        dropdown.selectByValue(arg0);
+//        dropdown.select
+    }
+
+    public boolean isDisplayedInThePhoneNumberInputField(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PHONE_NUMBER_INPUT_FIELD_WITH_COUNTRY_CODE.replace("$1", arg0))));
+        return $(LOCATORS.PHONE_NUMBER_INPUT_FIELD_WITH_COUNTRY_CODE.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnTheSaveChangesButton() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.SAVE_CHANGES_BUTTON)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.SAVE_CHANGES_BUTTON));
+    }
+
+    public boolean thePhoneNumberInputFieldIsCorrect(String arg0) {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PHONE_NUMBER_INPUT_FIELD_WITH_COUNTRY_CODE.replace("$1", arg0))));
+        return $(LOCATORS.PHONE_NUMBER_INPUT_FIELD_WITH_COUNTRY_CODE.replace("$1", arg0)).isPresent();
     }
 }
 

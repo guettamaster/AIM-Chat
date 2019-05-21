@@ -93,17 +93,17 @@ Feature: testing home page
     Then "edited note" message is edited
     Then "Edited" action is displayed
 
-#  Scenario: 2.008 Check that `edited note` message to a.shevchenko is deleted
-#    When click on the "a.shevchenko" user name in the left panel
-#    Then "a.shevchenko" user name is displayed in the header
-#    Then "edited note" message is displayed
-#    When scroll down to "edited note" message
-#    When click on the right control hamburger on the "edited note" message
-#    Then message menu is displayed
-#    When click on the Delete Message link in the message menu
-#    Then Delete Message title in the opened pop-up is displayed
-#    When click on the Delete button in the opened pop-up
-#    Then "edited note" message is deleted
+  Scenario: 2.008 Check that `edited note` message to a.shevchenko is deleted
+    When click on the "a.shevchenko" user name in the left panel
+    Then "a.shevchenko" user name is displayed in the header
+    Then "edited note" message is displayed
+    When scroll down to "edited note" message
+    When click on the right control hamburger on the "edited note" message
+    Then message menu is displayed
+    When click on the Delete Message link in the message menu
+    Then Delete Message title in the opened pop-up is displayed
+    When click on the Delete button in the opened pop-up
+    Then "edited note" message is deleted
 #
 #  Scenario: 2.009 Check that user a.shevchenko is deleted in the left panel (in the direct messages)
 #    When click on the delete sign near "a.shevchenko" user in the left panel

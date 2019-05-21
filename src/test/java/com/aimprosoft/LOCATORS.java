@@ -56,7 +56,7 @@ String RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE = "//span[@class='LinkifyPlus'][co
 String MESSAGE_MENU = "//div[@class='right-control-menu']/ul";
 String EDIT_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='right-control-menu']//li[contains(text(),'$1')]";
 String COMMENT_UNDER_MESSAGE = "//div[@class='chat-container active']//div[@class='was-edited'][contains(text(), '$1')]";
-String DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='chat-container active']//a[@role='menuitem']//span[@class='text-danger'][.='Delete Message']";
+String DELETE_MESSAGE_LINK_IN_THE_MESSAGE_MENU = "//div[@class='right-control-menu']//li[@class='text-danger'][contains(text(),'Delete Message')]";
 String DELETE_MESSAGE_TITLE_IN_THE_DELETE_MESSAGE_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][.='Delete Message']";
 String DELETE_THIS_MESSAGE_BUTTON = "//button[.='Delete']";
 String DELETE_SIGN_NEAR_USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']/span[contains(text(),'$1')]//ancestor::li//a[@class='remove-button']/i[contains(text(),'remove_circle')]";

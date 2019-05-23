@@ -474,7 +474,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheFavoriteRoomButton() {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FAVORITE_ROOM_BUTTON)));
+        waitABit(2000);
+//        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.FAVORITE_ROOM_BUTTON)));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.FAVORITE_ROOM_BUTTON));
     }
 

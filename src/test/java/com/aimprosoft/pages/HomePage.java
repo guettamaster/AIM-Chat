@@ -573,6 +573,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void uploadAvatar(String arg0) throws URISyntaxException {
+        waitABit(500);
         getDriver().findElement(By.id("avatarFile")).sendKeys(arg0);
         withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -1265,6 +1266,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean thePhoneNumberInputFieldIsCorrect(String arg0) {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PHONE_NUMBER_INPUT_FIELD_WITH_COUNTRY_CODE.replace("$1", arg0))));
         return $(LOCATORS.PHONE_NUMBER_INPUT_FIELD_WITH_COUNTRY_CODE.replace("$1", arg0)).isPresent();
+    }
+
+    public void clearDataInThePhoneNumberInputField() {
+        waitABit(500);
+        $(LOCATORS.PHONE_NUMBER_INPUT_FIELD).clear();
     }
 }
 

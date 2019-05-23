@@ -1045,4 +1045,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void thePhoneNumberInputFieldIsCorrect(String arg0) {
         Assert.assertTrue("False", homePage.thePhoneNumberInputFieldIsCorrect(arg0));
     }
+
+    @Step
+    public void clearDataInThePhoneNumberInputField() {
+        homePage.clearDataInThePhoneNumberInputField();
+    }
 }

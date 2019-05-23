@@ -989,4 +989,9 @@ public class DefinitionSteps {
     public void thePhoneNumberInputFieldIsCorrect(String arg0) throws Throwable {
         endUserSteps.thePhoneNumberInputFieldIsCorrect(arg0);
     }
+
+    @When("^clear data in the Phone number input field$")
+    public void clearDataInThePhoneNumberInputField() {
+        endUserSteps.clearDataInThePhoneNumberInputField();
+    }
 }

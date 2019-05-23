@@ -183,7 +183,7 @@ Feature: testing home page
       | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/maxresdefault.jpg |
     Then the Profile page is displayed
     When enter "test name" in the "First Name" input field
-    When enter "test last name" in the "Last Name" input field
+    When enter "last name" in the "Last Name" input field
     When enter "QA" in the "Job position" input field
     When enter "214" in the "Office location" input field
     When click on the "UA" Formats of phones number menu
@@ -200,38 +200,37 @@ Feature: testing home page
     When clear data in the "First Name" input field
     When enter "name" in the "First Name" input field
     When clear data in the "Last Name" input field
-    When enter "last_name" in the "Last Name" input field
+    When enter "lastname" in the "Last Name" input field
     When clear data in the "Job position" input field
     When enter "PM" in the "Job position" input field
     When clear data in the "Office location" input field
     When enter "209" in the "Office location" input field
-#
-#    When click on the Formats of phones number menu
-#    Then "+380" is displayed in the Phone number input field
-#    When enter "501234567" in the Phone number input field
-#
-#
-#
-#    When clear data in the "Skype:" input field
-#    When enter "skypeacc" in the "Skype:" input field
-#
-#    When Upload avatar to the Profile page
-#   | count              | 1                                                                                             |
-#   | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/17.jpg |
-#    Then the Profile page is displayed
-#    When click on the Save button on the Profile page
-#    Then Profile successfully updated message is displayed
-#    When click on the arrow back
-#    Then "name last_name" user name is displayed in the left panel after updating profile
-#    When click on "Scottie33" user name
-#    Then the user menu with actions is displayed
-#    When click on the Profile link
-#    Then the Profile page is displayed
-#    Then the "First Name:" input field is correct
-#    Then the "Last Name:" input field is correct
-#    Then the "Phone number:" input field is correct
-#    Then the "Skype:" input field is correct
-
+    When click on the "RU" Formats of phones number menu
+    When clear data in the Phone number input field
+    Then "+7" is displayed in the Phone number input field
+    When clear data in the Phone number input field
+    When enter "74951231234" in the Phone number input field
+    When clear data in the "Skype" input field
+    When enter "skypeacc" in the "Skype" input field
+#    When click on the Save Changes button
+    When Upload avatar to the Profile page
+      | count              | 1                                                                   |
+      | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/17.jpg |
+    Then the Profile page is displayed
+    When click on the Save Changes button
+    Then Profile successfully updated message is displayed
+    When click on the arrow back
+    Then "name lastname" user name is displayed in the left panel after updating profile
+    When click on "guettamaster" user name
+    Then the user menu with actions is displayed
+    When click on the Profile link
+    Then the Profile page is displayed
+    Then the "First Name" input field is correct
+    Then the "Last Name" input field is correct
+    Then the "Job position" input field is correct
+    Then the "Office location" input field is correct
+    Then the "+74951231234" Phone number input field is correct
+    Then the "Skype" input field is correct
 
 #  Scenario: 2.016 Check that draft sign is displayed in the left panel if we have an unsent message in the input field
 #    When click on the Direct Messages link
@@ -244,7 +243,7 @@ Feature: testing home page
 #    When enter "test message" in the input message field
 #    When click on "General" room in the left panel
 #    Then the draft sign is displayed near "a.shevchenko" user name in the left panel
-#
+
 #  Scenario: 2.017 Check that mentions panel is displayed after entering `@username` in the input field inside a room
 #    When click on "General" room in the left panel
 #    Then the "General" title is displayed in the header

@@ -182,21 +182,21 @@ Feature: testing home page
       | count              | 1                                                                              |
       | file               | /var/lib/jenkins/workspace/AIM-Chat/src/test/resources/Files/maxresdefault.jpg |
     Then the Profile page is displayed
-    When enter "test name" in the "First Name" input field
-    When enter "last name" in the "Last Name" input field
-    When enter "QA" in the "Job position" input field
-    When enter "214" in the "Office location" input field
-    When click on the "UA" Formats of phones number menu
-    Then "+380" is displayed in the Phone number input field
-    When enter "501234567" in the Phone number input field
-    When enter "test" in the "Skype" input field
-    When click on the Save Changes button
-    Then the "First Name" input field is correct
-    Then the "Last Name" input field is correct
-    Then the "Job position" input field is correct
-    Then the "Office location" input field is correct
-    Then the "+380501234567" Phone number input field is correct
-    Then the "Skype" input field is correct
+#    When enter "test name" in the "First Name" input field
+#    When enter "last name" in the "Last Name" input field
+#    When enter "QA" in the "Job position" input field
+#    When enter "214" in the "Office location" input field
+#    When click on the "UA" Formats of phones number menu
+#    Then "+380" is displayed in the Phone number input field
+#    When enter "501234567" in the Phone number input field
+#    When enter "test" in the "Skype" input field
+#    When click on the Save Changes button
+#    Then the "First Name" input field is correct
+#    Then the "Last Name" input field is correct
+#    Then the "Job position" input field is correct
+#    Then the "Office location" input field is correct
+#    Then the "+380501234567" Phone number input field is correct
+#    Then the "Skype" input field is correct
     When clear data in the "First Name" input field
     When enter "name" in the "First Name" input field
     When clear data in the "Last Name" input field

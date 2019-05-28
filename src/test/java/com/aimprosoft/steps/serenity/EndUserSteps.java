@@ -1050,4 +1050,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clearDataInThePhoneNumberInputField() {
         homePage.clearDataInThePhoneNumberInputField();
     }
+
+    @Step
+    public void clickOnTheInputMessageField() {
+        homePage.clickOnTheInputMessageField();
+    }
 }

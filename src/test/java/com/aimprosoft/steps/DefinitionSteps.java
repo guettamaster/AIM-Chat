@@ -994,4 +994,9 @@ public class DefinitionSteps {
     public void clearDataInThePhoneNumberInputField() {
         endUserSteps.clearDataInThePhoneNumberInputField();
     }
+
+    @When("^click on the input message field$")
+    public void clickOnTheInputMessageField() {
+        endUserSteps.clickOnTheInputMessageField();
+    }
 }

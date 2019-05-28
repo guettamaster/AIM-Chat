@@ -341,7 +341,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clearDataInTheInputMessageField() {
-        waitABit(3000);
+        waitABit(500);
         Actions builder = new Actions(getDriver());
         builder.sendKeys(Keys.chord(Keys.CONTROL, "a")).perform();
         //$(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG).clear();
@@ -1225,6 +1225,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clearDataInTheInputRoomNameField(String arg0) {
+        waitABit(500);
         $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0)).clear();
     }
 
@@ -1272,6 +1273,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void clearDataInThePhoneNumberInputField() {
         waitABit(500);
         $(LOCATORS.PHONE_NUMBER_INPUT_FIELD).clear();
+    }
+
+    public void clickOnTheInputMessageField() {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG)));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG));
     }
 }
 

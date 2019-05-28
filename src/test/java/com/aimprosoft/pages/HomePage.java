@@ -513,7 +513,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean theRoomReturnsToTheRoomsOnTheLeftPanel(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
+        waitABit(500);
+//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
         return $(LOCATORS.PUBLIC_ROOM_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)).isPresent();
     }
 

@@ -580,7 +580,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void uploadAvatar(String arg0) throws URISyntaxException {
-        waitABit(500);
+        waitABit(1500);
         getDriver().findElement(By.id("avatarFile")).sendKeys(arg0);
         withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
@@ -588,7 +588,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnSaveButton() {
-        waitABit(500);
+        waitABit(1500);
         $(LOCATORS.SAVE_BUTTON_ON_THE_CHANGE_AVATAR_PAGE).click();
     }
 

@@ -563,7 +563,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean theUserMenuWithActionsIsDisplayed() {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_MENU_WITH_ACTIONS)));
+        waitABit(1500);
+//        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_MENU_WITH_ACTIONS)));
         return $(LOCATORS.USER_MENU_WITH_ACTIONS).isPresent();
     }
 

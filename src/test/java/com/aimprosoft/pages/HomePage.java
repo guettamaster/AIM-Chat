@@ -555,9 +555,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnUserName(String arg0) {
-        waitABit(1500);
+        waitABit(500);
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(findBy(LOCATORS.THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))).click().build().perform();
 //        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0))));
-        evaluateJavascript("arguments[0].click();", $(LOCATORS.THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)));
+//        evaluateJavascript("arguments[0].click();", $(LOCATORS.THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL.replace("$1", arg0)));
     }
 
     public boolean theUserMenuWithActionsIsDisplayed() {

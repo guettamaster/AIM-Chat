@@ -14,7 +14,7 @@ String STANDARD_TAB = "//button[contains(text(),'standard')]";
 //TODO======================================================HomePage==========================================================
 
 String AIMPROSOFT_LOGO = "//div[@class='team-name'][contains(text(),'Aimprosoft')]";
-String THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL = "//p[@class='username'][contains(text(),'$1')]";
+String THE_CURRENT_AUTHORIZED_USER_NAME_IN_THE_LEFT_PANEL = "//div[@class]/p[@class='username'][contains(text(),'$1')]";
 String PLUS_LINK = "//a[@class='add-room-button']/i[contains(@class,\"material-icons 30 md-dark\")]";
 String ROOM_TITLE_IN_POPUP = "//div[@class='modal-header']/h4[@class='modal-title'][contains(text(),'Add Room')]";
 String INPUT_FIELD_WITH_LABEL = "//div[contains(label,'$1')]//div/input";

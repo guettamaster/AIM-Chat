@@ -6,9 +6,11 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.apache.tools.ant.taskdefs.Sleep;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
@@ -580,9 +582,10 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void uploadAvatar(String arg0) throws URISyntaxException {
-        waitABit(500);
+        waitABit(3000);
         getDriver().findElement(By.id("avatarFile")).sendKeys(arg0);
-        withTimeoutOf(1, TimeUnit.SECONDS);
+        waitABit(3000);
+        //withTimeoutOf(1, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", findBy(LOCATORS.CHANGE_AVATAR_BUTTON));
     }

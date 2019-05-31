@@ -17,6 +17,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 
@@ -463,7 +464,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean theFileIsDownloadedOnTheLocalMachine(String arg0) {
         waitABit(5000);
 //        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
-        File folder = new File("/home/ivankovskiy-pc/Downloads"  + arg0);  //this is for local machine
+        File folder = new File("/home/ivankovskiy-pc/Downloads" + arg0);  //this is for local machine
         waitABit(1500);
 //        return folder.exists();
         File[] listOfFile = folder.listFiles();
@@ -811,7 +812,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public boolean theSnippetIsDownloadedOnTheLocalMachine(String arg0) {
         waitABit(4500);
 //        File folder = new File("/var/lib/jenkins/Downloads/" + arg0); // this is for Jenkins
-        File folder = new File("/home/ivankovskiy-pc/Downloads"  + arg0);  //this is for local machine
+        File folder = new File("/home/ivankovskiy-pc/Downloads" + arg0);  //this is for local machine
         waitABit(1500);
 //        return folder.exists();
         File[] listOfFile = folder.listFiles();
@@ -926,7 +927,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", findBy(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0)));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(findBy(LOCATORS.FILE_NAME_IN_THE_ROOM_AFTER_UPLOADING.replace("$1", arg0))).build().perform();
-        }
+    }
 
     public void scrollDownToMessage(String arg0) {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.THE_SENT_MESSAGE1_INSIDE_THE_ROOM.replace("$1", arg0))));
@@ -942,12 +943,12 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void navigateOnMessageBlock(String arg0) {
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(findBy(LOCATORS.MESSAGE_BLOCK_IN_THE_PINNED_ITEMS.replace("$1", arg0))).build().perform();
+        actions.moveToElement(findBy(LOCATORS.MESSAGE_IN_THE_PINNED_ITEMS.replace("$1", arg0))).build().perform();
     }
 
     public void navigateOnFileBlock(String arg0) {
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(findBy(LOCATORS.FILE_BLOCK_IN_THE_PINNED_ITEMS.replace("$1", arg0))).build().perform();
+        actions.moveToElement(findBy(LOCATORS.FILE_NAME_IN_THE_PINNED_ITEMS.replace("$1", arg0))).build().perform();
     }
 
     public void clickOnAUnpinFromConversationLinkOnTheFileInTheMessageMenu(String arg0) {
@@ -962,23 +963,23 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public boolean pinnedSignIsnTDisplayedNearTheFile(String arg0) {
         try {
-                System.out.println("wait that documents are invisible");
-                withTimeoutOf(3, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
-                System.out.println("Element is invisible");
-            } catch (Exception e) {
-                System.out.println("Element isn`t invisible");
-            }
-            try {
-                System.out.println("check that documents are presented in the DOM");
-                withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
-                System.out.println("documents are presented in the DOM");
-                System.out.println("check that documents are visibility");
-                withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
-                System.out.println("documents are visibility");
-                return false;
-            } catch (Exception e) {
-                return true;
-            }
+            System.out.println("wait that documents are invisible");
+            withTimeoutOf(3, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+            System.out.println("Element is invisible");
+        } catch (Exception e) {
+            System.out.println("Element isn`t invisible");
+        }
+        try {
+            System.out.println("check that documents are presented in the DOM");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+            System.out.println("documents are presented in the DOM");
+            System.out.println("check that documents are visibility");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.PINNED_SIGN_NEAR_A_FILE.replace("$1", arg0))));
+            System.out.println("documents are visibility");
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
     }
 
     public boolean theFileIsDisplayedInsideThePinMessagePopUp(String arg0) {
@@ -1290,6 +1291,19 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG)));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG));
     }
-}
 
+    public String findFile(String arg0) throws URISyntaxException {
+        waitABit(1500);
+        Serenity.getCurrentSession().put("File Name:", arg0);
+        URL resource = this.getClass().getResource("./src/test/resources/Files" + arg0);
+        String file1 = new File(resource.toURI()).getAbsolutePath();
+        return file1;
+    }
+
+    public void uploadAvatarToTheProfilePage(String arg0) {
+        waitABit(1500);
+//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.CHANGE_AVATAR_BUTTON)));
+        upload(arg0).to($(LOCATORS.CHANGE_AVATAR_BUTTON));
+    }
+}
 

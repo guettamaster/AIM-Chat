@@ -999,4 +999,9 @@ public class DefinitionSteps {
     public void clickOnTheInputMessageField() {
         endUserSteps.clickOnTheInputMessageField();
     }
+
+    @When("^upload \"([^\"]*)\" avatar to the Profile page$")
+    public void uploadAvatarToTheProfilePage(String arg0) throws Throwable {
+        endUserSteps.uploadAvatarToTheProfilePage(arg0);
+    }
 }

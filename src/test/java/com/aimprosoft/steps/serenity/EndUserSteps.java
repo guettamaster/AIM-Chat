@@ -1055,4 +1055,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheInputMessageField() {
         homePage.clickOnTheInputMessageField();
     }
+
+    @Step
+    public void uploadAvatarToTheProfilePage(String arg0) throws URISyntaxException {
+        homePage.uploadAvatarToTheProfilePage(homePage.findFile(arg0));
+    }
 }

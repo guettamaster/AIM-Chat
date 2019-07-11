@@ -141,7 +141,7 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void enterInTheInputRoomNameField(String arg0) {
         waitABit(500);
         Actions actions = new Actions(getDriver());
-        actions.sendKeys(arg0);
+        $(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0)).sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.ROOM_NAME_INPUT_FIELD_ACTIVE.replace("$1", arg0))));
         actions.build().perform();
     }

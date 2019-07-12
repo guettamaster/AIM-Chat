@@ -33,10 +33,10 @@ String CHANNEL_DETAILS_LINK = "//div[@class='chat-container active']//div[@class
 String ROOM_NAME_IN_THE_SETTINGS_BLOCK_IN_THE_RIGHT_BUTTON = "//span[@class='text'][contains(text(),'Room settings')]//ancestor::div[@class='b-tab-content']//div[@class='field-value']/input[@value='$1']";
 String EDIT_ROOM_NAME_LINK = "(//span[@class='edit-description-link']/a[contains(text(),'Edit')]//ancestor::div[@class='change-room-name']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[1]";
 String ROOM_NAME_INPUT_FIELD = "(//div[@class='field-value']/input[@class='form-control'])[$1]";
-String ROOM_NAME_INPUT_FIELD_ACTIVE = "//div[@class='field-value']/input[@class='form-control'][@value='$1']";
+String ROOM_NAME_INPUT_FIELD_ACTIVE = "//div[@class='field-value']/input[@class='form-control']";
 String SAVE_CHANGES_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD = "//div[@class='button-group']/button[@class='btn btn-success done-button'][contains(text(),'Save changes')]";
 String EDIT_DESCRIPTION_LINK = "(//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='chat-container active']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[2]";
-String DESCRIPTION_INPUT_FIELD = "//div/textarea[@class='form-control'][contains(text(), '$1')]";
+String DESCRIPTION_INPUT_FIELD = "//div/textarea[@class='form-control']";
 String DONE_BUTTON = "//div[@class='chat-container active']//button[.='Done']";
 String DESCRIPTION_TITLE_IN_THE_CHANNEL_DETAILS_BLOCK = "//div[@class='description-text']/span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String DESCRIPTION_TITLE_IN_THE_HEADER = "//div[@data-for='description'][@data-tip='$1']";
@@ -51,7 +51,7 @@ String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//div[@class='modal-heade
 String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='room-item']//span[@class='username-text'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']//span[contains(text(), '$1')]";
 String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";
-String INPUT_MESSAGE_FIELD = "//div[contains(@class,'chat-container active')]//div[@class='notranslate public-DraftEditor-content']//span[@data-text='true'][contains(text(),'$1')]";
+String INPUT_MESSAGE_FIELD = "//div[contains(@class,'chat-container active')]//div[@class='notranslate public-DraftEditor-content']";
 //        "//div[@class='input-text input-text-hover']//span[@data-text='true'][contains(text(),'$1')]";
 String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String THE_SENT_MESSAGE1_INSIDE_THE_ROOM = "//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')]";

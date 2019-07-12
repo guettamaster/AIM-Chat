@@ -4,7 +4,6 @@ import com.aimprosoft.LOCATORS;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.annotations.findby.By;
 import net.thucydides.core.annotations.DefaultUrl;
-import org.apache.tools.ant.taskdefs.Sleep;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -168,8 +167,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputDescriptionField(String arg0) {
+        waitABit(500);
         Actions actions = new Actions(getDriver());
-        actions.sendKeys(arg0);
+        $(LOCATORS.DESCRIPTION_INPUT_FIELD.replace("$1", arg0)).sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.DESCRIPTION_INPUT_FIELD.replace("$1", arg0))));
         actions.build().perform();
     }
@@ -345,9 +345,8 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 
     public void clearDataInTheInputMessageField() {
         waitABit(500);
-        Actions builder = new Actions(getDriver());
-        builder.sendKeys(Keys.chord(Keys.CONTROL, "a")).perform();
-        //$(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG).clear();
+//        builder.sendKeys(Keys.chord(Keys.CONTROL, "a")).perform();
+        $(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG).clear();
     }
 
     public boolean actionIsDisplayed(String arg0) {

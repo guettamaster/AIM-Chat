@@ -272,11 +272,6 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void messageMenuIsDisplayed() {
-        Assert.assertTrue("False", homePage.messageMenuIsDisplayed());
-    }
-
-    @Step
     public void clickOnTheLinkInTheMessageMenu(String arg0) {
         homePage.clickOnTheLinkInTheMessageMenu(arg0);
     }
@@ -750,8 +745,8 @@ public class EndUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void messageMenuForTheFileIsDisplayed(String arg0) {
-        Assert.assertTrue("False", homePage.messageMenuForTheFileIsDisplayed(arg0));
+    public void messageMenuIsDisplayed() {
+        Assert.assertTrue("False", homePage.messageMenuIsDisplayed());
     }
 
     @Step

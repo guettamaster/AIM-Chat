@@ -126,8 +126,8 @@ String MESSAGE_IN_THE_PINNED_ITEMS = "//div[@class='tab-content-header clearfix'
 String OPEN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL = "//div[@class='pinned-message-item']//span[contains(text(),'$1')]//ancestor::div[@class='layout-content']//a[contains(text(),'Open')]";
 String PINNED_HIGHLIGHTED_MESSAGE_IN_THE_CENTRAL_CHAT_WINDOW = "//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'test message')]//ancestor::div[@class='message highlight highlight-pinned was-pinned']";
 String RIGHT_CONTROL_HAMBURGER_BUTTON_ON_THE_FILE = "//span[@class='file-name-text'][contains(text(),'$1')]//ancestor::div[@class='message-main-container']//div[@class='right-menu-btn']";
-String MESSAGE_MENU_FOR_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//ul[@id='message-menu-menu']";
-String PIN_TO_CONVERSATION_LINK_FOR_FILE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//div[@id='message-menu']/ul/li[1]";
+String MESSAGE_MENU_FOR_FILE = "//ul[@xpath='1']";
+String PIN_TO_CONVERSATION_LINK_FOR_FILE = "//div[@class='file-name']//span[contains(text(), '$1')]//ancestor::div[@class='chat-layout clearfix']//div[@class='right-control-menu']//li[contains(text(), 'Unpin from conversation')]";
 String FILE_NAME_INSIDE_THE_PIN_MESSAGE_POPUP = "//div[contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Pin Message')]";
 String PINNED_SIGN_NEAR_A_FILE = "//span[contains(text(),'$1')]//ancestor::div[contains(@class,'uploaded-file-wrapper')]//div[@class='pinned-by']";
 String FILE_NAME_IN_THE_PINNED_ITEMS = "//div[@class='tab-content-header clearfix']//span[contains(text(),'Pinned messages')]//ancestor::div[@class='b-tab-content']//div[@class='file-name'][contains(text(),'$1')]";
@@ -136,7 +136,7 @@ String MESSAGE_BLOCK_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active'
 String FILE_BLOCK_IN_THE_PINNED_ITEMS = "//div[@class='chat-container active']//div[@class='pinned-message-item']//ancestor::div[@class='pinned-message-item']//div[contains(text(),'$1')]";
 String UNPIN_BUTTON = "//button[contains(text(),'Unpin')]";
 String FILE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP = "//div[contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Unpin Message')]";
-String UNPIN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL = "//div[@class='chat-container active']//div[@class='pinned-message-item']//span[contains(text(),'$1')]//ancestor::div[@class='pinned-message-item']//a[contains(text(),'Unpin')]";
+String UNPIN_LINK_ON_A_MESSAGE_IN_THE_RIGHT_PANEL = "//div[@class='pinned-message-item']//span[contains(text(),'$1')]//ancestor::div[@class='pinned-message-item']//a[contains(text(),'Unpin')]";
 String MESSAGE_NAME_INSIDE_THE_UNPIN_MESSAGE_POPUP = "//span[contains(text(),'$1')]//ancestor::div[@class='modal-content']//h4[contains(text(),'Unpin Message')]";
 String COUNTER_UNDER_ITEMS_IN_THE_RIGHT_PANEL = "//i[@title='$1']//ancestor::a[@style='cursor: pointer;']//span[contains(text(),'$2')]";
 String HIDE_STAR_SIGN_NEAR_A_MESSAGE = "//span[contains(text(),'$1')]//ancestor::div[@class='message-main-container']//i[contains(text(),'star')]";

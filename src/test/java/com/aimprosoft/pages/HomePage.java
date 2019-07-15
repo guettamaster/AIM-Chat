@@ -896,11 +896,6 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
 //        js.executeScript("arguments[0].click();", findBy(LOCATORS.RIGHT_CONTROL_HAMBURGER_ON_THE_MESSAGE.replace("$1", arg0)));
     }
 
-    public boolean messageMenuForTheFileIsDisplayed(String arg0) {
-        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.MESSAGE_MENU_FOR_FILE.replace("$1", arg0))));
-        return $(LOCATORS.MESSAGE_MENU_FOR_FILE.replace("$1", arg0)).isPresent();
-    }
-
     public void clickOnAPinToConversationLinkOnTheFileInTheMessageMenu(String arg0) {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.PIN_TO_CONVERSATION_LINK_FOR_FILE.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.PIN_TO_CONVERSATION_LINK_FOR_FILE.replace("$1", arg0)));

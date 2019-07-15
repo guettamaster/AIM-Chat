@@ -270,11 +270,6 @@ public class DefinitionSteps {
         endUserSteps.clickOnTheRightControlHamburgerOnTheFile(arg0);
     }
 
-    @Then("^message menu is displayed$")
-    public void messageMenuIsDisplayed() throws Throwable {
-        endUserSteps.messageMenuIsDisplayed();
-    }
-
     @When("^click on the \"([^\"]*)\" link in the message menu$")
     public void clickOnTheLinkInTheMessageMenu(String arg0) throws Throwable {
         endUserSteps.clickOnTheLinkInTheMessageMenu(arg0);
@@ -705,9 +700,9 @@ public class DefinitionSteps {
         endUserSteps.clickOnTheRightControlHamburgerOnTheMessage(arg0);
     }
 
-    @Then("^message menu for the \"([^\"]*)\" file is displayed$")
-    public void messageMenuForTheFileIsDisplayed(String arg0) throws Throwable {
-        endUserSteps.messageMenuForTheFileIsDisplayed(arg0);
+    @Then("^message menu is displayed$")
+    public void messageMenuIsDisplayed() {
+        endUserSteps.messageMenuIsDisplayed();
     }
 
     @When("^click on a Pin to conversation link on the \"([^\"]*)\" file in the message menu$")

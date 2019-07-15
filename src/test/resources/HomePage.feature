@@ -395,7 +395,7 @@ Feature: testing home page
     When scroll down to "17.jpg" file
     When navigate on the pinned "17.jpg" file
     When click on the "17.jpg" file
-    Then message menu for the "17.jpg" file is displayed
+    Then message menu is displayed
     When click on a Unpin from conversation link on the "17.jpg" file in the message menu
     Then the "17.jpg" file is displayed inside the Unpin Message pop-up
     When click on the Unpin button

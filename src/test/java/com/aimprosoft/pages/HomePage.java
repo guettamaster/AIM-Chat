@@ -298,6 +298,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     public void enterInTheInputMessageField(String arg0) {
 //        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));
         waitABit(2000);
+
+//        $(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0)).sendKeys(arg0);
+
         Actions actions = new Actions(getDriver());
         actions.sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));

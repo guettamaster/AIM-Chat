@@ -51,7 +51,7 @@ String SEARCH_INPUT_FIELD_IN_THE_DIRECT_ROOMS_POPUP = "//div[@class='modal-heade
 String USER_NAME_IN_THE_USERS_LIST_FROM_THE_DIRECT_ROOMS_POPUP = "//span[@class='room-item']//span[@class='username-text'][contains(text(),'$1')]";
 String USER_NAME_IN_THE_LEFT_PANEL = "//a[@class='room-link']//span[contains(text(), '$1')]";
 String USER_NAME_IN_THE_HEADER = "//div[@class='channel-name room-direct'][contains(text(),'$1')]";
-String INPUT_MESSAGE_FIELD = "//div[contains(@class,'chat-container active')]//div[@class='notranslate public-DraftEditor-content']";
+String INPUT_MESSAGE_FIELD = "//div[@class='input-text input-text-hover']//span[@data-text='true'][contains(text(),'$1')]";
 //        "//div[@class='input-text input-text-hover']//span[@data-text='true'][contains(text(),'$1')]";
 String THE_SENT_MESSAGE_INSIDE_THE_ROOM = "//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')]";
 String THE_SENT_MESSAGE1_INSIDE_THE_ROOM = "//div[@class='message-main-container']//span[@class='LinkifyPlus'][contains(text(),'$1')]";

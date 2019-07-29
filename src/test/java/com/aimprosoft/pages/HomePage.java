@@ -1229,7 +1229,9 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickTheNameInTheListOfUsers(String arg0) {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0))));
+        waitABit(1500);
+//        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0))));
+//        $(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0)).click();
         evaluateJavascript("arguments[0].click();", $(LOCATORS.USER_NAME_IN_THE_USERS_LIST.replace("$1", arg0)));
     }
 

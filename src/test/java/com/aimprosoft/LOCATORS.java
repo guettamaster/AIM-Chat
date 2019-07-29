@@ -36,11 +36,11 @@ String ROOM_NAME_INPUT_FIELD = "(//div[@class='field-value']/input[@class='form-
 String ROOM_NAME_INPUT_FIELD_ACTIVE = "//div[@class='field-value']/input[@class='form-control']";
 String SAVE_CHANGES_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD = "//div[@class='button-group']/button[@class='btn btn-success done-button'][contains(text(),'Save changes')]";
 String EDIT_DESCRIPTION_LINK = "(//div[@class='channel-name room-public'][contains(text(),'$1')]//ancestor::div[@class='chat-container active']//span[@class='edit-description-link']/a[contains(text(),'Edit')])[2]";
-String DESCRIPTION_INPUT_FIELD = "//div/textarea[@class='form-control']";
+String DESCRIPTION_INPUT_FIELD = "//textarea[@class='form-control undefined']";
 String DONE_BUTTON = "//div[@class='chat-container active']//button[.='Done']";
 String DESCRIPTION_TITLE_IN_THE_CHANNEL_DETAILS_BLOCK = "//div[@class='description-text']/span[@class='LinkifyPlus'][contains(text(),'$1')]";
-String DESCRIPTION_TITLE_IN_THE_HEADER = "//div[@data-for='description'][@data-tip='$1']";
-String DESCRIPTION_TITLE_IN_THE_TOP = "//div[@id='room-description']/div[contains(text(),'$1')]";
+String DESCRIPTION_TITLE_IN_THE_HEADER = "//div[@data-for='description'][contains(text(),'$1')]";
+String DESCRIPTION_TITLE_IN_THE_TOP = "//div[@xpath='1'][contains(text(),'$1')]";
 String WHEEL_LINK_IN_THE_HEADER = "//a[@class='dropdown-toggle']/i[@class='glyphicon glyphicon-cog']";
 String DELETE_ROOM_LINK = "//div[contains(@class,'leave-room')]/span[.='Delete Room']";
 String DELETE_ROOM_TITLE_IN_THE_DELETE_ROOM_POPUP = "//span[@class='room-to-delete'][contains(text(),'$1')]";

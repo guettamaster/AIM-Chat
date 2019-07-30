@@ -146,9 +146,11 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnSaveChangesButtonUnderTheInputRoomNameField() {
+//        withTimeoutOf(1, TimeUnit.SECONDS);
+//        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+//        js.executeScript("arguments[0].click();", findBy(LOCATORS.SAVE_CHANGES_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD));
         withTimeoutOf(1, TimeUnit.SECONDS);
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", findBy(LOCATORS.SAVE_CHANGES_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.SAVE_CHANGES_BUTTON_BELOW_THE_ROOM_NAME_INPUT_FIELD));
         waitABit(5000);
     }
 
@@ -296,27 +298,15 @@ public class HomePage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void enterInTheInputMessageField(String arg0) {
-//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));
-        waitABit(2000);
-
-//        $(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0)).sendKeys(arg0);
-
-        Actions actions = new Actions(getDriver());
-        actions.sendKeys(arg0);
-        actions.moveToElement(find(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD.replace("$1", arg0))));
-        actions.build().perform();
+        $(LOCATORS.INPUT_MESSAGE_FIELD).sendKeys(arg0);
     }
 
     public void clickOnEnterButton() {
         waitABit(2000);
-//        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG)));
         Actions actions = new Actions(getDriver());
         actions.moveToElement(find(org.openqa.selenium.By.xpath((String.format(LOCATORS.INPUT_MESSAGE_FIELD_WITHOUT_ARG))))).click().sendKeys(Keys.ENTER).build().perform();
-
 //        Actions builder = new Actions(getDriver());
 //        builder.sendKeys(Keys.chord(Keys.CONTROL, "a")).perform();
-
-
     }
 
     public boolean messageIsCreated(String arg0) {

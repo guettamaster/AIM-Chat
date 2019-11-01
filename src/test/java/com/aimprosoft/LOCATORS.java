@@ -164,5 +164,4 @@ String INPUT_MESSAGE_FIELD_WITHOUT_ARG = "//div[contains(@class,'chat-container 
 String FORMATS_OF_PHONES_NUMBERS_MENU = "//div[@class='phone-number-input']//select[@class='phone-select']";
 String SAVE_CHANGES_BUTTON = "//span[@class='span_button'][contains(text(),'save changes')]";
 
-    fgftgfg
 }

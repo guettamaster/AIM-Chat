@@ -9,7 +9,6 @@ Feature: testing home page
     Then "guettamaster" user name is displayed
 #    Then "o.ivankovckyi" user name is displayed
 
-
   Scenario: 2.001 Check that public `room1` room is created
     When click on the room header in the left panel
     Then "Add Room" modal is displayed
